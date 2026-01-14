@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <title>Sansat IPTV – IPTV Premium & IBO Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sansat IPTV. IPTV Premium me aktivim falas të IBO Player. 1 muaj 10€, 6 muaj 39€, 12 muaj 79€.">
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1020;color:#eef}
+    header,section,footer{max-width:1100px;margin:auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .lang button{margin-left:6px;padding:6px 10px;border:0;border-radius:6px;cursor:pointer}
+    h1{font-size:38px;margin:0}
+    h2{margin-top:40px}
+    .btn{display:inline-block;padding:14px 18px;background:#4da3ff;color:#000;
+         border-radius:10px;text-decoration:none;font-weight:bold}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:#111a33;padding:20px;border-radius:16px}
+    footer{font-size:13px;color:#bbb;border-top:1px solid #333}
+  </style>
+</head>
+<body>
+
+<header>
+  <strong>Sansat IPTV</strong>
+  <div class="lang">
+    <button onclick="setLang('sq')">SQ</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('fr')">FR</button>
+  </div>
+</header>
+
+<section>
+  <h1 id="t1"></h1>
+  <p id="t2"></p>
+  <a class="btn" href="https://wa.me/38972698616" target="_blank" id="cta"></a>
+</section>
+
+<section>
+  <h2 id="t3"></h2>
+  <div class="cards">
+    <div class="card"><strong>1</strong> <span id="m1"></span><br><b>10 €</b></div>
+    <div class="card"><strong>6</strong> <span id="m2"></span><br><b>39 €</b></div>
+    <div class="card"><strong>12</strong> <span id="m3"></span><br><b>79 €</b></div>
+  </div>
+</section>
+
+<section>
+  <h2 id="t4"></h2>
+  <p id="t5"></p>
+</section>
+
+<section>
+  <h2 id="t6"></h2>
+  <ol>
+    <li id="s1"></li>
+    <li id="s2"></li>
+    <li id="s3"></li>
+  </ol>
+</section>
+
+<footer id="f1"></footer>
+
+<script>
+const content={
+sq:{
+t1:"IPTV Premium + IBO Player",
+t2:"Kanale LIVE, filma dhe sport. Aktivizim i shpejtë. IBO Player aktivizohet falas.",
+cta:"Na kontakto në WhatsApp",
+t3:"Paketat & Çmimet",
+m1:"muaj",m2:"muaj",m3:"muaj",
+t4:"Çfarë ofrojmë",
+t5:"Shërbim IPTV premium me mbështetje për Smart TV, Android TV, Fire Stick dhe pajisje mobile.",
+t6:"Si funksionon",
+s1:"Na kontaktoni në WhatsApp",
+s2:"Zgjedhni paketën dhe konfirmoni pagesën",
+s3:"Merrni aktivizimin dhe udhëzimet",
+f1:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale."
+},
+en:{
+t1:"Premium IPTV + IBO Player",
+t2:"Live TV, movies and sports. Fast activation. IBO Player activation included.",
+cta:"Contact us on WhatsApp",
+t3:"Plans & Pricing",
+m1:"month",m2:"months",m3:"months",
+t4:"What we offer",
+t5:"Premium IPTV service compatible with Smart TV, Android TV, Fire Stick and mobile devices.",
+t6:"How it works",
+s1:"Contact us on WhatsApp",
+s2:"Choose your plan and confirm payment",
+s3:"Receive activation and setup instructions",
+f1:"Disclaimer: Stable internet connection required. Usage must comply with local laws."
+},
+fr:{
+t1:"IPTV Premium + IBO Player",
+t2:"Chaînes TV, films et sport en direct. Activation rapide. IBO Player inclus.",
+cta:"Contactez-nous sur WhatsApp",
+t3:"Offres & Tarifs",
+m1:"mois",m2:"mois",m3:"mois",
+t4:"Notre service",
+t5:"Service IPTV premium compatible avec Smart TV, Android TV, Fire Stick et mobiles.",
+t6:"Comment ça marche",
+s1:"Contactez-nous sur WhatsApp",
+s2:"Choisissez l’offre et confirmez le paiement",
+s3:"Recevez l’activation et les instructions",
+f1:"Avertissement: connexion Internet stable requise. Utilisation conforme aux lois locales."
+}
+};
+
+function setLang(l){
+  for(let k in content[l]){
+    document.getElementById(k).innerText=content[l][k];
+  }
+}
+setLang('sq');
+</script>
+
+</body>
+</html>
