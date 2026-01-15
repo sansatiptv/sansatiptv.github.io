@@ -15,6 +15,7 @@
       --accent:#2563eb;
       --accent2:#0ea5e9;
       --ok:#16a34a;
+      --warn:#f59e0b;
     }
     *{box-sizing:border-box}
     body{
@@ -29,14 +30,23 @@
       display:flex;align-items:center;justify-content:space-between;gap:12px;
       padding:10px 0 18px;border-bottom:1px solid var(--border);
     }
-    .brand{font-weight:800;letter-spacing:.2px}
+    .brandRow{display:flex;gap:10px;align-items:center}
+    .logoMark{
+      width:34px;height:34px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:grid;place-items:center;color:#fff;font-weight:900;
+      box-shadow:0 8px 20px rgba(37,99,235,.18);
+      user-select:none;
+    }
+    .brand{font-weight:900;letter-spacing:.2px;line-height:1.05}
+    .brand small{display:block;color:var(--muted);font-weight:700;letter-spacing:0}
     .lang{
       display:flex;gap:8px;align-items:center;
       border:1px solid var(--border);border-radius:999px;padding:6px;background:#fff;
     }
     .lang button{
       border:0;cursor:pointer;border-radius:999px;padding:8px 10px;
-      background:transparent;color:var(--muted);font-weight:800;
+      background:transparent;color:var(--muted);font-weight:900;
     }
     .lang button.active{background:rgba(37,99,235,.10);color:var(--text)}
     .hero{
@@ -48,41 +58,74 @@
       padding:8px 10px;border-radius:999px;
       border:1px solid rgba(22,163,74,.20);
       background:rgba(22,163,74,.08);
-      color:var(--ok);font-weight:800;font-size:13px;
+      color:var(--ok);font-weight:900;font-size:13px;
     }
     h1{margin:12px 0 10px;font-size:clamp(28px,3.5vw,44px);line-height:1.08}
-    .lead{margin:0 0 14px;color:var(--muted);font-size:16px;max-width:60ch}
+    .lead{margin:0 0 14px;color:var(--muted);font-size:16px;max-width:62ch}
     .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 14px;border-radius:12px;font-weight:850;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:12px;font-weight:900;
       border:1px solid var(--border);background:#fff;
     }
     .btn.primary{
       border:0;color:#fff;
       background:linear-gradient(135deg,var(--accent),var(--accent2));
     }
-    .btn.ghost{background:#fff}
+    .btn svg{width:18px;height:18px}
     .small{font-size:13px;color:var(--muted);margin-top:10px}
     .card{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:16px;padding:16px;
     }
-    .section{margin-top:26px}
+    .section{margin-top:28px}
     .section h2{margin:0 0 12px;font-size:20px}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .price{font-size:30px;font-weight:900;margin:6px 0}
+    .price{font-size:30px;font-weight:950;margin:6px 0}
     .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      background:#fff;border:1px solid var(--border);
+      color:var(--muted);font-weight:900;font-size:12px;
+    }
+    .steps{counter-reset:step}
+    .stepCard{background:#fff}
+    .stepNum{
+      width:34px;height:34px;border-radius:12px;
+      background:rgba(37,99,235,.10);
+      display:grid;place-items:center;
+      color:var(--accent);font-weight:950;
+      border:1px solid rgba(37,99,235,.16);
+      margin-bottom:10px;
+    }
+    .iconWrap{
+      width:38px;height:38px;border-radius:14px;
+      background:rgba(14,165,233,.10);
+      border:1px solid rgba(14,165,233,.18);
+      display:grid;place-items:center;margin-bottom:10px;
+    }
+    .iconWrap svg{width:20px;height:20px;color:var(--accent)}
+    .callout{
+      border-left:4px solid rgba(245,158,11,.55);
+      background:rgba(245,158,11,.08);
+      border-radius:14px;
+      padding:12px 14px;
+      border:1px solid rgba(245,158,11,.22);
+    }
+    .callout strong{display:block;margin-bottom:4px}
     .faq details{
       background:#fff;border:1px solid var(--border);
       border-radius:14px;padding:12px;margin:10px 0;
     }
-    .faq summary{cursor:pointer;font-weight:850}
+    .faq summary{cursor:pointer;font-weight:900}
     footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
-    @media (max-width:900px){
+    @media (max-width:980px){
       .hero{grid-template-columns:1fr}
+      .grid4{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
     }
@@ -91,7 +134,14 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">Sansat IPTV</div>
+      <div class="brandRow">
+        <div class="logoMark">S</div>
+        <div class="brand">
+          Sansat IPTV
+          <small id="tagline">Premium • Fast activation</small>
+        </div>
+      </div>
+
       <div class="lang" aria-label="Language switcher">
         <button type="button" data-lang="sq" class="active">SQ</button>
         <button type="button" data-lang="en">EN</button>
@@ -108,8 +158,23 @@
         </p>
 
         <div class="ctaRow">
-          <a class="btn primary" id="waBtn" href="https://wa.me/38972698616" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn ghost" id="msBtn" href="#" target="_blank" rel="noopener">Messenger</a>
+          <a class="btn primary" id="waBtn" href="https://wa.me/38972698616" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 11.8a8 8 0 0 1-11.6 7.1L4 20l1.2-4.1A8 8 0 1 1 20 11.8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.8 8.9c.3-.7.6-.7.8-.7h.7c.2 0 .4.1.5.4l.7 1.7c.1.2.1.5 0 .7l-.5.6c-.2.2-.2.4-.1.6.5 1 1.3 1.7 2.2 2.2.2.1.4.1.6-.1l.6-.5c.2-.1.5-.2.7 0l1.7.7c.3.1.4.3.4.5v.7c0 .2 0 .5-.7.8-.7.3-2.1.7-4.3-.6-2.2-1.3-3.6-3.7-3.9-4.4-.3-.7-.1-1.4.2-2Z" fill="currentColor" opacity=".25"/>
+            </svg>
+            <span id="waLabel">WhatsApp</span>
+          </a>
+
+          <a class="btn" id="msBtn" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12a9 9 0 1 1-3.1-6.8A9 9 0 0 1 21 12Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M7.8 14.6l2.8-4.3c.2-.3.6-.4.9-.1l2.2 1.7c.2.1.4.1.6 0l2.9-2.2c.4-.3.9.2.6.6l-2.8 4.3c-.2.3-.6.4-.9.1l-2.2-1.7c-.2-.1-.4-.1-.6 0l-2.9 2.2c-.4.3-.9-.2-.6-.6Z" fill="currentColor" opacity=".25"/>
+            </svg>
+            <span id="msLabel">Messenger</span>
+          </a>
+
+          <span class="pill" id="supportPill">Support • Setup guidance</span>
         </div>
 
         <div class="small" id="note">
@@ -118,7 +183,7 @@
       </div>
 
       <div class="card">
-        <div class="muted" id="plansTitle" style="font-weight:900">Paketa & Çmimet</div>
+        <div class="muted" id="plansTitle" style="font-weight:950">Paketa & Çmimet</div>
         <div class="grid3" style="margin-top:10px">
           <div class="card" style="background:#fff">
             <div class="muted" id="p1">1 muaj</div>
@@ -136,26 +201,127 @@
             <div class="muted" id="p12d">Më e leverdishmja</div>
           </div>
         </div>
+
+        <div class="callout" style="margin-top:12px">
+          <strong id="calloutT">Aktivizim i shpejtë</strong>
+          <div class="muted" id="calloutD">Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).</div>
+        </div>
       </div>
     </section>
 
+    <!-- WHY SECTION -->
+    <section class="section">
+      <h2 id="whyH">Pse Sansat IPTV</h2>
+      <div class="grid4">
+        <div class="card" style="background:#fff">
+          <div class="iconWrap">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong id="why1t">Aktivizim i shpejtë</strong>
+          <div class="muted" id="why1d">Proces i thjeshtë dhe udhëzime të qarta.</div>
+        </div>
+
+        <div class="card" style="background:#fff">
+          <div class="iconWrap">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M5 7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 21h12a2 2 0 0 0 2-2V9H4v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong id="why2t">Paketa fleksibile</strong>
+          <div class="muted" id="why2d">1 / 6 / 12 muaj sipas nevojës.</div>
+        </div>
+
+        <div class="card" style="background:#fff">
+          <div class="iconWrap">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M22 12h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 4V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 22v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <strong id="why3t">Pajisje të ndryshme</strong>
+          <div class="muted" id="why3d">Smart TV, Android TV/Box, Fire Stick, Mobile.</div>
+        </div>
+
+        <div class="card" style="background:#fff">
+          <div class="iconWrap">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <strong id="why4t">Mbështetje</strong>
+          <div class="muted" id="why4d">Përgjigje e shpejtë në DM/WhatsApp.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVICES -->
     <section class="section">
       <h2 id="devicesH">Pajisjet e mbështetura</h2>
       <div class="grid2">
-        <div class="card"><strong id="dev1t">TV & Box</strong><div class="muted" id="dev1d">Smart TV, Android TV/Box, Fire Stick</div></div>
-        <div class="card"><strong id="dev2t">Mobile</strong><div class="muted" id="dev2d">Telefon dhe tablet (Android/iOS)</div></div>
+        <div class="card">
+          <strong id="dev1t">TV & Box</strong>
+          <div class="muted" id="dev1d">Smart TV, Android TV/Box, Fire Stick</div>
+        </div>
+        <div class="card">
+          <strong id="dev2t">Mobile</strong>
+          <div class="muted" id="dev2d">Telefon dhe tablet (Android/iOS)</div>
+        </div>
       </div>
     </section>
 
+    <!-- HOW IT WORKS -->
     <section class="section">
       <h2 id="howH">Si funksionon</h2>
-      <div class="grid3">
-        <div class="card"><strong id="s1t">1) Kontakto</strong><div class="muted" id="s1d">Na shkruaj në WhatsApp ose Messenger.</div></div>
-        <div class="card"><strong id="s2t">2) Zgjedh paketën</strong><div class="muted" id="s2d">Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.</div></div>
-        <div class="card"><strong id="s3t">3) Aktivizim</strong><div class="muted" id="s3d">Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).</div></div>
+      <div class="grid3 steps">
+        <div class="card stepCard">
+          <div class="stepNum">1</div>
+          <strong id="s1t">Kontakto</strong>
+          <div class="muted" id="s1d">Na shkruaj në WhatsApp ose Messenger.</div>
+        </div>
+        <div class="card stepCard">
+          <div class="stepNum">2</div>
+          <strong id="s2t">Zgjedh paketën</strong>
+          <div class="muted" id="s2d">Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.</div>
+        </div>
+        <div class="card stepCard">
+          <div class="stepNum">3</div>
+          <strong id="s3t">Aktivizim</strong>
+          <div class="muted" id="s3d">Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).</div>
+        </div>
       </div>
     </section>
 
+    <!-- IBO INSTALL -->
+    <section class="section">
+      <h2 id="iboH">IBO Player – Instalimi (shkurt)</h2>
+      <div class="grid3">
+        <div class="card" style="background:#fff">
+          <strong id="ibo1t">1) Instalo aplikacionin</strong>
+          <div class="muted" id="ibo1d">Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.</div>
+        </div>
+        <div class="card" style="background:#fff">
+          <strong id="ibo2t">2) Dërgo kodin</strong>
+          <div class="muted" id="ibo2d">Na dërgo Device ID / Device Key (siç shfaqet në aplikacion).</div>
+        </div>
+        <div class="card" style="background:#fff">
+          <strong id="ibo3t">3) Konfigurim</strong>
+          <div class="muted" id="ibo3d">Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.</div>
+        </div>
+      </div>
+      <div class="small" id="iboNote" style="margin-top:10px">
+        Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim/udhëzime konfigurimi.
+      </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="section faq">
       <h2 id="faqH">FAQ</h2>
       <details>
@@ -185,27 +351,48 @@
 
   <script>
     // === Set these once ===
-    const "sansatiptv"; = "sansatiptv"; // <-- ndrysho nëse username i Page është tjetër
+    const FB_USERNAME = "sansatiptv";
     const WA_LINK = "https://wa.me/38972698616";
     // ======================
 
     const i18n = {
       sq: {
+        tagline:"Premium • Aktivizim i shpejtë",
         badge:"Aktivizim IBO Player falas",
         h1:"IPTV Premium + IBO Player",
         lead:"Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.",
+        waLabel:"WhatsApp",
+        msLabel:"Messenger",
+        supportPill:"Support • Udhëzime konfigurimi",
         note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
         plansTitle:"Paketa & Çmimet",
         p1:"1 muaj", p1d:"E përshtatshme për testim",
         p6:"6 muaj", p6d:"Vlerë e mirë",
         p12:"12 muaj", p12d:"Më e leverdishmja",
+        calloutT:"Aktivizim i shpejtë",
+        calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).",
+
+        whyH:"Pse Sansat IPTV",
+        why1t:"Aktivizim i shpejtë", why1d:"Proces i thjeshtë dhe udhëzime të qarta.",
+        why2t:"Paketa fleksibile", why2d:"1 / 6 / 12 muaj sipas nevojës.",
+        why3t:"Pajisje të ndryshme", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
+        why4t:"Mbështetje", why4d:"Përgjigje e shpejtë në DM/WhatsApp.",
+
         devicesH:"Pajisjet e mbështetura",
         dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
         dev2t:"Mobile", dev2d:"Telefon dhe tablet (Android/iOS)",
+
         howH:"Si funksionon",
-        s1t:"1) Kontakto", s1d:"Na shkruaj në WhatsApp ose Messenger.",
-        s2t:"2) Zgjedh paketën", s2d:"Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.",
-        s3t:"3) Aktivizim", s3d:"Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).",
+        s1t:"Kontakto", s1d:"Na shkruaj në WhatsApp ose Messenger.",
+        s2t:"Zgjedh paketën", s2d:"Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.",
+        s3t:"Aktivizim", s3d:"Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).",
+
+        iboH:"IBO Player – Instalimi (shkurt)",
+        ibo1t:"1) Instalo aplikacionin", ibo1d:"Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.",
+        ibo2t:"2) Dërgo kodin", ibo2d:"Na dërgo Device ID / Device Key (siç shfaqet në aplikacion).",
+        ibo3t:"3) Konfigurim", ibo3d:"Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.",
+        iboNote:"Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim/udhëzime konfigurimi.",
+
         faqH:"FAQ",
         f1q:"Çfarë interneti rekomandohet?",
         f1a:"Rekomandohet lidhje stabile. Performanca varet nga rrjeti, pajisja dhe konfigurimi.",
@@ -213,24 +400,47 @@
         f2a:"Po, aktivizimi dhe udhëzimet bazë të konfigurimit përfshihen me abonimin.",
         f3q:"Sa shpejt bëhet aktivizimi?",
         f3a:"Zakonisht pas konfirmimit dhe marrjes së të dhënave të nevojshme nga klienti.",
+
         legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit."
       },
+
       en: {
+        tagline:"Premium • Fast activation",
         badge:"Free IBO Player activation",
         h1:"Premium IPTV + IBO Player",
         lead:"Digital subscription service with fast activation and setup guidance for compatible devices.",
+        waLabel:"WhatsApp",
+        msLabel:"Messenger",
+        supportPill:"Support • Setup guidance",
         note:"For details and payment options, please message us privately. Activation is done after confirmation.",
         plansTitle:"Plans & Pricing",
         p1:"1 month", p1d:"Good for testing",
         p6:"6 months", p6d:"Great value",
         p12:"12 months", p12d:"Best deal",
+        calloutT:"Fast activation",
+        calloutD:"Message us and we will guide you based on your device (Smart TV / Android / Fire Stick / Mobile).",
+
+        whyH:"Why Sansat IPTV",
+        why1t:"Fast activation", why1d:"Simple process with clear guidance.",
+        why2t:"Flexible plans", why2d:"1 / 6 / 12 months to match your needs.",
+        why3t:"Multiple devices", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
+        why4t:"Support", why4d:"Fast replies on DM/WhatsApp.",
+
         devicesH:"Supported devices",
         dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
         dev2t:"Mobile", dev2d:"Phone and tablet (Android/iOS)",
+
         howH:"How it works",
-        s1t:"1) Contact", s1d:"Message us on WhatsApp or Messenger.",
-        s2t:"2) Choose a plan", s2d:"Pick 1 / 6 / 12 months and receive guidance.",
-        s3t:"3) Activation", s3d:"Fast activation + free IBO Player activation (setup guidance).",
+        s1t:"Contact", s1d:"Message us on WhatsApp or Messenger.",
+        s2t:"Choose a plan", s2d:"Pick 1 / 6 / 12 months and receive guidance.",
+        s3t:"Activation", s3d:"Fast activation + free IBO Player activation (setup guidance).",
+
+        iboH:"IBO Player – Quick setup",
+        ibo1t:"1) Install the app", ibo1d:"On your device, install IBO Player from the app store.",
+        ibo2t:"2) Send the code", ibo2d:"Send us the Device ID / Device Key shown in the app.",
+        ibo3t:"3) Configure", ibo3d:"We configure and guide you through the final steps.",
+        iboNote:"Note: IBO Player is a third-party application. We provide activation/setup guidance.",
+
         faqH:"FAQ",
         f1q:"What internet speed is recommended?",
         f1a:"A stable connection is recommended. Performance depends on network, device and setup.",
@@ -238,24 +448,47 @@
         f2a:"Yes, activation and basic setup guidance are included with the subscription.",
         f3q:"How fast is activation?",
         f3a:"Usually after confirmation and receiving the required details from the client.",
+
         legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights."
       },
+
       fr: {
+        tagline:"Premium • Activation rapide",
         badge:"Activation IBO Player offerte",
         h1:"IPTV Premium + IBO Player",
         lead:"Service d’abonnement numérique avec activation rapide et assistance de configuration pour appareils compatibles.",
+        waLabel:"WhatsApp",
+        msLabel:"Messenger",
+        supportPill:"Support • Aide configuration",
         note:"Pour les détails et les moyens de paiement, merci de nous écrire en message privé. Activation après confirmation.",
         plansTitle:"Offres & Tarifs",
         p1:"1 mois", p1d:"Idéal pour tester",
         p6:"6 mois", p6d:"Très bon rapport",
         p12:"12 mois", p12d:"Meilleure offre",
+        calloutT:"Activation rapide",
+        calloutD:"Écrivez-nous et nous vous guidons selon votre appareil (Smart TV / Android / Fire Stick / Mobile).",
+
+        whyH:"Pourquoi Sansat IPTV",
+        why1t:"Activation rapide", why1d:"Processus simple avec des instructions claires.",
+        why2t:"Offres flexibles", why2d:"1 / 6 / 12 mois selon vos besoins.",
+        why3t:"Plusieurs appareils", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
+        why4t:"Assistance", why4d:"Réponses rapides en DM/WhatsApp.",
+
         devicesH:"Appareils compatibles",
         dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
         dev2t:"Mobile", dev2d:"Téléphone et tablette (Android/iOS)",
+
         howH:"Comment ça marche",
-        s1t:"1) Contact", s1d:"Écrivez-nous sur WhatsApp ou Messenger.",
-        s2t:"2) Choisir une offre", s2d:"Choisissez 1 / 6 / 12 mois et recevez l’assistance.",
-        s3t:"3) Activation", s3d:"Activation rapide + activation IBO Player offerte (assistance).",
+        s1t:"Contact", s1d:"Écrivez-nous sur WhatsApp ou Messenger.",
+        s2t:"Choisir une offre", s2d:"Choisissez 1 / 6 / 12 mois et recevez l’assistance.",
+        s3t:"Activation", s3d:"Activation rapide + activation IBO Player offerte (assistance).",
+
+        iboH:"IBO Player – Installation rapide",
+        ibo1t:"1) Installer l’application", ibo1d:"Sur votre appareil, installez IBO Player depuis la boutique d’apps.",
+        ibo2t:"2) Envoyer le code", ibo2d:"Envoyez-nous le Device ID / Device Key affiché dans l’application.",
+        ibo3t:"3) Configurer", ibo3d:"Nous configurons et vous guidons pour les dernières étapes.",
+        iboNote:"Note : IBO Player est une application tierce. Nous fournissons l’activation et l’aide à la configuration.",
+
         faqH:"FAQ",
         f1q:"Quel débit internet est recommandé ?",
         f1a:"Une connexion stable est recommandée. Les performances dépendent du réseau, de l’appareil et de la configuration.",
@@ -263,6 +496,7 @@
         f2a:"Oui, l’activation et l’assistance de configuration de base sont incluses.",
         f3q:"En combien de temps l’activation est faite ?",
         f3a:"Généralement après confirmation et réception des informations nécessaires.",
+
         legal:"Note : une connexion Internet stable est requise. Utilisation conforme aux lois locales et aux droits de diffusion."
       }
     };
@@ -281,8 +515,7 @@
     // Links
     document.getElementById("waBtn").href = WA_LINK;
     const ms = document.getElementById("msBtn");
-    ms.href = "sansatiptv"; ? ("https://m.me/" + "sansatiptv";) : "#";
-    if(!"sansatiptv";){ ms.style.opacity=.5; ms.style.pointerEvents="none"; ms.title="Set "sansatiptv"; in code"; }
+    ms.href = "https://m.me/" + FB_USERNAME;
 
     // Init language
     const stored = localStorage.getItem("lang") || "sq";
