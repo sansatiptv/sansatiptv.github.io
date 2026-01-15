@@ -138,7 +138,7 @@
         <div class="logoMark">S</div>
         <div class="brand">
           Sansat IPTV
-          <small id="tagline">Premium • Fast activation</small>
+          <small id="tagline">Premium • Aktivizim i shpejtë</small>
         </div>
       </div>
 
@@ -150,39 +150,13 @@
     </header>
 
     <section class="hero">
-  <div>
-
-    <img src="cover%20banner.png"
-         alt="Sansat IPTV Cover Banner"
-         style="width:100%; max-height:320px; object-fit:cover; border-radius:18px; border:1px solid var(--border); margin-bottom:14px;" />
-
-    <div class="badge" id="badge">Aktivizim IBO Player falas</div>
-    <h1 id="h1">IPTV Premium + IBO Player</h1>
-    ...
-  </div>
-
-  <div class="card">
-    ...
-  </div>
-</section>
-      <section class="section">
-  <h2 id="macPreviewH">MAC Address – Shembull</h2>
-
-  <div class="card" style="background:#fff">
-    <img src="maccaddresa.png"
-         alt="Shembull i MAC Address në IBO Player"
-         style="
-           width:100%;
-           height:auto;
-           border-radius:16px;
-           border:1px solid var(--border);
-         " />
-
-    <div class="small" id="macPreviewNote" style="margin-top:10px">
-      Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.
-    </div>
-  </div>
-</section>
+      <!-- LEFT -->
+      <div>
+        <!-- HERO COVER -->
+        <img src="cover%20banner.png"
+             alt="Sansat IPTV Cover Banner"
+             style="width:100%; max-height:320px; object-fit:cover; border-radius:18px; border:1px solid var(--border); margin-bottom:14px;"
+             loading="eager" />
 
         <div class="badge" id="badge">Aktivizim IBO Player falas</div>
         <h1 id="h1">IPTV Premium + IBO Player</h1>
@@ -199,7 +173,7 @@
             <span id="waLabel">WhatsApp</span>
           </a>
 
-          <a class="btn" id="msBtn" href="#" target="_blank" rel="noopener">
+          <a class="btn" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M21 12a9 9 0 1 1-3.1-6.8A9 9 0 0 1 21 12Z" stroke="currentColor" stroke-width="2"/>
               <path d="M7.8 14.6l2.8-4.3c.2-.3.6-.4.9-.1l2.2 1.7c.2.1.4.1.6 0l2.9-2.2c.4-.3.9.2.6.6l-2.8 4.3c-.2.3-.6.4-.9.1l-2.2-1.7c-.2-.1-.4-.1-.6 0l-2.9 2.2c-.4.3-.9-.2-.6-.6Z" fill="currentColor" opacity=".25"/>
@@ -207,7 +181,7 @@
             <span id="msLabel">Messenger</span>
           </a>
 
-          <span class="pill" id="supportPill">Support • Setup guidance</span>
+          <span class="pill" id="supportPill">Support • Udhëzime konfigurimi</span>
         </div>
 
         <div class="small" id="note">
@@ -215,6 +189,7 @@
         </div>
       </div>
 
+      <!-- RIGHT -->
       <div class="card">
         <div class="muted" id="plansTitle" style="font-weight:950">Paketa & Çmimet</div>
         <div class="grid3" style="margin-top:10px">
@@ -341,8 +316,8 @@
           <div class="muted" id="ibo1d">Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.</div>
         </div>
         <div class="card" style="background:#fff">
-          <strong id="ibo2t">2) Dërgo kodin</strong>
-          <div class="muted" id="ibo2d">Na dërgo Device ID / Device Key (siç shfaqet në aplikacion).</div>
+          <strong id="ibo2t">2) Dërgo MAC Address</strong>
+          <div class="muted" id="ibo2d">Na dërgo MAC Address-in (siç shfaqet në aplikacion).</div>
         </div>
         <div class="card" style="background:#fff">
           <strong id="ibo3t">3) Konfigurim</strong>
@@ -353,20 +328,20 @@
         Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim/udhëzime konfigurimi.
       </div>
     </section>
-  <section class="section">
-  <h2 id="macPreviewH">MAC Address – Shembull</h2>
 
-  <div class="card" style="background:#fff">
-    <img src="maccaddresa.png"
-         alt="MAC Address example"
-         style="width:100%; height:auto; border-radius:16px; border:1px solid var(--border);"
-         loading="lazy" />
-
-    <div class="small" id="macPreviewNote" style="margin-top:10px">
-      Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.
-    </div>
-  </div>
-</section>
+    <!-- MAC ADDRESS IMAGE (your maccaddresa.png) -->
+    <section class="section">
+      <h2 id="macPreviewH">MAC Address – Shembull</h2>
+      <div class="card" style="background:#fff">
+        <img src="maccaddresa.png"
+             alt="Shembull i MAC Address në IBO Player"
+             style="width:100%; height:auto; border-radius:16px; border:1px solid var(--border);"
+             loading="lazy" />
+        <div class="small" id="macPreviewNote" style="margin-top:10px">
+          Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ -->
     <section class="section faq">
@@ -397,11 +372,6 @@
   </div>
 
   <script>
-    // === Set these once ===
-    const FB_USERNAME = "sansatiptv";
-    const WA_LINK = "https://wa.me/38972698616";
-    // ======================
-
     const i18n = {
       sq: {
         tagline:"Premium • Aktivizim i shpejtë",
@@ -439,6 +409,9 @@
         ibo2t:"2) Dërgo MAC Address", ibo2d:"Na dërgo MAC Address-in (siç shfaqet në aplikacion).",
         ibo3t:"3) Konfigurim", ibo3d:"Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.",
         iboNote:"Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim/udhëzime konfigurimi.",
+
+        macPreviewH:"MAC Address – Shembull",
+        macPreviewNote:"Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.",
 
         faqH:"FAQ",
         f1q:"Çfarë interneti rekomandohet?",
@@ -488,6 +461,9 @@
         ibo3t:"3) Configure", ibo3d:"We configure and guide you through the final steps.",
         iboNote:"Note: IBO Player is a third-party application. We provide activation/setup guidance.",
 
+        macPreviewH:"MAC Address – Example",
+        macPreviewNote:"Example only: the MAC Address is shown inside the IBO Player app.",
+
         faqH:"FAQ",
         f1q:"What internet speed is recommended?",
         f1a:"A stable connection is recommended. Performance depends on network, device and setup.",
@@ -536,6 +512,9 @@
         ibo3t:"3) Configurer", ibo3d:"Nous configurons et vous guidons pour les dernières étapes.",
         iboNote:"Note : IBO Player est une application tierce. Nous fournissons l’activation et l’aide à la configuration.",
 
+        macPreviewH:"Adresse MAC – Exemple",
+        macPreviewNote:"Exemple uniquement : l’adresse MAC est affichée dans l’application IBO Player.",
+
         faqH:"FAQ",
         f1q:"Quel débit internet est recommandé ?",
         f1a:"Une connexion stable est recommandée. Les performances dépendent du réseau, de l’appareil et de la configuration.",
@@ -559,12 +538,6 @@
       });
     }
 
-    // Links
-    document.getElementById("waBtn").href = WA_LINK;
-    const ms = document.getElementById("msBtn");
-    ms.href = "https://m.me/" + FB_USERNAME;
-
-    // Init language
     const stored = localStorage.getItem("lang") || "sq";
     applyLang(stored);
     document.querySelectorAll(".lang button").forEach(btn=>{
