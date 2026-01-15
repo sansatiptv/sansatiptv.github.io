@@ -3,8 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Sansat IPTV | IPTV Premium + IBO Player</title>
   <meta name="description" content="Sansat IPTV: IPTV Premium me aktivizim falas të IBO Player. Paketa 1/6/12 muaj. Kontakt: WhatsApp & Messenger. Shqip/English/Français." />
+  <link rel="canonical" href="https://sansatiptv.github.io/" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
+  <meta property="og:description" content="Paketa 1/6/12 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
+  <meta property="og:image" content="cover banner.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sansatiptv.github.io/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
+  <meta name="twitter:description" content="Paketa 1/6/12 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
+  <meta name="twitter:image" content="cover banner.png" />
+
   <style>
     :root{
       --bg:#ffffff;
@@ -40,6 +55,7 @@
     }
     .brand{font-weight:900;letter-spacing:.2px;line-height:1.05}
     .brand small{display:block;color:var(--muted);font-weight:700;letter-spacing:0}
+
     .lang{
       display:flex;gap:8px;align-items:center;
       border:1px solid var(--border);border-radius:999px;padding:6px;background:#fff;
@@ -49,10 +65,12 @@
       background:transparent;color:var(--muted);font-weight:900;
     }
     .lang button.active{background:rgba(37,99,235,.10);color:var(--text)}
+
     .hero{
       padding:18px 0 8px;
       display:grid;grid-template-columns:1.2fr .8fr;gap:14px;align-items:start;
     }
+
     .badge{
       display:inline-flex;align-items:center;gap:8px;
       padding:8px 10px;border-radius:999px;
@@ -60,107 +78,82 @@
       background:rgba(22,163,74,.08);
       color:var(--ok);font-weight:900;font-size:13px;
     }
-    h1{margin:12px 0 10px;font-size:clamp(28px,3.5vw,44px);line-height:1.08}
-    .lead{margin:0 0 14px;color:var(--muted);font-size:16px;max-width:62ch}
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+    .tagline{color:var(--muted);font-weight:900;margin:10px 0 0}
+    h1{margin:10px 0 8px;font-size:34px;line-height:1.1}
+    .lead{color:var(--muted);margin:0 0 14px;max-width:60ch}
+
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      display:inline-flex;align-items:center;justify-content:center;
       padding:12px 14px;border-radius:12px;font-weight:900;
-      border:1px solid var(--border);background:#fff;
+      border:1px solid var(--border);
+      background:#fff;
+      min-height:46px;
     }
     .btn.primary{
-      border:0;color:#fff;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-    }
-    .btn svg{width:18px;height:18px}
-    .small{font-size:13px;color:var(--muted);margin-top:10px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;padding:16px;
-    }
-    .section{margin-top:22px}
-    .section h2{margin:0 0 12px;font-size:20px}
-    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .price{font-size:30px;font-weight:950;margin:6px 0}
-    .muted{color:var(--muted)}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:6px 10px;border-radius:999px;
-      background:#fff;border:1px solid var(--border);
-      color:var(--muted);font-weight:900;font-size:12px;
-    }
-    .steps{counter-reset:step}
-    .stepCard{background:#fff}
-    .stepNum{
-      width:34px;height:34px;border-radius:12px;
+      border-color:rgba(37,99,235,.25);
       background:rgba(37,99,235,.10);
-      display:grid;place-items:center;
-      color:var(--accent);font-weight:950;
-      border:1px solid rgba(37,99,235,.16);
-      margin-bottom:10px;
     }
-    .iconWrap{
-      width:38px;height:38px;border-radius:14px;
-      background:rgba(14,165,233,.10);
-      border:1px solid rgba(14,165,233,.18);
-      display:grid;place-items:center;margin-bottom:10px;
+    .pill{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:8px 12px;border-radius:999px;background:var(--card);
+      border:1px solid var(--border);color:var(--muted);font-weight:800;
     }
-    .iconWrap svg{width:20px;height:20px;color:var(--accent)}
-    .callout{
-      border-left:4px solid rgba(245,158,11,.55);
-      background:rgba(245,158,11,.08);
-      border-radius:14px;
-      padding:12px 14px;
-      border:1px solid rgba(245,158,11,.22);
-    }
-    .callout strong{display:block;margin-bottom:4px}
-    .faq details{
-      background:#fff;border:1px solid var(--border);
-      border-radius:14px;padding:12px;margin:10px 0;
-    }
-    /* Mobile-first image helper */
-.imgFrame{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:12px;
-}
-.imgCenter{
-  width:100%;
-  max-width:720px;
-  height:auto;
-  display:block;
-  margin:0 auto;
-  border-radius:14px;
-  border:1px solid var(--border);
-}
 
-/* Better button layout on phones */
-@media (max-width: 640px){
-  .ctaRow{gap:10px}
-  .btn{width:100%}
-  .pill{width:100%;justify-content:center}
-  h1{font-size:30px;line-height:1.12}
-  .lead{font-size:15px}
-  .card{padding:14px}
-  .grid3, .grid2, .grid4{gap:10px}
-  header{padding:8px 0 14px}
-}
-    .faq summary{cursor:pointer;font-weight:900}
-    footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
-    @media (max-width:980px){
+    .heroCard{
+      border:1px solid var(--border);background:var(--card);
+      border-radius:16px;overflow:hidden;
+    }
+    .heroCard img{display:block;width:100%;height:auto}
+    .heroCard .inner{padding:12px}
+    .note{color:var(--muted);margin:0}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .card{
+      border:1px solid var(--border);background:#fff;
+      border-radius:16px;padding:14px;
+    }
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-weight:700}
+
+    .section{margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
+    .section h2{margin:0 0 12px;font-size:22px}
+    .muted{color:var(--muted);font-weight:700}
+    .list{display:grid;gap:10px}
+
+    .steps{display:grid;gap:10px}
+    .step{
+      border:1px solid var(--border);background:#fff;border-radius:16px;padding:14px;
+    }
+    .step b{display:block;margin-bottom:6px}
+
+    .macPreview img{
+      display:block;width:100%;height:auto;
+      max-width:760px;margin:10px auto 0;
+      border-radius:14px;border:1px solid var(--border);
+    }
+
+    details{
+      border:1px solid var(--border);
+      background:#fff;border-radius:14px;
+      padding:10px 12px;margin-bottom:10px;
+    }
+    summary{cursor:pointer;font-weight:900}
+    footer{
+      margin-top:18px;
+      padding-top:14px;border-top:1px solid var(--border);
+      color:var(--muted);font-weight:700;font-size:14px;
+    }
+
+    @media (max-width: 860px){
       .hero{grid-template-columns:1fr}
-      .grid4{grid-template-columns:1fr}
+      h1{font-size:30px}
       .grid3{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-      @media (max-width:980px){
-  .hero{grid-template-columns:1fr}
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -172,249 +165,192 @@
         </div>
       </div>
 
-      <div class="lang" aria-label="Language switcher">
-        <button type="button" data-lang="sq" class="active">SQ</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="fr">FR</button>
+      <div class="lang" aria-label="Language selector">
+        <button type="button" id="btnSQ" class="active" data-lang="sq">SQ</button>
+        <button type="button" id="btnEN" data-lang="en">EN</button>
+        <button type="button" id="btnFR" data-lang="fr">FR</button>
       </div>
     </header>
 
     <section class="hero">
-      <!-- LEFT -->
       <div>
-        <!-- HERO COVER -->
-        <img src="cover%20banner.png"
-             alt="Sansat IPTV Cover Banner"
-             style="width:100%; max-height:260px; object-fit:cover; border-radius:18px; border:1px solid var(--border); margin-bottom:14px;"
-             loading="eager" />
+        <span class="badge" id="badge">Aktivizim IBO Player falas</span>
+        <p class="tagline" id="supportPill">Support • Udhëzime konfigurimi</p>
 
-        <div class="badge" id="badge">Aktivizim IBO Player falas</div>
         <h1 id="h1">IPTV Premium + IBO Player</h1>
         <p class="lead" id="lead">
           Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.
         </p>
 
         <div class="ctaRow">
-          <a class="btn primary" id="waBtn" href="https://wa.me/38972698616" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 11.8a8 8 0 0 1-11.6 7.1L4 20l1.2-4.1A8 8 0 1 1 20 11.8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M8.8 8.9c.3-.7.6-.7.8-.7h.7c.2 0 .4.1.5.4l.7 1.7c.1.2.1.5 0 .7l-.5.6c-.2.2-.2.4-.1.6.5 1 1.3 1.7 2.2 2.2.2.1.4.1.6-.1l.6-.5c.2-.1.5-.2.7 0l1.7.7c.3.1.4.3.4.5v.7c0 .2 0 .5-.7.8-.7.3-2.1.7-4.3-.6-2.2-1.3-3.6-3.7-3.9-4.4-.3-.7-.1-1.4.2-2Z" fill="currentColor" opacity=".25"/>
-            </svg>
-            <span id="waLabel">WhatsApp</span>
-          </a>
-
-          <a class="btn" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M21 12a9 9 0 1 1-3.1-6.8A9 9 0 0 1 21 12Z" stroke="currentColor" stroke-width="2"/>
-              <path d="M7.8 14.6l2.8-4.3c.2-.3.6-.4.9-.1l2.2 1.7c.2.1.4.1.6 0l2.9-2.2c.4-.3.9.2.6.6l-2.8 4.3c-.2.3-.6.4-.9.1l-2.2-1.7c-.2-.1-.4-.1-.6 0l-2.9 2.2c-.4.3-.9-.2-.6-.6Z" fill="currentColor" opacity=".25"/>
-            </svg>
-            <span id="msLabel">Messenger</span>
-          </a>
-
-          <span class="pill" id="supportPill">Support • Udhëzime konfigurimi</span>
+          <a class="btn primary" id="waBtn" href="https://wa.me/38972698616" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">Messenger</a>
         </div>
 
-        <div class="small" id="note">
+        <span class="pill" id="note">
           Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.
-        </div>
+        </span>
       </div>
 
-      <!-- RIGHT -->
-      <div class="card">
-        <div class="muted" id="plansTitle" style="font-weight:950">Paketa & Çmimet</div>
-        <div class="grid3" style="margin-top:10px">
-          <div class="card" style="background:#fff">
-            <div class="muted" id="p1">1 muaj</div>
-            <div class="price">10 €</div>
-            <div class="muted" id="p1d">E përshtatshme për testim</div>
-          </div>
-          <div class="card" style="background:#fff">
-            <div class="muted" id="p6">6 muaj</div>
-            <div class="price">39 €</div>
-            <div class="muted" id="p6d">Vlerë e mirë</div>
-          </div>
-          <div class="card" style="background:#fff;border-color:rgba(37,99,235,.35)">
-            <div class="muted" id="p12">12 muaj</div>
-            <div class="price">79 €</div>
-            <div class="muted" id="p12d">Më e leverdishmja</div>
-          </div>
-        </div>
-
-        <div class="callout" style="margin-top:12px">
-          <strong id="calloutT">Aktivizim i shpejtë</strong>
-          <div class="muted" id="calloutD">Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).</div>
+      <div class="heroCard">
+        <img src="cover banner.png" alt="Sansat IPTV cover banner" loading="eager">
+        <div class="inner">
+          <p class="note" id="calloutD">
+            Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- WHY SECTION -->
+    <!-- Plans -->
+    <section class="section">
+      <h2 id="plansTitle">Paketa & Çmimet</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3><span id="p1">1 muaj</span> — 10€</h3>
+          <p id="p1d">E përshtatshme për testim</p>
+        </div>
+        <div class="card">
+          <h3><span id="p6">6 muaj</span> — 39€</h3>
+          <p id="p6d">Vlerë e mirë</p>
+        </div>
+        <div class="card">
+          <h3><span id="p12">12 muaj</span> — 79€</h3>
+          <p id="p12d">Më e leverdishmja</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why -->
     <section class="section">
       <h2 id="whyH">Pse Sansat IPTV</h2>
-      <div class="grid4">
-        <div class="card" style="background:#fff">
-          <div class="iconWrap">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <strong id="why1t">Aktivizim i shpejtë</strong>
-          <div class="muted" id="why1d">Proces i thjeshtë dhe udhëzime të qarta.</div>
+      <div class="list">
+        <div class="card">
+          <h3 id="why1t">Aktivizim i shpejtë</h3>
+          <p id="why1d">Proces i thjeshtë dhe udhëzime të qarta.</p>
         </div>
-
-        <div class="card" style="background:#fff">
-          <div class="iconWrap">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M5 7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M6 21h12a2 2 0 0 0 2-2V9H4v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <strong id="why2t">Paketa fleksibile</strong>
-          <div class="muted" id="why2d">1 / 6 / 12 muaj sipas nevojës.</div>
+        <div class="card">
+          <h3 id="why2t">Paketa fleksibile</h3>
+          <p id="why2d">1 / 6 / 12 muaj sipas nevojës.</p>
         </div>
-
-        <div class="card" style="background:#fff">
-          <div class="iconWrap">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/>
-              <path d="M4 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M22 12h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 4V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 22v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <strong id="why3t">Pajisje të ndryshme</strong>
-          <div class="muted" id="why3d">Smart TV, Android TV/Box, Fire Stick, Mobile.</div>
+        <div class="card">
+          <h3 id="why3t">Pajisje të ndryshme</h3>
+          <p id="why3d">Smart TV, Android TV/Box, Fire Stick, Mobile.</p>
         </div>
-
-        <div class="card" style="background:#fff">
-          <div class="iconWrap">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0Z" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <strong id="why4t">Mbështetje</strong>
-          <div class="muted" id="why4d">Përgjigje e shpejtë në DM/WhatsApp.</div>
+        <div class="card">
+          <h3 id="why4t">Mbështetje</h3>
+          <p id="why4d">Përgjigje e shpejtë në DM/WhatsApp.</p>
         </div>
       </div>
     </section>
 
-    <!-- DEVICES -->
+    <!-- Devices -->
     <section class="section">
       <h2 id="devicesH">Pajisjet e mbështetura</h2>
-      <div class="grid2">
+      <div class="grid3">
         <div class="card">
-          <strong id="dev1t">TV & Box</strong>
-          <div class="muted" id="dev1d">Smart TV, Android TV/Box, Fire Stick</div>
+          <h3 id="dev1t">TV & Box</h3>
+          <p id="dev1d">Smart TV, Android TV/Box, Fire Stick</p>
         </div>
         <div class="card">
-          <strong id="dev2t">Mobile</strong>
-          <div class="muted" id="dev2d">Telefon dhe tablet (Android/iOS)</div>
+          <h3 id="dev2t">Mobile</h3>
+          <p id="dev2d">Telefon dhe tablet (Android/iOS)</p>
+        </div>
+        <div class="card">
+          <h3 id="calloutT">Aktivizim i shpejtë</h3>
+          <p class="muted" id="calloutD2">Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).</p>
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
+    <!-- How it works -->
     <section class="section">
       <h2 id="howH">Si funksionon</h2>
-      <div class="grid3 steps">
-        <div class="card stepCard">
-          <div class="stepNum">1</div>
-          <strong id="s1t">Kontakto</strong>
+      <div class="steps">
+        <div class="step">
+          <b id="s1t">Kontakto</b>
           <div class="muted" id="s1d">Na shkruaj në WhatsApp ose Messenger.</div>
         </div>
-        <div class="card stepCard">
-          <div class="stepNum">2</div>
-          <strong id="s2t">Zgjedh paketën</strong>
+        <div class="step">
+          <b id="s2t">Zgjedh paketën</b>
           <div class="muted" id="s2d">Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.</div>
         </div>
-        <div class="card stepCard">
-          <div class="stepNum">3</div>
-          <strong id="s3t">Aktivizim</strong>
+        <div class="step">
+          <b id="s3t">Aktivizim</b>
           <div class="muted" id="s3d">Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).</div>
         </div>
       </div>
     </section>
 
-    <!-- IBO INSTALL -->
+    <!-- IBO -->
     <section class="section">
       <h2 id="iboH">IBO Player – Instalimi (shkurt)</h2>
-      <div class="grid3">
-        <div class="card" style="background:#fff">
-          <strong id="ibo1t">1) Instalo aplikacionin</strong>
+      <div class="steps">
+        <div class="step">
+          <b id="ibo1t">1) Instalo aplikacionin</b>
           <div class="muted" id="ibo1d">Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.</div>
         </div>
-        <div class="card" style="background:#fff">
-          <strong id="ibo2t">2) Dërgo MAC Address</strong>
+        <div class="step">
+          <b id="ibo2t">2) Dërgo MAC Address</b>
           <div class="muted" id="ibo2d">Na dërgo MAC Address-in (siç shfaqet në aplikacion).</div>
         </div>
-        <div class="card" style="background:#fff">
-          <strong id="ibo3t">3) Konfigurim</strong>
+        <div class="step">
+          <b id="ibo3t">3) Konfigurim</b>
           <div class="muted" id="ibo3d">Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.</div>
         </div>
       </div>
-      <div class="small" id="iboNote" style="margin-top:10px">
+      <p class="muted" id="iboNote" style="margin-top:10px">
         Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim/udhëzime konfigurimi.
-      </div>
+      </p>
     </section>
 
-    <!-- MAC ADDRESS IMAGE (your maccaddresa.png) -->
-    <section class="section">
+    <!-- MAC preview -->
+    <section class="section macPreview">
       <h2 id="macPreviewH">MAC Address – Shembull</h2>
-      <div class="card" style="background:#fff">
-        <img src="maccaddresa.png"
-             alt="Shembull i MAC Address në IBO Player"
-             style="width:100%; max-width:640px; height:auto; display:block; border-radius:16px; border:1px solid var(--border);"
-             loading="lazy" />
-        <div class="small" id="macPreviewNote" style="margin-top:10px">
-          Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.
-        </div>
-      </div>
+      <p class="muted" id="macPreviewNote">Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.</p>
+      <img src="maccaddresa.png" alt="Shembull MAC Address për aktivizim IPTV" loading="lazy">
     </section>
 
     <!-- FAQ -->
     <section class="section faq">
       <h2 id="faqH">FAQ</h2>
+
       <details>
         <summary id="f1q">Çfarë interneti rekomandohet?</summary>
         <div class="muted" id="f1a" style="margin-top:8px">
           Rekomandohet lidhje stabile. Performanca varet nga rrjeti, pajisja dhe konfigurimi.
         </div>
       </details>
+
       <details>
         <summary id="f2q">A është aktivizimi i IBO Player falas?</summary>
         <div class="muted" id="f2a" style="margin-top:8px">
           Po, aktivizimi dhe udhëzimet bazë të konfigurimit përfshihen me abonimin.
         </div>
       </details>
+
       <details>
         <summary id="f3q">Sa shpejt bëhet aktivizimi?</summary>
         <div class="muted" id="f3a" style="margin-top:8px">
           Zakonisht pas konfirmimit dhe marrjes së të dhënave të nevojshme nga klienti.
         </div>
       </details>
+
+      <!-- NEW FAQ ITEMS -->
       <details>
-  <summary id="f4q">Çfarë përfshihet në shërbim?</summary>
-  <div class="muted" id="f4a" style="margin-top:8px">
-    <!-- plotësohet nga i18n -->
-  </div>
-</details>
+        <summary id="f4q">Çfarë përfshihet në shërbim?</summary>
+        <div class="muted" id="f4a" style="margin-top:8px"></div>
+      </details>
 
-<details>
-  <summary id="f5q">A ka evente sportive/PPV?</summary>
-  <div class="muted" id="f5a" style="margin-top:8px">
-    <!-- plotësohet nga i18n -->
-  </div>
-</details>
+      <details>
+        <summary id="f5q">A ka evente sportive/PPV?</summary>
+        <div class="muted" id="f5a" style="margin-top:8px"></div>
+      </details>
 
-<details>
-  <summary id="f6q">Çfarë cilësie video ofrohet (HD/4K)?</summary>
-  <div class="muted" id="f6a" style="margin-top:8px">
-    <!-- plotësohet nga i18n -->
-  </div>
-</details>
-      
+      <details>
+        <summary id="f6q">Çfarë cilësie video ofrohet (HD/4K)?</summary>
+        <div class="muted" id="f6a" style="margin-top:8px"></div>
+      </details>
     </section>
 
     <footer id="legal">
@@ -472,6 +408,13 @@
         f3q:"Sa shpejt bëhet aktivizimi?",
         f3a:"Zakonisht pas konfirmimit dhe marrjes së të dhënave të nevojshme nga klienti.",
 
+        f4q:"Çfarë përfshihet në shërbim?",
+        f4a:"Shërbimi përfshin një katalog të gjerë me kanale TV live dhe një bibliotekë VOD (filma, seriale, anime, emisione) në shumë gjuhë dhe nga vende të ndryshme. Disponueshmëria mund të ndryshojë me kohën dhe sipas rajonit.",
+        f5q:"A ka evente sportive/PPV?",
+        f5a:"Mund të ketë evente pay-per-view dhe përmbajtje sportive, në varësi të disponueshmërisë së momentit dhe rajonit.",
+        f6q:"Çfarë cilësie video ofrohet (HD/4K)?",
+        f6a:"Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; kur është e disponueshme, mund të ofrohet edhe 4K.",
+
         legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit."
       },
 
@@ -522,6 +465,13 @@
         f2a:"Yes, activation and basic setup guidance are included with the subscription.",
         f3q:"How fast is activation?",
         f3a:"Usually after confirmation and receiving the required details from the client.",
+
+        f4q:"What does the service include?",
+        f4a:"A large catalog of live TV channels plus an extensive VOD library (movies, series, anime, shows) in multiple languages and from different regions. Availability may change over time and by region.",
+        f5q:"Do you offer sports/PPV events?",
+        f5a:"PPV and sports content may be available depending on current availability and the user’s region.",
+        f6q:"What video quality is available (HD/4K)?",
+        f6a:"Quality varies by channel/content and internet speed. HD/Full HD is common and, when available, 4K may be supported.",
 
         legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights."
       },
@@ -574,26 +524,75 @@
         f3q:"En combien de temps l’activation est faite ?",
         f3a:"Généralement après confirmation et réception des informations nécessaires.",
 
+        f4q:"Que comprend le service ?",
+        f4a:"Un large catalogue de chaînes TV en direct ainsi qu’une grande bibliothèque VOD (films, séries, anime, émissions) en plusieurs langues et de différentes régions. La disponibilité peut varier selon la période et la région.",
+        f5q:"Proposez-vous des événements sportifs/PPV ?",
+        f5a:"Des contenus PPV et sportifs peuvent être disponibles selon la disponibilité du moment et la région de l’utilisateur.",
+        f6q:"Quelle qualité vidéo est disponible (HD/4K) ?",
+        f6a:"La qualité varie selon la chaîne/le contenu et la vitesse Internet. La HD/Full HD est fréquente et, lorsque disponible, la 4K peut être prise en charge.",
+
         legal:"Note : une connexion Internet stable est requise. Utilisation conforme aux lois locales et aux droits de diffusion."
       }
     };
 
-    function setText(id, v){ const el=document.getElementById(id); if(el) el.textContent=v; }
-    function applyLang(lang){
-      const t=i18n[lang] || i18n.sq;
-      Object.keys(t).forEach(k => setText(k, t[k]));
-      document.documentElement.lang = lang;
-      localStorage.setItem("lang", lang);
-      document.querySelectorAll(".lang button").forEach(b=>{
-        b.classList.toggle("active", b.dataset.lang===lang);
-      });
+    const ids = [
+      "tagline","badge","h1","lead","supportPill","note",
+      "plansTitle","p1","p1d","p6","p6d","p12","p12d",
+      "calloutT","calloutD","calloutD2",
+      "whyH","why1t","why1d","why2t","why2d","why3t","why3d","why4t","why4d",
+      "devicesH","dev1t","dev1d","dev2t","dev2d",
+      "howH","s1t","s1d","s2t","s2d","s3t","s3d",
+      "iboH","ibo1t","ibo1d","ibo2t","ibo2d","ibo3t","ibo3d","iboNote",
+      "macPreviewH","macPreviewNote",
+      "faqH","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","f5q","f5a","f6q","f6a",
+      "legal"
+    ];
+
+    function setActiveLangButton(lang){
+      document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
+      document.getElementById("btnEN").classList.toggle("active", lang === "en");
+      document.getElementById("btnFR").classList.toggle("active", lang === "fr");
     }
 
-    const stored = localStorage.getItem("lang") || "sq";
-    applyLang(stored);
-    document.querySelectorAll(".lang button").forEach(btn=>{
-      btn.addEventListener("click", ()=>applyLang(btn.dataset.lang));
-    });
+    function applyLang(lang){
+      const t = i18n[lang] || i18n.sq;
+
+      document.documentElement.lang = lang;
+
+      // Labels that are not direct id-to-key (buttons)
+      document.getElementById("waBtn").textContent = t.waLabel;
+      document.getElementById("msBtn").textContent = t.msLabel;
+
+      // Map id -> key with same name
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (t[id] !== undefined) el.textContent = t[id];
+      });
+
+      setActiveLangButton(lang);
+      try { localStorage.setItem("sansat_lang", lang); } catch(e){}
+    }
+
+    // Language buttons
+    document.getElementById("btnSQ").addEventListener("click", () => applyLang("sq"));
+    document.getElementById("btnEN").addEventListener("click", () => applyLang("en"));
+    document.getElementById("btnFR").addEventListener("click", () => applyLang("fr"));
+
+    // Init language
+    (function init(){
+      let lang = "sq";
+      try {
+        const saved = localStorage.getItem("sansat_lang");
+        if (saved && i18n[saved]) lang = saved;
+        else {
+          const nav = (navigator.language || "").toLowerCase();
+          if (nav.startsWith("fr")) lang = "fr";
+          else if (nav.startsWith("en")) lang = "en";
+        }
+      } catch(e){}
+      applyLang(lang);
+    })();
   </script>
 </body>
 </html>
