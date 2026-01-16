@@ -1,1105 +1,218 @@
 <!doctype html>
 <html lang="sq">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sansat IPTV | IPTV Premium + IBO Player</title>
-  <meta name="description" content="Sansat IPTV: IPTV Premium me aktivizim falas të IBO Player. Paketa 12/6/1 muaj. Kontakt: WhatsApp & Messenger. Shqip/English/Deutsch." />
-  <link rel="canonical" href="https://sansatiptv.github.io/" />
-  <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#2563eb" />
+<title>Sansat IPTV | IPTV Premium + IBO Player</title>
+<meta name="description" content="Sansat IPTV – IPTV Premium me aktivizim falas të IBO Player. Paketa 12/6/1 muaj. WhatsApp & Messenger.">
+<meta name="theme-color" content="#2563eb">
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
-  <meta property="og:description" content="Paketa 12/6/1 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
-  <meta property="og:image" content="cover banner.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sansatiptv.github.io/" />
+<style>
+:root{
+  --page:#f6f8ff;
+  --surface:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:#e2e8f0;
+  --shadow:0 12px 30px rgba(15,23,42,.08);
+  --brand:#2563eb;
+}
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
-  <meta name="twitter:description" content="Paketa 12/6/1 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
-  <meta name="twitter:image" content="cover banner.png" />
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--page);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
 
-  <!-- Structured data (basic) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Sansat IPTV",
-    "url":"https://sansatiptv.github.io/",
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"customer support",
-      "telephone":"+38972698616",
-      "availableLanguage":["sq","en","de"]
-    }]
-  }
-  </script>
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
 
-  <style>
-    :root{
-      --page:#f6f8ff;
-      --surface:#ffffff;
-      --surface2:#f8fafc;
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(246,248,255,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.headerRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.brand{
+  font-weight:900;
+  font-size:18px;
+}
+.lang button{
+  border:0;
+  background:#fff;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+}
+.lang button.active{
+  background:rgba(37,99,235,.15);
+}
 
-      --text:#0f172a;
-      --muted:#475569;
+/* FULL WIDTH BANNER */
+.fullBanner{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+}
+.fullBanner img{
+  width:100%;
+  max-height:460px;
+  object-fit:cover;
+  display:block;
+}
 
-      --border:#e2e8f0;
-      --shadow:0 12px 30px rgba(15,23,42,.08);
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:16px;
+  margin-top:16px;
+}
+.heroBox{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.hero h1{margin:0 0 8px;font-size:34px}
+.hero p{margin:0;color:var(--muted)}
+.cta{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.btn{
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:#fff;
+  font-weight:800;
+}
+.btn.primary{
+  background:rgba(37,99,235,.15);
+  border-color:rgba(37,99,235,.3);
+}
 
-      --brand:#2563eb;
-      --brand2:#0ea5e9;
+/* PLANS */
+.section{
+  margin-top:20px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+.plans{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.plan{
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:14px;
+}
+.plan h3{margin:0}
+.price{font-size:30px;font-weight:900;margin:6px 0}
 
-      --ok:#16a34a;
-      --warn:#f59e0b;
-      --violet:#7c3aed;
-      --rose:#e11d48;
-    }
+/* FOOTER */
+footer{
+  margin:20px auto;
+  max-width:1100px;
+  color:var(--muted);
+  font-size:14px;
+  text-align:center;
+}
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 15% 0%, rgba(37,99,235,.12), transparent 55%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(14,165,233,.10), transparent 50%),
-                  var(--page);
-      color: var(--text);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px 72px}
-
-    /* Accessibility */
-    .skip{
-      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-    }
-    .skip:focus{
-      left:16px;top:16px;width:auto;height:auto;overflow:visible;
-      background:#fff;border:1px solid var(--border);border-radius:12px;
-      padding:10px 12px;box-shadow:0 10px 22px rgba(15,23,42,.10);
-      z-index:9999;
-    }
-    :focus-visible{outline:3px solid rgba(37,99,235,.35); outline-offset:3px}
-
-    /* Top bar */
-    header{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:12px 0 10px;
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(10px);
-      background:rgba(246,248,255,.72);
-      border-bottom:1px solid rgba(226,232,240,.75);
-    }
-    .brandRow{display:flex;gap:10px;align-items:center}
-    .logoMark{
-      width:38px;height:38px;border-radius:12px;
-      background:linear-gradient(135deg,var(--brand),var(--brand2));
-      display:grid;place-items:center;color:#fff;font-weight:900;
-      box-shadow:0 12px 26px rgba(37,99,235,.22);
-      user-select:none;
-      flex:0 0 auto;
-    }
-    .brand{
-      font-weight:950;letter-spacing:.2px;line-height:1.05;
-    }
-    .brand small{
-      display:block;color:var(--muted);font-weight:800;letter-spacing:0;margin-top:3px
-    }
-
-    .topRight{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    nav.quick{
-      display:flex;gap:8px;align-items:center;flex-wrap:wrap;
-      padding:6px;
-      border:1px solid rgba(226,232,240,.9);
-      border-radius:999px;
-      background:rgba(255,255,255,.70);
-      box-shadow:0 10px 22px rgba(15,23,42,.06);
-    }
-    nav.quick a{
-      padding:8px 10px;border-radius:999px;
-      font-weight:900;color:var(--muted);
-    }
-    nav.quick a:hover{
-      background:rgba(37,99,235,.10);
-      color:var(--text);
-    }
-
-    .lang{
-      display:flex;gap:8px;align-items:center;
-      background:rgba(255,255,255,.75);
-      border:1px solid rgba(226,232,240,.9);
-      border-radius:999px;padding:6px;
-      box-shadow:0 10px 22px rgba(15,23,42,.06);
-    }
-    .lang button{
-      border:0;cursor:pointer;border-radius:999px;padding:8px 10px;
-      background:transparent;color:var(--muted);font-weight:900;
-    }
-    .lang button.active{
-      background:linear-gradient(135deg, rgba(37,99,235,.18), rgba(14,165,233,.16));
-      color:var(--text);
-    }
-
-    /* Hero */
-    .hero{
-      display:grid;grid-template-columns:1.15fr .85fr;gap:14px;align-items:stretch;
-      margin-top:14px;
-    }
-    .heroLeft{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(226,232,240,.9);
-      border-radius:20px;
-      padding:18px 18px 16px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(22,163,74,.22);
-      background:rgba(22,163,74,.10);
-      color:var(--ok);font-weight:950;font-size:13px;
-    }
-    .pill{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:8px 12px;border-radius:999px;
-      background:rgba(37,99,235,.08);
-      border:1px solid rgba(37,99,235,.18);
-      color:var(--muted);font-weight:850;
-      margin-top:10px;
-    }
-    h1{margin:10px 0 10px;font-size:36px;line-height:1.08}
-    .lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
-
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 14px;border-radius:14px;font-weight:950;
-      border:1px solid var(--border);
-      background:#fff;
-      min-height:46px;
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .btn:hover{transform: translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.10)}
-    .btn.primary{
-      border-color:rgba(37,99,235,.25);
-      background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
-    }
-    .btn.ghost{
-      background:transparent;
-      border-color:rgba(37,99,235,.18);
-      color:var(--muted);
-    }
-
-    .heroCard{
-      border:1px solid rgba(226,232,240,.9);
-      background:rgba(255,255,255,.78);
-      border-radius:20px;overflow:hidden;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-      display:flex;flex-direction:column;
-    }
-    .heroCard img{display:block;width:100%;height:auto}
-    .heroCard .inner{padding:14px 14px 16px}
-    .note{color:var(--muted);margin:0;font-weight:800}
-
-    /* Sections */
-    .section{
-      margin-top:18px;
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(226,232,240,.9);
-      border-radius:20px;
-      padding:16px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-    .section h2{margin:0 0 10px;font-size:22px}
-    .muted{color:var(--muted);font-weight:800}
-
-    /* Plans */
-    .plansGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .plan{
-      border-radius:18px;
-      padding:14px;
-      border:1px solid rgba(226,232,240,.95);
-      background: linear-gradient(180deg, #ffffff, #fbfdff);
-      box-shadow:0 10px 22px rgba(15,23,42,.07);
-      position:relative;
-      overflow:hidden;
-    }
-    .plan::before{
-      content:"";
-      position:absolute;inset:-1px;
-      background: radial-gradient(600px 200px at 15% 0%, rgba(37,99,235,.12), transparent 55%),
-                  radial-gradient(500px 200px at 85% 10%, rgba(14,165,233,.10), transparent 55%);
-      pointer-events:none;
-      opacity:.9;
-    }
-    .plan > *{position:relative}
-    .planTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-    .planBadge{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:6px 10px;border-radius:999px;
-      font-weight:950;font-size:12px;
-      border:1px solid rgba(2,132,199,.20);
-      background: rgba(14,165,233,.10);
-      color: var(--text);
-      white-space:nowrap;
-    }
-    .planTitle{margin:0;font-weight:950}
-    .planPrice{
-      margin:10px 0 6px;
-      font-size:30px; font-weight:1000; letter-spacing:-.3px;
-    }
-    .planSub{margin:0;color:var(--muted);font-weight:850}
-    .planMeta{margin-top:10px;display:grid;gap:8px}
-    .metaRow{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      padding:10px 10px;
-      background:rgba(15,23,42,.03);
-      border:1px solid rgba(226,232,240,.9);
-      border-radius:14px;
-      color:var(--muted);
-      font-weight:850;
-    }
-    .planCTA{
-      margin-top:12px;
-      display:flex;gap:10px;flex-wrap:wrap
-    }
-    .miniBtn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 12px;border-radius:14px;
-      border:1px solid rgba(226,232,240,.95);
-      background:#fff;font-weight:950;
-      min-height:42px;
-    }
-    .miniBtn.strong{
-      border-color:rgba(37,99,235,.26);
-      background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
-    }
-
-    .plan.best{
-      border-color:rgba(124,58,237,.28);
-      background: linear-gradient(180deg, #ffffff, #fcfbff);
-    }
-    .plan.best::before{
-      background: radial-gradient(700px 240px at 12% 0%, rgba(124,58,237,.18), transparent 55%),
-                  radial-gradient(700px 240px at 85% 8%, rgba(37,99,235,.14), transparent 55%);
-    }
-    .plan.best .planBadge{
-      border-color:rgba(124,58,237,.26);
-      background:rgba(124,58,237,.12);
-    }
-
-    /* Cards / lists */
-    .list{display:grid;gap:10px;margin-top:12px}
-    .card{
-      border:1px solid rgba(226,232,240,.95);
-      background:#fff;border-radius:18px;padding:14px;
-      box-shadow:0 10px 22px rgba(15,23,42,.06);
-    }
-    .card h3{margin:0 0 6px;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-weight:800}
-
-    /* Two-column utilities */
-    .cols2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-    .callout{
-      border:1px solid rgba(226,232,240,.95);
-      background:#fff;border-radius:18px;padding:14px;
-      box-shadow:0 10px 22px rgba(15,23,42,.06);
-    }
-    .callout h3{margin:0 0 6px;font-size:16px}
-    .callout p{margin:0;color:var(--muted);font-weight:800}
-    .contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-
-    /* Steps */
-    .steps{display:grid;gap:10px;margin-top:12px}
-    .step{
-      border:1px solid rgba(226,232,240,.95);
-      background:#fff;border-radius:18px;padding:14px;
-      box-shadow:0 10px 22px rgba(15,23,42,.06);
-    }
-    .step b{display:block;margin-bottom:6px}
-    .macPreview img{
-      display:block;width:100%;height:auto;
-      max-width:760px;margin:10px auto 0;
-      border-radius:16px;border:1px solid rgba(226,232,240,.95);
-      box-shadow:0 16px 30px rgba(15,23,42,.08);
-    }
-
-    /* FAQ */
-    details{
-      border:1px solid rgba(226,232,240,.95);
-      background:#fff;border-radius:16px;
-      padding:10px 12px;margin-bottom:10px;
-      box-shadow:0 10px 22px rgba(15,23,42,.05);
-    }
-    summary{cursor:pointer;font-weight:950}
-    footer{
-      margin-top:16px;
-      padding:14px 16px;
-      border:1px solid rgba(226,232,240,.9);
-      background:rgba(255,255,255,.65);
-      border-radius:18px;
-      color:var(--muted);font-weight:800;font-size:14px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
-      h1{font-size:32px}
-      .plansGrid{grid-template-columns:1fr}
-      .cols2{grid-template-columns:1fr}
-      .contactGrid{grid-template-columns:1fr}
-      nav.quick{display:none}
-    }
-  </style>
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .plans{grid-template-columns:1fr}
+  .fullBanner img{max-height:360px}
+}
+</style>
 </head>
 
 <body>
-  <a class="skip" href="#main" id="skipLink">Kalo te përmbajtja</a>
 
-  <div class="wrap">
-    <header aria-label="Top navigation">
-      <div class="brandRow">
-        <div class="logoMark" aria-hidden="true">S</div>
-        <div class="brand">
-          Sansat IPTV
-          <small id="tagline">Premium • Aktivizim i shpejtë</small>
-        </div>
-      </div>
+<header>
+  <div class="wrap headerRow">
+    <div class="brand">Sansat IPTV</div>
+    <div class="lang">
+      <button class="active">SQ</button>
+      <button>EN</button>
+      <button>DE</button>
+    </div>
+  </div>
+</header>
 
-      <div class="topRight">
-        <nav class="quick" aria-label="Quick links">
-          <a href="#plans" id="navPlans">Paketa</a>
-          <a href="#how" id="navHow">Si funksionon</a>
-          <a href="#setup" id="navSetup">Instalimi</a>
-          <a href="#faq" id="navFaq">FAQ</a>
-          <a href="#contact" id="navContact">Kontakt</a>
-        </nav>
-
-        <div class="lang" aria-label="Language selector">
-          <button type="button" id="btnSQ" class="active" data-lang="sq">SQ</button>
-          <button type="button" id="btnEN" data-lang="en">EN</button>
-          <button type="button" id="btnDE" data-lang="de">DE</button>
-        </div>
-      </div>
-    </header>
-    
-    <!-- FULL WIDTH GUARANTEE BANNER -->
-<section class="fullBanner" aria-label="30 Day Money Back Guarantee">
-  <img 
-    src="30daymoneyback.png"
-    alt="30-Day Money-Back Guarantee - Sansat IPTV"
-    loading="lazy">
+<!-- FULL WIDTH GUARANTEE IMAGE -->
+<section class="fullBanner">
+  <img src="30daymoneyback.png" alt="30 Day Money Back Guarantee - Sansat IPTV">
 </section>
 
-    <main id="main">
-      <!-- HERO -->
-      <section class="hero" aria-label="Hero">
-        <div class="heroLeft">
-          <span class="badge" id="badge">Aktivizim IBO Player falas</span>
-          <div class="pill" id="supportPill">Mbështetje • Udhëzime konfigurimi</div>
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="heroBox">
+      <h1>IPTV Premium + IBO Player</h1>
+      <p>Aktivizim i shpejtë dhe udhëzime konfigurimi për pajisjet tuaja.</p>
+
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/38972698616" target="_blank">WhatsApp</a>
+        <a class="btn" href="https://m.me/sansatiptv" target="_blank">Messenger</a>
+      </div>
+    </div>
+
+    <div class="heroBox">
+      <p><strong>IBO Player</strong> – aktivizim falas pas dërgimit të MAC Address.</p>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="section">
+    <h2>Paketa & Çmimet</h2>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>12 muaj</h3>
+        <div class="price">79€</div>
+        <p>Më e leverdishmja</p>
+      </div>
+
+      <div class="plan">
+        <h3>6 muaj</h3>
+        <div class="price">39€</div>
+        <p>Balancë ideale</p>
+      </div>
+
+      <div class="plan">
+        <h3>1 muaj</h3>
+        <div class="price">10€</div>
+        <p>Për testim</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale.
+</footer>
 
-          <h1 id="h1">IPTV Premium + IBO Player</h1>
-          <p class="lead" id="lead">
-            Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.
-          </p>
-
-          <div class="ctaRow" aria-label="Primary actions">
-            <a class="btn primary" id="waBtn" href="https://wa.me/38972698616" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">Messenger</a>
-            <a class="btn ghost" id="goPlansBtn" href="#plans">Shiko paketat</a>
-          </div>
-
-          <div class="pill" id="note" style="display:inline-flex; margin-top:2px">
-            Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.
-          </div>
-        </div>
-
-        <div class="heroCard">
-          <img src="cover banner.png" alt="Sansat IPTV cover banner" loading="eager">
-          <div class="inner">
-            <p class="note" id="calloutD">
-              Na shkruaj dhe të udhëzojmë sipas pajisjes (Samsung/LG/Android TV, Box, Fire Stick, Mobile).
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- TRUST / TRANSPARENCY -->
-      <section class="section" id="trust">
-        <h2 id="trustH">Transparencë & Besueshmëri</h2>
-        <p class="muted" id="trustLead">
-          Qëllimi ynë është aktivizim i shpejtë, udhëzime të qarta dhe komunikim transparent përpara pagesës.
-        </p>
-
-        <div class="cols2">
-          <div class="callout">
-            <h3 id="trust1t">Kontakt i verifikueshëm</h3>
-            <p id="trust1d">Na gjeni në WhatsApp dhe Messenger. Aktivizimi bëhet vetëm pas konfirmimit të detajeve.</p>
-          </div>
-          <div class="callout">
-            <h3 id="trust2t">Pagesa & procesi</h3>
-            <p id="trust2d">Para pagesës: konfirmojmë pajisjen, aplikacionin dhe të dhënat (p.sh. MAC Address). Pastaj aktivizojmë.</p>
-          </div>
-        </div>
-
-        <div class="cols2">
-          <div class="callout">
-            <h3 id="trust3t">Privatësia e të dhënave</h3>
-            <p id="trust3d">Kërkojmë vetëm të dhëna teknike të nevojshme për aktivizim (p.sh. MAC). Nuk kërkojmë “Device ID”.</p>
-          </div>
-          <div class="callout">
-            <h3 id="trust4t">Kushtet e përdorimit</h3>
-            <p id="trust4d">Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit. Shiko shënimin ligjor poshtë.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- PLANS -->
-      <section class="section" id="plans">
-        <h2 id="plansTitle">Paketa & Çmimet</h2>
-        <p class="muted" id="plansSubtitle">Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.</p>
-
-        <div class="plansGrid" aria-label="Plans">
-          <div class="plan best">
-            <div class="planTop">
-              <h3 class="planTitle"><span id="p12">12 muaj</span></h3>
-              <span class="planBadge" id="p12psych">⭐ Zgjedhja më e mirë</span>
-            </div>
-            <div class="planPrice">79€</div>
-            <p class="planSub" id="p12d">Më e leverdishmja</p>
-
-            <div class="planMeta">
-              <div class="metaRow">
-                <span id="p12pmLabel">€/muaj</span>
-                <span id="p12pm">≈ 6.6 € / muaj</span>
-              </div>
-              <div class="metaRow">
-                <span id="p12valueLabel">Vlerë</span>
-                <span id="p12value">Maksimum</span>
-              </div>
-            </div>
-
-            <div class="planCTA">
-              <a class="miniBtn strong" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="planCta12">Zgjidh 12 muaj</a>
-              <a class="miniBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs12">Messenger</a>
-            </div>
-          </div>
-
-          <div class="plan">
-            <div class="planTop">
-              <h3 class="planTitle"><span id="p6">6 muaj</span></h3>
-              <span class="planBadge" id="p6psych">🔹 Më e zgjedhura</span>
-            </div>
-            <div class="planPrice">39€</div>
-            <p class="planSub" id="p6d">Vlerë e mirë</p>
-
-            <div class="planMeta">
-              <div class="metaRow">
-                <span id="p6pmLabel">€/muaj</span>
-                <span id="p6pm">≈ 6.5 € / muaj</span>
-              </div>
-              <div class="metaRow">
-                <span id="p6valueLabel">Balancë</span>
-                <span id="p6value">Çmim / kohë</span>
-              </div>
-            </div>
-
-            <div class="planCTA">
-              <a class="miniBtn strong" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="planCta6">Zgjidh 6 muaj</a>
-              <a class="miniBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs6">Messenger</a>
-            </div>
-          </div>
-
-          <div class="plan">
-            <div class="planTop">
-              <h3 class="planTitle"><span id="p1">1 muaj</span></h3>
-              <span class="planBadge" id="p1psych">Pa obligim</span>
-            </div>
-            <div class="planPrice">10€</div>
-            <p class="planSub" id="p1d">E përshtatshme për testim</p>
-
-            <div class="planMeta">
-              <div class="metaRow">
-                <span id="p1pmLabel">€/muaj</span>
-                <span id="p1pm">≈ 10 € / muaj</span>
-              </div>
-              <div class="metaRow">
-                <span id="p1valueLabel">Testim</span>
-                <span id="p1value">Start i shpejtë</span>
-              </div>
-            </div>
-
-            <div class="planCTA">
-              <a class="miniBtn strong" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="planCta1">Zgjidh 1 muaj</a>
-              <a class="miniBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs1">Messenger</a>
-            </div>
-          </div>
-        </div>
-
-        <p class="muted" id="plansPush" style="margin-top:14px">
-          Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.
-        </p>
-      </section>
-
-      <!-- WHY -->
-      <section class="section">
-        <h2 id="whyH">Pse Sansat IPTV</h2>
-        <div class="list">
-          <div class="card">
-            <h3 id="why1t">Aktivizim i shpejtë</h3>
-            <p id="why1d">Proces i thjeshtë dhe udhëzime të qarta.</p>
-          </div>
-          <div class="card">
-            <h3 id="why2t">Paketa fleksibile</h3>
-            <p id="why2d">1 / 6 / 12 muaj sipas nevojës.</p>
-          </div>
-          <div class="card">
-            <h3 id="why3t">Pajisje të ndryshme</h3>
-            <p id="why3d">Smart TV, Android TV/Box, Fire Stick, Mobile.</p>
-          </div>
-          <div class="card">
-            <h3 id="why4t">Mbështetje</h3>
-            <p id="why4d">Përgjigje e shpejtë në DM/WhatsApp.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- DEVICES -->
-      <section class="section">
-        <h2 id="devicesH">Pajisjet e mbështetura</h2>
-        <div class="list">
-          <div class="card">
-            <h3 id="dev1t">TV & Box</h3>
-            <p id="dev1d">Smart TV, Android TV/Box, Fire Stick</p>
-          </div>
-          <div class="card">
-            <h3 id="dev2t">Mobile</h3>
-            <p id="dev2d">Telefon dhe tablet (Android/iOS)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section class="section" id="how">
-        <h2 id="howH">Si funksionon</h2>
-        <div class="steps">
-          <div class="step">
-            <b id="s1t">Kontakto</b>
-            <div class="muted" id="s1d">Na shkruaj në WhatsApp ose Messenger.</div>
-          </div>
-          <div class="step">
-            <b id="s2t">Zgjedh paketën</b>
-            <div class="muted" id="s2d">Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.</div>
-          </div>
-          <div class="step">
-            <b id="s3t">Aktivizim</b>
-            <div class="muted" id="s3d">Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SETUP (SAMSUNG/LG/ANDROID) -->
-      <section class="section" id="setup">
-        <h2 id="setupH">Instalimi në Smart TV (Samsung/LG/Android)</h2>
-        <p class="muted" id="setupLead">
-          Hapat më poshtë janë udhëzues të shkurtër. Nëse të del ndonjë opsion ndryshe sipas modelit, na shkruaj dhe të udhëzojmë.
-        </p>
-
-        <div class="steps">
-          <div class="step">
-            <b id="st1t">Samsung</b>
-            <div class="muted" id="st1d">Hap “Apps” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.</div>
-          </div>
-          <div class="step">
-            <b id="st2t">LG</b>
-            <div class="muted" id="st2d">Hap “LG Content Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.</div>
-          </div>
-          <div class="step">
-            <b id="st3t">Android TV / Box</b>
-            <div class="muted" id="st3d">Hap “Play Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- IBO -->
-      <section class="section">
-        <h2 id="iboH">IBO Player – Instalimi (shkurt)</h2>
-        <div class="steps">
-          <div class="step">
-            <b id="ibo1t">1) Instalo aplikacionin</b>
-            <div class="muted" id="ibo1d">Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.</div>
-          </div>
-          <div class="step">
-            <b id="ibo2t">2) Dërgo MAC Address</b>
-            <div class="muted" id="ibo2d">Na dërgo MAC Address-in (siç shfaqet në aplikacion).</div>
-          </div>
-          <div class="step">
-            <b id="ibo3t">3) Konfigurim</b>
-            <div class="muted" id="ibo3d">Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.</div>
-          </div>
-        </div>
-        <p class="muted" id="iboNote" style="margin-top:10px">
-          Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim dhe udhëzime konfigurimi.
-        </p>
-      </section>
-
-      <!-- MAC -->
-      <section class="section macPreview">
-        <h2 id="macPreviewH">MAC Address – Shembull</h2>
-        <p class="muted" id="macPreviewNote">Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.</p>
-        <img src="maccaddresa.png" alt="Shembull MAC Address për aktivizim IPTV" loading="lazy">
-      </section>
-
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <h2 id="contactH">Kontakt</h2>
-        <p class="muted" id="contactLead">Për aktivizim, na dërgo MAC Address-in dhe pajisjen që përdor (Samsung/LG/Android/Box/Mobile).</p>
-
-        <div class="contactGrid">
-          <div class="callout">
-            <h3 id="contact1t">WhatsApp</h3>
-            <p id="contact1d">Kliko për mesazh: +389 72 698 616</p>
-            <div class="ctaRow" style="margin:10px 0 0">
-              <a class="btn primary" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="contactWaBtn">Hap WhatsApp</a>
-            </div>
-          </div>
-
-          <div class="callout">
-            <h3 id="contact2t">Messenger</h3>
-            <p id="contact2d">Kliko për mesazh: m.me/sansatiptv</p>
-            <div class="ctaRow" style="margin:10px 0 0">
-              <a class="btn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="contactMsBtn">Hap Messenger</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="section" id="faq">
-        <h2 id="faqH">FAQ</h2>
-
-        <details>
-          <summary id="f1q">Çfarë interneti rekomandohet?</summary>
-          <div class="muted" id="f1a" style="margin-top:8px">
-            Për përvojë stabile rekomandohet lidhje e qëndrueshme. Si orientim: 10–15 Mbps për HD dhe 25+ Mbps për 4K (kur është e disponueshme). Performanca varet nga rrjeti, pajisja dhe konfigurimi.
-          </div>
-        </details>
-
-        <details>
-          <summary id="f2q">A është aktivizimi i IBO Player falas?</summary>
-          <div class="muted" id="f2a" style="margin-top:8px">
-            Po, aktivizimi dhe udhëzimet bazë të konfigurimit përfshihen me abonimin (nevojitet MAC Address).
-          </div>
-        </details>
-
-        <details>
-          <summary id="f3q">Sa shpejt bëhet aktivizimi?</summary>
-          <div class="muted" id="f3a" style="margin-top:8px">
-            Zakonisht menjëherë pas konfirmimit të pagesës dhe marrjes së të dhënave të nevojshme (p.sh. MAC Address).
-          </div>
-        </details>
-
-        <details>
-          <summary id="f4q">Çfarë përfshihet në shërbim?</summary>
-          <div class="muted" id="f4a" style="margin-top:8px">
-            Përfshihet akses në përmbajtje IPTV (kanale live dhe VOD), si dhe udhëzime konfigurimi. Disponueshmëria dhe lista e përmbajtjes mund të ndryshojë me kohën dhe sipas rajonit.
-          </div>
-        </details>
-
-        <details>
-          <summary id="f5q">A ka evente sportive/PPV?</summary>
-          <div class="muted" id="f5a" style="margin-top:8px">
-            Eventet sportive dhe PPV mund të jenë të disponueshme sipas periudhës dhe rajonit. Për rastin konkret, na shkruaj dhe e konfirmojmë.
-          </div>
-        </details>
-
-        <details>
-          <summary id="f6q">Çfarë cilësie video ofrohet (HD/4K)?</summary>
-          <div class="muted" id="f6a" style="margin-top:8px">
-            Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; 4K mund të jetë e disponueshme për disa përmbajtje.
-          </div>
-        </details>
-
-        <details>
-          <summary id="f7q">Çfarë të dhënash kërkohen për aktivizim?</summary>
-          <div class="muted" id="f7a" style="margin-top:8px">
-            Kërkojmë vetëm të dhëna teknike të nevojshme për konfigurim, zakonisht MAC Address (siç shfaqet në aplikacion). Nuk kërkojmë “Device ID”.
-          </div>
-        </details>
-      </section>
-
-      <footer id="legal">
-        Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    const i18n = {
-      sq: {
-        tagline:"Premium • Aktivizim i shpejtë",
-        badge:"Aktivizim IBO Player falas",
-        h1:"IPTV Premium + IBO Player",
-        lead:"Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.",
-        waLabel:"WhatsApp",
-        msLabel:"Messenger",
-        supportPill:"Mbështetje • Udhëzime konfigurimi",
-        note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
-        calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
-        goPlansBtn:"Shiko paketat",
-
-        navPlans:"Paketa", navHow:"Si funksionon", navSetup:"Instalimi", navFaq:"FAQ", navContact:"Kontakt",
-
-        trustH:"Transparencë & Besueshmëri",
-        trustLead:"Qëllimi ynë është aktivizim i shpejtë, udhëzime të qarta dhe komunikim transparent përpara pagesës.",
-        trust1t:"Kontakt i verifikueshëm",
-        trust1d:"Na gjeni në WhatsApp dhe Messenger. Aktivizimi bëhet vetëm pas konfirmimit të detajeve.",
-        trust2t:"Pagesa & procesi",
-        trust2d:"Para pagesës: konfirmojmë pajisjen, aplikacionin dhe të dhënat (p.sh. MAC Address). Pastaj aktivizojmë.",
-        trust3t:"Privatësia e të dhënave",
-        trust3d:"Kërkojmë vetëm të dhëna teknike të nevojshme për aktivizim (p.sh. MAC). Nuk kërkojmë “Device ID”.",
-        trust4t:"Kushtet e përdorimit",
-        trust4d:"Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit. Shiko shënimin ligjor poshtë.",
-
-        plansTitle:"Paketa & Çmimet",
-        plansSubtitle:"Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.",
-        p12:"12 muaj", p12d:"Më e leverdishmja", p12psych:"⭐ Zgjedhja më e mirë", p12pm:"≈ 6.6 € / muaj",
-        p6:"6 muaj", p6d:"Vlerë e mirë", p6psych:"🔹 Më e zgjedhura", p6pm:"≈ 6.5 € / muaj",
-        p1:"1 muaj", p1d:"E përshtatshme për testim", p1psych:"Pa obligim", p1pm:"≈ 10 € / muaj",
-        p12pmLabel:"€/muaj", p6pmLabel:"€/muaj", p1pmLabel:"€/muaj",
-        p12valueLabel:"Vlerë", p6valueLabel:"Balancë", p1valueLabel:"Testim",
-        p12value:"Maksimum", p6value:"Çmim / kohë", p1value:"Start i shpejtë",
-        planCta12:"Zgjidh 12 muaj", planCta6:"Zgjidh 6 muaj", planCta1:"Zgjidh 1 muaj",
-        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
-        plansPush:"Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.",
-
-        whyH:"Pse Sansat IPTV",
-        why1t:"Aktivizim i shpejtë", why1d:"Proces i thjeshtë dhe udhëzime të qarta.",
-        why2t:"Paketa fleksibile", why2d:"1 / 6 / 12 muaj sipas nevojës.",
-        why3t:"Pajisje të ndryshme", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
-        why4t:"Mbështetje", why4d:"Përgjigje e shpejtë në DM/WhatsApp.",
-
-        devicesH:"Pajisjet e mbështetura",
-        dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
-        dev2t:"Mobile", dev2d:"Telefon dhe tablet (Android/iOS)",
-
-        howH:"Si funksionon",
-        s1t:"Kontakto", s1d:"Na shkruaj në WhatsApp ose Messenger.",
-        s2t:"Zgjedh paketën", s2d:"Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.",
-        s3t:"Aktivizim", s3d:"Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).",
-
-        setupH:"Instalimi në Smart TV (Samsung/LG/Android)",
-        setupLead:"Hapat më poshtë janë udhëzues të shkurtër. Nëse të del ndonjë opsion ndryshe sipas modelit, na shkruaj dhe të udhëzojmë.",
-        st1t:"Samsung",
-        st1d:"Hap “Apps” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.",
-        st2t:"LG",
-        st2d:"Hap “LG Content Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.",
-        st3t:"Android TV / Box",
-        st3d:"Hap “Play Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.",
-
-        iboH:"IBO Player – Instalimi (shkurt)",
-        ibo1t:"1) Instalo aplikacionin", ibo1d:"Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.",
-        ibo2t:"2) Dërgo MAC Address", ibo2d:"Na dërgo MAC Address-in (siç shfaqet në aplikacion).",
-        ibo3t:"3) Konfigurim", ibo3d:"Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.",
-        iboNote:"Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim dhe udhëzime konfigurimi.",
-
-        macPreviewH:"MAC Address – Shembull",
-        macPreviewNote:"Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.",
-
-        contactH:"Kontakt",
-        contactLead:"Për aktivizim, na dërgo MAC Address-in dhe pajisjen që përdor (Samsung/LG/Android/Box/Mobile).",
-        contact1t:"WhatsApp",
-        contact1d:"Kliko për mesazh: +389 72 698 616",
-        contact2t:"Messenger",
-        contact2d:"Kliko për mesazh: m.me/sansatiptv",
-        contactWaBtn:"Hap WhatsApp",
-        contactMsBtn:"Hap Messenger",
-
-        faqH:"FAQ",
-        f1q:"Çfarë interneti rekomandohet?",
-        f1a:"Për përvojë stabile rekomandohet lidhje e qëndrueshme. Si orientim: 10–15 Mbps për HD dhe 25+ Mbps për 4K (kur është e disponueshme). Performanca varet nga rrjeti, pajisja dhe konfigurimi.",
-        f2q:"A është aktivizimi i IBO Player falas?",
-        f2a:"Po, aktivizimi dhe udhëzimet bazë të konfigurimit përfshihen me abonimin (nevojitet MAC Address).",
-        f3q:"Sa shpejt bëhet aktivizimi?",
-        f3a:"Zakonisht menjëherë pas konfirmimit të pagesës dhe marrjes së të dhënave të nevojshme (p.sh. MAC Address).",
-        f4q:"Çfarë përfshihet në shërbim?",
-        f4a:"Përfshihet akses në përmbajtje IPTV (kanale live dhe VOD), si dhe udhëzime konfigurimi. Disponueshmëria dhe lista e përmbajtjes mund të ndryshojë me kohën dhe sipas rajonit.",
-        f5q:"A ka evente sportive/PPV?",
-        f5a:"Eventet sportive dhe PPV mund të jenë të disponueshme sipas periudhës dhe rajonit. Për rastin konkret, na shkruaj dhe e konfirmojmë.",
-        f6q:"Çfarë cilësie video ofrohet (HD/4K)?",
-        f6a:"Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; 4K mund të jetë e disponueshme për disa përmbajtje.",
-        f7q:"Çfarë të dhënash kërkohen për aktivizim?",
-        f7a:"Kërkojmë vetëm të dhëna teknike të nevojshme për konfigurim, zakonisht MAC Address (siç shfaqet në aplikacion). Nuk kërkojmë “Device ID”.",
-
-        legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit."
-      },
-
-      en: {
-        tagline:"Premium • Fast activation",
-        badge:"Free IBO Player activation",
-        h1:"Premium IPTV + IBO Player",
-        lead:"Digital subscription service with fast activation and setup guidance for compatible devices.",
-        waLabel:"WhatsApp",
-        msLabel:"Messenger",
-        supportPill:"Support • Setup guidance",
-        note:"For details and payment options, please message us privately. Activation is done after confirmation.",
-        calloutD:"Message us and we’ll guide you based on your device (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
-        goPlansBtn:"View plans",
-
-        navPlans:"Plans", navHow:"How it works", navSetup:"Setup", navFaq:"FAQ", navContact:"Contact",
-
-        trustH:"Transparency & Trust",
-        trustLead:"Our goal is fast activation, clear guidance and transparent communication before payment.",
-        trust1t:"Verified contact",
-        trust1d:"Reach us via WhatsApp and Messenger. Activation happens only after confirming details.",
-        trust2t:"Payment & process",
-        trust2d:"Before payment: we confirm your device, app and required details (e.g., MAC Address). Then we activate.",
-        trust3t:"Data privacy",
-        trust3d:"We ask only for technical details needed for activation (e.g., MAC). We do not request “Device ID”.",
-        trust4t:"Terms of use",
-        trust4d:"Use must comply with local laws and broadcasting rights. See legal note below.",
-
-        plansTitle:"Plans & Pricing",
-        plansSubtitle:"All plans include Premium IPTV, free IBO Player activation, and support.",
-        p12:"12 months", p12d:"Best deal", p12psych:"⭐ Best choice", p12pm:"≈ €6.6 / month",
-        p6:"6 months", p6d:"Great value", p6psych:"🔹 Most popular", p6pm:"≈ €6.5 / month",
-        p1:"1 month", p1d:"Good for testing", p1psych:"No commitment", p1pm:"≈ €10 / month",
-        p12pmLabel:"€/month", p6pmLabel:"€/month", p1pmLabel:"€/month",
-        p12valueLabel:"Value", p6valueLabel:"Balance", p1valueLabel:"Trial",
-        p12value:"Maximum", p6value:"Price / time", p1value:"Quick start",
-        planCta12:"Choose 12 months", planCta6:"Choose 6 months", planCta1:"Choose 1 month",
-        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
-        plansPush:"To order and activate, message us on WhatsApp or Messenger and we will guide you right away.",
-
-        whyH:"Why Sansat IPTV",
-        why1t:"Fast activation", why1d:"Simple process with clear guidance.",
-        why2t:"Flexible plans", why2d:"1 / 6 / 12 months to match your needs.",
-        why3t:"Multiple devices", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
-        why4t:"Support", why4d:"Fast replies on DM/WhatsApp.",
-
-        devicesH:"Supported devices",
-        dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
-        dev2t:"Mobile", dev2d:"Phone and tablet (Android/iOS)",
-
-        howH:"How it works",
-        s1t:"Contact", s1d:"Message us on WhatsApp or Messenger.",
-        s2t:"Choose a plan", s2d:"Pick 1 / 6 / 12 months and receive guidance.",
-        s3t:"Activation", s3d:"Fast activation + free IBO Player activation (setup guidance).",
-
-        setupH:"Smart TV setup (Samsung/LG/Android)",
-        setupLead:"These are quick steps. If menus differ by model, message us and we’ll guide you.",
-        st1t:"Samsung", st1d:"Open “Apps” → search “IBO Player” → install → open the app and find the MAC Address.",
-        st2t:"LG", st2d:"Open “LG Content Store” → search “IBO Player” → install → open the app and find the MAC Address.",
-        st3t:"Android TV / Box", st3d:"Open “Play Store” → search “IBO Player” → install → open the app and find the MAC Address.",
-
-        iboH:"IBO Player – Quick setup",
-        ibo1t:"1) Install the app", ibo1d:"On your device, install IBO Player from the app store.",
-        ibo2t:"2) Send MAC Address", ibo2d:"Send us the MAC Address as shown in the app.",
-        ibo3t:"3) Configure", ibo3d:"We configure and guide you through the final steps.",
-        iboNote:"Note: IBO Player is a third-party application. We provide activation and setup guidance.",
-
-        macPreviewH:"MAC Address – Example",
-        macPreviewNote:"Example only: the MAC Address is shown inside the IBO Player app.",
-
-        contactH:"Contact",
-        contactLead:"For activation, send your MAC Address and device type (Samsung/LG/Android/Box/Mobile).",
-        contact1t:"WhatsApp",
-        contact1d:"Tap to message: +389 72 698 616",
-        contact2t:"Messenger",
-        contact2d:"Tap to message: m.me/sansatiptv",
-        contactWaBtn:"Open WhatsApp",
-        contactMsBtn:"Open Messenger",
-
-        faqH:"FAQ",
-        f1q:"What internet speed is recommended?",
-        f1a:"A stable connection is recommended. As a guideline: 10–15 Mbps for HD and 25+ Mbps for 4K (when available). Performance depends on network, device and setup.",
-        f2q:"Is IBO Player activation free?",
-        f2a:"Yes. Activation and basic setup guidance are included with the subscription (MAC Address required).",
-        f3q:"How fast is activation?",
-        f3a:"Usually right after payment confirmation and receiving the required details (e.g., MAC Address).",
-        f4q:"What does the service include?",
-        f4a:"Access to IPTV content (live channels and VOD) plus setup guidance. Availability and lists may change over time and by region.",
-        f5q:"Do you offer sports/PPV events?",
-        f5a:"Sports and PPV may be available depending on time and region. Message us to confirm for your case.",
-        f6q:"What video quality is available (HD/4K)?",
-        f6a:"Quality varies by channel/content and internet speed. HD/Full HD is common; 4K may be available for some content.",
-        f7q:"What details are required for activation?",
-        f7a:"We request only technical details needed for setup—usually the MAC Address shown in the app. We do not request “Device ID”.",
-
-        legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights."
-      },
-
-      de: {
-        tagline:"Premium • Schnelle Aktivierung",
-        badge:"Kostenlose IBO Player Aktivierung",
-        h1:"Premium IPTV + IBO Player",
-        lead:"Digitaler Abonnement-Service mit schneller Aktivierung und Einrichtungsanleitung für kompatible Geräte.",
-        waLabel:"WhatsApp",
-        msLabel:"Messenger",
-        supportPill:"Support • Einrichtungsanleitung",
-        note:"Für Details und Zahlungsoptionen schreiben Sie uns bitte privat. Die Aktivierung erfolgt nach Bestätigung.",
-        calloutD:"Schreiben Sie uns – wir helfen je nach Gerät (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
-        goPlansBtn:"Tarife ansehen",
-
-        navPlans:"Tarife", navHow:"Ablauf", navSetup:"Installation", navFaq:"FAQ", navContact:"Kontakt",
-
-        trustH:"Transparenz & Vertrauen",
-        trustLead:"Unser Ziel: schnelle Aktivierung, klare Anleitung und transparente Kommunikation vor der Zahlung.",
-        trust1t:"Verifizierbarer Kontakt",
-        trust1d:"Erreichen Sie uns über WhatsApp und Messenger. Aktivierung erst nach Bestätigung der Details.",
-        trust2t:"Zahlung & Ablauf",
-        trust2d:"Vor der Zahlung: Wir bestätigen Gerät, App und benötigte Angaben (z. B. MAC-Adresse). Danach aktivieren wir.",
-        trust3t:"Datenschutz",
-        trust3d:"Wir fragen nur technische Daten ab, die für die Aktivierung notwendig sind (z. B. MAC). Wir verlangen keine „Device ID“.",
-        trust4t:"Nutzungsbedingungen",
-        trust4d:"Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen. Siehe rechtlichen Hinweis unten.",
-
-        plansTitle:"Tarife & Preise",
-        plansSubtitle:"Alle Tarife enthalten Premium IPTV, kostenlose IBO Player Aktivierung und Support.",
-        p12:"12 Monate", p12d:"Bestes Angebot", p12psych:"⭐ Beste Wahl", p12pm:"≈ 6,6 € / Monat",
-        p6:"6 Monate", p6d:"Gutes Preis-Leistungs-Verhältnis", p6psych:"🔹 Am beliebtesten", p6pm:"≈ 6,5 € / Monat",
-        p1:"1 Monat", p1d:"Ideal zum Testen", p1psych:"Ohne Verpflichtung", p1pm:"≈ 10 € / Monat",
-        p12pmLabel:"€/Monat", p6pmLabel:"€/Monat", p1pmLabel:"€/Monat",
-        p12valueLabel:"Wert", p6valueLabel:"Balance", p1valueLabel:"Test",
-        p12value:"Maximum", p6value:"Preis / Laufzeit", p1value:"Schneller Start",
-        planCta12:"12 Monate wählen", planCta6:"6 Monate wählen", planCta1:"1 Monat wählen",
-        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
-        plansPush:"Für Bestellung und Aktivierung schreiben Sie uns auf WhatsApp oder Messenger – wir helfen sofort.",
-
-        whyH:"Warum Sansat IPTV",
-        why1t:"Schnelle Aktivierung", why1d:"Einfacher Ablauf mit klarer Anleitung.",
-        why2t:"Flexible Tarife", why2d:"1 / 6 / 12 Monate – passend zu Ihrem Bedarf.",
-        why3t:"Mehrere Geräte", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
-        why4t:"Support", why4d:"Schnelle Antworten per DM/WhatsApp.",
-
-        devicesH:"Unterstützte Geräte",
-        dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
-        dev2t:"Mobile", dev2d:"Smartphone und Tablet (Android/iOS)",
-
-        howH:"So funktioniert es",
-        s1t:"Kontakt", s1d:"Schreiben Sie uns auf WhatsApp oder Messenger.",
-        s2t:"Tarif wählen", s2d:"Wählen Sie 1 / 6 / 12 Monate und erhalten Sie die Anleitung.",
-        s3t:"Aktivierung", s3d:"Schnelle Aktivierung + kostenlose IBO Player Aktivierung (Einrichtungsanleitung).",
-
-        setupH:"Installation auf Smart TV (Samsung/LG/Android)",
-        setupLead:"Kurzanleitung. Wenn Menüs je nach Modell abweichen, schreiben Sie uns – wir helfen.",
-        st1t:"Samsung", st1d:"„Apps“ öffnen → „IBO Player“ suchen → installieren → App öffnen und MAC-Adresse finden.",
-        st2t:"LG", st2d:"„LG Content Store“ öffnen → „IBO Player“ suchen → installieren → App öffnen und MAC-Adresse finden.",
-        st3t:"Android TV / Box", st3d:"„Play Store“ öffnen → „IBO Player“ suchen → installieren → App öffnen und MAC-Adresse finden.",
-
-        iboH:"IBO Player – Kurze Einrichtung",
-        ibo1t:"1) App installieren", ibo1d:"Installieren Sie IBO Player aus dem App-Store Ihres Geräts.",
-        ibo2t:"2) MAC-Adresse senden", ibo2d:"Senden Sie uns die MAC-Adresse, wie sie in der App angezeigt wird.",
-        ibo3t:"3) Konfigurieren", ibo3d:"Wir konfigurieren und führen Sie durch die letzten Schritte.",
-        iboNote:"Hinweis: IBO Player ist eine Drittanbieter-App. Wir bieten Aktivierung und Einrichtungshilfe.",
-
-        macPreviewH:"MAC-Adresse – Beispiel",
-        macPreviewNote:"Nur als Beispiel: Die MAC-Adresse wird in der IBO Player App angezeigt.",
-
-        contactH:"Kontakt",
-        contactLead:"Für die Aktivierung senden Sie uns die MAC-Adresse und den Gerätetyp (Samsung/LG/Android/Box/Mobile).",
-        contact1t:"WhatsApp",
-        contact1d:"Tippen zum Schreiben: +389 72 698 616",
-        contact2t:"Messenger",
-        contact2d:"Tippen zum Schreiben: m.me/sansatiptv",
-        contactWaBtn:"WhatsApp öffnen",
-        contactMsBtn:"Messenger öffnen",
-
-        faqH:"FAQ",
-        f1q:"Welche Internetgeschwindigkeit wird empfohlen?",
-        f1a:"Eine stabile Verbindung wird empfohlen. Richtwert: 10–15 Mbps für HD und 25+ Mbps für 4K (wenn verfügbar). Leistung hängt von Netzwerk, Gerät und Setup ab.",
-        f2q:"Ist die IBO Player Aktivierung kostenlos?",
-        f2a:"Ja. Aktivierung und grundlegende Einrichtungshilfe sind im Abonnement enthalten (MAC-Adresse erforderlich).",
-        f3q:"Wie schnell erfolgt die Aktivierung?",
-        f3a:"In der Regel direkt nach Zahlungsbestätigung und Erhalt der benötigten Angaben (z. B. MAC-Adresse).",
-        f4q:"Was ist im Service enthalten?",
-        f4a:"Zugang zu IPTV-Inhalten (Live-Kanäle und VOD) plus Einrichtungshilfe. Verfügbarkeit und Listen können sich je nach Zeit und Region ändern.",
-        f5q:"Gibt es Sport/PPV?",
-        f5a:"Sport und PPV können je nach Zeitraum und Region verfügbar sein. Schreiben Sie uns zur Bestätigung.",
-        f6q:"Welche Videoqualität ist verfügbar (HD/4K)?",
-        f6a:"Die Qualität hängt von Kanal/Inhalt und Internetgeschwindigkeit ab. HD/Full HD ist üblich; 4K kann für 일부 Inhalte verfügbar sein.",
-        f7q:"Welche Angaben werden für die Aktivierung benötigt?",
-        f7a:"Wir benötigen nur technische Angaben für das Setup – in der Regel die in der App angezeigte MAC-Adresse. Wir verlangen keine „Device ID“.",
-
-        legal:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen."
-      }
-    };
-
-    const ids = [
-      "tagline","badge","h1","lead","supportPill","note","calloutD","goPlansBtn",
-      "navPlans","navHow","navSetup","navFaq","navContact",
-
-      "trustH","trustLead","trust1t","trust1d","trust2t","trust2d","trust3t","trust3d","trust4t","trust4d",
-
-      "plansTitle","plansSubtitle",
-      "p12","p12d","p12psych","p12pm","p12pmLabel","p12valueLabel","p12value",
-      "p6","p6d","p6psych","p6pm","p6pmLabel","p6valueLabel","p6value",
-      "p1","p1d","p1psych","p1pm","p1pmLabel","p1valueLabel","p1value",
-      "planCta12","planCta6","planCta1","planMs12","planMs6","planMs1",
-      "plansPush",
-
-      "whyH","why1t","why1d","why2t","why2d","why3t","why3d","why4t","why4d",
-      "devicesH","dev1t","dev1d","dev2t","dev2d",
-      "howH","s1t","s1d","s2t","s2d","s3t","s3d",
-
-      "setupH","setupLead","st1t","st1d","st2t","st2d","st3t","st3d",
-
-      "iboH","ibo1t","ibo1d","ibo2t","ibo2d","ibo3t","ibo3d","iboNote",
-      "macPreviewH","macPreviewNote",
-
-      "contactH","contactLead","contact1t","contact1d","contact2t","contact2d","contactWaBtn","contactMsBtn",
-
-      "faqH","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","f5q","f5a","f6q","f6a","f7q","f7a",
-      "legal"
-    ];
-
-    function setActiveLangButton(lang){
-      document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
-      document.getElementById("btnEN").classList.toggle("active", lang === "en");
-      document.getElementById("btnDE").classList.toggle("active", lang === "de");
-    }
-
-    function applyLang(lang){
-      const t = i18n[lang] || i18n.sq;
-      document.documentElement.lang = lang;
-
-      document.getElementById("waBtn").textContent = t.waLabel;
-      document.getElementById("msBtn").textContent = t.msLabel;
-
-      ids.forEach((id) => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        if (t[id] !== undefined) el.textContent = t[id];
-      });
-
-      setActiveLangButton(lang);
-      try { localStorage.setItem("sansat_lang", lang); } catch(e){}
-    }
-
-    document.getElementById("btnSQ").addEventListener("click", () => applyLang("sq"));
-    document.getElementById("btnEN").addEventListener("click", () => applyLang("en"));
-    document.getElementById("btnDE").addEventListener("click", () => applyLang("de"));
-
-    (function init(){
-      let lang = "sq";
-      try {
-        const saved = localStorage.getItem("sansat_lang");
-        if (saved && i18n[saved]) lang = saved;
-        else {
-          const nav = (navigator.language || "").toLowerCase();
-          if (nav.startsWith("de")) lang = "de";
-          else if (nav.startsWith("en")) lang = "en";
-        }
-      } catch(e){}
-      applyLang(lang);
-    })();
-  </script>
 </body>
 </html>
