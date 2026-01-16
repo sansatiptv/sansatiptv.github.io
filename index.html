@@ -202,29 +202,40 @@
       </div>
     </section>
 
-    <!-- Plans -->
+    <!-- Plans (strategic order: 12 - 6 - 1) -->
     <section class="section">
       <h2 id="plansTitle">Paketa & Çmimet</h2>
+
+      <p class="muted" id="plansNote">
+        Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.
+      </p>
+
       <div class="grid3">
-  <!-- 12 MONTHS - HERO -->
-  <div class="card">
-    <h3><span id="p12">12 muaj</span> — 79€</h3>
-    <p id="p12d">Më e leverdishmja • Best deal</p>
-    <p class="muted">≈ 6.5 € / muaj</p>
-  </div>
-  <!-- 6 MONTHS -->
-  <div class="card">
-    <h3><span id="p6">6 muaj</span> — 39€</h3>
-    <p id="p6d">Vlerë e mirë</p>
-    <p class="muted">≈ 6.5 € / muaj</p>
-  </div>
-  <!-- 1 MONTH -->
-  <div class="card">
-    <h3><span id="p1">1 muaj</span> — 10€</h3>
-    <p id="p1d">E përshtatshme për testim</p>
-    <p class="muted">Pa obligim</p>
-  </div>
-</div>
+        <!-- 12 months (hero) -->
+        <div class="card">
+          <h3><span id="p12">12 muaj</span> — 79€</h3>
+          <p id="p12d">Më e leverdishmja • Best deal</p>
+          <p class="muted" id="p12m">≈ 6.6 € / muaj</p>
+        </div>
+
+        <!-- 6 months -->
+        <div class="card">
+          <h3><span id="p6">6 muaj</span> — 39€</h3>
+          <p id="p6d">Vlerë e mirë • Më e zgjedhura</p>
+          <p class="muted" id="p6m">≈ 6.5 € / muaj</p>
+        </div>
+
+        <!-- 1 month -->
+        <div class="card">
+          <h3><span id="p1">1 muaj</span> — 10€</h3>
+          <p id="p1d">E përshtatshme për testim</p>
+          <p class="muted" id="p1m">Pa obligim</p>
+        </div>
+      </div>
+
+      <p class="muted" id="plansCta" style="margin-top:14px">
+        Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.
+      </p>
     </section>
 
     <!-- Why -->
@@ -342,7 +353,6 @@
         </div>
       </details>
 
-      <!-- NEW FAQ ITEMS -->
       <details>
         <summary id="f4q">Çfarë përfshihet në shërbim?</summary>
         <div class="muted" id="f4a" style="margin-top:8px"></div>
@@ -356,12 +366,12 @@
       <details>
         <summary id="f6q">Çfarë cilësie video ofrohet (HD/4K)?</summary>
         <div class="muted" id="f6a" style="margin-top:8px"></div>
-      </details
-        
+      </details>
+
       <details>
-  <summary id="f7q">Qka përmban Paketi?</summary>
-  <div class="muted" id="f7a" style="margin-top:8px"></div>
-</details>
+        <summary id="f7q">Qka përmban Paketi?</summary>
+        <div class="muted" id="f7a" style="margin-top:8px"></div>
+      </details>
     </section>
 
     <footer id="legal">
@@ -380,10 +390,15 @@
         msLabel:"Messenger",
         supportPill:"Support • Udhëzime konfigurimi",
         note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
+
         plansTitle:"Paketa & Çmimet",
-        p1:"1 muaj", p1d:"E përshtatshme për testim",
-        p6:"6 muaj", p6d:"Vlerë e mirë",
-        p12:"12 muaj", p12d:"Më e leverdishmja",
+        plansNote:"Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.",
+        plansCta:"Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.",
+
+        p1:"1 muaj", p1d:"E përshtatshme për testim", p1m:"Pa obligim",
+        p6:"6 muaj", p6d:"Vlerë e mirë • Më e zgjedhura", p6m:"≈ 6.5 € / muaj",
+        p12:"12 muaj", p12d:"Më e leverdishmja • Best deal", p12m:"≈ 6.6 € / muaj",
+
         calloutT:"Aktivizim i shpejtë",
         calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).",
 
@@ -426,6 +441,9 @@
         f6q:"Çfarë cilësie video ofrohet (HD/4K)?",
         f6a:"Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; kur është e disponueshme, mund të ofrohet edhe 4K.",
 
+        f7q:"Qka përmban Paketi?",
+        f7a:"Përmban: 23,000+ Live TV Channels, 101,191+ VOD (Filma, Serialë, Anime, Shows) në shumë gjuhë nga vende të ndryshme, dhe 28,937+ Serialë + Anime. Shifra janë orientuese dhe mund të ndryshojnë me kohën/rajonin.",
+
         legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit."
       },
 
@@ -438,10 +456,15 @@
         msLabel:"Messenger",
         supportPill:"Support • Setup guidance",
         note:"For details and payment options, please message us privately. Activation is done after confirmation.",
+
         plansTitle:"Plans & Pricing",
-        p1:"1 month", p1d:"Good for testing",
-        p6:"6 months", p6d:"Great value",
-        p12:"12 months", p12d:"Best deal",
+        plansNote:"All plans include Premium IPTV, free IBO Player activation, and support.",
+        plansCta:"To order and activate, message us on WhatsApp or Messenger and we will guide you immediately.",
+
+        p1:"1 month", p1d:"Good for testing", p1m:"No commitment",
+        p6:"6 months", p6d:"Great value • Most popular", p6m:"≈ 6.5 € / month",
+        p12:"12 months", p12d:"Best deal • Recommended", p12m:"≈ 6.6 € / month",
+
         calloutT:"Fast activation",
         calloutD:"Message us and we will guide you based on your device (Smart TV / Android / Fire Stick / Mobile).",
 
@@ -484,6 +507,9 @@
         f6q:"What video quality is available (HD/4K)?",
         f6a:"Quality varies by channel/content and internet speed. HD/Full HD is common and, when available, 4K may be supported.",
 
+        f7q:"What’s included in the package?",
+        f7a:"Includes: 23,000+ live TV channels, 101,191+ VOD (movies, series, anime, shows) in multiple languages from different regions, and 28,937+ series + anime. Numbers are approximate and may change over time/region.",
+
         legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights."
       },
 
@@ -496,10 +522,15 @@
         msLabel:"Messenger",
         supportPill:"Support • Aide configuration",
         note:"Pour les détails et les moyens de paiement, merci de nous écrire en message privé. Activation après confirmation.",
+
         plansTitle:"Offres & Tarifs",
-        p1:"1 mois", p1d:"Idéal pour tester",
-        p6:"6 mois", p6d:"Très bon rapport",
-        p12:"12 mois", p12d:"Meilleure offre",
+        plansNote:"Toutes les offres incluent IPTV Premium, l’activation IBO Player offerte, et l’assistance.",
+        plansCta:"Pour commander et activer, écrivez-nous sur WhatsApp ou Messenger et nous vous guidons immédiatement.",
+
+        p1:"1 mois", p1d:"Idéal pour tester", p1m:"Sans engagement",
+        p6:"6 mois", p6d:"Très bon rapport • Le plus choisi", p6m:"≈ 6.5 € / mois",
+        p12:"12 mois", p12d:"Meilleure offre • Recommandé", p12m:"≈ 6.6 € / mois",
+
         calloutT:"Activation rapide",
         calloutD:"Écrivez-nous et nous vous guidons selon votre appareil (Smart TV / Android / Fire Stick / Mobile).",
 
@@ -542,20 +573,24 @@
         f6q:"Quelle qualité vidéo est disponible (HD/4K) ?",
         f6a:"La qualité varie selon la chaîne/le contenu et la vitesse Internet. La HD/Full HD est fréquente et, lorsque disponible, la 4K peut être prise en charge.",
 
+        f7q:"Que contient l’offre ?",
+        f7a:"Comprend : 23 000+ chaînes TV en direct, 101 191+ VOD (films, séries, anime, émissions) en plusieurs langues et de différentes régions, et 28 937+ séries + anime. Chiffres indicatifs pouvant varier selon la période/la région.",
+
         legal:"Note : une connexion Internet stable est requise. Utilisation conforme aux lois locales et aux droits de diffusion."
       }
     };
 
     const ids = [
       "tagline","badge","h1","lead","supportPill","note",
-      "plansTitle","p1","p1d","p6","p6d","p12","p12d",
+      "plansTitle","plansNote","plansCta",
+      "p12","p12d","p12m","p6","p6d","p6m","p1","p1d","p1m",
       "calloutT","calloutD","calloutD2",
       "whyH","why1t","why1d","why2t","why2d","why3t","why3d","why4t","why4d",
       "devicesH","dev1t","dev1d","dev2t","dev2d",
       "howH","s1t","s1d","s2t","s2d","s3t","s3d",
       "iboH","ibo1t","ibo1d","ibo2t","ibo2d","ibo3t","ibo3d","iboNote",
       "macPreviewH","macPreviewNote",
-      "faqH","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","f5q","f5a","f6q","f6a",
+      "faqH","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","f5q","f5a","f6q","f6a","f7q","f7a",
       "legal"
     ];
 
@@ -570,11 +605,9 @@
 
       document.documentElement.lang = lang;
 
-      // Labels that are not direct id-to-key (buttons)
       document.getElementById("waBtn").textContent = t.waLabel;
       document.getElementById("msBtn").textContent = t.msLabel;
 
-      // Map id -> key with same name
       ids.forEach((id) => {
         const el = document.getElementById(id);
         if (!el) return;
@@ -585,12 +618,10 @@
       try { localStorage.setItem("sansat_lang", lang); } catch(e){}
     }
 
-    // Language buttons
     document.getElementById("btnSQ").addEventListener("click", () => applyLang("sq"));
     document.getElementById("btnEN").addEventListener("click", () => applyLang("en"));
     document.getElementById("btnFR").addEventListener("click", () => applyLang("fr"));
 
-    // Init language
     (function init(){
       let lang = "sq";
       try {
