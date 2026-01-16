@@ -5,151 +5,291 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Sansat IPTV | IPTV Premium + IBO Player</title>
-  <meta name="description" content="Sansat IPTV: IPTV Premium me aktivizim falas të IBO Player. Paketa 1/6/12 muaj. Kontakt: WhatsApp & Messenger. Shqip/English/Français." />
+  <meta name="description" content="Sansat IPTV: IPTV Premium me aktivizim falas të IBO Player. Paketa 12/6/1 muaj. Kontakt: WhatsApp & Messenger. Shqip/English/Français." />
   <link rel="canonical" href="https://sansatiptv.github.io/" />
 
   <!-- Social preview -->
   <meta property="og:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
-  <meta property="og:description" content="Paketa 1/6/12 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
+  <meta property="og:description" content="Paketa 12/6/1 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
   <meta property="og:image" content="cover banner.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sansatiptv.github.io/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
-  <meta name="twitter:description" content="Paketa 1/6/12 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
+  <meta name="twitter:description" content="Paketa 12/6/1 muaj. Aktivizim falas i IBO Player. Kontakt: WhatsApp & Messenger." />
   <meta name="twitter:image" content="cover banner.png" />
 
   <style>
     :root{
-      --bg:#ffffff;
+      /* Background + surfaces (light) */
+      --page:#f6f8ff;        /* light tint background */
+      --surface:#ffffff;
+      --surface2:#f8fafc;
+
+      /* Text */
       --text:#0f172a;
       --muted:#475569;
+
+      /* Borders / shadow */
       --border:#e2e8f0;
-      --card:#f8fafc;
-      --accent:#2563eb;
-      --accent2:#0ea5e9;
+      --shadow:0 12px 30px rgba(15,23,42,.08);
+
+      /* Brand */
+      --brand:#2563eb;
+      --brand2:#0ea5e9;
+
+      /* Accents */
       --ok:#16a34a;
       --warn:#f59e0b;
+      --violet:#7c3aed;
+      --rose:#e11d48;
     }
+
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
+      background: radial-gradient(1200px 600px at 15% 0%, rgba(37,99,235,.12), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(14,165,233,.10), transparent 50%),
+                  var(--page);
       color: var(--text);
     }
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px 60px}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px 72px}
+
+    /* Top bar */
     header{
       display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:10px 0 18px;border-bottom:1px solid var(--border);
+      padding:12px 0 16px;
     }
     .brandRow{display:flex;gap:10px;align-items:center}
     .logoMark{
-      width:34px;height:34px;border-radius:10px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
       display:grid;place-items:center;color:#fff;font-weight:900;
-      box-shadow:0 8px 20px rgba(37,99,235,.18);
+      box-shadow:0 12px 26px rgba(37,99,235,.22);
       user-select:none;
     }
-    .brand{font-weight:900;letter-spacing:.2px;line-height:1.05}
-    .brand small{display:block;color:var(--muted);font-weight:700;letter-spacing:0}
-
+    .brand{
+      font-weight:950;letter-spacing:.2px;line-height:1.05;
+    }
+    .brand small{
+      display:block;color:var(--muted);font-weight:800;letter-spacing:0;margin-top:3px
+    }
     .lang{
       display:flex;gap:8px;align-items:center;
-      border:1px solid var(--border);border-radius:999px;padding:6px;background:#fff;
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:999px;padding:6px;
+      backdrop-filter: blur(6px);
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
     }
     .lang button{
       border:0;cursor:pointer;border-radius:999px;padding:8px 10px;
       background:transparent;color:var(--muted);font-weight:900;
     }
-    .lang button.active{background:rgba(37,99,235,.10);color:var(--text)}
-
-    .hero{
-      padding:18px 0 8px;
-      display:grid;grid-template-columns:1.2fr .8fr;gap:14px;align-items:start;
+    .lang button.active{
+      background:linear-gradient(135deg, rgba(37,99,235,.18), rgba(14,165,233,.16));
+      color:var(--text);
     }
 
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:14px;align-items:stretch;
+      margin-top:4px;
+    }
+    .heroLeft{
+      background:rgba(255,255,255,.78);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:20px;
+      padding:18px 18px 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
     .badge{
       display:inline-flex;align-items:center;gap:8px;
       padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(22,163,74,.20);
-      background:rgba(22,163,74,.08);
-      color:var(--ok);font-weight:900;font-size:13px;
+      border:1px solid rgba(22,163,74,.22);
+      background:rgba(22,163,74,.10);
+      color:var(--ok);font-weight:950;font-size:13px;
     }
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(37,99,235,.08);
+      border:1px solid rgba(37,99,235,.18);
+      color:var(--muted);font-weight:850;
+      margin-top:10px;
+    }
+    .tagline{color:var(--muted);font-weight:900;margin:12px 0 0}
+    h1{margin:10px 0 10px;font-size:36px;line-height:1.08}
+    .lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
 
-    .tagline{color:var(--muted);font-weight:900;margin:10px 0 0}
-    h1{margin:10px 0 8px;font-size:34px;line-height:1.1}
-    .lead{color:var(--muted);margin:0 0 14px;max-width:60ch}
-
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 12px}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 14px;border-radius:12px;font-weight:900;
+      padding:12px 14px;border-radius:14px;font-weight:950;
       border:1px solid var(--border);
       background:#fff;
       min-height:46px;
+      transition: transform .12s ease, box-shadow .12s ease;
     }
+    .btn:hover{transform: translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.10)}
     .btn.primary{
       border-color:rgba(37,99,235,.25);
-      background:rgba(37,99,235,.10);
-    }
-    .pill{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:8px 12px;border-radius:999px;background:var(--card);
-      border:1px solid var(--border);color:var(--muted);font-weight:800;
+      background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
     }
 
     .heroCard{
-      border:1px solid var(--border);background:var(--card);
-      border-radius:16px;overflow:hidden;
+      border:1px solid rgba(226,232,240,.9);
+      background:rgba(255,255,255,.78);
+      border-radius:20px;overflow:hidden;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      display:flex;flex-direction:column;
     }
     .heroCard img{display:block;width:100%;height:auto}
-    .heroCard .inner{padding:12px}
-    .note{color:var(--muted);margin:0}
+    .heroCard .inner{padding:14px 14px 16px}
+    .note{color:var(--muted);margin:0;font-weight:800}
 
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    /* Sections */
+    .section{
+      margin-top:18px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:20px;
+      padding:16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .section h2{margin:0 0 10px;font-size:22px}
+    .muted{color:var(--muted);font-weight:800}
+
+    /* Plans */
+    .plansGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .plan{
+      border-radius:18px;
+      padding:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+      box-shadow:0 10px 22px rgba(15,23,42,.07);
+      position:relative;
+      overflow:hidden;
+    }
+    .plan::before{
+      content:"";
+      position:absolute;inset:-1px;
+      background: radial-gradient(600px 200px at 15% 0%, rgba(37,99,235,.12), transparent 55%),
+                  radial-gradient(500px 200px at 85% 10%, rgba(14,165,233,.10), transparent 55%);
+      pointer-events:none;
+      opacity:.9;
+    }
+    .plan > *{position:relative}
+    .planTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .planBadge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      font-weight:950;font-size:12px;
+      border:1px solid rgba(2,132,199,.20);
+      background: rgba(14,165,233,.10);
+      color: var(--text);
+      white-space:nowrap;
+    }
+    .planTitle{margin:0;font-weight:950}
+    .planPrice{
+      margin:10px 0 6px;
+      font-size:30px; font-weight:1000; letter-spacing:-.3px;
+    }
+    .planSub{margin:0;color:var(--muted);font-weight:850}
+    .planMeta{margin-top:10px;display:grid;gap:8px}
+    .metaRow{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:10px 10px;
+      background:rgba(15,23,42,.03);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:14px;
+      color:var(--muted);
+      font-weight:850;
+    }
+    .planCTA{
+      margin-top:12px;
+      display:flex;gap:10px;flex-wrap:wrap
+    }
+    .miniBtn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;font-weight:950;
+      min-height:42px;
+    }
+    .miniBtn.strong{
+      border-color:rgba(37,99,235,.26);
+      background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
+    }
+
+    /* Highlight “best” plan */
+    .plan.best{
+      border-color:rgba(124,58,237,.28);
+      background: linear-gradient(180deg, #ffffff, #fcfbff);
+    }
+    .plan.best::before{
+      background: radial-gradient(700px 240px at 12% 0%, rgba(124,58,237,.18), transparent 55%),
+                  radial-gradient(700px 240px at 85% 8%, rgba(37,99,235,.14), transparent 55%);
+    }
+    .plan.best .planBadge{
+      border-color:rgba(124,58,237,.26);
+      background:rgba(124,58,237,.12);
+    }
+
+    /* Cards / lists */
+    .list{display:grid;gap:10px;margin-top:12px}
     .card{
-      border:1px solid var(--border);background:#fff;
-      border-radius:16px;padding:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:18px;padding:14px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
     }
     .card h3{margin:0 0 6px;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-weight:700}
+    .card p{margin:0;color:var(--muted);font-weight:800}
 
-    .section{margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
-    .section h2{margin:0 0 12px;font-size:22px}
-    .muted{color:var(--muted);font-weight:700}
-    .list{display:grid;gap:10px}
-
-    .steps{display:grid;gap:10px}
+    /* Steps */
+    .steps{display:grid;gap:10px;margin-top:12px}
     .step{
-      border:1px solid var(--border);background:#fff;border-radius:16px;padding:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:18px;padding:14px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
     }
     .step b{display:block;margin-bottom:6px}
-
     .macPreview img{
       display:block;width:100%;height:auto;
       max-width:760px;margin:10px auto 0;
-      border-radius:14px;border:1px solid var(--border);
+      border-radius:16px;border:1px solid rgba(226,232,240,.95);
+      box-shadow:0 16px 30px rgba(15,23,42,.08);
     }
 
+    /* FAQ */
     details{
-      border:1px solid var(--border);
-      background:#fff;border-radius:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:16px;
       padding:10px 12px;margin-bottom:10px;
+      box-shadow:0 10px 22px rgba(15,23,42,.05);
     }
-    summary{cursor:pointer;font-weight:900}
+    summary{cursor:pointer;font-weight:950}
     footer{
-      margin-top:18px;
-      padding-top:14px;border-top:1px solid var(--border);
-      color:var(--muted);font-weight:700;font-size:14px;
+      margin-top:16px;
+      padding:14px 16px;
+      border:1px solid rgba(226,232,240,.9);
+      background:rgba(255,255,255,.65);
+      border-radius:18px;
+      color:var(--muted);font-weight:800;font-size:14px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
     }
 
-    @media (max-width: 860px){
+    @media (max-width: 920px){
       .hero{grid-template-columns:1fr}
-      h1{font-size:30px}
-      .grid3{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .plansGrid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -172,10 +312,11 @@
       </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-      <div>
+      <div class="heroLeft">
         <span class="badge" id="badge">Aktivizim IBO Player falas</span>
-        <p class="tagline" id="supportPill">Support • Udhëzime konfigurimi</p>
+        <div class="pill" id="supportPill">Support • Udhëzime konfigurimi</div>
 
         <h1 id="h1">IPTV Premium + IBO Player</h1>
         <p class="lead" id="lead">
@@ -187,9 +328,9 @@
           <a class="btn" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">Messenger</a>
         </div>
 
-        <span class="pill" id="note">
+        <div class="pill" id="note" style="display:inline-flex; margin-top:2px">
           Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.
-        </span>
+        </div>
       </div>
 
       <div class="heroCard">
@@ -202,32 +343,86 @@
       </div>
     </section>
 
-    <!-- Plans -->
+    <!-- PLANS -->
     <section class="section">
       <h2 id="plansTitle">Paketa & Çmimet</h2>
       <p class="muted" id="plansSubtitle">Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.</p>
 
-      <div class="grid3">
+      <div class="plansGrid">
         <!-- STRATEGIC ORDER: 12 -> 6 -> 1 -->
-        <div class="card">
-          <h3><span id="p12">12 muaj</span> — 79€</h3>
-          <p id="p12d">Më e leverdishmja</p>
-          <p class="muted" id="p12psych">⭐ Zgjedhja më e mirë</p>
-          <p class="muted" id="p12pm">≈ 6.6 € / muaj</p>
+        <div class="plan best">
+          <div class="planTop">
+            <h3 class="planTitle"><span id="p12">12 muaj</span></h3>
+            <span class="planBadge" id="p12psych">⭐ Zgjedhja më e mirë</span>
+          </div>
+          <div class="planPrice">79€</div>
+          <p class="planSub" id="p12d">Më e leverdishmja</p>
+
+          <div class="planMeta">
+            <div class="metaRow">
+              <span id="p12pmLabel">€/muaj</span>
+              <span id="p12pm">≈ 6.6 € / muaj</span>
+            </div>
+            <div class="metaRow">
+              <span id="p12valueLabel">Vlerë</span>
+              <span id="p12value">Maksimum</span>
+            </div>
+          </div>
+
+          <div class="planCTA">
+            <a class="miniBtn strong" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="planCta12">Zgjidh 12 muaj</a>
+            <a class="miniBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs12">Messenger</a>
+          </div>
         </div>
 
-        <div class="card">
-          <h3><span id="p6">6 muaj</span> — 39€</h3>
-          <p id="p6d">Vlerë e mirë</p>
-          <p class="muted" id="p6psych">🔹 Më e zgjedhura</p>
-          <p class="muted" id="p6pm">≈ 6.5 € / muaj</p>
+        <div class="plan">
+          <div class="planTop">
+            <h3 class="planTitle"><span id="p6">6 muaj</span></h3>
+            <span class="planBadge" id="p6psych">🔹 Më e zgjedhura</span>
+          </div>
+          <div class="planPrice">39€</div>
+          <p class="planSub" id="p6d">Vlerë e mirë</p>
+
+          <div class="planMeta">
+            <div class="metaRow">
+              <span id="p6pmLabel">€/muaj</span>
+              <span id="p6pm">≈ 6.5 € / muaj</span>
+            </div>
+            <div class="metaRow">
+              <span id="p6valueLabel">Balancë</span>
+              <span id="p6value">Çmim / kohë</span>
+            </div>
+          </div>
+
+          <div class="planCTA">
+            <a class="miniBtn strong" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="planCta6">Zgjidh 6 muaj</a>
+            <a class="miniBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs6">Messenger</a>
+          </div>
         </div>
 
-        <div class="card">
-          <h3><span id="p1">1 muaj</span> — 10€</h3>
-          <p id="p1d">E përshtatshme për testim</p>
-          <p class="muted" id="p1psych">Pa obligim</p>
-          <p class="muted" id="p1pm">≈ 10 € / muaj</p>
+        <div class="plan">
+          <div class="planTop">
+            <h3 class="planTitle"><span id="p1">1 muaj</span></h3>
+            <span class="planBadge" id="p1psych">Pa obligim</span>
+          </div>
+          <div class="planPrice">10€</div>
+          <p class="planSub" id="p1d">E përshtatshme për testim</p>
+
+          <div class="planMeta">
+            <div class="metaRow">
+              <span id="p1pmLabel">€/muaj</span>
+              <span id="p1pm">≈ 10 € / muaj</span>
+            </div>
+            <div class="metaRow">
+              <span id="p1valueLabel">Testim</span>
+              <span id="p1value">Start i shpejtë</span>
+            </div>
+          </div>
+
+          <div class="planCTA">
+            <a class="miniBtn strong" href="https://wa.me/38972698616" target="_blank" rel="noopener" id="planCta1">Zgjidh 1 muaj</a>
+            <a class="miniBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs1">Messenger</a>
+          </div>
         </div>
       </div>
 
@@ -236,7 +431,7 @@
       </p>
     </section>
 
-    <!-- Why -->
+    <!-- WHY -->
     <section class="section">
       <h2 id="whyH">Pse Sansat IPTV</h2>
       <div class="list">
@@ -259,10 +454,10 @@
       </div>
     </section>
 
-    <!-- Devices -->
+    <!-- DEVICES -->
     <section class="section">
       <h2 id="devicesH">Pajisjet e mbështetura</h2>
-      <div class="grid3">
+      <div class="list">
         <div class="card">
           <h3 id="dev1t">TV & Box</h3>
           <p id="dev1d">Smart TV, Android TV/Box, Fire Stick</p>
@@ -271,14 +466,10 @@
           <h3 id="dev2t">Mobile</h3>
           <p id="dev2d">Telefon dhe tablet (Android/iOS)</p>
         </div>
-        <div class="card">
-          <h3 id="calloutT">Aktivizim i shpejtë</h3>
-          <p class="muted" id="calloutD2">Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).</p>
-        </div>
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- HOW IT WORKS -->
     <section class="section">
       <h2 id="howH">Si funksionon</h2>
       <div class="steps">
@@ -319,7 +510,7 @@
       </p>
     </section>
 
-    <!-- MAC preview -->
+    <!-- MAC -->
     <section class="section macPreview">
       <h2 id="macPreviewH">MAC Address – Shembull</h2>
       <p class="muted" id="macPreviewNote">Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.</p>
@@ -327,7 +518,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section faq">
+    <section class="section">
       <h2 id="faqH">FAQ</h2>
 
       <details>
@@ -388,20 +579,18 @@
         msLabel:"Messenger",
         supportPill:"Support • Udhëzime konfigurimi",
         note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
+
         plansTitle:"Paketa & Çmimet",
         plansSubtitle:"Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.",
-        p1:"1 muaj", p1d:"E përshtatshme për testim",
-        p6:"6 muaj", p6d:"Vlerë e mirë",
-        p12:"12 muaj", p12d:"Më e leverdishmja",
-        p12psych:"⭐ Zgjedhja më e mirë",
-        p6psych:"🔹 Më e zgjedhura",
-        p1psych:"Pa obligim",
-        p12pm:"≈ 6.6 € / muaj",
-        p6pm:"≈ 6.5 € / muaj",
-        p1pm:"≈ 10 € / muaj",
+        p12:"12 muaj", p12d:"Më e leverdishmja", p12psych:"⭐ Zgjedhja më e mirë", p12pm:"≈ 6.6 € / muaj",
+        p6:"6 muaj", p6d:"Vlerë e mirë", p6psych:"🔹 Më e zgjedhura", p6pm:"≈ 6.5 € / muaj",
+        p1:"1 muaj", p1d:"E përshtatshme për testim", p1psych:"Pa obligim", p1pm:"≈ 10 € / muaj",
+        p12pmLabel:"€/muaj", p6pmLabel:"€/muaj", p1pmLabel:"€/muaj",
+        p12valueLabel:"Vlerë", p6valueLabel:"Balancë", p1valueLabel:"Testim",
+        p12value:"Maksimum", p6value:"Çmim / kohë", p1value:"Start i shpejtë",
+        planCta12:"Zgjidh 12 muaj", planCta6:"Zgjidh 6 muaj", planCta1:"Zgjidh 1 muaj",
+        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
         plansPush:"Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.",
-        calloutT:"Aktivizim i shpejtë",
-        calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Smart TV / Android / Fire Stick / Mobile).",
 
         whyH:"Pse Sansat IPTV",
         why1t:"Aktivizim i shpejtë", why1d:"Proces i thjeshtë dhe udhëzime të qarta.",
@@ -457,20 +646,18 @@
         msLabel:"Messenger",
         supportPill:"Support • Setup guidance",
         note:"For details and payment options, please message us privately. Activation is done after confirmation.",
+
         plansTitle:"Plans & Pricing",
         plansSubtitle:"All plans include Premium IPTV, free IBO Player activation, and support.",
-        p1:"1 month", p1d:"Good for testing",
-        p6:"6 months", p6d:"Great value",
-        p12:"12 months", p12d:"Best deal",
-        p12psych:"⭐ Best choice",
-        p6psych:"🔹 Most popular",
-        p1psych:"No commitment",
-        p12pm:"≈ €6.6 / month",
-        p6pm:"≈ €6.5 / month",
-        p1pm:"≈ €10 / month",
+        p12:"12 months", p12d:"Best deal", p12psych:"⭐ Best choice", p12pm:"≈ €6.6 / month",
+        p6:"6 months", p6d:"Great value", p6psych:"🔹 Most popular", p6pm:"≈ €6.5 / month",
+        p1:"1 month", p1d:"Good for testing", p1psych:"No commitment", p1pm:"≈ €10 / month",
+        p12pmLabel:"€/month", p6pmLabel:"€/month", p1pmLabel:"€/month",
+        p12valueLabel:"Value", p6valueLabel:"Balance", p1valueLabel:"Trial",
+        p12value:"Maximum", p6value:"Price / time", p1value:"Quick start",
+        planCta12:"Choose 12 months", planCta6:"Choose 6 months", planCta1:"Choose 1 month",
+        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
         plansPush:"To order and activate, message us on WhatsApp or Messenger and we will guide you right away.",
-        calloutT:"Fast activation",
-        calloutD:"Message us and we will guide you based on your device (Smart TV / Android / Fire Stick / Mobile).",
 
         whyH:"Why Sansat IPTV",
         why1t:"Fast activation", why1d:"Simple process with clear guidance.",
@@ -526,20 +713,18 @@
         msLabel:"Messenger",
         supportPill:"Support • Aide configuration",
         note:"Pour les détails et les moyens de paiement, merci de nous écrire en message privé. Activation après confirmation.",
+
         plansTitle:"Offres & Tarifs",
         plansSubtitle:"Toutes les offres incluent IPTV Premium, activation IBO Player offerte et assistance.",
-        p1:"1 mois", p1d:"Idéal pour tester",
-        p6:"6 mois", p6d:"Très bon rapport",
-        p12:"12 mois", p12d:"Meilleure offre",
-        p12psych:"⭐ Meilleur choix",
-        p6psych:"🔹 Le plus choisi",
-        p1psych:"Sans engagement",
-        p12pm:"≈ 6,6 € / mois",
-        p6pm:"≈ 6,5 € / mois",
-        p1pm:"≈ 10 € / mois",
+        p12:"12 mois", p12d:"Meilleure offre", p12psych:"⭐ Meilleur choix", p12pm:"≈ 6,6 € / mois",
+        p6:"6 mois", p6d:"Très bon rapport", p6psych:"🔹 Le plus choisi", p6pm:"≈ 6,5 € / mois",
+        p1:"1 mois", p1d:"Idéal pour tester", p1psych:"Sans engagement", p1pm:"≈ 10 € / mois",
+        p12pmLabel:"€/mois", p6pmLabel:"€/mois", p1pmLabel:"€/mois",
+        p12valueLabel:"Valeur", p6valueLabel:"Équilibre", p1valueLabel:"Test",
+        p12value:"Maximum", p6value:"Prix / durée", p1value:"Démarrage rapide",
+        planCta12:"Choisir 12 mois", planCta6:"Choisir 6 mois", planCta1:"Choisir 1 mois",
+        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
         plansPush:"Pour commander et activer, écrivez-nous sur WhatsApp ou Messenger et nous vous guidons immédiatement.",
-        calloutT:"Activation rapide",
-        calloutD:"Écrivez-nous et nous vous guidons selon votre appareil (Smart TV / Android / Fire Stick / Mobile).",
 
         whyH:"Pourquoi Sansat IPTV",
         why1t:"Activation rapide", why1d:"Processus simple avec des instructions claires.",
@@ -589,9 +774,14 @@
 
     const ids = [
       "tagline","badge","h1","lead","supportPill","note",
-      "plansTitle","plansSubtitle","p1","p1d","p6","p6d","p12","p12d",
-      "p12psych","p6psych","p1psych","p12pm","p6pm","p1pm","plansPush",
-      "calloutT","calloutD","calloutD2",
+
+      "plansTitle","plansSubtitle",
+      "p12","p12d","p12psych","p12pm","p12pmLabel","p12valueLabel","p12value",
+      "p6","p6d","p6psych","p6pm","p6pmLabel","p6valueLabel","p6value",
+      "p1","p1d","p1psych","p1pm","p1pmLabel","p1valueLabel","p1value",
+      "planCta12","planCta6","planCta1","planMs12","planMs6","planMs1",
+      "plansPush",
+
       "whyH","why1t","why1d","why2t","why2d","why3t","why3d","why4t","why4d",
       "devicesH","dev1t","dev1d","dev2t","dev2d",
       "howH","s1t","s1d","s2t","s2d","s3t","s3d",
@@ -609,7 +799,6 @@
 
     function applyLang(lang){
       const t = i18n[lang] || i18n.sq;
-
       document.documentElement.lang = lang;
 
       document.getElementById("waBtn").textContent = t.waLabel;
