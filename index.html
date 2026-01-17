@@ -448,6 +448,93 @@
       color:var(--text);
     }
 
+  
+    /* Sticky WhatsApp FAB */
+    .fabWa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:56px;
+      height:56px;
+      border-radius:18px;
+      background:linear-gradient(135deg, rgba(37,99,235,.22), rgba(14,165,233,.18));
+      border:1px solid rgba(37,99,235,.25);
+      box-shadow:0 18px 36px rgba(15,23,42,.18);
+      display:grid;
+      place-items:center;
+      z-index:9999;
+      backdrop-filter: blur(8px);
+    }
+    .fabWa:hover{transform: translateY(-1px)}
+    .fabIcon{
+      width:26px;height:26px;display:block;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230f172a' d='M20.52 3.48A11.78 11.78 0 0 0 12.07 0C5.47 0 .12 5.35.12 11.95c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.6 0 11.95-5.35 11.95-11.95 0-3.2-1.25-6.2-3.5-8.39ZM12.07 21.6h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.37A9.9 9.9 0 0 1 2.1 11.95C2.1 6.45 6.58 1.98 12.08 1.98c2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.98c0 5.5-4.47 9.94-9.9 9.94Zm5.75-7.4c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.71.16-.2.31-.81 1.02-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.54.16-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55h-.6c-.2 0-.54.08-.82.39-.28.31-1.07 1.05-1.07 2.56s1.1 2.97 1.25 3.18c.16.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.39.2 1.91.12.58-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.48-.07-.12-.28-.2-.59-.36Z'/%3E%3C/svg%3E");
+      background-size:contain;background-repeat:no-repeat;background-position:center;
+      opacity:.95;
+    }
+
+    /* Refund quick chips */
+    .refundQuick{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin:12px 0 12px;
+    }
+    .rqItem{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(226,232,240,.95);
+      background:rgba(15,23,42,.03);
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+    }
+    .refundCtaRow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+
+    /* Footer improvements */
+    .footerGrid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      gap:12px;
+      align-items:center;
+    }
+    .footerBrand{display:flex;gap:10px;align-items:center}
+    .footerName{font-weight:950}
+    .footerSmall{color:var(--muted);font-weight:650;margin-top:2px}
+    .footerLinks{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .footerLinks a{color:var(--muted);font-weight:750}
+    .footerLinks a:hover{color:var(--text)}
+    .footerCtas{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+    .footerBottom{margin-top:12px;border-top:1px solid rgba(226,232,240,.9);padding-top:10px}
+    .footerCopy{display:inline-block;margin-left:10px;color:var(--muted);font-weight:650}
+    @media (max-width: 920px){
+      .footerGrid{grid-template-columns:1fr;justify-items:start}
+      .footerLinks{justify-content:flex-start}
+      .footerCtas{justify-content:flex-start}
+      .fabWa{right:14px;bottom:14px}
+    }
+
+    /* Icons (CSS pseudo-elements) */
+    #tb1::before, #tb2::before, #tb3::before{
+      content:"";
+      width:16px;height:16px;display:inline-block;margin-right:8px;
+      background-size:contain;background-repeat:no-repeat;background-position:center;
+      opacity:.9;
+    }
+    #tb1::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-6a1 1 0 0 1 1 1v1.07A8.97 8.97 0 0 1 20.93 11H22a1 1 0 1 1 0 2h-1.07A8.97 8.97 0 0 1 13 20.93V22a1 1 0 1 1-2 0v-1.07A8.97 8.97 0 0 1 3.07 13H2a1 1 0 1 1 0-2h1.07A8.97 8.97 0 0 1 11 3.07V2a1 1 0 0 1 1-1Z'/%3E%3C/svg%3E");}
+    #tb2::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2-8 4.5A1.5 1.5 0 0 0 5.5 20h13A1.5 1.5 0 0 0 20 18.5C20 16 16.42 14 12 14Z'/%3E%3C/svg%3E");}
+    #tb3::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1Zm1 17.93V20a1 1 0 0 1-2 0v-1.07A8.97 8.97 0 0 1 3.07 13H2a1 1 0 0 1 0-2h1.07A8.97 8.97 0 0 1 11 3.07V2a1 1 0 0 1 2 0v1.07A8.97 8.97 0 0 1 20.93 11H22a1 1 0 0 1 0 2h-1.07A8.97 8.97 0 0 1 13 18.93Z'/%3E%3C/svg%3E");}
+
+    /* Why cards subtle icons */
+    .whyDevicesGrid .card{position:relative;padding-left:52px}
+    .whyDevicesGrid .card::before{
+      content:"";position:absolute;left:16px;top:16px;width:26px;height:26px;
+      background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.9
+    }
+    .whyDevicesGrid .card:nth-child(1)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M13 2 3 14h7l-1 8 10-12h-7l1-8Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(2)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 2a10 10 0 0 0-3 19.54V14H7v-2h2V9.5A3.5 3.5 0 0 1 12.5 6H15v2h-2.5A1.5 1.5 0 0 0 11 9.5V12h4l-1 2h-3v7.54A10 10 0 0 0 12 2Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(3)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M4 6h16v10H4V6Zm2 12h12v2H6v-2Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(4)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 22a4 4 0 0 1-4-4h2a2 2 0 0 0 4 0h2a4 4 0 0 1-4 4ZM7 2h10v2H7V2Zm0 4h10a5 5 0 0 1 5 5v4h-2v-4a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v4H2v-4a5 5 0 0 1 5-5Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(5)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M7 3h10v2H7V3Zm-2 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm0 2v10h14V9H5Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(6)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 2a7 7 0 0 1 7 7c0 2.39-1.19 4.5-3 5.74V22l-4-2-4 2v-7.26A6.99 6.99 0 0 1 5 9a7 7 0 0 1 7-7Z'/%3E%3C/svg%3E");}
+
   </style>
 </head>
 
@@ -777,6 +864,20 @@
           pas ndjekjes së udhëzimeve dhe verifikimit teknik.
         </p>
 
+
+        <div class="refundQuick">
+          <div class="rqItem" id="rq1">30 ditë rimbursim i plotë</div>
+          <div class="rqItem" id="rq2">Kërkohet verifikim teknik</div>
+          <div class="rqItem" id="rq3">Përgjigje 24–48 orë</div>
+          <div class="rqItem" id="rq4">Përjashtime: ISP/Wi‑Fi/VPN</div>
+        </div>
+
+        <div class="refundCtaRow">
+          <a class="btn primary" id="refundWaBtn" href="https://wa.me/38972698616?text=" target="_blank" rel="noopener">Kërko rimbursim</a>
+          <a class="btn secondary" href="#contact" id="refundAltBtn">Kontakto mbështetjen</a>
+        </div>
+
+
         <div class="steps">
           <div class="step">
             <b id="r1t">1) Afati</b>
@@ -864,8 +965,32 @@
 </section>
 
 <footer id="legal">
-        Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
-      </footer>
+        <div class="footerGrid">
+          <div class="footerBrand">
+            <div class="logoMark" aria-hidden="true">S</div>
+            <div>
+              <div class="footerName">Sansat IPTV</div>
+              <div class="footerSmall">Aktivizim i shpejtë • Mbështetje direkte</div>
+            </div>
+          </div>
+
+          <div class="footerLinks">
+            <a href="#plans" id="footerPlans">Paketa</a>
+            <a href="#refund" id="footerRefund">Rimbursimi</a>
+            <a href="#contact" id="footerContact">Kontakt</a>
+          </div>
+
+          <div class="footerCtas">
+            <a class="btn primary" href="https://wa.me/38972698616?text=" target="_blank" rel="noopener" id="footerWa">WhatsApp</a>
+            <a class="btn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="footerMs">Messenger</a>
+          </div>
+        </div>
+
+        <div class="footerBottom" id="legalText">
+          Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
+          <span class="footerCopy">© 2026 Sansat IPTV</span>
+        </div>
+</footer>
 
 </main>
   </div>
@@ -985,6 +1110,18 @@
         p6save:"Kursen 21€ krahasuar me 1 muaj",
         p1save:"E mirë për testim 30 ditë",
         p12ribbon:"SAVE 41€",
+        rq1:"30 ditë rimbursim i plotë",
+        rq2:"Kërkohet verifikim teknik",
+        rq3:"Përgjigje 24–48 orë",
+        rq4:"Përjashtime: ISP/Wi‑Fi/VPN",
+        refundWaBtn:"Kërko rimbursim",
+        refundAltBtn:"Kontakto mbështetjen",
+        footerPlans:"Paketa",
+        footerRefund:"Rimbursimi",
+        footerContact:"Kontakt",
+        footerWa:"WhatsApp",
+        footerMs:"Messenger",
+        legalText:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.",
 
 
         legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit."
@@ -1100,6 +1237,18 @@
         p6save:"Save €21 vs monthly",
         p1save:"Great for a 30-day trial",
         p12ribbon:"SAVE €41",
+        rq1:"30-day full refund",
+        rq2:"Technical verification required",
+        rq3:"Response in 24–48 hours",
+        rq4:"Exclusions: ISP/Wi‑Fi/VPN",
+        refundWaBtn:"Request refund",
+        refundAltBtn:"Contact support",
+        footerPlans:"Plans",
+        footerRefund:"Refund",
+        footerContact:"Contact",
+        footerWa:"WhatsApp",
+        footerMs:"Messenger",
+        legalText:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights.",
 
 
         legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights."
@@ -1215,6 +1364,18 @@
         p6save:"Spare 21€ gegenüber monatlich",
         p1save:"Ideal zum 30‑Tage‑Test",
         p12ribbon:"SPARE 41€",
+        rq1:"30 Tage volle Erstattung",
+        rq2:"Technische Prüfung erforderlich",
+        rq3:"Antwort in 24–48 Stunden",
+        rq4:"Ausschlüsse: ISP/WLAN/VPN",
+        refundWaBtn:"Erstattung anfordern",
+        refundAltBtn:"Support kontaktieren",
+        footerPlans:"Tarife",
+        footerRefund:"Erstattung",
+        footerContact:"Kontakt",
+        footerWa:"WhatsApp",
+        footerMs:"Messenger",
+        legalText:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen.",
 
 
         legal:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen."
@@ -1248,7 +1409,8 @@
       "faqH","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","f5q","f5a","f6q","f6a","f7q","f7a",
       "legal",
       "navRefund", "refundH", "refundLead", "r1t", "r1d", "r2t", "r2d", "r3t", "r3d", "r4t", "r4d",
-      "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon"];
+      "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon",
+      "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerWa", "footerMs", "legalText"];
 
     function setActiveLangButton(lang){
       document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
@@ -1297,32 +1459,36 @@
     function buildWaText(lang, plan){
       if(lang === "en"){
         return `Hi! I want Sansat IPTV${plan?` (${plan} months)`:``}.
-Device: (Samsung/LG/Android/Box/Mobile):
-MAC Address:
-Payment method:
+Device: ____
+MAC Address: ____
 `;
       }
       if(lang === "de"){
         return `Hallo! Ich möchte Sansat IPTV${plan?` (${plan} Monate)`:``}.
-Gerät: (Samsung/LG/Android/Box/Mobile):
-MAC-Adresse:
-Zahlungsmethode:
+Gerät: ____
+MAC‑Adresse: ____
 `;
       }
       return `Përshëndetje! Dua Sansat IPTV${plan?` (${plan} muaj)`:``}.
-Pajisja: (Samsung/LG/Android/Box/Mobile):
-MAC Address:
-Mënyra e pagesës:
+Pajisja: ____
+MAC Address: ____
 `;
     }
 
     function setWaLinks(lang){
       const base = "https://wa.me/38972698616?text=";
-      const hero = document.getElementById("waBtn");
+            const refundBtn = document.getElementById("refundWaBtn");
+      const fab = document.getElementById("fabWa");
+const hero = document.getElementById("waBtn");
       const contact = document.getElementById("contactWaBtn");
+      const footerWa = document.getElementById("footerWa");
 
       if(hero) hero.href = base + enc(buildWaText(lang, ""));
       if(contact) contact.href = base + enc(buildWaText(lang, ""));
+      if(footerWa) footerWa.href = base + enc(buildWaText(lang, ""));
+
+      if(refundBtn) refundBtn.href = base + enc("Kërkoj rimbursim (30 ditë).\nEmri: ____\nData e aktivizimit: ____\nPajisja: ____\nMAC Address: ____\nPërshkrimi i problemit: ____\n");
+      if(fab) fab.href = base + enc(buildWaText(lang, ""));
 
       const p12 = document.getElementById("planCta12");
       const p6  = document.getElementById("planCta6");
@@ -1333,5 +1499,11 @@ Mënyra e pagesës:
       if(p1)  p1.href  = base + enc(buildWaText(lang, "1"));
     }
 </script>
+
+  <!-- Sticky WhatsApp Button -->
+  <a id="fabWa" class="fabWa" href="https://wa.me/38972698616?text=" target="_blank" rel="noopener" aria-label="Hap WhatsApp">
+    <span class="fabIcon" aria-hidden="true"></span>
+  </a>
+
 </body>
 </html>
