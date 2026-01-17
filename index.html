@@ -593,6 +593,34 @@
 
     /* Unify trust bullet icon sizing */
     #tb1::before, #tb2::before, #tb3::before{width:18px;height:18px}
+    /* Dark mode palette */
+:root[data-theme="dark"]{
+  --page:#0b1220;
+  --surface:#0f172a;
+  --surface2:#111c33;
+
+  --text:#e5e7eb;
+  --muted:#a7b0c0;
+
+  --border:rgba(148,163,184,.18);
+  --shadow:0 16px 40px rgba(0,0,0,.35);
+
+  --brand:#60a5fa;
+  --brand2:#38bdf8;
+
+  --ok:#22c55e;
+  --warn:#fbbf24;
+  --violet:#a78bfa;
+  --rose:#fb7185;
+}
+
+/* Background in dark */
+:root[data-theme="dark"] body{
+  background:
+    radial-gradient(1200px 600px at 15% 0%, rgba(96,165,250,.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 10%, rgba(56,189,248,.14), transparent 50%),
+    var(--page);
+}
 
   </style>
 
