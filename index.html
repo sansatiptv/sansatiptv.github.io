@@ -357,6 +357,27 @@
       .contactGrid{grid-template-columns:1fr}
       nav.quick{display:none}
     }
+    /* ================================
+   FULL WIDTH BANNER (FINAL)
+   ================================ */
+.fullBanner{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.fullBanner img{
+  width: 100%;
+  height: 460px;       /* desktop */
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .fullBanner img{
+    height: 220px;     /* mobile – e shkurt */
+  }
+}
   </style>
 </head>
 
