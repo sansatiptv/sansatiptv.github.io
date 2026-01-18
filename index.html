@@ -1211,6 +1211,155 @@ body.dark .logoMark,
   .testCtaSub{font-size:14px;}
 }
 
+
+
+/* ================================
+   24H TRIAL MODAL (CTA PREVIEW)
+   ================================ */
+.trialModal{position:fixed; inset:0; display:none; z-index:10000;}
+.trialModal.isOpen{display:block;}
+.trialBackdrop{
+  position:absolute; inset:0;
+  background:rgba(2,6,23,.55);
+  backdrop-filter: blur(4px);
+}
+.trialPanel{
+  position:relative;
+  width:min(720px, calc(100vw - 28px));
+  margin: clamp(14px, 6vh, 38px) auto 0;
+  background:#fff;
+  border-radius:22px;
+  border:1px solid rgba(226,232,240,.95);
+  box-shadow: 0 30px 80px rgba(0,0,0,.35);
+  padding: 22px 18px 18px;
+  text-align:center;
+}
+.trialClose{
+  position:absolute;
+  right:12px; top:10px;
+  width:40px; height:40px;
+  border-radius:12px;
+  border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.03);
+  color:rgba(15,23,42,.8);
+  font-weight:950;
+  font-size:22px;
+  cursor:pointer;
+}
+.trialIcon{
+  display:inline-grid;
+  place-items:center;
+  width:64px; height:64px;
+  border-radius:999px;
+  color:#16a34a;
+  background:rgba(22,163,74,.10);
+  border:1px solid rgba(22,163,74,.22);
+  margin: 4px auto 10px;
+}
+.trialTitle{
+  margin: 0 0 8px;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+  font-weight: 1000;
+  color: var(--text);
+}
+.trialAccent{color:#16a34a;}
+.trialLead{
+  margin: 0 auto 16px;
+  max-width: 72ch;
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.6;
+}
+.trialSubhead{
+  margin: 6px 0 10px;
+  font-size: 18px;
+  font-weight: 950;
+  color: var(--text);
+}
+.trialList{
+  margin: 0 auto 18px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+  text-align:left;
+}
+.trialList li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-weight: 850;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.trialList li::before{
+  content:"";
+  width:18px; height:18px;
+  flex:0 0 18px;
+  margin-top:2px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2316a34a' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");
+}
+.trialCtaRow{margin: 10px 0 8px;}
+.trialBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:min(520px, 100%);
+  min-height:54px;
+  padding: 12px 16px;
+  border-radius:14px;
+  background: linear-gradient(135deg, rgba(22,163,74,1), rgba(34,197,94,1));
+  color:#fff;
+  font-weight: 1000;
+  border:1px solid rgba(22,163,74,.35);
+  box-shadow: 0 18px 40px rgba(22,163,74,.22);
+}
+.trialBtn:hover{transform: translateY(-1px); opacity:.97;}
+.trialBtn::before{
+  content:"";
+  width:18px;height:18px;
+  background-size:contain;background-repeat:no-repeat;background-position:center;
+  filter: invert(1);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M20.52 3.48A11.78 11.78 0 0 0 12.07 0C5.47 0 .12 5.35.12 11.95c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.6 0 11.95-5.35 11.95-11.95 0-3.2-1.25-6.2-3.5-8.39ZM12.07 21.6h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.37A9.9 9.9 0 0 1 2.1 11.95C2.1 6.45 6.58 1.98 12.08 1.98c2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.98c0 5.5-4.47 9.94-9.9 9.94Zm5.75-7.4c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.71.16-.2.31-.81 1.02-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.54.16-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55h-.6c-.2 0-.54.08-.82.39-.28.31-1.07 1.05-1.07 2.56s1.1 2.97 1.25 3.18c.16.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.39.2 1.91.12.58-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.48-.07-.12-.28-.2-.59-.36Z'/%3E%3C/svg%3E");
+}
+.trialFoot{
+  margin: 10px auto 0;
+  max-width: 78ch;
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+/* Dark mode */
+:root[data-theme="dark"] .trialPanel{
+  background: rgba(15,23,42,.92);
+  border-color: rgba(148,163,184,.18);
+}
+:root[data-theme="dark"] .trialClose{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(148,163,184,.18);
+  color: rgba(226,232,240,.9);
+}
+:root[data-theme="dark"] .trialTitle{color: var(--text);}
+:root[data-theme="dark"] .trialLead,
+:root[data-theme="dark"] .trialFoot,
+:root[data-theme="dark"] .trialList li{color: var(--muted);}
+
+/* Mobile */
+@media (max-width: 640px){
+  .trialTitle{font-size: 34px;}
+  .trialPanel{padding:18px 14px 14px;}
+  .trialList{gap:8px;}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1535,7 +1684,7 @@ body.dark .logoMark,
       
       <!-- 24H TEST CTA -->
       <section class="section testCta" id="test24h" aria-label="Test 24 orë">
-        <a class="testCtaLink" href="https://wa.me/38972698616?text=Përshëndetje Sansat IPTV,%0A%0ADua TEST 24 orë për IPTV.%0APajisja (Model/Platformë): ____%0ADevice ID: ____%0AMAC Address: ____%0A%0AFaleminderit!" target="_blank" rel="noopener">
+        <button type="button" class="testCtaLink" id="openTrialModal">
           <div class="testCtaInner">
             <div class="testCtaBadge">TEST 24 ORË</div>
             <h2 class="testCtaTitle">Aktivizo testin falas për IPTV (24 orë)</h2>
@@ -1544,8 +1693,44 @@ body.dark .logoMark,
             </p>
             <div class="testCtaHint">Kliko për WhatsApp</div>
           </div>
-        </a>
+        </button>
       </section>
+
+      <!-- 24H Trial Modal -->
+      <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
+        <div class="trialBackdrop" data-close="true"></div>
+        <div class="trialPanel" role="document">
+          <button type="button" class="trialClose" aria-label="Close" data-close="true">×</button>
+
+          <div class="trialIcon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="54" height="54">
+              <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
+              <path d="M21 17l14 7-14 7z" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <h2 class="trialTitle" id="trialTitle" data-sq="Test 24 orë falas për IPTV" data-en="Your 24hr Free Trial Awaits!" data-de="Ihre 24‑Std. IPTV‑Testversion">Test 24 orë falas për IPTV</h2>
+
+          <p class="trialLead" id="trialLead" data-sq="Aktivizim testues për 24 orë. Testi bëhet pas dërgimit të Device ID dhe MAC Address." data-en="Get a 24-hour trial after sending your Device ID and MAC Address." data-de="24‑Stunden‑Test nach Zusendung von Device ID und MAC‑Adresse.">Aktivizim testues për 24 orë. Testi bëhet pas dërgimit të Device ID dhe MAC Address.</p>
+
+          <h3 class="trialSubhead" id="trialGet" data-sq="Çfarë përfshihet në test:" data-en="What is included:" data-de="Im Test enthalten:">Çfarë përfshihet në test:</h3>
+          <ul class="trialList" aria-label="Trial benefits">
+            <li>Full access to Live Channels</li>
+            <li>HD & 4K Streaming Quality</li>
+            <li>VOD Library (Movies & Series)</li>
+            <li>Multi-Device Compatibility</li>
+            <li>EPG (TV Guide)</li>
+          </ul>
+
+          <div class="trialCtaRow">
+            <a class="trialBtn" id="trialWaBtn" href="#" target="_blank" rel="noopener" data-sq="Aktivizo testin në WhatsApp" data-en="Claim your trial via WhatsApp" data-de="Test über WhatsApp aktivieren">Aktivizo testin në WhatsApp</a>
+          </div>
+
+          <p class="trialFoot" id="trialFoot" data-sq="Testi shërben vetëm për verifikim të shërbimit dhe kompatibilitetit të pajisjes." data-en="Trial is for service and device compatibility testing only." data-de="Der Test dient nur zur Überprüfung des Dienstes und der Gerätekompatibilität.">Testi shërben vetëm për verifikim të shërbimit dhe kompatibilitetit të pajisjes.</p>
+        </div>
+      </div>
+
+
 
 
 
@@ -2768,6 +2953,66 @@ const hero = document.getElementById("waBtn");
     });
   })();
 </script>
+
+
+<script>
+  (function(){
+    const openBtn = document.getElementById("openTrialModal");
+    const modal = document.getElementById("trialModal");
+    const waBtn = document.getElementById("trialWaBtn");
+    if(!openBtn || !modal || !waBtn) return;
+
+    const PHONE_E164 = "38972698616";
+
+    function buildWhatsAppUrl(){
+      const lines = [
+        "Hi Sansat IPTV,",
+        "",
+        "Dua TEST 24 ore per IPTV.",
+        "Pajisja (Model/Platforme): ____",
+        "Device ID: ____",
+        "MAC Address: ____",
+        "",
+        "Faleminderit!"
+      ];
+      const text = encodeURIComponent(lines.join("
+"));
+      return "https://wa.me/" + PHONE_E164 + "?text=" + text;
+    }
+
+    function openModal(){
+      modal.classList.add("isOpen");
+      modal.setAttribute("aria-hidden","false");
+      waBtn.setAttribute("href", buildWhatsAppUrl());
+      // prevent background scroll
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal(){
+      modal.classList.remove("isOpen");
+      modal.setAttribute("aria-hidden","true");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      try{ openBtn.focus(); }catch(e){}
+    }
+
+    openBtn.addEventListener("click", openModal);
+
+    modal.addEventListener("click", function(e){
+      const t = e.target;
+      if(t && t.getAttribute && t.getAttribute("data-close")==="true"){
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && modal.classList.contains("isOpen")){
+        closeModal();
+      }
+    });
+  })();
+</script>
+
 
 </body>
 </html>
