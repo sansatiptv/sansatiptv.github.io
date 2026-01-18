@@ -896,6 +896,97 @@ body.dark .payItem.card .payIcon{background:rgba(249,115,22,.15);color:#fb923c}
 body.dark .payItem.paypal .payIcon{background:rgba(37,99,235,.18);color:#60a5fa}
 body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
 
+
+/* Devices compatibility (colored icons + subtle animation) */
+.devicesWrap{margin-top:12px}
+.devicesTitle{text-align:center}
+.devicesGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(6, minmax(0,1fr));
+  gap:14px;
+}
+.deviceCard{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  padding:16px 14px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  text-align:center;
+  transform: translateY(0);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  animation: devFadeUp .45s ease both;
+}
+.deviceCard:hover{
+  transform: translateY(-4px);
+  box-shadow:0 18px 34px rgba(15,23,42,.12);
+  border-color: rgba(37,99,235,.22);
+}
+.deviceIcon{
+  width:62px;height:62px;border-radius:999px;
+  display:grid;place-items:center;
+  border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.04);
+  position:relative;
+}
+.deviceIcon svg{width:28px;height:28px}
+.deviceLabel{margin:0;font-weight:950;color:var(--text)}
+.deviceSub{margin:0;color:var(--muted);font-weight:800;font-size:13px;line-height:1.25}
+
+/* Color variants (match payment icons style) */
+.deviceCard.tv .deviceIcon{background:#fff3e6;border-color:#fed7aa;color:#f97316}
+.deviceCard.mobile .deviceIcon{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
+.deviceCard.tablet .deviceIcon{background:#f5f3ff;border-color:#ddd6fe;color:#7c3aed}
+.deviceCard.pc .deviceIcon{background:#f1f5f9;border-color:#cbd5e1;color:#0f172a}
+.deviceCard.box .deviceIcon{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
+.deviceCard.mag .deviceIcon{background:#fff1f2;border-color:#fecdd3;color:#e11d48}
+
+/* Subtle “breathing” animation for icons */
+.deviceIcon{
+  animation: devBreathe 3.2s ease-in-out infinite;
+}
+.deviceCard:hover .deviceIcon{
+  animation: devWiggle .55s ease-in-out 1;
+}
+
+@keyframes devFadeUp{
+  from{opacity:0; transform:translateY(10px)}
+  to{opacity:1; transform:translateY(0)}
+}
+@keyframes devBreathe{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-2px)}
+}
+@keyframes devWiggle{
+  0%{transform:translateY(-2px) rotate(0deg)}
+  35%{transform:translateY(-4px) rotate(-3deg)}
+  70%{transform:translateY(-3px) rotate(3deg)}
+  100%{transform:translateY(-2px) rotate(0deg)}
+}
+
+/* Dark mode */
+body.dark .deviceCard,
+[data-theme="dark"] .deviceCard{
+  background:rgba(2,6,23,.55);
+  border-color:rgba(148,163,184,.22);
+}
+body.dark .deviceSub,
+[data-theme="dark"] .deviceSub{color:rgba(226,232,240,.78)}
+body.dark .deviceCard:hover,
+[data-theme="dark"] .deviceCard:hover{
+  border-color:rgba(96,165,250,.28);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .devicesGrid{grid-template-columns:repeat(3, minmax(0,1fr))}
+}
+@media (max-width: 640px){
+  .devicesGrid{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1256,17 +1347,86 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
 
         </div>
       
-<section class="section" id="devices">
-  <h2 id="devicesH">Compatible With All Your Favourite Devices</h2>
-  <div class="list whyDevicesGrid">
-    <div class="card"><h3 id="devTV">Smart TV</h3><p>Samsung, LG, Sony</p></div>
-    <div class="card"><h3 id="devMobile">Mobile</h3><p>iOS & Android</p></div>
-    <div class="card"><h3 id="devTablet">Tablets</h3><p>iPad & Android</p></div>
-    <div class="card"><h3 id="devPC">Computers</h3><p>Windows & Mac</p></div>
-    <div class="card"><h3 id="devBox">Android Box</h3><p>Firestick</p></div>
-    <div class="card"><h3 id="devMag">MAG / Formuler</h3><p>Supported</p></div>
+
+<section class="section" id="devices" aria-label="Compatible devices">
+  <h2 class="devicesTitle" id="devicesH">Compatible With All Your Favourite Devices</h2>
+
+  <div class="devicesWrap">
+    <div class="devicesGrid" role="list">
+      <div class="deviceCard tv" role="listitem">
+        <div class="deviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="6" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="deviceLabel" id="devTV">Smart TV</p>
+        <p class="deviceSub" id="devTVsub">Samsung, LG, Sony etc.</p>
+      </div>
+
+      <div class="deviceCard mobile" role="listitem">
+        <div class="deviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="8" y="3" width="8" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="deviceLabel" id="devMobile">Mobile</p>
+        <p class="deviceSub" id="devMobilesub">iOS & Android</p>
+      </div>
+
+      <div class="deviceCard tablet" role="listitem">
+        <div class="deviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="6" y="4" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M11 17h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="deviceLabel" id="devTablet">Tablets</p>
+        <p class="deviceSub" id="devTabletsub">iPad & Android</p>
+      </div>
+
+      <div class="deviceCard pc" role="listitem">
+        <div class="deviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="5" y="6" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="deviceLabel" id="devPC">Computers</p>
+        <p class="deviceSub" id="devPCsub">Windows & Mac</p>
+      </div>
+
+      <div class="deviceCard box" role="listitem">
+        <div class="deviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="6" y="8" width="12" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 16v2m6-2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="deviceLabel" id="devBox">Android Box</p>
+        <p class="deviceSub" id="devBoxsub">Firestick</p>
+      </div>
+
+      <div class="deviceCard mag" role="listitem">
+        <div class="deviceIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7 9h10v8H7z" stroke="currentColor" stroke-width="2" />
+            <path d="M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 9V7h8v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="deviceLabel" id="devMag">MAG Box / Formuler</p>
+        <p class="deviceSub" id="devMagsub">Supported</p>
+      </div>
+    </div>
+
+    <p class="muted" id="devicesNote" style="text-align:center;margin:14px 0 0">
+      And many more. If your device supports IPTV, it’s compatible.
+    </p>
   </div>
 </section>
+
 
 
 <!-- HOW IT WORKS -->
@@ -1588,7 +1748,7 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
         why3t:"Pajisje të ndryshme", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
         why4t:"Mbështetje", why4d:"Përgjigje e shpejtë në DM/WhatsApp.",
 
-        devicesH:"Pajisjet e mbështetura",
+        devicesH:"Përputhshmëri me pajisjet tuaja të preferuara",
         dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
         dev2t:"Mobile", dev2d:"Telefon dhe tablet (Android/iOS)",
 
@@ -1699,7 +1859,20 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
         paySub:"Pranojmë metoda të sigurta pagese për lehtësinë tuaj.",
         payCard:"Pagesa me kartë",
         payPaypal:"PayPal",
-        payBank:"Transfer bankar"
+        payBank:"Transfer bankar",
+        devTV:"Smart TV",
+        devTVsub:"Samsung, LG, Sony etj.",
+        devMobile:"Mobile",
+        devMobilesub:"iOS & Android",
+        devTablet:"Tablets",
+        devTabletsub:"iPad & Android",
+        devPC:"Kompjuter",
+        devPCsub:"Windows & Mac",
+        devBox:"Android Box",
+        devBoxsub:"Firestick",
+        devMag:"MAG Box / Formuler",
+        devMagsub:"Të mbështetura",
+        devicesNote:"Dhe shumë të tjera. Nëse pajisja e mbështet IPTV, është e përputhshme."
 },
 
       en: {
@@ -1745,7 +1918,7 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
         why3t:"Multiple devices", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
         why4t:"Support", why4d:"Fast replies on DM/WhatsApp.",
 
-        devicesH:"Supported devices",
+        devicesH:"Compatible With All Your Favourite Devices",
         dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
         dev2t:"Mobile", dev2d:"Phone and tablet (Android/iOS)",
 
@@ -1853,7 +2026,20 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
         paySub:"We accept secure payment methods for your convenience.",
         payCard:"Card Payments",
         payPaypal:"PayPal",
-        payBank:"Bank Transfer"
+        payBank:"Bank Transfer",
+        devTV:"Smart TV",
+        devTVsub:"Samsung, LG, Sony etc.",
+        devMobile:"Mobile",
+        devMobilesub:"iOS & Android",
+        devTablet:"Tablets",
+        devTabletsub:"iPad & Android",
+        devPC:"Computers",
+        devPCsub:"Windows & Mac",
+        devBox:"Android Box",
+        devBoxsub:"Firestick",
+        devMag:"MAG Box / Formuler",
+        devMagsub:"Supported",
+        devicesNote:"And many more. If your device supports IPTV, it’s compatible."
 },
 
       de: {
@@ -1899,7 +2085,7 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
         why3t:"Mehrere Geräte", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
         why4t:"Support", why4d:"Schnelle Antworten per DM/WhatsApp.",
 
-        devicesH:"Unterstützte Geräte",
+        devicesH:"Kompatibel mit all Ihren Lieblingsgeräten",
         dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
         dev2t:"Mobile", dev2d:"Smartphone und Tablet (Android/iOS)",
 
@@ -2007,7 +2193,20 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
         paySub:"Wir akzeptieren sichere Zahlungsmethoden für Ihren Komfort.",
         payCard:"Kartenzahlung",
         payPaypal:"PayPal",
-        payBank:"Banküberweisung"
+        payBank:"Banküberweisung",
+        devTV:"Smart TV",
+        devTVsub:"Samsung, LG, Sony usw.",
+        devMobile:"Mobil",
+        devMobilesub:"iOS & Android",
+        devTablet:"Tablets",
+        devTabletsub:"iPad & Android",
+        devPC:"Computer",
+        devPCsub:"Windows & Mac",
+        devBox:"Android Box",
+        devBoxsub:"Firestick",
+        devMag:"MAG Box / Formuler",
+        devMagsub:"Unterstützt",
+        devicesNote:"Und viele mehr. Wenn Ihr Gerät IPTV unterstützt, ist es kompatibel."
 }
     };
 
@@ -2044,7 +2243,9 @@ body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
       "refundLink",
       "themeLabel",
       "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5",
-      "payTitle", "paySub", "payCard", "payPaypal", "payBank"
+      "payTitle", "paySub", "payCard", "payPaypal", "payBank",
+      "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote"
+    
     
     ];
 
