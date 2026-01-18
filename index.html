@@ -2031,5 +2031,28 @@ const hero = document.getElementById("waBtn");
     })();
   </script>
 
+
+<script>
+(function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const langParam = params.get("lang");
+
+    if (langParam && ["sq","en","de"].includes(langParam)) {
+      localStorage.setItem("sansat_lang", langParam);
+      return;
+    }
+
+    if (localStorage.getItem("sansat_lang")) return;
+
+    const nav = (navigator.language || "").toLowerCase();
+    if (nav.startsWith("sq")) localStorage.setItem("sansat_lang", "sq");
+    else if (nav.startsWith("de")) localStorage.setItem("sansat_lang", "de");
+    else localStorage.setItem("sansat_lang", "en");
+
+  } catch (e) {}
+})();
+</script>
+
 </body>
 </html>
