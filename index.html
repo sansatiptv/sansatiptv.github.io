@@ -1135,6 +1135,82 @@ body.dark .logoMark,
   100%{transform:scale(1)}
 }
 
+
+
+/* ================================
+   24H TEST CTA (CENTER + GREEN)
+   ================================ */
+.testCta{padding:0; border:0; background:transparent; box-shadow:none;}
+.testCtaLink{
+  display:block;
+  border-radius:22px;
+  border:1px solid rgba(22,163,74,.22);
+  background: linear-gradient(135deg, rgba(22,163,74,.16), rgba(34,197,94,.10));
+  box-shadow: 0 16px 36px rgba(15,23,42,.10);
+  text-align:center;
+  overflow:hidden;
+}
+.testCtaInner{
+  padding:22px 18px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.testCtaBadge{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(22,163,74,.16);
+  border:1px solid rgba(22,163,74,.24);
+  color: var(--ok);
+  font-weight:1000;
+  letter-spacing:.4px;
+}
+.testCtaTitle{
+  margin:12px 0 6px;
+  font-size:28px;
+  letter-spacing:-.3px;
+}
+.testCtaSub{
+  margin:0 auto;
+  max-width: 70ch;
+  color: var(--muted);
+  font-weight:850;
+  line-height:1.5;
+}
+.testCtaHint{
+  margin:14px auto 0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 14px;
+  border-radius:14px;
+  background: rgba(255,255,255,.75);
+  border:1px solid rgba(226,232,240,.90);
+  color: var(--text);
+  font-weight:950;
+}
+.testCtaLink:hover{transform: translateY(-1px);}
+.testCtaLink:active{transform: translateY(0);}
+
+/* Dark mode */
+:root[data-theme="dark"] .testCtaLink{
+  border-color: rgba(34,197,94,.22);
+  background: linear-gradient(135deg, rgba(22,163,74,.18), rgba(34,197,94,.10));
+  box-shadow: 0 22px 44px rgba(0,0,0,.35);
+}
+:root[data-theme="dark"] .testCtaHint{
+  background: rgba(15,23,42,.55);
+  border-color: rgba(148,163,184,.18);
+}
+
+/* Mobile */
+@media (max-width: 920px){
+  .testCtaTitle{font-size:22px;}
+  .testCtaInner{padding:18px 14px;}
+  .testCtaSub{font-size:14px;}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1456,115 +1532,21 @@ body.dark .logoMark,
 
 
       <!-- WHY -->
-      <section class="section">
-        <h2 id="whyH">Pse Sansat IPTV</h2>
-        <div class="list whyDevicesGrid">
-          <div class="card">
-            <h3 id="why1t">Aktivizim i shpejtë</h3>
-            <p id="why1d">Proces i thjeshtë dhe udhëzime të qarta.</p>
-          </div>
-          <div class="card">
-            <h3 id="why2t">Paketa fleksibile</h3>
-            <p id="why2d">1 / 6 / 12 muaj sipas nevojës.</p>
-          </div>
-          <div class="card">
-            <h3 id="why3t">Pajisje të ndryshme</h3>
-            <p id="why3d">Smart TV, Android TV/Box, Fire Stick, Mobile.</p>
-          </div>
-          <div class="card">
-            <h3 id="why4t">Mbështetje</h3>
-            <p id="why4d">Përgjigje e shpejtë në DM/WhatsApp.</p>
-          </div>
-          <div class="card">
-            <h3 id="dev1t">TV & Box</h3>
-            <p id="dev1d">Smart TV, Android TV/Box, Fire Stick</p>
-          </div>
-          <div class="card">
-            <h3 id="dev2t">Mobile</h3>
-            <p id="dev2d">Telefon dhe tablet (Android/iOS)</p>
-          </div>
-
-        </div>
       
+      <!-- 24H TEST CTA -->
+      <section class="section testCta" id="test24h" aria-label="Test 24 orë">
+        <a class="testCtaLink" href="https://wa.me/38972698616?text=Përshëndetje Sansat IPTV,%0A%0ADua TEST 24 orë për IPTV.%0APajisja (Model/Platformë): ____%0ADevice ID: ____%0AMAC Address: ____%0A%0AFaleminderit!" target="_blank" rel="noopener">
+          <div class="testCtaInner">
+            <div class="testCtaBadge">TEST 24 ORË</div>
+            <h2 class="testCtaTitle">Aktivizo testin falas për IPTV (24 orë)</h2>
+            <p class="testCtaSub">
+              Kliko këtu dhe na dërgo në WhatsApp: Device ID dhe MAC Address për aktivizim.
+            </p>
+            <div class="testCtaHint">Kliko për WhatsApp</div>
+          </div>
+        </a>
+      </section>
 
-<section class="section" id="devices" aria-label="Compatible devices">
-  <h2 class="devicesTitle" id="devicesH">Compatible With All Your Favourite Devices</h2>
-
-  <div class="devicesWrap">
-    <div class="devicesGrid" role="list">
-      <div class="deviceCard tv" role="listitem">
-        <div class="deviceIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <rect x="4" y="6" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p class="deviceLabel" id="devTV">Smart TV</p>
-        <p class="deviceSub" id="devTVsub">Samsung, LG, Sony etc.</p>
-      </div>
-
-      <div class="deviceCard mobile" role="listitem">
-        <div class="deviceIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <rect x="8" y="3" width="8" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p class="deviceLabel" id="devMobile">Mobile</p>
-        <p class="deviceSub" id="devMobilesub">iOS & Android</p>
-      </div>
-
-      <div class="deviceCard tablet" role="listitem">
-        <div class="deviceIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <rect x="6" y="4" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M11 17h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p class="deviceLabel" id="devTablet">Tablets</p>
-        <p class="deviceSub" id="devTabletsub">iPad & Android</p>
-      </div>
-
-      <div class="deviceCard pc" role="listitem">
-        <div class="deviceIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <rect x="5" y="6" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M9 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p class="deviceLabel" id="devPC">Computers</p>
-        <p class="deviceSub" id="devPCsub">Windows & Mac</p>
-      </div>
-
-      <div class="deviceCard box" role="listitem">
-        <div class="deviceIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <rect x="6" y="8" width="12" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M9 16v2m6-2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p class="deviceLabel" id="devBox">Android Box</p>
-        <p class="deviceSub" id="devBoxsub">Firestick</p>
-      </div>
-
-      <div class="deviceCard mag" role="listitem">
-        <div class="deviceIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M7 9h10v8H7z" stroke="currentColor" stroke-width="2" />
-            <path d="M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M8 9V7h8v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <p class="deviceLabel" id="devMag">MAG Box / Formuler</p>
-        <p class="deviceSub" id="devMagsub">Supported</p>
-      </div>
-    </div>
-
-    <p class="muted" id="devicesNote" style="text-align:center;margin:14px 0 0">
-      And many more. If your device supports IPTV, it’s compatible.
-    </p>
-  </div>
-</section>
 
 
 
