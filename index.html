@@ -1799,7 +1799,7 @@ body.dark .logoMark,
       <form id="waForm" class="formGrid" autocomplete="on">
         <div class="field">
           <label for="waName" id="waNameL">Your Name</label>
-          <input id="waName" name="name" type="text" placeholder="John Smith" />
+          <input id="waName" name="name" type="text" placeholder="John Smith" required />
         </div>
 
         <div class="field">
@@ -1814,10 +1814,13 @@ body.dark .logoMark,
 
         <div class="field">
           <label for="waMsg" id="waMsgL">Message</label>
-          <textarea id="waMsg" name="message" placeholder="Your message here..."></textarea>
+          <textarea id="waMsg" name="message" placeholder="Your message here..." required></textarea>
         </div>
 
         <button type="submit" class="btnBigOrange" id="waSendBtn">Send Message via WhatsApp</button>
+        <p class="muted" id="waHelpText" style="margin:6px 0 0;font-weight:800;font-size:13px">
+          This will open WhatsApp with your message pre-filled.
+        </p>
       </form>
     </div>
   </div>
@@ -2741,6 +2744,47 @@ const hero = document.getElementById("waBtn");
     window.open(url, "_blank", "noopener");
   });
 })();
+</script>
+
+<script>
+  (function(){
+    const PHONE_E164 = "38972698616"; // Sansat IPTV WhatsApp (no +)
+    const form = document.getElementById("waForm");
+    if(!form) return;
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = (document.getElementById("waName")?.value || "").trim();
+      const email = (document.getElementById("waEmail")?.value || "").trim();
+      const subject = (document.getElementById("waSubject")?.value || "").trim();
+      const msg = (document.getElementById("waMsg")?.value || "").trim();
+
+      // Basic validation (HTML required covers most, but keep for robustness)
+      if(!name || !msg){
+        try{ document.getElementById("waSendBtn")?.focus(); }catch(_){}
+        return;
+      }
+
+      const lines = [
+        "Hi Sansat IPTV,",
+        "",
+        "Name: " + name
+      ];
+      if(email)   lines.push("Email: " + email);
+      if(subject) lines.push("Subject: " + subject);
+      lines.push("");
+      lines.push("Message:");
+      lines.push(msg);
+
+      const text = encodeURIComponent(lines.join("
+"));
+      const url = "https://wa.me/" + PHONE_E164 + "?text=" + text;
+
+      // Open WhatsApp (new tab)
+      window.open(url, "_blank", "noopener");
+    });
+  })();
 </script>
 
 </body>
