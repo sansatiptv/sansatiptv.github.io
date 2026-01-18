@@ -726,57 +726,7 @@
     :root[data-theme="dark"] .fullBanner p a{color:var(--text)}
 
   
-/* Ensuring 30 day money-back image is responsive and displays properly */
-.fullBanner img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px; /* Optional: Soft rounded corners */
-}
-
-  
-/* Ensuring 30 day money-back image is responsive and displays properly */
-.fullBanner img {
-  width: 80%;   /* Limiting to 80% of the width */
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px; /* Optional: Soft rounded corners */
-  margin: 0 auto; /* Centering the image */
-  display: block;
-}
-
-  
-/* Beautifying logo */
-.logoMark {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--brand), var(--brand2));
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
-
-  
-/* Beautifying logo with new design */
-.logoMark {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--brand), var(--brand2));
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 26px;
-  font-weight: 800;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-  
-    /* Plan price discount styling */
+/* Plan price discount styling */
     .planPrice{
       margin:10px 0 6px;
       display:flex;
@@ -853,12 +803,37 @@
   color:var(--muted);
 }
 
+/* Reviews stars */
+.stars{
+  font-size:14px;
+  letter-spacing:1px;
+  line-height:1;
+  color:var(--warn);
+  margin-bottom:8px;
+  user-select:none;
+}
+.starsBig{font-size:18px;margin:0}
+.ratingRow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(245,158,11,.22);
+  background:rgba(245,158,11,.08);
+}
+.ratingText{font-weight:900;color:var(--text)}
+:root[data-theme="dark"] .ratingRow{
+  border-color:rgba(245,158,11,.22);
+  background:rgba(245,158,11,.10);
+}
 
-  <!-- Font -->
+</style>
+<!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -1290,7 +1265,7 @@
 <section class="fullBanner">
   <img src="30daymoneyback.png" alt="30 Day Money Back Guarantee - Sansat IPTV">
   <p class="muted" style="text-align:center;margin:10px 0 0">
-    <a href="#refund" id="refundLink" style="font-weight:950"></a>
+    <a href="#refund" id="refundLink" style="font-weight:950">Shiko kushtet e rimbursimit</a>
   </p>
 </section>
 
@@ -1514,7 +1489,8 @@
         refundLink:"Shiko kushtet e rimbursimit",
 
 
-        legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit."
+        legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.",
+        ratingText:"Vlerësuar nga klientët tanë"
       },
 
       en: {
@@ -1656,7 +1632,8 @@
         refundLink:"View refund policy",
 
 
-        legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights."
+        legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights.",
+        ratingText:"Rated by our customers"
       },
 
       de: {
@@ -1798,7 +1775,8 @@
         refundLink:"Rückerstattungsbedingungen ansehen",
 
 
-        legal:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen."
+        legal:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen.",
+        ratingText:"Von unseren Kunden bewertet"
       }
     };
 
