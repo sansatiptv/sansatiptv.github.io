@@ -776,19 +776,52 @@
 }
 
   
-/* Beautifying logo with new design */
-.logoMark {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--brand), var(--brand2));
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 26px;
-  font-weight: 800;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
+    /* Plan price discount styling */
+    .planPrice{
+      margin:10px 0 6px;
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .oldPrice{
+      font-weight:950;
+      color:var(--muted);
+      text-decoration:line-through;
+      opacity:.8;
+      font-size:18px;
+    }
+    .newPrice{
+      font-size:32px;
+      font-weight:1000;
+      letter-spacing:-.3px;
+      color:var(--text);
+    }
+    .priceNote{
+      font-size:12px;
+      font-weight:950;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(34,197,94,.22);
+      background:rgba(34,197,94,.10);
+      color:var(--ok);
+    }
+
+  
+    /* Premium logo mark */
+    .logoMark{
+      position:relative;
+      isolation:isolate;
+    }
+    .logoMark::after{
+      content:"";
+      position:absolute;
+      inset:3px;
+      border-radius:inherit;
+      background:radial-gradient(60% 60% at 30% 25%, rgba(255,255,255,.35), transparent 55%);
+      z-index:-1;
+      pointer-events:none;
+    }
 
   </style>
 
@@ -894,7 +927,13 @@
               <h3 class="planTitle"><span id="p12">12 muaj</span></h3>
               <span class="planBadge" id="p12psych">⭐ Zgjedhja më e mirë</span>
             </div>
-            <p class="planSave muted" id="p12save">Kursen 41€ krahasuar me 1 muaj</p>
+            <div class="planPrice" aria-label="Çmimi">
+              <span class="oldPrice" aria-hidden="true">79€</span>
+              <span class="newPrice">69€</span>
+              <span class="priceNote" id="p12priceNote">Zbritje</span>
+            </div>
+
+            <p class="planSave muted" id="p12save">Kursen 51€ krahasuar me 1 muaj</p>
             <p class="planSub" id="p12d">Më e leverdishmja</p>
             <ul class="planFeatures" aria-label="Features">
               <li id="p12f1">IPTV Premium</li>
@@ -906,7 +945,7 @@
             <div class="planMeta">
               <div class="metaRow">
                 <span id="p12pmLabel">€/muaj</span>
-                <span id="p12pm">≈ 6.6 € / muaj</span>
+                <span id="p12pm">≈ 5.8 € / muaj</span>
               </div>
               <div class="metaRow">
                 <span id="p12valueLabel">Vlerë</span>
@@ -1261,7 +1300,7 @@
     const i18n = {
       sq: {
         tagline:"Premium • Aktivizim i shpejtë",
-        badge:"Aktivizim IBO Player falas",
+        badge:"Aktivizim IBO Player falas (normal 10€)",
         h1:"IPTV Premium për Sport, Filma & Seriale",
         lead:"Aktivizim i shpejtë, udhëzime konfigurimi për pajisjen tënde dhe rimbursim i plotë brenda 30 ditësh (sipas kushteve).",
         waLabel:"WhatsApp",
@@ -1330,7 +1369,7 @@
         macPreviewNote:"Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.",
 
         contactH:"Kontakt",
-        contactLead:"Për aktivizim, na dërgo MAC Address-in dhe pajisjen që përdor (Samsung/LG/Android/Box/Mobile).",
+        contactLead:"Për aktivizim, na dërgo MAC Address-in dhe Device ID-në, si dhe pajisjen që përdor (Samsung/LG/Android/Box/Mobile).",
         contact1t:"WhatsApp",
         contact1d:"Kliko për mesazh: +389 72 698 616",
         contact2t:"Messenger",
@@ -1352,7 +1391,7 @@
         f6q:"Çfarë cilësie video ofrohet (HD/4K)?",
         f6a:"Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; 4K mund të jetë e disponueshme për disa përmbajtje.",
         f7q:"Çfarë të dhënash kërkohen për aktivizim?",
-        f7a:"Kërkojmë vetëm të dhëna teknike të nevojshme për konfigurim, zakonisht MAC Address (siç shfaqet në aplikacion). Nuk kërkojmë “Device ID”.",
+        f7a:"Kërkojmë të dhëna teknike për konfigurim: MAC Address dhe Device ID (siç shfaqen në aplikacion/pajisje).",
 
         navRefund:"Rimbursimi",
         refundH:"Politika e rimbursimit (30 ditë – rimbursim i plotë)",
@@ -1388,7 +1427,7 @@
         hs2:"Udhëzim sipas pajisjes",
         hs3:"Rimbursim 30 ditë",
         p12f1:"IPTV Premium",
-        p12f2:"IBO Player aktivizim falas",
+        p12f2:"IBO Player (10€) falas",
         p12f3:"Mbështetje konfigurimi",
         p6f1:"IPTV Premium",
         p6f2:"IBO Player aktivizim falas",
@@ -1406,7 +1445,7 @@
 
       en: {
         tagline:"Premium • Fast activation",
-        badge:"Free IBO Player activation",
+        badge:"Free IBO Player activation (normally €10)",
         h1:"Premium IPTV for Sports, Movies & Series",
         lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
         waLabel:"WhatsApp",
@@ -1472,7 +1511,7 @@
         macPreviewNote:"Example only: the MAC Address is shown inside the IBO Player app.",
 
         contactH:"Contact",
-        contactLead:"For activation, send your MAC Address and device type (Samsung/LG/Android/Box/Mobile).",
+        contactLead:"For activation, send your MAC Address and Device ID, plus your device type (Samsung/LG/Android/Box/Mobile).",
         contact1t:"WhatsApp",
         contact1d:"Tap to message: +389 72 698 616",
         contact2t:"Messenger",
@@ -1494,7 +1533,7 @@
         f6q:"What video quality is available (HD/4K)?",
         f6a:"Quality varies by channel/content and internet speed. HD/Full HD is common; 4K may be available for some content.",
         f7q:"What details are required for activation?",
-        f7a:"We request only technical details needed for setup—usually the MAC Address shown in the app. We do not request “Device ID”.",
+        f7a:"We request technical details for setup: MAC Address and Device ID (as shown in the app/device).",
 
         navRefund:"Refund",
         refundH:"Refund policy (30 days – full refund)",
@@ -1530,7 +1569,7 @@
         hs2:"Device-specific guidance",
         hs3:"30-day refund",
         p12f1:"Premium IPTV",
-        p12f2:"Free IBO Player activation",
+        p12f2:"IBO Player (€10) free",
         p12f3:"Setup support",
         p6f1:"Premium IPTV",
         p6f2:"Free IBO Player activation",
@@ -1548,7 +1587,7 @@
 
       de: {
         tagline:"Premium • Schnelle Aktivierung",
-        badge:"Kostenlose IBO Player Aktivierung",
+        badge:"IBO Player Aktivierung gratis (normal 10€)",
         h1:"Premium IPTV für Sport, Filme & Serien",
         lead:"Schnelle Aktivierung, gerätespezifische Einrichtungshilfe und volle 30‑Tage‑Erstattung (Bedingungen gelten).",
         waLabel:"WhatsApp",
@@ -1614,7 +1653,7 @@
         macPreviewNote:"Nur als Beispiel: Die MAC-Adresse wird in der IBO Player App angezeigt.",
 
         contactH:"Kontakt",
-        contactLead:"Für die Aktivierung senden Sie uns die MAC-Adresse und den Gerätetyp (Samsung/LG/Android/Box/Mobile).",
+        contactLead:"Für die Aktivierung senden Sie MAC-Adresse und Device-ID sowie den Gerätetyp (Samsung/LG/Android/Box/Mobile).",
         contact1t:"WhatsApp",
         contact1d:"Tippen zum Schreiben: +389 72 698 616",
         contact2t:"Messenger",
@@ -1636,7 +1675,7 @@
         f6q:"Welche Videoqualität ist verfügbar (HD/4K)?",
         f6a:"Die Qualität hängt von Kanal/Inhalt und Internetgeschwindigkeit ab. HD/Full HD ist üblich; 4K kann für einige Inhalte verfügbar sein.",
         f7q:"Welche Angaben werden für die Aktivierung benötigt?",
-        f7a:"Wir benötigen nur technische Angaben für das Setup – in der Regel die in der App angezeigte MAC-Adresse. Wir verlangen keine „Device ID“.",
+        f7a:"Für das Setup benötigen wir technische Angaben: MAC-Adresse und Device-ID (wie in App/Gerät angezeigt).",
 
         navRefund:"Erstattung",
         refundH:"Erstattungsrichtlinie (30 Tage – volle Erstattung)",
@@ -1672,7 +1711,7 @@
         hs2:"Anleitung je Gerät",
         hs3:"30 Tage Erstattung",
         p12f1:"Premium IPTV",
-        p12f2:"Kostenlose IBO Player Aktivierung",
+        p12f2:"IBO Player (10€) gratis",
         p12f3:"Einrichtungs‑Support",
         p6f1:"Premium IPTV",
         p6f2:"Kostenlose IBO Player Aktivierung",
