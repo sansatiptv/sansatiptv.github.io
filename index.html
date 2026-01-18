@@ -1095,6 +1095,23 @@ body.dark .field textarea,
   .contactHero h2{font-size:30px}
 }
 
+
+/* Logo upgrade (SVG mark) */
+.logoMark{
+  width:44px;height:44px;border-radius:14px;
+  background:transparent !important;
+  display:grid;place-items:center;
+  box-shadow:0 12px 26px rgba(37,99,235,.22);
+  user-select:none;
+  flex:0 0 auto;
+  overflow:hidden;
+}
+.logoSvg{width:44px;height:44px;display:block}
+body.dark .logoMark,
+[data-theme="dark"] .logoMark{
+  box-shadow:0 16px 34px rgba(0,0,0,.32);
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1144,7 +1161,23 @@ body.dark .field textarea,
   <div class="wrap">
     <header aria-label="Top navigation">
       <div class="brandRow">
-        <div class="logoMark" aria-hidden="true">S</div>
+        <div class="logoMark" aria-hidden="true">
+          <svg class="logoSvg" viewBox="0 0 48 48" role="img" aria-label="Sansat IPTV logo">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#0ea5e9"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f97316"/>
+                <stop offset="1" stop-color="#fb7185"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="40" height="40" rx="14" fill="url(#g1)"/>
+            <path d="M14 18c0-3 2.6-5 6.5-5 3.8 0 6 1.6 7.2 3.6l-3.6 1.8c-.7-1.2-1.8-1.8-3.7-1.8-1.8 0-2.7.6-2.7 1.5 0 .8.8 1.2 3.4 1.7 4.6.9 7.2 2.4 7.2 6 0 3.2-2.7 5.5-7.4 5.5-4.3 0-7-1.7-8.3-4.3l3.7-1.7c.7 1.6 2 2.5 4.6 2.5 2.2 0 3.1-.7 3.1-1.6 0-1-1-1.4-4-2-4.1-.8-6.8-2.1-6.8-5.7Z" fill="#ffffff" opacity="0.95"/>
+            <circle cx="36" cy="12" r="4" fill="url(#g2)" opacity="0.95"/>
+          </svg>
+        </div>
         <div class="brand">
           Sansat IPTV
           <small id="tagline">Premium • Aktivizim i shpejtë</small>
@@ -1247,15 +1280,7 @@ body.dark .field textarea,
               <li id="p12f4">24/7 Support via WhatsApp</li>
               <li id="p12f5">Free Setup Assistance</li>
             </ul>
-
-
-
-            <div class="planMeta">
-              <div class="metaRow">
-                <span id="p12pmLabel">€/muaj</span>
-                <span id="p12pm">≈ 5.8 € / muaj</span>
-              </div>
-              <div class="metaRow">
+<div class="metaRow">
                 <span id="p12valueLabel">Vlerë</span>
                 <span id="p12value">Maksimum</span>
               </div>
@@ -1294,14 +1319,7 @@ body.dark .field textarea,
               <li id="p6f4">24/7 Support via WhatsApp</li>
               <li id="p6f5">Free Setup Assistance</li>
             </ul>
-
-
-            <div class="planMeta">
-              <div class="metaRow">
-                <span id="p6pmLabel">€/muaj</span>
-                <span id="p6pm">≈ 6.5 € / muaj</span>
-              </div>
-              <div class="metaRow">
+<div class="metaRow">
                 <span id="p6valueLabel">Balancë</span>
                 <span id="p6value">Çmim / kohë</span>
               </div>
@@ -1339,15 +1357,7 @@ body.dark .field textarea,
               <li id="p1f4">24/7 Support via WhatsApp</li>
               <li id="p1f5">Free Setup Assistance</li>
             </ul>
-
-
-
-            <div class="planMeta">
-              <div class="metaRow">
-                <span id="p1pmLabel">€/muaj</span>
-                <span id="p1pm">≈ 10 € / muaj</span>
-              </div>
-              <div class="metaRow">
+<div class="metaRow">
                 <span id="p1valueLabel">Testim</span>
                 <span id="p1value">Start i shpejtë</span>
               </div>
@@ -1809,7 +1819,23 @@ body.dark .field textarea,
         <footer id="legal">
 <div class="footerGrid">
           <div class="footerBrand">
-            <div class="logoMark" aria-hidden="true">S</div>
+            <div class="logoMark" aria-hidden="true">
+          <svg class="logoSvg" viewBox="0 0 48 48" role="img" aria-label="Sansat IPTV logo">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#0ea5e9"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f97316"/>
+                <stop offset="1" stop-color="#fb7185"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="40" height="40" rx="14" fill="url(#g1)"/>
+            <path d="M14 18c0-3 2.6-5 6.5-5 3.8 0 6 1.6 7.2 3.6l-3.6 1.8c-.7-1.2-1.8-1.8-3.7-1.8-1.8 0-2.7.6-2.7 1.5 0 .8.8 1.2 3.4 1.7 4.6.9 7.2 2.4 7.2 6 0 3.2-2.7 5.5-7.4 5.5-4.3 0-7-1.7-8.3-4.3l3.7-1.7c.7 1.6 2 2.5 4.6 2.5 2.2 0 3.1-.7 3.1-1.6 0-1-1-1.4-4-2-4.1-.8-6.8-2.1-6.8-5.7Z" fill="#ffffff" opacity="0.95"/>
+            <circle cx="36" cy="12" r="4" fill="url(#g2)" opacity="0.95"/>
+          </svg>
+        </div>
             <div>
               <div class="footerName">Sansat IPTV</div>
               <div class="footerSmall">Aktivizim i shpejtë • Mbështetje direkte</div>
