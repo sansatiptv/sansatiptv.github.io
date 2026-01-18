@@ -1700,7 +1700,7 @@ body.dark .logoMark,
       <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
         <div class="trialBackdrop" data-close="true"></div>
         <div class="trialPanel" role="document">
-          <button type="button" class="trialClose" aria-label="Close" data-close="true">×</button>
+          <button type="button" class="trialClose" id="trialCloseBtn" aria-label="Close" data-close="true">×</button>
 
           <div class="trialIcon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="54" height="54">
@@ -1709,49 +1709,77 @@ body.dark .logoMark,
             </svg>
           </div>
 
-          <h2 class="trialTitle" id="trialTitle" data-sq="Test 24 orë falas për IPTV" data-en="Your 24hr Free Trial Awaits!" data-de="Ihre 24‑Std. IPTV‑Testversion">Test 24 orë falas për IPTV</h2>
+          <h2 class="trialTitle" id="trialTitle"
+              data-sq="Test 24 orë falas për IPTV"
+              data-en="Your 24hr IPTV Trial Awaits!"
+              data-de="Ihre 24‑Std. IPTV‑Testversion">
+            Test 24 orë falas për IPTV
+          </h2>
 
-          <p class="trialLead" id="trialLead" data-sq="Aktivizim testues për 24 orë. Testi bëhet pas dërgimit të Device ID dhe MAC Address." data-en="Get a 24-hour trial after sending your Device ID and MAC Address." data-de="24‑Stunden‑Test nach Zusendung von Device ID und MAC‑Adresse.">Aktivizim testues për 24 orë. Testi bëhet pas dërgimit të Device ID dhe MAC Address.</p>
+          <p class="trialLead" id="trialLead"
+             data-sq="Merr test 24 orë për verifikim të shërbimit. Aktivizimi bëhet pasi të na dërgosh Device ID dhe MAC Address."
+             data-en="Get a 24-hour test to verify the service. Activation happens after you send your Device ID and MAC Address."
+             data-de="24‑Stunden‑Test zur Überprüfung. Aktivierung nach Zusendung von Device ID und MAC‑Adresse.">
+            Merr test 24 orë për verifikim të shërbimit. Aktivizimi bëhet pasi të na dërgosh Device ID dhe MAC Address.
+          </p>
 
-          <h3 class="trialSubhead" id="trialGet" data-sq="Çfarë përfshihet në test:" data-en="What is included:" data-de="Im Test enthalten:">Çfarë përfshihet në test:</h3>
+          <h3 class="trialSubhead" id="trialGet"
+              data-sq="Çfarë përfshihet në test:"
+              data-en="What is included:"
+              data-de="Im Test enthalten:">
+            Çfarë përfshihet në test:
+          </h3>
+
           <ul class="trialList" aria-label="Trial benefits">
-            <li>Full access to Live Channels</li>
-            <li>HD & 4K Streaming Quality</li>
-            <li>VOD Library (Movies & Series)</li>
-            <li>Multi-Device Compatibility</li>
-            <li>EPG (TV Guide)</li>
+            <li id="trialLi1"
+                data-sq="Kanale Live + Sport (përzgjedhja mund të ndryshojë)"
+                data-en="Live Channels + Sports (selection may vary)"
+                data-de="Live‑Kanäle + Sport (Auswahl kann variieren)">
+              Kanale Live + Sport (përzgjedhja mund të ndryshojë)
+            </li>
+            <li id="trialLi2"
+                data-sq="Cilësi HD/4K (në varësi të kanalit dhe pajisjes)"
+                data-en="HD/4K quality (depends on channel and device)"
+                data-de="HD/4K‑Qualität (abhängig von Kanal und Gerät)">
+              Cilësi HD/4K (në varësi të kanalit dhe pajisjes)
+            </li>
+            <li id="trialLi3"
+                data-sq="VOD (Filma & Serialë) – në varësi të paketës/listës"
+                data-en="VOD (Movies & Series) – depends on your list/package"
+                data-de="VOD (Filme & Serien) – abhängig von Liste/Paket">
+              VOD (Filma & Serialë) – në varësi të paketës/listës
+            </li>
+            <li id="trialLi4"
+                data-sq="Kompatibilitet për TV/Box/Mobile (sipas pajisjes)"
+                data-en="Compatible with TV/Box/Mobile (device dependent)"
+                data-de="Kompatibel mit TV/Box/Mobil (geräteabhängig)">
+              Kompatibilitet për TV/Box/Mobile (sipas pajisjes)
+            </li>
+            <li id="trialLi5"
+                data-sq="EPG (TV Guide) kur është e disponueshme"
+                data-en="EPG (TV Guide) where available"
+                data-de="EPG (TV‑Guide) sofern verfügbar">
+              EPG (TV Guide) kur është e disponueshme
+            </li>
           </ul>
 
           <div class="trialCtaRow">
-            <a class="trialBtn" id="trialWaBtn" href="#" target="_blank" rel="noopener" data-sq="Aktivizo testin në WhatsApp" data-en="Claim your trial via WhatsApp" data-de="Test über WhatsApp aktivieren">Aktivizo testin në WhatsApp</a>
+            <a class="trialBtn" id="trialWaBtn" href="#" target="_blank" rel="noopener"
+               data-sq="Aktivizo testin në WhatsApp"
+               data-en="Claim your trial via WhatsApp"
+               data-de="Test über WhatsApp aktivieren">
+              Aktivizo testin në WhatsApp
+            </a>
           </div>
 
-          <p class="trialFoot" id="trialFoot" data-sq="Testi shërben vetëm për verifikim të shërbimit dhe kompatibilitetit të pajisjes." data-en="Trial is for service and device compatibility testing only." data-de="Der Test dient nur zur Überprüfung des Dienstes und der Gerätekompatibilität.">Testi shërben vetëm për verifikim të shërbimit dhe kompatibilitetit të pajisjes.</p>
+          <p class="trialFoot" id="trialFoot"
+             data-sq="Kliko butonin dhe dërgo mesazhin në WhatsApp. Shkruaj: Device ID dhe MAC Address (të dyja)."
+             data-en="Tap the button and send the WhatsApp message. Please include both Device ID and MAC Address."
+             data-de="Button klicken und WhatsApp‑Nachricht senden. Bitte Device ID und MAC‑Adresse angeben.">
+            Kliko butonin dhe dërgo mesazhin në WhatsApp. Shkruaj: Device ID dhe MAC Address (të dyja).
+          </p>
         </div>
       </div>
-
-
-
-
-
-
-<!-- HOW IT WORKS -->
-      <section class="section" id="how">
-        <h2 id="howH">Si funksionon</h2>
-        <div class="steps">
-          <div class="step">
-            <b id="s1t">Kontakto</b>
-            <div class="muted" id="s1d">Na shkruaj në WhatsApp ose Messenger.</div>
-          </div>
-          <div class="step">
-            <b id="s2t">Zgjedh paketën</b>
-            <div class="muted" id="s2d">Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.</div>
-          </div>
-          <div class="step">
-            <b id="s3t">Aktivizim</b>
-            <div class="muted" id="s3d">Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).</div>
-          </div>
-        </div>
       </section>
 
       <!-- SETUP (SAMSUNG/LG/ANDROID) -->
@@ -2675,7 +2703,10 @@ body.dark .logoMark,
       const t = i18n[lang] || i18n.sq;
       document.documentElement.lang = lang;
 
-      document.getElementById("waBtn").textContent = t.waLabel;
+      
+      window.__sansatLang = lang;
+      if (typeof updateTrialWaLink === "function") updateTrialWaLink(lang);
+document.getElementById("waBtn").textContent = t.waLabel;
       document.getElementById("msBtn").textContent = t.msLabel;
 
       ids.forEach((id) => {
@@ -2962,32 +2993,79 @@ const hero = document.getElementById("waBtn");
     const waBtn = document.getElementById("trialWaBtn");
     if(!openBtn || !modal || !waBtn) return;
 
-    const PHONE_E164 = "38972698616";
+    const PHONE_E164 = "38972698616"; // no +
 
-    function buildWhatsAppUrl(){
-      const lines = [
-        "Hi Sansat IPTV,",
-        "",
-        "Dua TEST 24 ore per IPTV.",
-        "Pajisja (Model/Platforme): ____",
-        "Device ID: ____",
-        "MAC Address: ____",
-        "",
-        "Faleminderit!"
-      ];
-      const text = encodeURIComponent(lines.join("
+    function getLang(){
+      return (window.__sansatLang || document.documentElement.lang || "sq").toLowerCase();
+    }
+
+    function buildWhatsAppUrl(lang){
+      const L = (lang === "en" || lang === "de" || lang === "sq") ? lang : "sq";
+
+      const templates = {
+        sq: [
+          "Përshëndetje Sansat IPTV,",
+          "",
+          "Dua TEST 24 orë për IPTV.",
+          "Pajisja (Model/Platformë): ____",
+          "Device ID: ____",
+          "MAC Address: ____",
+          "",
+          "Faleminderit!"
+        ],
+        en: [
+          "Hi Sansat IPTV,",
+          "",
+          "I would like a 24-hour IPTV trial.",
+          "Device (Model/Platform): ____",
+          "Device ID: ____",
+          "MAC Address: ____",
+          "",
+          "Thank you!"
+        ],
+        de: [
+          "Hallo Sansat IPTV,",
+          "",
+          "Ich möchte einen 24‑Stunden‑IPTV‑Test.",
+          "Gerät (Modell/Plattform): ____",
+          "Device ID: ____",
+          "MAC‑Adresse: ____",
+          "",
+          "Danke!"
+        ]
+      };
+
+      const text = encodeURIComponent(templates[L].join("
 "));
       return "https://wa.me/" + PHONE_E164 + "?text=" + text;
     }
 
+    // Expose for applyLang
+    window.updateTrialWaLink = function(lang){
+      try{
+        waBtn.setAttribute("href", buildWhatsAppUrl(lang || getLang()));
+      }catch(e){}
+    };
+
     function openModal(){
+      const lang = getLang();
+
+      // Update modal text nodes from data- attributes (so switching language works reliably)
+      document.querySelectorAll("#trialModal [data-sq][data-en][data-de]").forEach(el=>{
+        const val = el.getAttribute("data-"+lang) || el.getAttribute("data-sq");
+        if(val) el.textContent = val;
+      });
+
+      waBtn.setAttribute("href", buildWhatsAppUrl(lang));
+
       modal.classList.add("isOpen");
       modal.setAttribute("aria-hidden","false");
-      waBtn.setAttribute("href", buildWhatsAppUrl());
-      // prevent background scroll
+
+      // Prevent background scroll (mobile + desktop)
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
     }
+
     function closeModal(){
       modal.classList.remove("isOpen");
       modal.setAttribute("aria-hidden","true");
