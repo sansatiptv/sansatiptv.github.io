@@ -1280,7 +1280,7 @@ body.dark .logoMark,
 
 </head>
 
-<body class=\"hero-football\">
+<body class="hero-football">
   <a class="skip" href="#main" id="skipLink">Kalo te përmbajtja</a>
 
   <div class="wrap">
@@ -2319,7 +2319,17 @@ body.dark .logoMark,
         waEmailL:"Email Address",
         waSubjL:"Subject",
         waMsgL:"Message",
-        waSendBtn:"Send Message via WhatsApp"
+        waSendBtn:"Send Message via WhatsApp",
+      "trialTitle": "Your 24hr IPTV Trial Awaits!",
+      "trialLead": "Get a 24-hour test to verify the service. Activation happens after you send your Device ID and MAC Address.",
+      "trialGet": "What is included:",
+      "trialLi1": "Live Channels + Sports (selection may vary)",
+      "trialLi2": "HD/4K quality (depends on channel and device)",
+      "trialLi3": "VOD (Movies & Series) – depends on your list/package",
+      "trialLi4": "Compatible with TV/Box/Mobile (device dependent)",
+      "trialLi5": "EPG (TV Guide) where available",
+      "trialWaBtn": "Claim your trial via WhatsApp",
+      "trialFoot": "Tap the button and send the WhatsApp message. Please include both Device ID and MAC Address."
 },
 
       de: {
@@ -2566,7 +2576,8 @@ body.dark .logoMark,
       "trialLi4",
       "trialLi5",
       "trialWaBtn",
-      "trialFoot"];
+      "trialFoot"
+    ];
 
     function setActiveLangButton(lang){
       document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
@@ -2859,5 +2870,88 @@ const hero = document.getElementById("waBtn");
   })();
 </script>
 
+<script>
+  (function(){
+    const openBtn = document.getElementById("openTrialModal");
+    const modal = document.getElementById("trialModal");
+    const waBtn = document.getElementById("trialWaBtn");
+    if(!openBtn || !modal || !waBtn) return;
+
+    const PHONE_E164 = "38972698616"; // no +
+
+    function getLang(){
+      return (window.__sansatLang || document.documentElement.lang || "sq").toLowerCase();
+    }
+
+    function buildWhatsAppUrl(lang){
+      const L = (lang === "en" || lang === "de" || lang === "sq") ? lang : "sq";
+      const templates = {
+        sq: [
+          "Përshëndetje Sansat IPTV,",
+          "",
+          "Dua TEST 24 orë për IPTV.",
+          "Pajisja (Model/Platformë): ____",
+          "Device ID: ____",
+          "MAC Address: ____",
+          "",
+          "Faleminderit!"
+        ],
+        en: [
+          "Hi Sansat IPTV,",
+          "",
+          "I would like a 24-hour IPTV trial.",
+          "Device (Model/Platform): ____",
+          "Device ID: ____",
+          "MAC Address: ____",
+          "",
+          "Thank you!"
+        ],
+        de: [
+          "Hallo Sansat IPTV,",
+          "",
+          "Ich möchte einen 24-Stunden-IPTV-Test.",
+          "Gerät (Modell/Plattform): ____",
+          "Device ID: ____",
+          "MAC-Adresse: ____",
+          "",
+          "Danke!"
+        ]
+      };
+      const text = encodeURIComponent(templates[L].join("\n"));
+      return "https://wa.me/" + PHONE_E164 + "?text=" + text;
+    }
+
+    window.updateTrialWaLink = function(lang){
+      try{ waBtn.href = buildWhatsAppUrl(lang || getLang()); }catch(e){}
+    };
+
+    function openModal(){
+      try{ updateTrialWaLink(getLang()); }catch(e){}
+      modal.classList.add("isOpen");
+      modal.setAttribute("aria-hidden","false");
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      modal.classList.remove("isOpen");
+      modal.setAttribute("aria-hidden","true");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      try{ openBtn.focus(); }catch(e){}
+    }
+
+    openBtn.addEventListener("click", openModal);
+
+    modal.addEventListener("click", function(e){
+      const t = e.target;
+      if(t && t.getAttribute && t.getAttribute("data-close")==="true") closeModal();
+    });
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && modal.classList.contains("isOpen")) closeModal();
+    });
+  })();
+</script>
 </body>
 </html>
