@@ -989,9 +989,7 @@ body.dark .deviceCard:hover,
 
 
 /* Premium contact section (2 columns) */
-.contactHero{
-  text-align:center;
-}
+.contactHero{ text-align:center; }
 .contactHero h2{margin:0 0 8px;font-size:34px;letter-spacing:-.3px}
 .contactHero p{margin:0;color:var(--muted);font-weight:800}
 
@@ -1008,7 +1006,8 @@ body.dark .deviceCard:hover,
   padding:18px;
   box-shadow:0 10px 22px rgba(15,23,42,.06);
 }
-:root[data-theme="dark"] .contactCard{
+body.dark .contactCard,
+[data-theme="dark"] .contactCard{
   background:rgba(2,6,23,.55);
   border-color:rgba(148,163,184,.18);
 }
@@ -1021,15 +1020,18 @@ body.dark .deviceCard:hover,
   padding:12px 0;
   border-bottom:1px solid rgba(226,232,240,.75);
 }
-:root[data-theme="dark"] .contactItem{border-bottom-color:rgba(148,163,184,.16)}
+body.dark .contactItem,
+[data-theme="dark"] .contactItem{border-bottom-color:rgba(148,163,184,.16)}
 .contactItem:last-child{border-bottom:0}
+
 .ciIcon{
   width:40px;height:40px;border-radius:14px;
   display:grid;place-items:center;
   border:1px solid rgba(226,232,240,.95);
   background:rgba(15,23,42,.04);
 }
-:root[data-theme="dark"] .ciIcon{
+body.dark .ciIcon,
+[data-theme="dark"] .ciIcon{
   border-color:rgba(148,163,184,.18);
   background:rgba(148,163,184,.10);
 }
@@ -1037,9 +1039,9 @@ body.dark .deviceCard:hover,
 .ciIcon.email{background:#fff3e6;border-color:#fed7aa;color:#f97316}
 .ciIcon.phone{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
 .ciIcon.chat{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
-:root[data-theme="dark"] .ciIcon.email{background:rgba(249,115,22,.15);color:#fb923c}
-:root[data-theme="dark"] .ciIcon.phone{background:rgba(37,99,235,.18);color:#60a5fa}
-:root[data-theme="dark"] .ciIcon.chat{background:rgba(22,163,74,.18);color:#4ade80}
+body.dark .ciIcon.email,[data-theme="dark"] .ciIcon.email{background:rgba(249,115,22,.15);color:#fb923c}
+body.dark .ciIcon.phone,[data-theme="dark"] .ciIcon.phone{background:rgba(37,99,235,.18);color:#60a5fa}
+body.dark .ciIcon.chat,[data-theme="dark"] .ciIcon.chat{background:rgba(22,163,74,.18);color:#4ade80}
 
 .ciText b{display:block;color:var(--text);font-weight:950;margin-bottom:4px}
 .ciText span{display:block;color:var(--muted);font-weight:800;line-height:1.35}
@@ -1049,7 +1051,7 @@ body.dark .deviceCard:hover,
   padding-top:14px;
   border-top:1px solid rgba(226,232,240,.75);
 }
-:root[data-theme="dark"] .hours{border-top-color:rgba(148,163,184,.16)}
+body.dark .hours,[data-theme="dark"] .hours{border-top-color:rgba(148,163,184,.16)}
 .hours h4{margin:0 0 8px;font-size:16px}
 .hours p{margin:0;color:var(--muted);font-weight:800;line-height:1.5}
 
@@ -1066,8 +1068,10 @@ body.dark .deviceCard:hover,
   outline:none;
 }
 .field textarea{min-height:120px;resize:vertical}
-:root[data-theme="dark"] .field input,
-:root[data-theme="dark"] .field textarea{
+body.dark .field input,
+body.dark .field textarea,
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field textarea{
   background:rgba(15,23,42,.55);
   border-color:rgba(148,163,184,.18);
   color:var(--text);
@@ -1709,50 +1713,7 @@ body.dark .deviceCard:hover,
 </section>
 
 
-<section class="section" id="reviews">
-  <h2 id="reviewsH">Çfarë thonë klientët tanë</h2>
-  <p class="muted" id="reviewsLead">Feedback real nga përdorues të Sansat IPTV.</p>
 
-  <div class="ratingRow" aria-label="Customer rating">
-    <div class="stars starsBig" aria-hidden="true">★★★★★</div>
-    <div class="ratingText" id="ratingText">Vlerësuar nga klientët tanë</div>
-  </div>
-
-  <div class="reviewsGrid">
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r1">“Aktivizim shumë i shpejtë, gjithçka funksionoi pa problem.”</p><span>— Arben K.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r2">“Cilësi e mirë e kanaleve sportive, pa ndërprerje.”</p><span>— Lirim S.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r3">“Mbështetje shumë korrekte në WhatsApp.”</p><span>— Valon M.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r4">“Raport shumë i mirë çmim / cilësi.”</p><span>— Besnik R.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r5">“E përdor në Samsung TV, punon perfekt.”</p><span>— Ilir D.</span></div>
-
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r6">“Fast setup and very helpful support team.”</p><span>— Mark L.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r7">“Great value for money, especially the yearly plan.”</p><span>— Daniel P.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r8">“Streams are stable even during live sports.”</p><span>— Alex T.</span></div>
-
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r9">“Sehr gute Qualität und schneller Support.”</p><span>— Thomas W.</span></div>
-    <div class="reviewCard">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p id="r10">“Läuft einwandfrei auf meinem LG TV.”</p><span>— Stefan H.</span></div>
-  </div>
-</section>
 
         <div class="footerGrid">
           <div class="footerBrand">
@@ -2612,6 +2573,34 @@ const hero = document.getElementById("waBtn");
     else localStorage.setItem("sansat_lang", "en");
 
   } catch (e) {}
+})();
+</script>
+
+
+<script>
+(function(){
+  const form = document.getElementById("waForm");
+  if(!form) return;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = (document.getElementById("waName")||{}).value || "";
+    const email = (document.getElementById("waEmail")||{}).value || "";
+    const subject = (document.getElementById("waSubject")||{}).value || "";
+    const msg = (document.getElementById("waMsg")||{}).value || "";
+
+    const lines = [];
+    if(name) lines.push("Name: " + name);
+    if(email) lines.push("Email: " + email);
+    if(subject) lines.push("Subject: " + subject);
+    if(msg) lines.push("Message: " + msg);
+
+    const text = encodeURIComponent(lines.join("
+"));
+    const waNumber = "38972698616";
+    const url = "https://wa.me/" + waNumber + "?text=" + text;
+    window.open(url, "_blank", "noopener");
+  });
 })();
 </script>
 
