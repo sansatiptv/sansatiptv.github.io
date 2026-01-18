@@ -987,6 +987,110 @@ body.dark .deviceCard:hover,
   .devicesGrid{grid-template-columns:repeat(2, minmax(0,1fr))}
 }
 
+
+/* Premium contact section (2 columns) */
+.contactHero{
+  text-align:center;
+}
+.contactHero h2{margin:0 0 8px;font-size:34px;letter-spacing:-.3px}
+.contactHero p{margin:0;color:var(--muted);font-weight:800}
+
+.contactGrid2{
+  display:grid;
+  grid-template-columns:1fr 1.15fr;
+  gap:14px;
+  margin-top:14px;
+}
+.contactCard{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+}
+:root[data-theme="dark"] .contactCard{
+  background:rgba(2,6,23,.55);
+  border-color:rgba(148,163,184,.18);
+}
+
+.contactCard h3{margin:0 0 12px;font-size:18px}
+.contactItem{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:12px 0;
+  border-bottom:1px solid rgba(226,232,240,.75);
+}
+:root[data-theme="dark"] .contactItem{border-bottom-color:rgba(148,163,184,.16)}
+.contactItem:last-child{border-bottom:0}
+.ciIcon{
+  width:40px;height:40px;border-radius:14px;
+  display:grid;place-items:center;
+  border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.04);
+}
+:root[data-theme="dark"] .ciIcon{
+  border-color:rgba(148,163,184,.18);
+  background:rgba(148,163,184,.10);
+}
+.ciIcon svg{width:20px;height:20px}
+.ciIcon.email{background:#fff3e6;border-color:#fed7aa;color:#f97316}
+.ciIcon.phone{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
+.ciIcon.chat{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
+:root[data-theme="dark"] .ciIcon.email{background:rgba(249,115,22,.15);color:#fb923c}
+:root[data-theme="dark"] .ciIcon.phone{background:rgba(37,99,235,.18);color:#60a5fa}
+:root[data-theme="dark"] .ciIcon.chat{background:rgba(22,163,74,.18);color:#4ade80}
+
+.ciText b{display:block;color:var(--text);font-weight:950;margin-bottom:4px}
+.ciText span{display:block;color:var(--muted);font-weight:800;line-height:1.35}
+
+.hours{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid rgba(226,232,240,.75);
+}
+:root[data-theme="dark"] .hours{border-top-color:rgba(148,163,184,.16)}
+.hours h4{margin:0 0 8px;font-size:16px}
+.hours p{margin:0;color:var(--muted);font-weight:800;line-height:1.5}
+
+.formGrid{display:grid;gap:10px;margin-top:8px}
+.field label{display:block;font-weight:900;color:var(--muted);margin:0 0 6px}
+.field input,.field textarea{
+  width:100%;
+  border-radius:14px;
+  border:1px solid rgba(226,232,240,.95);
+  background:#fff;
+  padding:12px 12px;
+  font-weight:800;
+  color:var(--text);
+  outline:none;
+}
+.field textarea{min-height:120px;resize:vertical}
+:root[data-theme="dark"] .field input,
+:root[data-theme="dark"] .field textarea{
+  background:rgba(15,23,42,.55);
+  border-color:rgba(148,163,184,.18);
+  color:var(--text);
+}
+
+.btnBigOrange{
+  width:100%;
+  min-height:48px;
+  border:0;
+  border-radius:14px;
+  font-weight:950;
+  cursor:pointer;
+  background:#f97316;
+  color:#fff;
+  transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.btnBigOrange:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.18); opacity:.95}
+
+@media (max-width: 920px){
+  .contactGrid2{grid-template-columns:1fr}
+  .contactHero h2{font-size:30px}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1496,29 +1600,6 @@ body.dark .deviceCard:hover,
       <!-- MAC -->
       
 
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <h2 id="contactH">Kontakt</h2>
-        <p class="muted" id="contactLead">Për aktivizim, na dërgo MAC Address-in dhe pajisjen që përdor (Samsung/LG/Android/Box/Mobile).</p>
-
-        <div class="contactGrid">
-          <div class="callout">
-            <h3 id="contact1t">WhatsApp</h3>
-            <p id="contact1d">Kliko për mesazh: +389 72 698 616</p>
-            <div class="ctaRow" style="margin:10px 0 0">
-              <a class="btn primary" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" id="contactWaBtn">Hap WhatsApp</a>
-            </div>
-          </div>
-
-          <div class="callout">
-            <h3 id="contact2t">Messenger</h3>
-            <p id="contact2d">Kliko për mesazh: m.me/sansatiptv</p>
-            <div class="ctaRow" style="margin:10px 0 0">
-              <a class="btn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="contactMsBtn">Hap Messenger</a>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- REFUND POLICY -->
       <section class="section" id="refund">
         <h2 id="refundH">Politika e rimbursimit (30 ditë – rimbursim i plotë)</h2>
@@ -1872,7 +1953,28 @@ body.dark .deviceCard:hover,
         devBoxsub:"Firestick",
         devMag:"MAG Box / Formuler",
         devMagsub:"Të mbështetura",
-        devicesNote:"Dhe shumë të tjera. Nëse pajisja e mbështet IPTV, është e përputhshme."
+        devicesNote:"Dhe shumë të tjera. Nëse pajisja e mbështet IPTV, është e përputhshme.",
+        contactSub:"Keni pyetje apo ju duhet ndihmë? Jemi këtu për ju!",
+        getTouchH:"Na kontaktoni",
+        emailT:"Na shkruani në email",
+        emailV:"contact@sansatiptv.com",
+        emailA:"Disponueshëm 24/7",
+        callT:"Na telefononi",
+        callV:"+389 72 698 616",
+        callA:"Disponueshëm 24/7",
+        chatT:"Chat / Mesazh",
+        chatV:"Në WhatsApp & Messenger",
+        chatA:"Koha e përgjigjes: nën 5 minuta",
+        hoursH:"Orari",
+        hours1:"Mbështetje klienti: 24/7",
+        hours2:"Shitje: Hën–Pre, 09:00–18:00",
+        hours3:"Mbështetje teknike: 24/7",
+        waFormH:"Na dërgoni mesazh (në WhatsApp)",
+        waNameL:"Emri juaj",
+        waEmailL:"Email",
+        waSubjL:"Subjekti",
+        waMsgL:"Mesazhi",
+        waSendBtn:"Dërgo mesazh në WhatsApp"
 },
 
       en: {
@@ -1942,7 +2044,7 @@ body.dark .deviceCard:hover,
         macPreviewH:"MAC Address – Example",
         macPreviewNote:"Example only: the MAC Address is shown inside the IBO Player app.",
 
-        contactH:"Contact",
+        contactH:"Contact Us",
         contactLead:"For activation, send your MAC Address and Device ID, plus your device type (Samsung/LG/Android/Box/Mobile).",
         contact1t:"WhatsApp",
         contact1d:"Tap to message: +389 72 698 616",
@@ -2039,7 +2141,28 @@ body.dark .deviceCard:hover,
         devBoxsub:"Firestick",
         devMag:"MAG Box / Formuler",
         devMagsub:"Supported",
-        devicesNote:"And many more. If your device supports IPTV, it’s compatible."
+        devicesNote:"And many more. If your device supports IPTV, it’s compatible.",
+        contactSub:"Have questions or need assistance? We're here to help!",
+        getTouchH:"Get in Touch",
+        emailT:"Email Us",
+        emailV:"contact@sansatiptv.com",
+        emailA:"Available 24/7",
+        callT:"Call Us",
+        callV:"+389 72 698 616",
+        callA:"Available 24/7",
+        chatT:"Live Chat",
+        chatV:"Available on WhatsApp & Messenger",
+        chatA:"Response time: Under 5 minutes",
+        hoursH:"Our Hours",
+        hours1:"Customer Support: 24/7",
+        hours2:"Sales Department: Mon–Fri, 9am–6pm",
+        hours3:"Technical Support: 24/7",
+        waFormH:"Send Us a Message (via WhatsApp)",
+        waNameL:"Your Name",
+        waEmailL:"Email Address",
+        waSubjL:"Subject",
+        waMsgL:"Message",
+        waSendBtn:"Send Message via WhatsApp"
 },
 
       de: {
@@ -2206,7 +2329,28 @@ body.dark .deviceCard:hover,
         devBoxsub:"Firestick",
         devMag:"MAG Box / Formuler",
         devMagsub:"Unterstützt",
-        devicesNote:"Und viele mehr. Wenn Ihr Gerät IPTV unterstützt, ist es kompatibel."
+        devicesNote:"Und viele mehr. Wenn Ihr Gerät IPTV unterstützt, ist es kompatibel.",
+        contactSub:"Haben Sie Fragen oder brauchen Sie Hilfe? Wir sind für Sie da!",
+        getTouchH:"Kontakt aufnehmen",
+        emailT:"E-Mail senden",
+        emailV:"contact@sansatiptv.com",
+        emailA:"24/7 verfügbar",
+        callT:"Anrufen",
+        callV:"+389 72 698 616",
+        callA:"24/7 verfügbar",
+        chatT:"Live-Chat",
+        chatV:"Über WhatsApp & Messenger",
+        chatA:"Antwortzeit: unter 5 Minuten",
+        hoursH:"Öffnungszeiten",
+        hours1:"Kundensupport: 24/7",
+        hours2:"Vertrieb: Mo–Fr, 09:00–18:00",
+        hours3:"Technischer Support: 24/7",
+        waFormH:"Nachricht senden (via WhatsApp)",
+        waNameL:"Ihr Name",
+        waEmailL:"E-Mail",
+        waSubjL:"Betreff",
+        waMsgL:"Nachricht",
+        waSendBtn:"Nachricht via WhatsApp senden"
 }
     };
 
@@ -2244,7 +2388,9 @@ body.dark .deviceCard:hover,
       "themeLabel",
       "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5",
       "payTitle", "paySub", "payCard", "payPaypal", "payBank",
-      "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote"
+      "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote",
+      "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn"
+    
     
     
     ];
