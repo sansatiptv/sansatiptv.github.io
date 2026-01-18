@@ -855,6 +855,21 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
+
+<style>
+.btn-paypal-dark{
+  background:linear-gradient(135deg,#1f2937,#111827);
+  color:#fff;
+  border:1px solid #0f172a;
+  border-radius:14px;
+  padding:12px 16px;
+  font-weight:900;
+  cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.btn-paypal-dark:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(0,0,0,.35); opacity:.95}
+</style>
+
 </head>
 
 <body>
@@ -1030,7 +1045,7 @@
                 <input type="hidden" name="on0" value="Subscription">
                 <input type="hidden" name="os0" value="6 Months – IPTV Premium + IBO Player FREE">
                 <input type="hidden" name="currency_code" value="EUR">
-                <button type="submit" class="miniBtn strong" id="payPal6">
+                <button type="submit" class="btn-paypal-dark" id="payPal6">
                   Paguaj me PayPal
                 </button>
               </form>
