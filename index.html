@@ -1114,98 +1114,33 @@ body.dark .logoMark,
 
 
 
+@media (max-width: 920px){
+  .heroOverlay{padding:14px 14px 12px;}
+  .heroOverlay .heroOverTitle{font-size:20px;}
+}
+
+
+
 /* ================================
-   HERO FOOTBALL (3 OPTIONS)
-   1) Darker / higher contrast look for soccer banner
-   2) Text overlay: "LIVE FOOTBALL • IPTV PREMIUM"
-   3) Subtle hero animation (Ken Burns zoom)
+   HERO FOOTBALL (MOBILE-SAFE)
+   - Cinematic banner look
+   - Subtle hero animation (Ken Burns zoom)
    Enable via body class: .hero-football
    ================================ */
-
 .hero-football .heroCard{position:relative; overflow:hidden;}
 .hero-football .heroImg{
-  /* Option 1: punchier, more cinematic look */
   filter: saturate(1.10) contrast(1.14) brightness(.90);
   transform-origin:center center;
-  /* Option 3: subtle motion */
   animation: heroZoom 8s ease-in-out infinite;
   will-change: transform;
 }
-
-/* Option 2: overlay */
-.heroOverlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:flex-end;
-  justify-content:flex-start;
-  padding:16px 16px 14px;
-  pointer-events:none;
-  background:
-    radial-gradient(600px 260px at 20% 15%, rgba(0,0,0,.12), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.55) 100%);
-}
-.heroOverlay .heroOverText{
-  display:inline-flex;
-  flex-direction:column;
-  gap:6px;
-  max-width: 90%;
-}
-.heroOverlay .heroOverKicker{
-  display:inline-flex;
-  width:fit-content;
-  padding:7px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.18);
-  color:rgba(255,255,255,.92);
-  font-weight:950;
-  font-size:12px;
-  letter-spacing:.3px;
-  text-transform:uppercase;
-  backdrop-filter: blur(6px);
-}
-.heroOverlay .heroOverTitle{
-  margin:0;
-  color:#fff;
-  font-weight:1000;
-  letter-spacing:-.3px;
-  font-size:22px;
-  line-height:1.1;
-  text-shadow: 0 10px 26px rgba(0,0,0,.35);
-}
-.heroOverlay .heroOverSub{
-  margin:0;
-  color:rgba(255,255,255,.86);
-  font-weight:800;
-  font-size:13px;
-  line-height:1.35;
-  text-shadow: 0 10px 26px rgba(0,0,0,.28);
-}
-
-/* Dark theme: keep overlay readable, slightly cooler */
-:root[data-theme="dark"] .heroOverlay{
-  background:
-    radial-gradient(600px 260px at 20% 15%, rgba(0,0,0,.18), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.65) 100%);
-}
-
-/* Motion accessibility */
 @media (prefers-reduced-motion: reduce){
   .hero-football .heroImg{animation:none;}
 }
-
-/* Option 3 keyframes */
 @keyframes heroZoom{
   0%{transform:scale(1)}
   50%{transform:scale(1.03)}
   100%{transform:scale(1)}
-}
-
-/* Mobile sizing for overlay text */
-@media (max-width: 920px){
-  .heroOverlay{padding:14px 14px 12px;}
-  .heroOverlay .heroOverTitle{font-size:20px;}
 }
 
 </style>
@@ -1340,20 +1275,7 @@ body.dark .logoMark,
 
         <div class="heroCard">
           <img class="heroImg" src="soccer_banner.png" alt="Sansat IPTV cover banner" loading="eager">
-          
-          <div class="heroOverlay" aria-hidden="true">
-            <div class="heroOverText">
-              <div class="heroOverKicker">LIVE FOOTBALL</div>
-              <h3 class="heroOverTitle">IPTV Premium • Sport 24/7</h3>
-              <p class="heroOverSub">Ndeshje live, kanale sporti dhe mbështetje e shpejtë për aktivizim.</p>
-            </div>
-          </div>
-<div class="inner">
-            <p class="note" id="calloutD">
-              Na shkruaj dhe të udhëzojmë sipas pajisjes (Samsung/LG/Android TV, Box, Fire Stick, Mobile).
-            </p>
-          </div>
-        </div>
+</div>
       </section>
 
       <!-- TRUST / TRANSPARENCY -->
