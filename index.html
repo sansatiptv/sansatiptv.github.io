@@ -823,7 +823,37 @@
       pointer-events:none;
     }
 
-  </style>
+  
+/* Reviews */
+.reviewsGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.reviewCard{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:16px;
+  padding:14px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+  font-weight:800;
+  color:var(--muted);
+}
+.reviewCard span{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  color:var(--text);
+  font-weight:900;
+}
+:root[data-theme="dark"] .reviewCard{
+  background:rgba(15,23,42,.6);
+  border-color:rgba(148,163,184,.18);
+  color:var(--muted);
+}
+
+\1
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1265,7 +1295,53 @@
   </p>
 </section>
 
-<footer id="legal">
+
+<section class="section" id="reviews">
+  <h2 id="reviewsH">Çfarë thonë klientët tanë</h2>
+  <p class="muted" id="reviewsLead">Feedback real nga përdorues të Sansat IPTV.</p>
+
+  <div class="ratingRow" aria-label="Customer rating">
+    <div class="stars starsBig" aria-hidden="true">★★★★★</div>
+    <div class="ratingText" id="ratingText">Vlerësuar nga klientët tanë</div>
+  </div>
+
+  <div class="reviewsGrid">
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r1">“Aktivizim shumë i shpejtë, gjithçka funksionoi pa problem.”</p><span>— Arben K.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r2">“Cilësi e mirë e kanaleve sportive, pa ndërprerje.”</p><span>— Lirim S.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r3">“Mbështetje shumë korrekte në WhatsApp.”</p><span>— Valon M.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r4">“Raport shumë i mirë çmim / cilësi.”</p><span>— Besnik R.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r5">“E përdor në Samsung TV, punon perfekt.”</p><span>— Ilir D.</span></div>
+
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r6">“Fast setup and very helpful support team.”</p><span>— Mark L.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r7">“Great value for money, especially the yearly plan.”</p><span>— Daniel P.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r8">“Streams are stable even during live sports.”</p><span>— Alex T.</span></div>
+
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r9">“Sehr gute Qualität und schneller Support.”</p><span>— Thomas W.</span></div>
+    <div class="reviewCard">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="r10">“Läuft einwandfrei auf meinem LG TV.”</p><span>— Stefan H.</span></div>
+  </div>
+</section>
+
+\1
         <div class="footerGrid">
           <div class="footerBrand">
             <div class="logoMark" aria-hidden="true">S</div>
