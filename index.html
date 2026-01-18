@@ -774,7 +774,7 @@
       <section class="hero" aria-label="Hero">
         <div class="heroLeft">
           <span class="badge" id="badge">Aktivizim IBO Player falas</span>
-          <div class="pill" id="supportPill"></div>
+          <div class="pill" id="supportPill">Mbështetje • Udhëzime konfigurimi</div>
 
           <h1 id="h1">IPTV Premium + IBO Player</h1>
           <p class="lead" id="lead">
@@ -1224,15 +1224,14 @@
       sq: {
         tagline:"Premium • Aktivizim i shpejtë",
         badge:"Aktivizim IBO Player falas",
-        h1:"IPTV Premium + IBO Player",
-        lead:"Aktivizim brenda minutash, udhëzim sipas pajisjes dhe mbështetje në WhatsApp/Messenger.",
+        h1:"IPTV Premium për Sport, Filma & Seriale",
+        lead:"Aktivizim i shpejtë, udhëzime konfigurimi për pajisjen tënde dhe rimbursim i plotë brenda 30 ditësh (sipas kushteve).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
-        supportPill:"Mbështetje • Udhëzime konfigurimi",
+        supportPill:"Sport live • Filma • Seriale • Kanale ndërkombëtare",
         note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
         calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"Shiko paketat",
-        supportPill:"Sport live • Filma • Seriale • Kanale Ndërkombëtare",
 
         navPlans:"Paketa", navHow:"Si funksionon", navSetup:"Instalimi", navFaq:"FAQ", navContact:"Kontakt",
 
@@ -1370,15 +1369,14 @@
       en: {
         tagline:"Premium • Fast activation",
         badge:"Free IBO Player activation",
-        h1:"Premium IPTV + IBO Player",
-        lead:"Activation in minutes, device-specific guidance, and support on WhatsApp/Messenger.",
+        h1:"Premium IPTV for Sports, Movies & Series",
+        lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
-        supportPill:"Support • Setup guidance",
+        supportPill:"Live sports • Movies • Series • International channels",
         note:"For details and payment options, please message us privately. Activation is done after confirmation.",
         calloutD:"Message us and we’ll guide you based on your device (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"View plans",
-        supportPill:"Live sports • Movies • Series • International channels",
 
         navPlans:"Plans", navHow:"How it works", navSetup:"Setup", navFaq:"FAQ", navContact:"Contact",
 
@@ -1513,15 +1511,14 @@
       de: {
         tagline:"Premium • Schnelle Aktivierung",
         badge:"Kostenlose IBO Player Aktivierung",
-        h1:"Premium IPTV + IBO Player",
-        lead:"Aktivierung in Minuten, Anleitung je Gerät und Support via WhatsApp/Messenger.",
+        h1:"Premium IPTV für Sport, Filme & Serien",
+        lead:"Schnelle Aktivierung, gerätespezifische Einrichtungshilfe und volle 30‑Tage‑Erstattung (Bedingungen gelten).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
-        supportPill:"Support • Einrichtungsanleitung",
+        supportPill:"Live‑Sport • Filme • Serien • Internationale Sender",
         note:"Für Details und Zahlungsoptionen schreiben Sie uns bitte privat. Die Aktivierung erfolgt nach Bestätigung.",
         calloutD:"Schreiben Sie uns – wir helfen je nach Gerät (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"Tarife ansehen",
-        supportPill:"Live-Sport • Filme • Serien • Internationale Sender",
 
         navPlans:"Tarife", navHow:"Ablauf", navSetup:"Installation", navFaq:"FAQ", navContact:"Kontakt",
 
@@ -1684,7 +1681,8 @@
       "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon",
       "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerWa", "footerMs", "legalText",
       "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3",
-      "refundLink"];
+      "refundLink",
+      "themeLabel"];
 
     function setActiveLangButton(lang){
       document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
@@ -1776,7 +1774,53 @@ const hero = document.getElementById("waBtn");
       if(p6)  p6.href  = base + enc(buildWaText(lang, "6"));
       if(p1)  p1.href  = base + enc(buildWaText(lang, "1"));
     }
-</script>
+
+    // Theme (Light/Dark)
+    function applyTheme(theme){
+      const root = document.documentElement;
+      if(theme === "dark") root.setAttribute("data-theme","dark");
+      else root.removeAttribute("data-theme");
+
+      const icon = document.getElementById("themeIcon");
+      const label = document.getElementById("themeLabel");
+      const lang = document.documentElement.lang || "sq";
+      const t = (typeof i18n !== "undefined" && i18n[lang]) ? i18n[lang] : (typeof i18n !== "undefined" ? i18n.sq : null);
+
+      if(icon) icon.textContent = (theme === "dark") ? "☀️" : "🌙";
+      if(label){
+        if(t){
+          label.textContent = (theme === "dark") ? (t.themeLight || "Light") : (t.themeDark || "Dark");
+        }else{
+          label.textContent = (theme === "dark") ? "Light" : "Dark";
+        }
+      }
+
+      try { localStorage.setItem("sansat_theme", theme); } catch(e){}
+    }
+
+    function getInitialTheme(){
+      try{
+        const saved = localStorage.getItem("sansat_theme");
+        if(saved === "dark" || saved === "light") return saved;
+      }catch(e){}
+      return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    }
+
+    function initTheme(){
+      applyTheme(getInitialTheme());
+      const btn = document.getElementById("themeToggle");
+      if(btn){
+        btn.addEventListener("click", () => {
+          const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+          applyTheme(isDark ? "light" : "dark");
+        });
+      }
+    }
+
+    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTheme);
+    else initTheme();
+
+  </script>
 
   <!-- Sticky WhatsApp Button -->
   <a id="fabWa" class="fabWa" href="https://wa.me/38972698616?text=" target="_blank" rel="noopener" aria-label="Hap WhatsApp">
