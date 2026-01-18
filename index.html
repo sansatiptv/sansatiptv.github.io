@@ -1114,24 +1114,16 @@ body.dark .logoMark,
 
 
 
-@media (max-width: 920px){
-  .heroOverlay{padding:14px 14px 12px;}
-  .heroOverlay .heroOverTitle{font-size:20px;}
-}
-
-
-
 /* ================================
-   HERO FOOTBALL (MOBILE-SAFE)
+   HERO FOOTBALL (CHROME-FIX)
    - Cinematic banner look
    - Subtle hero animation (Ken Burns zoom)
-   Enable via body class: .hero-football
    ================================ */
 .hero-football .heroCard{position:relative; overflow:hidden;}
 .hero-football .heroImg{
-  filter: saturate(1.10) contrast(1.14) brightness(.90);
+  filter: saturate(1.08) contrast(1.12) brightness(.92);
   transform-origin:center center;
-  animation: heroZoom 8s ease-in-out infinite;
+  animation: heroZoom 9s ease-in-out infinite;
   will-change: transform;
 }
 @media (prefers-reduced-motion: reduce){
@@ -1139,7 +1131,7 @@ body.dark .logoMark,
 }
 @keyframes heroZoom{
   0%{transform:scale(1)}
-  50%{transform:scale(1.03)}
+  50%{transform:scale(1.025)}
   100%{transform:scale(1)}
 }
 
