@@ -829,6 +829,63 @@
   background:rgba(245,158,11,.10);
 }
 
+
+/* Payment options */
+.payments{
+  margin-top:18px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(226,232,240,.9);
+  border-radius:20px;
+  padding:16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+.payHead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+.payHead .shield{width:22px;height:22px;display:inline-block}
+.payTitle{margin:0;font-size:20px;font-weight:950;text-align:center}
+.paySub{margin:6px 0 0;color:var(--muted);font-weight:800;text-align:center}
+.payGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:12px;
+}
+.payItem{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  text-align:center;
+}
+.payIcon{
+  width:52px;height:52px;border-radius:999px;
+  display:grid;place-items:center;
+  background:rgba(15,23,42,.04);
+  border:1px solid rgba(226,232,240,.95);
+}
+.payLabel{margin:0;font-weight:950;color:var(--text)}
+/* Dark mode compatibility (assumes body.dark or [data-theme="dark"]) */
+body.dark .payments,
+[data-theme="dark"] .payments{
+  background:rgba(15,23,42,.55);
+  border-color:rgba(148,163,184,.25);
+}
+body.dark .payItem,
+[data-theme="dark"] .payItem{
+  background:rgba(2,6,23,.55);
+  border-color:rgba(148,163,184,.22);
+}
+body.dark .payIcon,
+[data-theme="dark"] .payIcon{
+  background:rgba(148,163,184,.10);
+  border-color:rgba(148,163,184,.18);
+}
+@media (max-width: 920px){
+  .payGrid{grid-template-columns:1fr}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1109,6 +1166,54 @@
           Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.
         </p>
       </section>
+
+
+      <!-- PAYMENT OPTIONS -->
+      <section class="payments" id="payments" aria-label="Payment options">
+        <div class="payHead">
+          <svg class="shield" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" />
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2 class="payTitle" id="payTitle">Secure Payment Options</h2>
+        </div>
+        <p class="paySub" id="paySub">We accept secure payment methods for your convenience.</p>
+
+        <div class="payGrid" role="list">
+          <div class="payItem" role="listitem">
+            <div class="payIcon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 10h18" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <p class="payLabel" id="payCard">Card Payments</p>
+          </div>
+
+          <div class="payItem" role="listitem">
+            <div class="payIcon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <path d="M4 16l6-6 4 4 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 8v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="payLabel" id="payPaypal">PayPal</p>
+          </div>
+
+          <div class="payItem" role="listitem">
+            <div class="payIcon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="7" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="payLabel" id="payBank">Bank Transfer</p>
+          </div>
+        </div>
+      </section>
+
+
+
 
       <!-- WHY -->
       <section class="section">
@@ -1573,7 +1678,12 @@
         p6f4:"Mbështetje 24/7 në WhatsApp",
         p6f5:"Ndihmë falas për konfigurim",
         p1f4:"Mbështetje 24/7 në WhatsApp",
-        p1f5:"Ndihmë falas për konfigurim"
+        p1f5:"Ndihmë falas për konfigurim",
+        payTitle:"Opsione të sigurta pagese",
+        paySub:"Pranojmë metoda të sigurta pagese për lehtësinë tuaj.",
+        payCard:"Pagesa me kartë",
+        payPaypal:"PayPal",
+        payBank:"Transfer bankar"
 },
 
       en: {
@@ -1722,7 +1832,12 @@
         p6f4:"24/7 Support via WhatsApp",
         p6f5:"Free Setup Assistance",
         p1f4:"24/7 Support via WhatsApp",
-        p1f5:"Free Setup Assistance"
+        p1f5:"Free Setup Assistance",
+        payTitle:"Secure Payment Options",
+        paySub:"We accept secure payment methods for your convenience.",
+        payCard:"Card Payments",
+        payPaypal:"PayPal",
+        payBank:"Bank Transfer"
 },
 
       de: {
@@ -1871,7 +1986,12 @@
         p6f4:"24/7 Support über WhatsApp",
         p6f5:"Kostenlose Einrichtungsunterstützung",
         p1f4:"24/7 Support über WhatsApp",
-        p1f5:"Kostenlose Einrichtungsunterstützung"
+        p1f5:"Kostenlose Einrichtungsunterstützung",
+        payTitle:"Sichere Zahlungsoptionen",
+        paySub:"Wir akzeptieren sichere Zahlungsmethoden für Ihren Komfort.",
+        payCard:"Kartenzahlung",
+        payPaypal:"PayPal",
+        payBank:"Banküberweisung"
 }
     };
 
@@ -1907,7 +2027,9 @@
       "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3",
       "refundLink",
       "themeLabel",
-      "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5"
+      "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5",
+      "payTitle", "paySub", "payCard", "payPaypal", "payBank"
+    
     ];
 
     function setActiveLangButton(lang){
