@@ -173,7 +173,13 @@
       margin-top:10px;
     }
     h1{margin:10px 0 10px;font-size:36px;line-height:1.08}
-    .lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
+    
+    /* Hero title split */
+    .heroTitleSplit{font-weight:1000}
+    .heroTitleSplit .tMain{color:#0f172a;font-weight:1000}
+    .heroTitleSplit .tAccent{color:var(--accent);font-weight:950}
+    :root[data-theme="dark"] .heroTitleSplit .tMain{color:#f8fafc}
+.lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
 
     .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px}
 
@@ -1937,7 +1943,18 @@ body.dark .logoMark,
 
           <h3 style="margin:14px 0 6px;font-size:18px" id="reviewsH">Customer Feedback</h3>
           <p class="muted" style="margin:0 0 12px" id="reviewsLead">Real messages from our users about speed and support.</p>
-          <div class="reviewsGrid" id="reviewsGrid" aria-label="Reviews"></div>
+          <div class="reviewsGrid" id="reviewsGrid" aria-label="Reviews">
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+          </div>
         </div>
 
 
@@ -1971,6 +1988,7 @@ body.dark .logoMark,
         rev9:"Stabilitet shumë i mirë edhe në mobile.", rev9n:"Sara N.",
         rev10:"Shërbim korrekt, e rekomandoj.", rev10n:"Ilir D.",
 h1:"IPTV Premium për Sport, Filma & Seriale",
+        h1Html:"<span class=\"tMain\">IPTV Premium</span> <span class=\"tAccent\">për Sport, Filma & Seriale</span>",
         lead:"Aktivizim i shpejtë, udhëzime konfigurimi për pajisjen tënde dhe rimbursim i plotë brenda 30 ditësh (sipas kushteve).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
@@ -2192,6 +2210,7 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
         rev9:"Stable streaming on mobile too.", rev9n:"Alex G.",
         rev10:"Reliable service, recommended.", rev10n:"Kevin D.",
 h1:"Premium IPTV for Sports, Movies & Series",
+        h1Html:"<span class=\"tMain\">Premium IPTV</span> <span class=\"tAccent\">for Sports, Movies & Series</span>",
         lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
@@ -2410,6 +2429,7 @@ h1:"Premium IPTV for Sports, Movies & Series",
         rev9:"Stabiles Streaming auch am Handy.", rev9n:"Alex G.",
         rev10:"Zuverlässiger Service, empfehlenswert.", rev10n:"Kevin D.",
 h1:"Premium IPTV für Sport, Filme & Serien",
+        h1Html:"<span class=\"tMain\">Premium IPTV</span> <span class=\"tAccent\">für Sport, Filme & Serien</span>",
         lead:"Schnelle Aktivierung, gerätespezifische Einrichtungshilfe und volle 30‑Tage‑Erstattung (Bedingungen gelten).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
@@ -2705,6 +2725,12 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       ids.forEach((id) => {
         const el = document.getElementById(id);
         if (!el) return;
+        // Allow styled headline (innerHTML)
+        if (id === 'h1' && t.h1Html) {
+          el.innerHTML = t.h1Html;
+          el.classList.add('heroTitleSplit');
+          return;
+        }
         if (t[id] !== undefined) el.textContent = t[id];
       });
 
