@@ -1259,6 +1259,20 @@ body.dark .logoMark,
 :root[data-theme="dark"] .trialClose{background: rgba(255,255,255,.06); border-color: rgba(148,163,184,.18); color: rgba(226,232,240,.9);}
 :root[data-theme="dark"] .trialList li, :root[data-theme="dark"] .trialLead, :root[data-theme="dark"] .trialFoot{color: var(--muted);}
 @media (max-width: 640px){.trialTitle{font-size: 34px;} .trialPanel{padding:18px 14px 14px;} .trialList{gap:8px;}}
+
+
+/* Hero title split colors */
+#h1 .tMain{color:#0b1220 !important;font-weight:900;}
+#h1 .tAccent{color:#f97316 !important;font-weight:900;}
+#h1{font-weight:900;}
+
+/* Footer reviews */
+.footerReviewsWrap{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);}
+.footerReviewsWrap h3{margin:0 0 6px;font-size:16px;color:rgba(255,255,255,.92);}
+.footerReviewsWrap .muted{color:rgba(255,255,255,.72);}
+.footerReviewsWrap .reviewCard{background:rgba(255,255,255,.95);}
+.footerReviewsWrap .reviewCard .stars{letter-spacing:1px;font-size:14px;line-height:1;}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1941,19 +1955,19 @@ body.dark .logoMark,
             <div class="ratingText" id="ratingText">Rated by our customers</div>
           </div>
 
-          <h3 style="margin:14px 0 6px;font-size:18px" id="reviewsH">Customer Feedback</h3>
-          <p class="muted" style="margin:0 0 12px" id="reviewsLead">Real messages from our users about speed and support.</p>
+          <h3 style="margin:14px 0 6px;font-size:18px" id="reviewsTitle">Customer Feedback</h3>
+          <p class="muted" style="margin:0 0 12px" id="reviewsSub">Real messages from our users about speed and support.</p>
           <div class="reviewsGrid" id="reviewsGrid" aria-label="Reviews">
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div><span style="font-weight:850">...</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Stable streams and fast support.<span>Nora K.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Great sports package, no buffering.<span>Daniel P.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Easy setup with clear instructions.<span>Mila S.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Best value for money.<span>Chris T.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Works on mobile and Android box smoothly.<span>Sara N.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Channels load quickly.<span>Ethan R.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Support answered within minutes.<span>Liam B.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>High quality movies and series.<span>Olivia H.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Reliable service, recommended.<span>Noah D.</span></div>
           </div>
         </div>
 
@@ -1975,6 +1989,8 @@ body.dark .logoMark,
         
         trialMini:"Provë falas 24 orë",
         ratingText:"Vlerësuar nga klientët tanë",
+        reviewsSub:"Mesazhe reale nga përdoruesit për shpejtësinë dhe suportin.",
+        reviewsTitle:"Feedback nga klientët",
         reviewsH:"Feedback nga klientët",
         reviewsLead:"Komente reale për shpejtësinë dhe mbështetjen.",
         rev1:"Aktivizim shumë i shpejtë dhe lista punon perfekt.", rev1n:"Arben K.",
@@ -2197,6 +2213,8 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
         
         trialMini:"24 hr Free Trial",
         ratingText:"Rated by our customers",
+        reviewsSub:"Real messages from our users about speed and support.",
+        reviewsTitle:"Customer Feedback",
         reviewsH:"Customer Feedback",
         reviewsLead:"Real messages about speed and support.",
         rev1:"Activation was very fast and everything works smoothly.", rev1n:"Mark L.",
@@ -2416,6 +2434,8 @@ h1:"Premium IPTV for Sports, Movies & Series",
         
         trialMini:"24 Std. Gratis-Test",
         ratingText:"Bewertet von unseren Kunden",
+        reviewsSub:"Echte Rückmeldungen unserer Nutzer zu Geschwindigkeit und Support.",
+        reviewsTitle:"Kundenbewertungen",
         reviewsH:"Kundenbewertungen",
         reviewsLead:"Echte Rückmeldungen zu Speed und Support.",
         rev1:"Sehr schnelle Aktivierung, läuft einwandfrei.", rev1n:"Marco L.",
@@ -2671,8 +2691,8 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       "buyNow12", "buyNow6", "buyNow1",
       "trialMini",
       "ratingText",
-      "reviewsH",
-      "reviewsLead",
+      "reviewsTitle",
+      "reviewsSub",
       "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint",
       "trialTitle",
       "trialLead",
@@ -2730,7 +2750,7 @@ h1:"Premium IPTV für Sport, Filme & Serien",
           el.innerHTML = t.h1Html;
           el.classList.add('heroTitleSplit');
           return;
-        }
+                }
         if (t[id] !== undefined) el.textContent = t[id];
       });
 
