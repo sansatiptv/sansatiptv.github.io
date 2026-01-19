@@ -1,0 +1,3643 @@
+
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sansat IPTV | IPTV Premium + IBO Player</title>
+  <meta name="description" content="Sansat IPTV: IPTV Premium me aktivizim falas të IBO Player. Paketa 12/6/1 muaj. Kontakt: WhatsApp & Messenger. Shqip/English/Deutsch." />
+  <link rel="canonical" href="https://sansatiptv.github.io/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
+  <meta property="og:description" content="Paketa 12/6/1 muaj. Aktivizim i IBO Player falas (paga normale është 10€). Kontakt: WhatsApp & Messenger." />
+  <meta property="og:image" content="https://sansatiptv.github.io/soccer_banner.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sansatiptv.github.io/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
+  <meta name="twitter:description" content="Paketa 12/6/1 muaj. Aktivizim i IBO Player falas (paga normale është 10€). Kontakt: WhatsApp & Messenger." />
+  <meta name="twitter:image" content="https://sansatiptv.github.io/soccer_banner.png" />
+
+  <!-- Structured data (basic) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Sansat IPTV",
+    "url":"https://sansatiptv.github.io/",
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "telephone":"+38972698616",
+      "availableLanguage":["sq","en","de"]
+    }]
+  }
+  </script>
+
+  <style>
+    :root{
+      --page:#f6f8ff;
+      --surface:#ffffff;
+      --surface2:#f8fafc;
+
+      --text:#0f172a;
+      --muted:#475569;
+
+      --border:#e2e8f0;
+      --shadow:0 12px 30px rgba(15,23,42,.08);
+
+      --brand:#2563eb;
+      --brand2:#0ea5e9;
+
+      --ok:#16a34a;
+      --warn:#f59e0b;
+      --violet:#7c3aed;
+      --rose:#e11d48;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 15% 0%, rgba(37,99,235,.12), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(14,165,233,.10), transparent 50%),
+                  var(--page);
+      color: var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px 72px}
+
+    /* Accessibility */
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip:focus{
+      left:16px;top:16px;width:auto;height:auto;overflow:visible;
+      background:#fff;border:1px solid var(--border);border-radius:12px;
+      padding:10px 12px;box-shadow:0 10px 22px rgba(15,23,42,.10);
+      z-index:9999;
+    }
+    :focus-visible{outline:3px solid rgba(37,99,235,.35); outline-offset:3px}
+
+    /* Top bar */
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 0 10px;
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(10px);
+      background:rgba(246,248,255,.72);
+      border-bottom:1px solid rgba(226,232,240,.75);
+    }
+    .brandRow{display:flex;gap:10px;align-items:center}
+    .logoMark{
+      width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      display:grid;place-items:center;color:#fff;font-weight:900;
+      box-shadow:0 12px 26px rgba(37,99,235,.22);
+      user-select:none;
+      flex:0 0 auto;
+    }
+    .brand{
+      font-weight:950;letter-spacing:.2px;line-height:1.05;
+    }
+    .brand small{
+      display:block;color:var(--muted);font-weight:800;letter-spacing:0;margin-top:3px
+    }
+
+    .topRight{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    nav.quick{
+      display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+      padding:6px;
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:999px;
+      background:rgba(255,255,255,.70);
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    nav.quick a{
+      padding:8px 10px;border-radius:999px;
+      font-weight:900;color:var(--muted);
+    }
+    nav.quick a:hover{
+      background:rgba(37,99,235,.10);
+      color:var(--text);
+    }
+
+    .lang{
+      display:flex;gap:8px;align-items:center;
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:999px;padding:6px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    .lang button{
+      border:0;cursor:pointer;border-radius:999px;padding:8px 10px;
+      background:transparent;color:var(--muted);font-weight:900;
+    }
+    .lang button.active{
+      background:linear-gradient(135deg, rgba(37,99,235,.18), rgba(14,165,233,.16));
+      color:var(--text);
+    }
+
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:14px;align-items:stretch;
+      margin-top:14px;
+    }
+    .heroLeft{
+      background:rgba(255,255,255,.78);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:20px;
+      padding:18px 18px 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(22,163,74,.22);
+      background:rgba(22,163,74,.10);
+      color:var(--ok);font-weight:950;font-size:13px;
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(37,99,235,.08);
+      border:1px solid rgba(37,99,235,.18);
+      color:var(--muted);font-weight:850;
+      margin-top:10px;
+    }
+    h1{margin:10px 0 10px;font-size:36px;line-height:1.08}
+    
+    /* Hero title split */
+    .heroTitleSplit{font-weight:1000}
+    .heroTitleSplit .tMain{color:#0f172a;font-weight:1000}
+    .heroTitleSplit .tAccent{color:var(--accent);font-weight:950}
+    :root[data-theme="dark"] .heroTitleSplit .tMain{color:#f8fafc}
+.lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
+
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px}
+
+    .trialMini{
+      display:inline-flex;align-items:center;
+      padding:7px 12px;border-radius:999px;
+      border:1px solid rgba(34,197,94,.28);
+      background:rgba(34,197,94,.14);
+      color:#166534;font-weight:950;font-size:13px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+      margin:8px 0 2px;
+      cursor:pointer;
+    }
+    :root[data-theme="dark"] .trialMini{
+      background:rgba(34,197,94,.14);
+      border-color:rgba(34,197,94,.24);
+      color:#4ade80;
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:14px;font-weight:950;
+      border:1px solid var(--border);
+      background:#fff;
+      min-height:46px;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.10)}
+    .btn.primary{
+      border-color:rgba(37,99,235,.25);
+      background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
+    }
+    .btn.ghost{
+      background:transparent;
+      border-color:rgba(37,99,235,.18);
+      color:var(--muted);
+    }
+
+    .heroCard{
+      border:1px solid rgba(226,232,240,.9);
+      background:rgba(255,255,255,.78);
+      border-radius:20px;overflow:hidden;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      display:flex;flex-direction:column;
+    }
+    .heroCard img{display:block;width:100%;height:auto}
+    .heroCard .inner{padding:14px 14px 16px}
+    .note{color:var(--muted);margin:0;font-weight:650}
+
+    /* Sections */
+    .section{
+      margin-top:18px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:20px;
+      padding:16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .section h2{margin:0 0 10px;font-size:22px}
+    .muted{color:var(--muted);font-weight:650}
+
+    /* Plans */
+    .plansGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .plan{
+      border-radius:18px;
+      padding:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+      box-shadow:0 10px 22px rgba(15,23,42,.07);
+      position:relative;
+      overflow:hidden;
+    }
+    .plan::before{
+      content:"";
+      position:absolute;inset:-1px;
+      background: radial-gradient(600px 200px at 15% 0%, rgba(37,99,235,.12), transparent 55%),
+                  radial-gradient(500px 200px at 85% 10%, rgba(14,165,233,.10), transparent 55%);
+      pointer-events:none;
+      opacity:.9;
+    }
+    .plan > *{position:relative}
+    .planTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .planBadge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      font-weight:950;font-size:12px;
+      border:1px solid rgba(2,132,199,.20);
+      background: rgba(14,165,233,.10);
+      color: var(--text);
+      white-space:nowrap;
+    }
+    .planTitle{margin:0;font-weight:950}
+    .planPrice{
+      margin:10px 0 6px;
+      font-size:30px; font-weight:1000; letter-spacing:-.3px;
+    }
+    .planSub{margin:0;color:var(--muted);font-weight:850}
+    .planMeta{margin-top:10px;display:grid;gap:8px}
+    .metaRow{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:10px 10px;
+      background:rgba(15,23,42,.03);
+      border:1px solid rgba(226,232,240,.9);
+      border-radius:14px;
+      color:var(--muted);
+      font-weight:850;
+    }
+    .planCTA{
+      margin-top:12px;
+      display:flex;gap:10px;flex-wrap:wrap
+    }
+    .miniBtn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;font-weight:950;
+      min-height:42px;
+    }
+    .miniBtn.strong{
+      border-color:rgba(37,99,235,.26);
+      background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
+    }
+
+    .plan.best{
+      border-color:rgba(124,58,237,.28);
+      background: linear-gradient(180deg, #ffffff, #fcfbff);
+    }
+    .plan.best::before{
+      background: radial-gradient(700px 240px at 12% 0%, rgba(124,58,237,.18), transparent 55%),
+                  radial-gradient(700px 240px at 85% 8%, rgba(37,99,235,.14), transparent 55%);
+    }
+    .plan.best .planBadge{
+      border-color:rgba(124,58,237,.26);
+      background:rgba(124,58,237,.12);
+    }
+
+    /* Cards / lists */
+    .list{display:grid;gap:10px;margin-top:12px}
+    .card{
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:18px;padding:14px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-weight:800}
+
+    /* Two-column utilities */
+    .cols2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .callout{
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:18px;padding:14px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    .callout h3{margin:0 0 6px;font-size:16px}
+    .callout p{margin:0;color:var(--muted);font-weight:800}
+    .contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+
+    /* Steps */
+    .steps{display:grid;gap:10px;margin-top:12px}
+    .step{
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:18px;padding:14px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    .step b{display:block;margin-bottom:6px}
+    .macPreview img{
+      display:block;width:100%;height:auto;
+      max-width:760px;margin:10px auto 0;
+      border-radius:16px;border:1px solid rgba(226,232,240,.95);
+      box-shadow:0 16px 30px rgba(15,23,42,.08);
+    }
+
+    /* FAQ */
+    details{
+      border:1px solid rgba(226,232,240,.95);
+      background:#fff;border-radius:16px;
+      padding:10px 12px;margin-bottom:10px;
+      box-shadow:0 10px 22px rgba(15,23,42,.05);
+    }
+    summary{cursor:pointer;font-weight:950}
+    footer{
+      margin-top:16px;
+      padding:14px 16px;
+      border:1px solid rgba(226,232,240,.9);
+      background:rgba(255,255,255,.65);
+      border-radius:18px;
+      color:var(--muted);font-weight:800;font-size:14px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .plansGrid{grid-template-columns:1fr}
+      .cols2{grid-template-columns:1fr}
+      .contactGrid{grid-template-columns:1fr}
+      nav.quick{display:none}
+    }
+    /* ================================
+   FULL WIDTH BANNER (FINAL)
+   ================================ */
+.fullBanner{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.fullBanner img{
+  width: 100%;
+  height: 460px;       /* desktop */
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .fullBanner img{
+    height: 220px;     /* mobile – e shkurt */
+  }
+}
+  
+    /* Enhancements: hero trust bullets */
+    .trustBullets{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin:10px 0 0;
+    }
+    .tbullet{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(226,232,240,.95);
+      background:rgba(255,255,255,.70);
+      color:var(--muted); font-weight:850; font-size:13px;
+    }
+    .tbullet.link{border-color:rgba(37,99,235,.22); background:rgba(37,99,235,.08)}
+    .tbullet.link:hover{background:rgba(37,99,235,.12)}
+
+    /* Plans: ribbon + savings + best CTA emphasis */
+    .planRibbon{
+      position:absolute; top:12px; right:12px;
+      padding:6px 10px; border-radius:999px;
+      font-weight:950; font-size:12px;
+      border:1px solid rgba(124,58,237,.26);
+      background:rgba(124,58,237,.12);
+      color:var(--text);
+      z-index:2;
+    }
+    .planSave{margin:2px 0 10px}
+    .miniBtn.primaryBest{
+      border-color:rgba(37,99,235,.35);
+      background:linear-gradient(135deg, rgba(37,99,235,.22), rgba(14,165,233,.18));
+    }
+
+    /* Why + Devices merged grid */
+    .whyDevicesGrid{
+      grid-template-columns:repeat(3, 1fr);
+    }
+    @media (max-width: 920px){
+      .whyDevicesGrid{grid-template-columns:1fr}
+    }
+
+  
+    /* CTA hierarchy */
+    .btn.secondary{
+      background:transparent;
+      border-color:rgba(37,99,235,.22);
+      color:var(--muted);
+    }
+    .btn.secondary:hover{
+      background:rgba(37,99,235,.08);
+      color:var(--text);
+    }
+    .btn.linkBtn{
+      background:transparent;
+      border-color:transparent;
+      color:var(--brand);
+      padding:12px 6px;
+    }
+    .btn.linkBtn:hover{background:transparent;text-decoration:underline}
+
+    .miniBtn.secondary{
+      background:transparent;
+      border-color:rgba(37,99,235,.22);
+      color:var(--muted);
+    }
+    .miniBtn.secondary:hover{
+      background:rgba(37,99,235,.08);
+      color:var(--text);
+    }
+
+  
+    /* Sticky WhatsApp FAB */
+    .fabWa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:56px;
+      height:56px;
+      border-radius:18px;
+      background:linear-gradient(135deg, rgba(37,99,235,.22), rgba(14,165,233,.18));
+      border:1px solid rgba(37,99,235,.25);
+      box-shadow:0 18px 36px rgba(15,23,42,.18);
+      display:grid;
+      place-items:center;
+      z-index:9999;
+      backdrop-filter: blur(8px);
+    }
+    .fabWa:hover{transform: translateY(-1px)}
+    .fabIcon{
+      width:26px;height:26px;display:block;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230f172a' d='M20.52 3.48A11.78 11.78 0 0 0 12.07 0C5.47 0 .12 5.35.12 11.95c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.6 0 11.95-5.35 11.95-11.95 0-3.2-1.25-6.2-3.5-8.39ZM12.07 21.6h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.37A9.9 9.9 0 0 1 2.1 11.95C2.1 6.45 6.58 1.98 12.08 1.98c2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.98c0 5.5-4.47 9.94-9.9 9.94Zm5.75-7.4c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.71.16-.2.31-.81 1.02-.99 1.22-.18.2-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.54.16-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55h-.6c-.2 0-.54.08-.82.39-.28.31-1.07 1.05-1.07 2.56s1.1 2.97 1.25 3.18c.16.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.39.2 1.91.12.58-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.48-.07-.12-.28-.2-.59-.36Z'/%3E%3C/svg%3E");
+      background-size:contain;background-repeat:no-repeat;background-position:center;
+      opacity:.95;
+    }
+
+    /* Refund quick chips */
+    .refundQuick{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin:12px 0 12px;
+    }
+    .rqItem{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(226,232,240,.95);
+      background:rgba(15,23,42,.03);
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+    }
+    .refundCtaRow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+
+    /* Footer improvements */
+    .footerGrid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      gap:12px;
+      align-items:center;
+    }
+    .footerBrand{display:flex;gap:10px;align-items:center}
+    .footerName{font-weight:950}
+    .footerSmall{color:var(--muted);font-weight:650;margin-top:2px}
+    .footerLinks{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .footerLinks a{color:var(--muted);font-weight:750}
+    .footerLinks a:hover{color:var(--text)}
+    .footerCtas{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+    .footerBottom{margin-top:12px;border-top:1px solid rgba(226,232,240,.9);padding-top:10px}
+    .footerCopy{display:inline-block;margin-left:10px;color:var(--muted);font-weight:650}
+    @media (max-width: 920px){
+      .footerGrid{grid-template-columns:1fr;justify-items:start}
+      .footerLinks{justify-content:flex-start}
+      .footerCtas{justify-content:flex-start}
+      .fabWa{right:14px;bottom:14px}
+    }
+
+    /* Icons (CSS pseudo-elements) */
+    #tb1::before, #tb2::before, #tb3::before{
+      content:"";
+      width:16px;height:16px;display:inline-block;margin-right:8px;
+      background-size:contain;background-repeat:no-repeat;background-position:center;
+      opacity:.9;
+    }
+    #tb1::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-6a1 1 0 0 1 1 1v1.07A8.97 8.97 0 0 1 20.93 11H22a1 1 0 1 1 0 2h-1.07A8.97 8.97 0 0 1 13 20.93V22a1 1 0 1 1-2 0v-1.07A8.97 8.97 0 0 1 3.07 13H2a1 1 0 1 1 0-2h1.07A8.97 8.97 0 0 1 11 3.07V2a1 1 0 0 1 1-1Z'/%3E%3C/svg%3E");}
+    #tb2::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2-8 4.5A1.5 1.5 0 0 0 5.5 20h13A1.5 1.5 0 0 0 20 18.5C20 16 16.42 14 12 14Z'/%3E%3C/svg%3E");}
+    #tb3::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1Zm1 17.93V20a1 1 0 0 1-2 0v-1.07A8.97 8.97 0 0 1 3.07 13H2a1 1 0 0 1 0-2h1.07A8.97 8.97 0 0 1 11 3.07V2a1 1 0 0 1 2 0v1.07A8.97 8.97 0 0 1 20.93 11H22a1 1 0 0 1 0 2h-1.07A8.97 8.97 0 0 1 13 18.93Z'/%3E%3C/svg%3E");}
+
+    /* Why cards subtle icons */
+    .whyDevicesGrid .card{position:relative;padding-left:52px}
+    .whyDevicesGrid .card::before{
+      content:"";position:absolute;left:16px;top:16px;width:26px;height:26px;
+      background-size:contain;background-repeat:no-repeat;background-position:center;opacity:.9
+    }
+    .whyDevicesGrid .card:nth-child(1)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M13 2 3 14h7l-1 8 10-12h-7l1-8Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(2)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 2a10 10 0 0 0-3 19.54V14H7v-2h2V9.5A3.5 3.5 0 0 1 12.5 6H15v2h-2.5A1.5 1.5 0 0 0 11 9.5V12h4l-1 2h-3v7.54A10 10 0 0 0 12 2Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(3)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M4 6h16v10H4V6Zm2 12h12v2H6v-2Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(4)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 22a4 4 0 0 1-4-4h2a2 2 0 0 0 4 0h2a4 4 0 0 1-4 4ZM7 2h10v2H7V2Zm0 4h10a5 5 0 0 1 5 5v4h-2v-4a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v4H2v-4a5 5 0 0 1 5-5Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(5)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M7 3h10v2H7V3Zm-2 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm0 2v10h14V9H5Z'/%3E%3C/svg%3E");}
+    .whyDevicesGrid .card:nth-child(6)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23475569' d='M12 2a7 7 0 0 1 7 7c0 2.39-1.19 4.5-3 5.74V22l-4-2-4 2v-7.26A6.99 6.99 0 0 1 5 9a7 7 0 0 1 7-7Z'/%3E%3C/svg%3E");}
+
+  
+    /* Premium typography & spacing */
+    h1{letter-spacing:-.4px}
+    .lead{line-height:1.5}
+
+    /* Hero image polish */
+    .heroCard{position:relative}
+    .heroImg{filter:saturate(1.03) contrast(1.02)}
+    .heroCard::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.22) 100%);
+      pointer-events:none;
+    }
+
+    /* Mini stats */
+    .miniStats{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 0}
+    .mstat{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-weight:650;font-size:13px}
+    .mDot{width:8px;height:8px;border-radius:999px;background:rgba(37,99,235,.35);border:1px solid rgba(37,99,235,.25)}
+
+    /* Plans: features list */
+    .planFeatures{
+      list-style:none;
+      padding:0;
+      margin:10px 0 0;
+      display:grid;
+      gap:8px;
+    }
+    .planFeatures li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:var(--muted);
+      font-weight:650;
+      font-size:14px;
+      line-height:1.35;
+    }
+    .planFeatures li::before{
+      content:"";
+      width:16px;height:16px;flex:0 0 16px;
+      margin-top:2px;
+      background-size:contain;background-repeat:no-repeat;background-position:center;
+      opacity:.95;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2316a34a' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");
+    }
+
+    /* Micro-interactions */
+    .card, .callout, .plan, .step, details{
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+    }
+    .card:hover, .callout:hover, .plan:hover, .step:hover, details:hover{
+      transform: translateY(-1px);
+      box-shadow:0 16px 34px rgba(15,23,42,.10);
+      border-color:rgba(37,99,235,.18);
+    }
+
+    /* Unify trust bullet icon sizing */
+    #tb1::before, #tb2::before, #tb3::before{width:18px;height:18px}
+    /* Dark mode palette */
+:root[data-theme="dark"]{
+  --page:#0b1220;
+  --surface:#0f172a;
+  --surface2:#111c33;
+
+  --text:#e5e7eb;
+  --muted:#a7b0c0;
+
+  --border:rgba(148,163,184,.18);
+  --shadow:0 16px 40px rgba(0,0,0,.35);
+
+  --brand:#60a5fa;
+  --brand2:#38bdf8;
+
+  --ok:#22c55e;
+  --warn:#fbbf24;
+  --violet:#a78bfa;
+  --rose:#fb7185;
+}
+
+/* Background in dark */
+:root[data-theme="dark"] body{
+  background:
+    radial-gradient(1200px 600px at 15% 0%, rgba(96,165,250,.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 10%, rgba(56,189,248,.14), transparent 50%),
+    var(--page);
+}
+
+  
+    /* Theme toggle button */
+    .themeToggle{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid rgba(226,232,240,.9);
+      background:rgba(255,255,255,.75);
+      padding:10px 12px;
+      border-radius:999px;
+      font-weight:900;
+      color:var(--muted);
+      cursor:pointer;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+    .themeToggle:hover{
+      transform: translateY(-1px);
+      box-shadow:0 14px 28px rgba(15,23,42,.10);
+      background:rgba(37,99,235,.08);
+      color:var(--text);
+    }
+    .themeIcon{font-size:16px;line-height:1}
+
+    /* Dark mode overrides for hard-coded surfaces */
+    :root[data-theme="dark"] header{
+      background:rgba(11,18,32,.72);
+      border-bottom:1px solid rgba(148,163,184,.18);
+    }
+    :root[data-theme="dark"] nav.quick,
+    :root[data-theme="dark"] .lang,
+    :root[data-theme="dark"] .themeToggle{
+      background:rgba(15,23,42,.55);
+      border-color:rgba(148,163,184,.18);
+    }
+    :root[data-theme="dark"] nav.quick a{color:var(--muted)}
+    :root[data-theme="dark"] nav.quick a:hover{background:rgba(96,165,250,.14);color:var(--text)}
+    :root[data-theme="dark"] .lang button.active{
+      background:linear-gradient(135deg, rgba(96,165,250,.22), rgba(56,189,248,.18));
+      color:var(--text);
+    }
+
+    :root[data-theme="dark"] .heroLeft,
+    :root[data-theme="dark"] .heroCard,
+    :root[data-theme="dark"] .section{
+      background:rgba(15,23,42,.60);
+      border-color:rgba(148,163,184,.18);
+    }
+    :root[data-theme="dark"] .badge{
+      background:rgba(34,197,94,.14);
+      border-color:rgba(34,197,94,.22);
+      color:var(--ok);
+    }
+    :root[data-theme="dark"] .pill{
+      background:rgba(96,165,250,.14);
+      border-color:rgba(96,165,250,.22);
+      color:var(--muted);
+    }
+
+    :root[data-theme="dark"] .card,
+    :root[data-theme="dark"] .callout,
+    :root[data-theme="dark"] .step,
+    :root[data-theme="dark"] details,
+    :root[data-theme="dark"] footer{
+      background:rgba(15,23,42,.60);
+      border-color:rgba(148,163,184,.18);
+    }
+
+    :root[data-theme="dark"] .plan{
+      background: linear-gradient(180deg, rgba(15,23,42,.80), rgba(17,28,51,.72));
+      border-color:rgba(148,163,184,.18);
+    }
+    :root[data-theme="dark"] .metaRow{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(148,163,184,.18);
+      color:var(--muted);
+    }
+    :root[data-theme="dark"] .miniBtn,
+    :root[data-theme="dark"] .btn{
+      background:rgba(15,23,42,.55);
+      border-color:rgba(148,163,184,.18);
+      color:var(--text);
+    }
+    :root[data-theme="dark"] .btn.linkBtn{
+      background:transparent;
+      border-color:transparent;
+      color:var(--brand);
+    }
+    :root[data-theme="dark"] .btn.secondary,
+    :root[data-theme="dark"] .miniBtn.secondary{
+      background:transparent;
+      border-color:rgba(96,165,250,.22);
+      color:var(--muted);
+    }
+    :root[data-theme="dark"] .tbullet{
+      background:rgba(15,23,42,.55);
+      border-color:rgba(148,163,184,.18);
+    }
+    :root[data-theme="dark"] .rqItem{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(148,163,184,.18);
+      color:var(--muted);
+    }
+    :root[data-theme="dark"] .fullBanner p a{color:var(--text)}
+
+  
+/* Plan price discount styling */
+    .planPrice{
+      margin:10px 0 6px;
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .oldPrice{
+      font-weight:950;
+      color:var(--muted);
+      text-decoration:line-through;
+      opacity:.8;
+      font-size:18px;
+    }
+    .newPrice{
+      font-size:32px;
+      font-weight:1000;
+      letter-spacing:-.3px;
+      color:var(--text);
+    }
+    .priceNote{
+      font-size:12px;
+      font-weight:950;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(34,197,94,.22);
+      background:rgba(34,197,94,.10);
+      color:var(--ok);
+    }
+
+  
+    /* Premium logo mark */
+    .logoMark{
+      position:relative;
+      isolation:isolate;
+    }
+    .logoMark::after{
+      content:"";
+      position:absolute;
+      inset:3px;
+      border-radius:inherit;
+      background:radial-gradient(60% 60% at 30% 25%, rgba(255,255,255,.35), transparent 55%);
+      z-index:-1;
+      pointer-events:none;
+    }
+
+  
+/* Reviews */
+.reviewsGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.reviewCard{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:16px;
+  padding:14px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+  font-weight:800;
+  color:var(--muted);
+}
+.reviewCard span{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  color:var(--text);
+  font-weight:900;
+}
+:root[data-theme="dark"] .reviewCard{
+  background:rgba(15,23,42,.6);
+  border-color:rgba(148,163,184,.18);
+  color:var(--muted);
+}
+
+/* Reviews stars */
+.stars{
+  font-size:14px;
+  letter-spacing:1px;
+  line-height:1;
+  color:var(--warn);
+  margin-bottom:8px;
+  user-select:none;
+}
+.starsBig{font-size:18px;margin:0}
+.ratingRow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(245,158,11,.22);
+  background:rgba(245,158,11,.08);
+}
+.ratingText{font-weight:900;color:var(--text)}
+:root[data-theme="dark"] .ratingRow{
+  border-color:rgba(245,158,11,.22);
+  background:rgba(245,158,11,.10);
+}
+
+
+/* Payment options */
+.payments{
+  margin-top:18px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(226,232,240,.9);
+  border-radius:20px;
+  padding:16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+.payHead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+.payHead .shield{width:22px;height:22px;display:inline-block}
+.payTitle{margin:0;font-size:20px;font-weight:950;text-align:center}
+.paySub{margin:6px 0 0;color:var(--muted);font-weight:800;text-align:center}
+.payGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:12px;
+}
+.payItem{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  text-align:center;
+}
+.payIcon{
+  width:52px;height:52px;border-radius:999px;
+  display:grid;place-items:center;
+  background:rgba(15,23,42,.04);
+  border:1px solid rgba(226,232,240,.95);
+}
+.payLabel{margin:0;font-weight:950;color:var(--text)}
+/* Dark mode compatibility (assumes body.dark or [data-theme="dark"]) */
+body.dark .payments,
+[data-theme="dark"] .payments{
+  background:rgba(15,23,42,.55);
+  border-color:rgba(148,163,184,.25);
+}
+body.dark .payItem,
+[data-theme="dark"] .payItem{
+  background:rgba(2,6,23,.55);
+  border-color:rgba(148,163,184,.22);
+}
+body.dark .payIcon,
+[data-theme="dark"] .payIcon{
+  background:rgba(148,163,184,.10);
+  border-color:rgba(148,163,184,.18);
+}
+@media (max-width: 920px){
+  .payGrid{grid-template-columns:1fr}
+}
+
+
+/* Colored payment icons */
+.payItem.card .payIcon{background:#fff3e6;border-color:#fed7aa;color:#f97316}
+.payItem.paypal .payIcon{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
+.payItem.bank .payIcon{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
+
+body.dark .payItem.card .payIcon{background:rgba(249,115,22,.15);color:#fb923c}
+body.dark .payItem.paypal .payIcon{background:rgba(37,99,235,.18);color:#60a5fa}
+body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
+
+
+/* Devices compatibility (colored icons + subtle animation) */
+.devicesWrap{margin-top:12px}
+.devicesTitle{text-align:center}
+.devicesGrid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(6, minmax(0,1fr));
+  gap:14px;
+}
+.deviceCard{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  padding:16px 14px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  text-align:center;
+  transform: translateY(0);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  animation: devFadeUp .45s ease both;
+}
+.deviceCard:hover{
+  transform: translateY(-4px);
+  box-shadow:0 18px 34px rgba(15,23,42,.12);
+  border-color: rgba(37,99,235,.22);
+}
+.deviceIcon{
+  width:62px;height:62px;border-radius:999px;
+  display:grid;place-items:center;
+  border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.04);
+  position:relative;
+}
+.deviceIcon svg{width:28px;height:28px}
+.deviceLabel{margin:0;font-weight:950;color:var(--text)}
+.deviceSub{margin:0;color:var(--muted);font-weight:800;font-size:13px;line-height:1.25}
+
+/* Color variants (match payment icons style) */
+.deviceCard.tv .deviceIcon{background:#fff3e6;border-color:#fed7aa;color:#f97316}
+.deviceCard.mobile .deviceIcon{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
+.deviceCard.tablet .deviceIcon{background:#f5f3ff;border-color:#ddd6fe;color:#7c3aed}
+.deviceCard.pc .deviceIcon{background:#f1f5f9;border-color:#cbd5e1;color:#0f172a}
+.deviceCard.box .deviceIcon{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
+.deviceCard.mag .deviceIcon{background:#fff1f2;border-color:#fecdd3;color:#e11d48}
+
+/* Subtle “breathing” animation for icons */
+.deviceIcon{
+  animation: devBreathe 3.2s ease-in-out infinite;
+}
+.deviceCard:hover .deviceIcon{
+  animation: devWiggle .55s ease-in-out 1;
+}
+
+@keyframes devFadeUp{
+  from{opacity:0; transform:translateY(10px)}
+  to{opacity:1; transform:translateY(0)}
+}
+@keyframes devBreathe{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-2px)}
+}
+@keyframes devWiggle{
+  0%{transform:translateY(-2px) rotate(0deg)}
+  35%{transform:translateY(-4px) rotate(-3deg)}
+  70%{transform:translateY(-3px) rotate(3deg)}
+  100%{transform:translateY(-2px) rotate(0deg)}
+}
+
+/* Dark mode */
+body.dark .deviceCard,
+[data-theme="dark"] .deviceCard{
+  background:rgba(2,6,23,.55);
+  border-color:rgba(148,163,184,.22);
+}
+body.dark .deviceSub,
+[data-theme="dark"] .deviceSub{color:rgba(226,232,240,.78)}
+body.dark .deviceCard:hover,
+[data-theme="dark"] .deviceCard:hover{
+  border-color:rgba(96,165,250,.28);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .devicesGrid{grid-template-columns:repeat(3, minmax(0,1fr))}
+}
+@media (max-width: 640px){
+  .devicesGrid{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+
+
+/* Premium contact section (2 columns) */
+.contactHero{ text-align:center; }
+.contactHero h2{margin:0 0 8px;font-size:34px;letter-spacing:-.3px}
+.contactHero p{margin:0;color:var(--muted);font-weight:800}
+
+.contactGrid2{
+  display:grid;
+  grid-template-columns:1fr 1.15fr;
+  gap:14px;
+  margin-top:14px;
+}
+.contactCard{
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 22px rgba(15,23,42,.06);
+}
+body.dark .contactCard,
+[data-theme="dark"] .contactCard{
+  background:rgba(2,6,23,.55);
+  border-color:rgba(148,163,184,.18);
+}
+
+.contactCard h3{margin:0 0 12px;font-size:18px}
+.contactItem{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:12px 0;
+  border-bottom:1px solid rgba(226,232,240,.75);
+}
+body.dark .contactItem,
+[data-theme="dark"] .contactItem{border-bottom-color:rgba(148,163,184,.16)}
+.contactItem:last-child{border-bottom:0}
+
+.ciIcon{
+  width:40px;height:40px;border-radius:14px;
+  display:grid;place-items:center;
+  border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.04);
+}
+body.dark .ciIcon,
+[data-theme="dark"] .ciIcon{
+  border-color:rgba(148,163,184,.18);
+  background:rgba(148,163,184,.10);
+}
+.ciIcon svg{width:20px;height:20px}
+.ciIcon.email{background:#fff3e6;border-color:#fed7aa;color:#f97316}
+.ciIcon.phone{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
+.ciIcon.chat{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
+body.dark .ciIcon.email,[data-theme="dark"] .ciIcon.email{background:rgba(249,115,22,.15);color:#fb923c}
+body.dark .ciIcon.phone,[data-theme="dark"] .ciIcon.phone{background:rgba(37,99,235,.18);color:#60a5fa}
+body.dark .ciIcon.chat,[data-theme="dark"] .ciIcon.chat{background:rgba(22,163,74,.18);color:#4ade80}
+
+.ciText b{display:block;color:var(--text);font-weight:950;margin-bottom:4px}
+.ciText span{display:block;color:var(--muted);font-weight:800;line-height:1.35}
+
+.hours{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid rgba(226,232,240,.75);
+}
+body.dark .hours,[data-theme="dark"] .hours{border-top-color:rgba(148,163,184,.16)}
+.hours h4{margin:0 0 8px;font-size:16px}
+.hours p{margin:0;color:var(--muted);font-weight:800;line-height:1.5}
+
+.formGrid{display:grid;gap:10px;margin-top:8px}
+.field label{display:block;font-weight:900;color:var(--muted);margin:0 0 6px}
+.field input,.field textarea{
+  width:100%;
+  border-radius:14px;
+  border:1px solid rgba(226,232,240,.95);
+  background:#fff;
+  padding:12px 12px;
+  font-weight:800;
+  color:var(--text);
+  outline:none;
+}
+.field textarea{min-height:120px;resize:vertical}
+body.dark .field input,
+body.dark .field textarea,
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field textarea{
+  background:rgba(15,23,42,.55);
+  border-color:rgba(148,163,184,.18);
+  color:var(--text);
+}
+
+.btnBigOrange{
+  width:100%;
+  min-height:48px;
+  border:0;
+  border-radius:14px;
+  font-weight:950;
+  cursor:pointer;
+  background:#f97316;
+  color:#fff;
+  transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.btnBigOrange:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.18); opacity:.95}
+
+@media (max-width: 920px){
+  .contactGrid2{grid-template-columns:1fr}
+  .contactHero h2{font-size:30px}
+}
+
+
+/* Logo upgrade (SVG mark) */
+.logoMark{
+  width:44px;height:44px;border-radius:14px;
+  background:transparent !important;
+  display:grid;place-items:center;
+  box-shadow:0 12px 26px rgba(37,99,235,.22);
+  user-select:none;
+  flex:0 0 auto;
+  overflow:hidden;
+}
+.logoSvg{width:44px;height:44px;display:block}
+body.dark .logoMark,
+[data-theme="dark"] .logoMark{
+  box-shadow:0 16px 34px rgba(0,0,0,.32);
+}
+
+
+
+/* ================================
+   HERO FOOTBALL (CHROME-FIX)
+   - Cinematic banner look
+   - Subtle hero animation (Ken Burns zoom)
+   ================================ */
+.hero-football .heroCard{position:relative; overflow:hidden;}
+.hero-football .heroImg{
+  filter: saturate(1.08) contrast(1.12) brightness(.92);
+  transform-origin:center center;
+  animation: heroZoom 9s ease-in-out infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-football .heroImg{animation:none;}
+}
+@keyframes heroZoom{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.025)}
+  100%{transform:scale(1)}
+}
+
+
+
+/* ================================
+   24H TEST CTA (CENTER + GREEN)
+   ================================ */
+.testCta{padding:0; border:0; background:transparent; box-shadow:none;}
+.testCtaLink{
+  display:block;
+  border-radius:22px;
+  border:1px solid rgba(22,163,74,.22);
+  background: linear-gradient(135deg, rgba(22,163,74,.16), rgba(34,197,94,.10));
+  box-shadow: 0 16px 36px rgba(15,23,42,.10);
+  text-align:center;
+  overflow:hidden;
+}
+.testCtaInner{
+  padding:22px 18px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.testCtaBadge{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(22,163,74,.16);
+  border:1px solid rgba(22,163,74,.24);
+  color: var(--ok);
+  font-weight:1000;
+  letter-spacing:.4px;
+}
+.testCtaTitle{
+  margin:12px 0 6px;
+  font-size:28px;
+  letter-spacing:-.3px;
+}
+.testCtaSub{
+  margin:0 auto;
+  max-width: 70ch;
+  color: var(--muted);
+  font-weight:850;
+  line-height:1.5;
+}
+.testCtaHint{
+  margin:14px auto 0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 14px;
+  border-radius:14px;
+  background: rgba(255,255,255,.75);
+  border:1px solid rgba(226,232,240,.90);
+  color: var(--text);
+  font-weight:950;
+}
+.testCtaLink:hover{transform: translateY(-1px);}
+.testCtaLink:active{transform: translateY(0);}
+
+/* Dark mode */
+:root[data-theme="dark"] .testCtaLink{
+  border-color: rgba(34,197,94,.22);
+  background: linear-gradient(135deg, rgba(22,163,74,.18), rgba(34,197,94,.10));
+  box-shadow: 0 22px 44px rgba(0,0,0,.35);
+}
+:root[data-theme="dark"] .testCtaHint{
+  background: rgba(15,23,42,.55);
+  border-color: rgba(148,163,184,.18);
+}
+
+/* Mobile */
+@media (max-width: 920px){
+  .testCtaTitle{font-size:22px;}
+  .testCtaInner{padding:18px 14px;}
+  .testCtaSub{font-size:14px;}
+}
+
+
+
+
+
+/* ================================
+   PRIVACY POLICY MODAL
+   ================================ */
+.privacyModal{position:fixed; inset:0; display:none; z-index:12000;}
+.privacyModal.isOpen{display:block;}
+.privacyBackdrop{position:absolute; inset:0; background:rgba(2,6,23,.55); backdrop-filter: blur(4px);}
+.privacyPanel{position:relative; width:min(820px, calc(100vw - 28px)); max-height: calc(100vh - 80px); overflow:auto;
+  margin: clamp(14px, 6vh, 38px) auto 0; background:#fff; border-radius:22px; border:1px solid rgba(226,232,240,.95);
+  box-shadow: 0 30px 80px rgba(0,0,0,.35); padding: 22px 18px 18px;}
+.privacyClose{position:absolute; right:12px; top:10px; width:40px; height:40px; border-radius:12px; border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.03); color:rgba(15,23,42,.85); font-weight:950; font-size:22px; cursor:pointer;}
+.privacyTitle{margin: 6px 0 6px; font-size: 30px; line-height: 1.15; letter-spacing: -0.4px; font-weight: 1000; color: var(--text);} 
+.privacyUpdated{margin:0 0 14px; color: var(--muted); font-weight: 850; font-size: 13px;}
+.privacyBody h3{margin:14px 0 8px; font-size:16px; color: var(--text);} 
+.privacyBody p, .privacyBody li{color: var(--muted); font-weight: 800; line-height: 1.6;}
+.privacyBody ul{margin:8px 0 0 18px;}
+.privacyBody a{color: var(--brand); text-decoration: underline;}
+:root[data-theme="dark"] .privacyPanel{background: rgba(15,23,42,.92); border-color: rgba(148,163,184,.18);} 
+:root[data-theme="dark"] .privacyClose{background: rgba(255,255,255,.06); border-color: rgba(148,163,184,.18); color: rgba(226,232,240,.9);} 
+
+
+/* ================================
+   24H TRIAL MODAL (POPUP)
+   ================================ */
+.trialModal{position:fixed; inset:0; display:none; z-index:10000;}
+.trialModal.isOpen{display:block;}
+.trialBackdrop{position:absolute; inset:0; background:rgba(2,6,23,.55); backdrop-filter: blur(4px);}
+.trialPanel{position:relative; width:min(720px, calc(100vw - 28px)); margin: clamp(14px, 6vh, 38px) auto 0; background:#fff; border-radius:22px; border:1px solid rgba(226,232,240,.95); box-shadow: 0 30px 80px rgba(0,0,0,.35); padding: 22px 18px 18px; text-align:center;}
+.trialClose{position:absolute; right:12px; top:10px; width:40px; height:40px; border-radius:12px; border:1px solid rgba(226,232,240,.95); background:rgba(15,23,42,.03); color:rgba(15,23,42,.85); font-weight:950; font-size:22px; cursor:pointer;}
+.trialIcon{display:inline-grid; place-items:center; width:64px; height:64px; border-radius:999px; color:#16a34a; background:rgba(22,163,74,.10); border:1px solid rgba(22,163,74,.22); margin: 4px auto 10px;}
+.trialTitle{margin: 0 0 8px; font-size: 44px; line-height: 1.05; letter-spacing: -0.6px; font-weight: 1000; color: var(--text);}
+.trialLead{margin: 0 auto 16px; max-width: 72ch; color: var(--muted); font-weight: 800; line-height: 1.6;}
+.trialSubhead{margin: 6px 0 10px; font-size: 18px; font-weight: 950; color: var(--text);}
+.trialList{margin: 0 auto 18px; padding: 0; list-style: none; display: grid; gap: 10px; max-width: 520px; text-align:left;}
+.trialList li{display:flex; align-items:flex-start; gap:10px; font-weight: 850; color: var(--muted); line-height: 1.4;}
+.trialList li::before{content:""; width:18px; height:18px; flex:0 0 18px; margin-top:2px; background-size:contain; background-repeat:no-repeat; background-position:center; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2316a34a' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");}
+.trialCtaRow{margin: 10px 0 8px;}
+.trialBtn{display:inline-flex; align-items:center; justify-content:center; gap:10px; width:min(520px, 100%); min-height:54px; padding: 12px 16px; border-radius:14px; background: linear-gradient(135deg, rgba(22,163,74,1), rgba(34,197,94,1)); color:#fff; font-weight: 1000; border:1px solid rgba(22,163,74,.35); box-shadow: 0 18px 40px rgba(22,163,74,.22);}
+.trialBtn:hover{transform: translateY(-1px); opacity:.97;}
+.trialBtn::before{content:""; width:18px;height:18px; background-size:contain;background-repeat:no-repeat;background-position:center; filter: invert(1); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M20.52 3.48A11.78 11.78 0 0 0 12.07 0C5.47 0 .12 5.35.12 11.95c0 2.1.55 4.14 1.6 5.94L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.6 0 11.95-5.35 11.95-11.95 0-3.2-1.25-6.2-3.5-8.39ZM12.07 21.6h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.74.98 1-3.65-.24-.37A9.9 9.9 0 0 1 2.1 11.95C2.1 6.45 6.58 1.98 12.08 1.98c2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.98c0 5.5-4.47 9.94-9.9 9.94Z'/%3E%3C/svg%3E");}
+.trialFoot{margin: 10px auto 0; max-width: 78ch; color: var(--muted); font-weight: 800; line-height: 1.5; font-size: 13px;}
+:root[data-theme="dark"] .trialPanel{background: rgba(15,23,42,.92); border-color: rgba(148,163,184,.18);}
+:root[data-theme="dark"] .trialClose{background: rgba(255,255,255,.06); border-color: rgba(148,163,184,.18); color: rgba(226,232,240,.9);}
+:root[data-theme="dark"] .trialList li, :root[data-theme="dark"] .trialLead, :root[data-theme="dark"] .trialFoot{color: var(--muted);}
+@media (max-width: 640px){.trialTitle{font-size: 34px;} .trialPanel{padding:18px 14px 14px;} .trialList{gap:8px;}}
+
+
+/* Hero title split colors */
+#h1 .tMain{color:#0b1220 !important;font-weight:900;}
+#h1 .tAccent{color:#f97316 !important;font-weight:900;}
+#h1{font-weight:900;}
+
+/* Footer reviews */
+.footerReviewsWrap{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);}
+.footerReviewsWrap h3{margin:0 0 6px;font-size:16px;color:rgba(255,255,255,.92);}
+.footerReviewsWrap .muted{color:rgba(255,255,255,.72);}
+.footerReviewsWrap .reviewCard{background:rgba(255,255,255,.95);}
+.footerReviewsWrap .reviewCard .stars{letter-spacing:1px;font-size:14px;line-height:1;}
+
+
+/* Hero split title colors */
+.heroTitleSplit .tMain{font-weight:950;color:#0b0b0b !important;}
+.heroTitleSplit .tAccent{font-weight:950;color:#f97316 !important;}
+
+/* Customer feedback section (cards + modal) */
+.reviewsSection{padding:64px 0;background:#ffffff;}
+.reviewsSection .reviewsWrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+.reviewsSection h2{margin:0 0 10px;font-size:44px;line-height:1.08;letter-spacing:-0.02em;text-align:center;}
+.reviewsSection p.lead{margin:0 auto 28px;max-width:720px;text-align:center;color:#6b7280;font-size:18px;}
+.reviewsCards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;}
+.reviewCard2{border:1px solid #e5e7eb;border-radius:14px;background:#fff;box-shadow:0 12px 30px rgba(15,23,42,.06);padding:18px;min-height:300px;display:flex;flex-direction:column;}
+.reviewHead{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;}
+.reviewAvatar{width:46px;height:46px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:900;background:#f97316;color:#fff;flex:0 0 auto;}
+.reviewMeta{display:flex;flex-direction:column;gap:2px;}
+.reviewName{font-weight:900;color:#111827;}
+.reviewCity{font-size:13px;color:#6b7280;}
+.reviewStars{margin:6px 0 10px;letter-spacing:1px;font-size:16px;line-height:1;color:#f59e0b;}
+.reviewText{font-style:italic;color:#111827;line-height:1.55;flex:1 1 auto;}
+.reviewsActions{display:flex;justify-content:center;margin-top:22px;}
+.btnReviews{border:1px solid #f97316;background:#fff;color:#f97316;font-weight:900;padding:12px 18px;border-radius:12px;cursor:pointer;transition:all .15s ease;}
+.btnReviews:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(249,115,22,.18);}
+
+/* Reviews modal */
+.reviewsModalOverlay{position:fixed;inset:0;background:rgba(2,6,23,.65);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999;}
+.reviewsModalOverlay.isOpen{display:flex;}
+.reviewsModal{width:min(980px,100%);background:#fff;border-radius:16px;box-shadow:0 30px 80px rgba(2,6,23,.35);overflow:hidden;}
+.reviewsModalHeader{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #e5e7eb;}
+.reviewsModalHeader h3{margin:0;font-size:18px;}
+.reviewsModalClose{border:0;background:transparent;font-size:18px;font-weight:900;cursor:pointer;padding:8px 10px;border-radius:10px;}
+.reviewsModalClose:hover{background:rgba(15,23,42,.06);}
+.reviewsModalBody{padding:18px;max-height:min(78vh,820px);overflow:auto;}
+.reviewsAll{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:18px;}
+.reviewMini{border:1px solid #e5e7eb;border-radius:14px;padding:14px;background:#fff;}
+.reviewMini .top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.reviewMini .who{font-weight:900;color:#111827;font-size:14px;}
+.reviewMini .stars{color:#f59e0b;letter-spacing:1px;font-size:14px;}
+.reviewMini .msg{margin:8px 0 0;color:#111827;line-height:1.5;font-style:italic;}
+
+.feedbackForm{border-top:1px solid #e5e7eb;padding-top:16px;margin-top:8px;}
+.feedbackForm h4{margin:0 0 10px;font-size:16px;}
+.feedbackGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.feedbackGrid .field{display:flex;flex-direction:column;gap:6px;}
+.feedbackGrid label{font-size:13px;color:#374151;font-weight:800;}
+.feedbackGrid input,.feedbackGrid select,.feedbackGrid textarea{border:1px solid #e5e7eb;border-radius:12px;padding:10px 12px;font-size:14px;outline:none;}
+.feedbackGrid textarea{min-height:92px;grid-column:1/-1;resize:vertical;}
+.btnSubmitFeedback{margin-top:12px;width:100%;border:0;background:#f97316;color:#fff;font-weight:950;padding:12px 14px;border-radius:12px;cursor:pointer;}
+.btnSubmitFeedback:hover{filter:brightness(.98);}
+
+@media (max-width: 980px){
+  .reviewsCards{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width: 640px){
+  .reviewsSection h2{font-size:32px;}
+  .reviewsCards{grid-template-columns:1fr;}
+  .reviewsAll{grid-template-columns:1fr;}
+  .feedbackGrid{grid-template-columns:1fr;}
+}
+
+</style>
+<!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1655560612278663'); 
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1655560612278663&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+
+<style>
+.btn-paypal-dark{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 16px;
+  border-radius:14px;
+  font-weight:950;
+  cursor:pointer;
+  background:linear-gradient(135deg, rgba(37,99,235,1), rgba(14,165,233,1));
+  color:#ffffff;
+  border:1px solid rgba(37,99,235,.35);
+  min-height:50px;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.btn-paypal-dark:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.18); opacity:.97}
+</style>
+
+</head>
+
+<body class="hero-football">
+  <a class="skip" href="#main" id="skipLink">Kalo te përmbajtja</a>
+
+  <div class="wrap">
+    <header aria-label="Top navigation">
+      <div class="brandRow">
+        <div class="logoMark" aria-hidden="true">
+          <svg class="logoSvg" viewBox="0 0 48 48" role="img" aria-label="Sansat IPTV logo">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#0ea5e9"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f97316"/>
+                <stop offset="1" stop-color="#fb7185"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="40" height="40" rx="14" fill="url(#g1)"/>
+            <path d="M14 18c0-3 2.6-5 6.5-5 3.8 0 6 1.6 7.2 3.6l-3.6 1.8c-.7-1.2-1.8-1.8-3.7-1.8-1.8 0-2.7.6-2.7 1.5 0 .8.8 1.2 3.4 1.7 4.6.9 7.2 2.4 7.2 6 0 3.2-2.7 5.5-7.4 5.5-4.3 0-7-1.7-8.3-4.3l3.7-1.7c.7 1.6 2 2.5 4.6 2.5 2.2 0 3.1-.7 3.1-1.6 0-1-1-1.4-4-2-4.1-.8-6.8-2.1-6.8-5.7Z" fill="#ffffff" opacity="0.95"/>
+            <circle cx="36" cy="12" r="4" fill="url(#g2)" opacity="0.95"/>
+          </svg>
+        </div>
+        <div class="brand">
+          Sansat IPTV
+          <small id="tagline">Premium • Aktivizim i shpejtë</small>
+        </div>
+      </div>
+
+      <div class="topRight">
+        <nav class="quick" aria-label="Quick links">
+          <a href="#plans" id="navPlans">Paketa</a>
+          <a href="#how" id="navHow">Si funksionon</a>
+          <a href="#setup" id="navSetup">Instalimi</a>
+          <a href="#faq" id="navFaq">FAQ</a>
+          <a href="#refund" id="navRefund">Rimbursimi</a>
+          <a href="#contact" id="navContact">Kontakt</a>
+        </nav>
+
+        <div class="lang" aria-label="Language selector">
+          <button type="button" id="btnSQ" class="active" data-lang="sq">SQ</button>
+          <button type="button" id="btnEN" data-lang="en">EN</button>
+          <button type="button" id="btnDE" data-lang="de">DE</button>
+        </div>
+        <button type="button" class="themeToggle" id="themeToggle" aria-label="Ndrysho temën">
+          <span class="themeIcon" id="themeIcon" aria-hidden="true">🌙</span>
+          <span id="themeLabel">Errët</span>
+        </button>
+      </div>
+    </header>
+    
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-label="Hero">
+        <div class="heroLeft">
+          <span class="badge" id="badge">Aktivizim IBO Player falas</span>
+          <div class="pill" id="supportPill">Mbështetje • Udhëzime konfigurimi</div>
+
+          <h1 id="h1">IPTV Premium + IBO Player</h1>
+          <p class="lead" id="lead">
+            Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.
+          </p>
+
+          <button type="button" class="trialMini" id="trialMini" aria-haspopup="dialog" aria-controls="trialModal">24 hr Free Trial</button>
+
+          
+          <div class="ctaRow" aria-label="Primary actions">
+            <a class="btn primary" id="waBtn" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn secondary" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">Messenger</a>
+            <a class="btn linkBtn" id="goPlansBtn" href="#plans">Shiko paketat</a>
+          </div>
+
+          <div class="trustBullets" aria-label="Trust bullets">
+            <div class="miniStats" aria-label="Quick stats">
+              <div class="mstat"><span class="mDot"></span><span id="hs1">Aktivizim i shpejtë</span></div>
+              <div class="mstat"><span class="mDot"></span><span id="hs2">Udhëzim sipas pajisjes</span></div>
+              <div class="mstat"><span class="mDot"></span><span id="hs3">Rimbursim 30 ditë</span></div>
+            </div>
+            <div class="tbullet" id="tb2">Mbështetje në WhatsApp/Messenger</div>
+            <a class="tbullet link" id="tb3" href="#refund">30 ditë rimbursim i plotë</a>
+          </div>
+
+        </div>
+
+        <div class="heroCard">
+          <img class="heroImg" src="soccer_banner.png" alt="Sansat IPTV cover banner" loading="eager">
+</div>
+      </section>
+
+      <!-- TRUST / TRANSPARENCY -->
+      
+
+      <!-- PLANS -->
+      <section class="section" id="plans">
+        <h2 id="plansTitle">Paketa & Çmimet</h2>
+        <p class="muted" id="plansSubtitle">Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.</p>
+
+        <div class="plansGrid" aria-label="Plans">
+          <div class="plan best">
+            <div class="planTop">
+              <h3 class="planTitle"><span id="p12">12 muaj</span></h3>
+              <span class="planBadge" id="p12psych">⭐ Zgjedhja më e mirë</span>
+            </div>
+            <div class="planPrice" aria-label="Çmimi">
+              <span class="oldPrice" aria-hidden="true">79€</span>
+              <span class="newPrice">69€</span>
+              <span class="priceNote" id="p12priceNote">Zbritje</span>
+            </div>
+
+            
+            <ul class="planFeatures" aria-label="Features">
+              <li id="p12f1">28,000+ Live TV Channels</li>
+              <li id="p12f2">Full HD & 4K Quality</li>
+              <li id="p12f3">Premium VOD Library (Updated Daily) (Movies & Series)</li>
+              <li id="p12f4">24/7 Support via WhatsApp</li>
+              <li id="p12f5">Free Setup Assistance</li>
+            </ul>
+            <div class="planMeta">
+              <div class="metaRow">
+                <span id="p12valueLabel">Vlerë</span>
+                <span id="p12value">Maksimum</span>
+                            </div>
+            </div>
+
+            <div class="planCTA">
+              
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin:0">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="KNFR85QN9MSQ2">
+  <input type="hidden" name="on0" value="Subscription">
+  <input type="hidden" name="os0" value="12 Months – IPTV Premium + IBO Player FREE">
+  <input type="hidden" name="currency_code" value="EUR">
+  <button type="submit" class="btn-paypal-dark" id="buyNow12">
+    Buy now
+  </button>
+</form>
+
+
+              <a class="miniBtn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs12">Messenger</a>
+            </div>
+          </div>
+
+          <div class="plan">
+            <div class="planTop">
+              <h3 class="planTitle"><span id="p6">6 muaj</span></h3>
+              <span class="planBadge" id="p6psych">🔹 Më e zgjedhura</span>
+            </div>
+            <div class="planPrice">39€</div>
+            
+            <ul class="planFeatures" aria-label="Features">
+              <li id="p6f1">28,000+ Live TV Channels</li>
+              <li id="p6f2">Full HD & 4K Quality</li>
+              <li id="p6f3">Premium VOD Library (Updated Daily) (Movies & Series)</li>
+              <li id="p6f4">24/7 Support via WhatsApp</li>
+              <li id="p6f5">Free Setup Assistance</li>
+            </ul>
+            <div class="planMeta">
+              <div class="metaRow">
+                <span id="p6valueLabel">Balancë</span>
+                <span id="p6value">Çmim / kohë</span>
+                            </div>
+            </div>
+
+            <div class="planCTA">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin:0">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="G8VHWJG2AUEFE">
+                <input type="hidden" name="on0" value="Subscription">
+                <input type="hidden" name="os0" value="6 Months – IPTV Premium + IBO Player FREE">
+                <input type="hidden" name="currency_code" value="EUR">
+                <button type="submit" class="btn-paypal-dark" id="buyNow6">
+    Buy now
+  </button>
+              </form>
+
+              <a class="miniBtn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs6">Messenger</a>
+            </div>
+          </div>
+
+
+
+          <div class="plan">
+            <div class="planTop">
+              <h3 class="planTitle"><span id="p1">1 muaj</span></h3>
+              <span class="planBadge" id="p1psych">Pa obligim</span>
+            </div>
+            <div class="planPrice">10€</div>
+            
+            <ul class="planFeatures" aria-label="Features">
+              <li id="p1f1">28,000+ Live TV Channels</li>
+              <li id="p1f2">Full HD & 4K Quality</li>
+              <li id="p1f3">Premium VOD Library (Updated Daily) (Movies & Series)</li>
+              <li id="p1f4">24/7 Support via WhatsApp</li>
+              <li id="p1f5">Free Setup Assistance</li>
+            </ul>
+            <div class="planMeta">
+              <div class="metaRow">
+                <span id="p1valueLabel">Testim</span>
+                <span id="p1value">Start i shpejtë</span>
+                            </div>
+            </div>
+
+            <div class="planCTA">
+              
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin:0">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="X6LPZT5JZDYU8">
+  <input type="hidden" name="on0" value="Subscription">
+  <input type="hidden" name="os0" value="1 Month – IPTV Premium">
+  <input type="hidden" name="currency_code" value="EUR">
+  <button type="submit" class="btn-paypal-dark" id="buyNow1">
+    Buy now
+  </button>
+</form>
+
+              <a class="miniBtn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs1">Messenger</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="muted" id="plansPush" style="margin-top:14px">
+          Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.
+        </p>
+      </section>
+
+
+      <!-- PAYMENT OPTIONS -->
+      <section class="payments" id="payments" aria-label="Payment options">
+        <div class="payHead">
+          <svg class="shield" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" />
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2 class="payTitle" id="payTitle">Secure Payment Options</h2>
+        </div>
+        <p class="paySub" id="paySub">We accept secure payment methods for your convenience.</p>
+
+        <div class="payGrid" role="list">
+          <div class="payItem card" role="listitem">
+            <div class="payIcon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 10h18" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <p class="payLabel" id="payCard">Card Payments</p>
+          </div>
+
+          <div class="payItem paypal" role="listitem">
+            <div class="payIcon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <path d="M4 16l6-6 4 4 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 8v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="payLabel" id="payPaypal">PayPal</p>
+          </div>
+
+          <div class="payItem bank" role="listitem">
+            <div class="payIcon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="7" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="payLabel" id="payBank">Bank Transfer</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- WHY -->
+      
+      
+
+      <!-- 24H Trial Modal -->
+      <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
+        <div class="trialBackdrop" data-close="true"></div>
+        <div class="trialPanel" role="document">
+          <button type="button" class="trialClose" aria-label="Close" data-close="true" data-close="true">×</button>
+
+          <div class="trialIcon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="54" height="54">
+              <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
+              <path d="M21 17l14 7-14 7z" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <h2 class="trialTitle" id="trialTitle">Test 24 orë falas për IPTV</h2>
+
+          <p class="trialLead" id="trialLead">Merr test 24 orë për verifikim të shërbimit. Aktivizimi bëhet pasi të na dërgosh Device ID dhe MAC Address.</p>
+
+          <h3 class="trialSubhead" id="trialGet">Çfarë përfshihet në test:</h3>
+
+          <ul class="trialList" aria-label="Trial benefits">
+            <li id="trialLi1">Kanale Live + Sport (përzgjedhja mund të ndryshojë)</li>
+            <li id="trialLi2">Cilësi HD/4K (në varësi të kanalit dhe pajisjes)</li>
+            <li id="trialLi3">VOD (Filma &amp; Serialë) – në varësi të paketës/listës</li>
+            <li id="trialLi4">Kompatibilitet për TV/Box/Mobile (sipas pajisjes)</li>
+            <li id="trialLi5">EPG (TV Guide) kur është e disponueshme</li>
+          </ul>
+
+          <div class="trialCtaRow">
+            <a class="trialBtn" id="trialWaBtn" href="#" target="_blank" rel="noopener">Aktivizo testin në WhatsApp</a>
+          </div>
+
+          <p class="trialFoot" id="trialFoot">Kliko butonin dhe dërgo mesazhin në WhatsApp. Shkruaj: Device ID dhe MAC Address (të dyja).</p>
+        </div>
+      </div>
+
+
+
+
+
+<!-- HOW IT WORKS -->
+      <section class="section" id="how">
+        <h2 id="howH">Si funksionon</h2>
+        <div class="steps">
+          <div class="step">
+            <b id="s1t">Kontakto</b>
+            <div class="muted" id="s1d">Na shkruaj në WhatsApp ose Messenger.</div>
+          </div>
+          <div class="step">
+            <b id="s2t">Zgjedh paketën</b>
+            <div class="muted" id="s2d">Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.</div>
+          </div>
+          <div class="step">
+            <b id="s3t">Aktivizim</b>
+            <div class="muted" id="s3d">Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETUP (SAMSUNG/LG/ANDROID) -->
+      <section class="section" id="setup">
+        <h2 id="setupH">Instalimi në Smart TV (Samsung/LG/Android)</h2>
+        <p class="muted" id="setupLead">
+          Hapat më poshtë janë udhëzues të shkurtër. Nëse të del ndonjë opsion ndryshe sipas modelit, na shkruaj dhe të udhëzojmë.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <b id="st1t">Samsung</b>
+            <div class="muted" id="st1d">Hap “Apps” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.</div>
+          </div>
+          <div class="step">
+            <b id="st2t">LG</b>
+            <div class="muted" id="st2d">Hap “LG Content Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.</div>
+          </div>
+          <div class="step">
+            <b id="st3t">Android TV / Box</b>
+            <div class="muted" id="st3d">Hap “Play Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IBO -->
+      <section class="section">
+        <h2 id="iboH">IBO Player – Instalimi (shkurt)</h2>
+        <div class="steps">
+          <div class="step">
+            <b id="ibo1t">1) Instalo aplikacionin</b>
+            <div class="muted" id="ibo1d">Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.</div>
+          </div>
+          <div class="step">
+            <b id="ibo2t">2) Dërgo MAC Address</b>
+            <div class="muted" id="ibo2d">Na dërgo MAC Address-in (siç shfaqet në aplikacion).</div>
+          </div>
+          <div class="step">
+            <b id="ibo3t">3) Konfigurim</b>
+            <div class="muted" id="ibo3d">Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.</div>
+          </div>
+        </div>
+        <p class="muted" id="iboNote" style="margin-top:10px">
+          Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim dhe udhëzime konfigurimi.
+        </p>
+      </section>
+
+      <!-- MAC -->
+      
+
+      <!-- REFUND POLICY -->
+      <section class="section" id="refund">
+        <h2 id="refundH">Politika e rimbursimit (30 ditë – rimbursim i plotë)</h2>
+        <p class="muted" id="refundLead">
+          Rimbursimi i plotë (100%) aprovohet nëse shërbimi nuk funksionon ose nuk stabilizohet në pajisjen e konfirmuar,
+          pas ndjekjes së udhëzimeve dhe verifikimit teknik.
+        </p>
+
+
+        <div class="refundQuick">
+          <div class="rqItem" id="rq1">30 ditë rimbursim i plotë</div>
+          <div class="rqItem" id="rq2">Kërkohet verifikim teknik</div>
+          <div class="rqItem" id="rq3">Përgjigje 24–48 orë</div>
+          <div class="rqItem" id="rq4">Përjashtime: ISP/Wi‑Fi/VPN</div>
+        </div>
+
+        <div class="refundCtaRow">
+          <a class="btn primary" id="refundWaBtn" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener">Kërko rimbursim</a>
+          <a class="btn secondary" href="#contact" id="refundAltBtn">Kontakto mbështetjen</a>
+        </div>
+
+
+        <div class="steps">
+          <div class="step">
+            <b id="r1t">1) Afati</b>
+            <div class="muted" id="r1d">Kërkesat pranohen brenda 30 ditëve nga data e aktivizimit.</div>
+          </div>
+          <div class="step">
+            <b id="r2t">2) Dokumentimi</b>
+            <div class="muted" id="r2d">Kërkohen: paketa, data e aktivizimit, pajisja, MAC Address dhe foto/video e problemit.</div>
+          </div>
+          <div class="step">
+            <b id="r3t">3) Përjashtime</b>
+            <div class="muted" id="r3d">Nuk mbulohen: internet/ISP, Wi‑Fi i dobët, VPN/ndryshim rajoni, pajisje jo e përputhshme, aplikacione të palës së tretë.</div>
+          </div>
+          <div class="step">
+            <b id="r4t">4) Shqyrtimi & rimbursimi</b>
+            <div class="muted" id="r4d">Shqyrtimi bëhet brenda 24–48 orëve. Nëse aprovohet, rimbursimi bëhet në shumën e plotë.</div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <h2 id="faqH">FAQ</h2>
+
+        <details>
+          <summary id="f1q">Çfarë interneti rekomandohet?</summary>
+          <div class="muted" id="f1a" style="margin-top:8px">
+            Për përvojë stabile rekomandohet lidhje e qëndrueshme. Si orientim: 10–15 Mbps për HD dhe 25+ Mbps për 4K (kur është e disponueshme). Performanca varet nga rrjeti, pajisja dhe konfigurimi.
+          </div>
+        </details>
+
+        <details>
+          <summary id="f2q">A është aktivizimi i IBO Player falas?</summary>
+          <div class="muted" id="f2a" style="margin-top:8px">
+            Po, aktivizimi dhe udhëzimet bazë të konfigurimit përfshihen me abonimin (nevojitet MAC Address).
+          </div>
+        </details>
+
+        <details>
+          <summary id="f3q">Sa shpejt bëhet aktivizimi?</summary>
+          <div class="muted" id="f3a" style="margin-top:8px">
+            Zakonisht menjëherë pas konfirmimit të pagesës dhe marrjes së të dhënave të nevojshme (p.sh. MAC Address).
+          </div>
+        </details>
+
+        <details>
+          <summary id="f4q">Çfarë përfshihet në shërbim?</summary>
+          <div class="muted" id="f4a" style="margin-top:8px">
+            Përfshihet akses në përmbajtje IPTV (kanale live dhe VOD), si dhe udhëzime konfigurimi. Disponueshmëria dhe lista e përmbajtjes mund të ndryshojë me kohën dhe sipas rajonit.
+          </div>
+        </details>
+
+        <details>
+          <summary id="f5q">A ka evente sportive/PPV?</summary>
+          <div class="muted" id="f5a" style="margin-top:8px">
+            Eventet sportive dhe PPV mund të jenë të disponueshme sipas periudhës dhe rajonit. Për rastin konkret, na shkruaj dhe e konfirmojmë.
+          </div>
+        </details>
+
+        <details>
+          <summary id="f6q">Çfarë cilësie video ofrohet (HD/4K)?</summary>
+          <div class="muted" id="f6a" style="margin-top:8px">
+            Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; 4K mund të jetë e disponueshme për disa përmbajtje.
+          </div>
+        </details>
+
+        <details>
+          <summary id="f7q">Çfarë të dhënash kërkohen për aktivizim?</summary>
+          <div class="muted" id="f7a" style="margin-top:8px">
+            Kërkojmë vetëm të dhëna teknike të nevojshme për konfigurim, zakonisht MAC Address (siç shfaqet në aplikacion). Nuk kërkojmë “Device ID”.
+          </div>
+        </details>
+      </section>
+
+      
+      
+<!-- CONTACT -->
+<section class="section" id="contact" aria-label="Contact">
+  <div class="contactHero">
+    <h2 id="contactH">Contact Us</h2>
+    <p id="contactSub">Have questions or need assistance? We're here to help!</p>
+  </div>
+
+  <div class="contactGrid2">
+    <div class="contactCard">
+      <h3 id="getTouchH">Get in Touch</h3>
+
+      <div class="contactItem">
+        <div class="ciIcon email" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2"/>
+            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="ciText">
+          <b id="emailT">Email Us</b>
+          <span id="emailV">contact@sansatiptv.com</span>
+          <span id="emailA">Available 24/7</span>
+        </div>
+      </div>
+
+      <div class="contactItem">
+        <div class="ciIcon phone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M6 3h4l2 5-2 1c1 3 4 6 7 7l1-2 5 2v4c0 1-1 2-2 2C10 22 2 14 2 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="ciText">
+          <b id="callT">Call Us</b>
+          <span id="callV">+389 72 698 616</span>
+          <span id="callA">Available 24/7</span>
+        </div>
+      </div>
+
+      <div class="contactItem">
+        <div class="ciIcon chat" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="ciText">
+          <b id="chatT">Live Chat</b>
+          <span id="chatV">Available on WhatsApp & Messenger</span>
+          <span id="chatA">Response time: Under 5 minutes</span>
+        </div>
+      </div>
+
+      <div class="hours">
+        <h4 id="hoursH">Our Hours</h4>
+        <p id="hours1">Customer Support: 24/7</p>
+        <p id="hours2">Sales Department: Mon–Fri, 9am–6pm</p>
+        <p id="hours3">Technical Support: 24/7</p>
+      </div>
+    </div>
+
+    <div class="contactCard">
+      <h3 id="waFormH">Send Us a Message (via WhatsApp)</h3>
+
+      <form id="waForm" class="formGrid" autocomplete="on">
+        <div class="field">
+          <label for="waName" id="waNameL">Your Name</label>
+          <input id="waName" name="name" type="text" placeholder="John Smith" required />
+        </div>
+
+        <div class="field">
+          <label for="waEmail" id="waEmailL">Email Address</label>
+          <input id="waEmail" name="email" type="email" placeholder="john@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="waSubject" id="waSubjL">Subject</label>
+          <input id="waSubject" name="subject" type="text" placeholder="Subscription Inquiry" />
+        </div>
+
+        <div class="field">
+          <label for="waMsg" id="waMsgL">Message</label>
+          <textarea id="waMsg" name="message" placeholder="Your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btnBigOrange" id="waSendBtn">Send Message via WhatsApp</button>
+        <p class="muted" id="waHelpText" style="margin:6px 0 0;font-weight:800;font-size:13px">
+          This will open WhatsApp with your message pre-filled.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- FULL WIDTH GUARANTEE IMAGE -->
+
+
+<section class="fullBanner">
+  <img src="30daymoneyback.png" alt="30 Day Money Back Guarantee - Sansat IPTV">
+  <p class="muted" style="text-align:center;margin:10px 0 0">
+    <a href="#refund" id="refundLink" style="font-weight:950">Shiko kushtet e rimbursimit</a>
+  </p>
+</section>
+
+<section id="reviews" class="reviewsSection">
+  <div class="reviewsWrap">
+    <h2 id="reviewsSectionTitle">What Our Customers Say</h2>
+    <p class="lead" id="reviewsSectionSub">Don't just take our word for it - hear from our satisfied customers</p>
+
+    <div class="reviewsCards" id="reviewsCards" aria-label="Customer reviews">
+      <!-- Cards injected by JS (with fallback below) -->
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">JW</div>
+          <div class="reviewMeta">
+            <div class="reviewName">James Wilson</div>
+            <div class="reviewCity">London</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★★</div>
+        <div class="reviewText">"Great service and very stable streams."</div>
+      </div>
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">ST</div>
+          <div class="reviewMeta">
+            <div class="reviewName">Sarah Thompson</div>
+            <div class="reviewCity">Manchester</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★★</div>
+        <div class="reviewText">"Fast setup help and excellent support."</div>
+      </div>
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">DC</div>
+          <div class="reviewMeta">
+            <div class="reviewName">David Clark</div>
+            <div class="reviewCity">Birmingham</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★☆</div>
+        <div class="reviewText">"Great value for money and good channel selection."</div>
+      </div>
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">ER</div>
+          <div class="reviewMeta">
+            <div class="reviewName">Emma Roberts</div>
+            <div class="reviewCity">Glasgow</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★★</div>
+        <div class="reviewText">"Reliable service. Highly recommended."</div>
+      </div>
+    </div>
+
+    <div class="reviewsActions">
+      <button class="btnReviews" id="readMoreReviewsBtn" type="button">Read More Reviews</button>
+    </div>
+  </div>
+</section>
+
+<div class="reviewsModalOverlay" id="reviewsModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="reviewsModal" role="document">
+    <div class="reviewsModalHeader">
+      <h3 id="reviewsModalTitle">Customer Reviews</h3>
+      <button class="reviewsModalClose" id="reviewsModalClose" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="reviewsModalBody">
+      <div class="reviewsAll" id="reviewsAll"></div>
+
+      <div class="feedbackForm">
+        <h4 id="feedbackTitle">Leave your feedback</h4>
+        <div class="feedbackGrid">
+          <div class="field">
+            <label for="fbName" id="fbNameL">Name</label>
+            <input id="fbName" type="text" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="fbCity" id="fbCityL">City</label>
+            <input id="fbCity" type="text" placeholder="City" />
+          </div>
+          <div class="field">
+            <label for="fbStars" id="fbStarsL">Rating</label>
+            <select id="fbStars">
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label for="fbMsg" id="fbMsgL">Comment</label>
+            <textarea id="fbMsg" placeholder="Write your feedback..."></textarea>
+          </div>
+        </div>
+        <button class="btnSubmitFeedback" id="fbSubmit" type="button">Submit via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer id="legal">
+<div class="footerGrid">
+          <div class="footerBrand">
+            <div class="logoMark" aria-hidden="true">
+          <svg class="logoSvg" viewBox="0 0 48 48" role="img" aria-label="Sansat IPTV logo">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#0ea5e9"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f97316"/>
+                <stop offset="1" stop-color="#fb7185"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="40" height="40" rx="14" fill="url(#g1)"/>
+            <path d="M14 18c0-3 2.6-5 6.5-5 3.8 0 6 1.6 7.2 3.6l-3.6 1.8c-.7-1.2-1.8-1.8-3.7-1.8-1.8 0-2.7.6-2.7 1.5 0 .8.8 1.2 3.4 1.7 4.6.9 7.2 2.4 7.2 6 0 3.2-2.7 5.5-7.4 5.5-4.3 0-7-1.7-8.3-4.3l3.7-1.7c.7 1.6 2 2.5 4.6 2.5 2.2 0 3.1-.7 3.1-1.6 0-1-1-1.4-4-2-4.1-.8-6.8-2.1-6.8-5.7Z" fill="#ffffff" opacity="0.95"/>
+            <circle cx="36" cy="12" r="4" fill="url(#g2)" opacity="0.95"/>
+          </svg>
+        </div>
+            <div>
+              <div class="footerName">Sansat IPTV</div>
+              <div class="footerSmall">Aktivizim i shpejtë • Mbështetje direkte</div>
+            </div>
+          </div>
+
+          <div class="footerLinks">
+            <a href="#plans" id="footerPlans">Paketa</a>
+            <a href="#refund" id="footerRefund">Rimbursimi</a>
+            <a href="#contact" id="footerContact">Kontakt</a>
+            <a href="#" id="footerPrivacy" role="button">Privacy Policy</a>
+          </div>
+
+          <div class="footerCtas">
+            <a class="btn primary" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" id="footerWa">WhatsApp</a>
+            <a class="btn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="footerMs">Messenger</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="ratingRow" aria-label="Customer rating">
+            <div class="stars starsBig" aria-hidden="true">★★★★★</div>
+            <div class="ratingText" id="ratingText">Rated by our customers</div>
+          </div>
+          <div class="reviewsGrid" id="reviewsGrid" aria-label="Customer reviews">
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Stable streams and fast support.<span>Nora K.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Great sports package, no buffering.<span>Daniel P.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Easy setup with clear instructions.<span>Mila S.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Best value for money.<span>Chris T.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Works on mobile and Android box smoothly.<span>Sara N.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Channels load quickly.<span>Ethan R.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Support answered within minutes.<span>Liam B.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>High quality movies and series.<span>Olivia H.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Reliable service, recommended.<span>Noah D.</span></div>
+          </div>
+        </div>
+
+
+          </div>
+
+        <div class="footerBottom" id="legalText">
+          Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
+          <span class="footerCopy">© 2026 Sansat IPTV</span>
+        </div>
+
+
+        <!-- Privacy Policy Modal -->
+        <div class="privacyModal" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+          <div class="privacyBackdrop" data-close="privacy"></div>
+          <div class="privacyPanel" role="document">
+            <button class="privacyClose" id="privacyClose" aria-label="Close">×</button>
+            <h2 class="privacyTitle" id="privacyTitle">Privacy Policy</h2>
+            <p class="privacyUpdated" id="privacyUpdated">Last updated: January 19, 2026</p>
+            <div class="privacyBody" id="privacyBody">
+              <!-- injected by i18n -->
+            </div>
+          </div>
+        </div>
+
+</footer>
+
+<script>
+    const i18n = {
+      sq: {
+        footerPrivacy:"Politika e Privatësisë",
+        privacyTitle:"Politika e Privatësisë",
+        privacyUpdated:"Përditësuar: 19 Janar 2026",
+        privacyBodyHtml:`<h3>Qëllimi</h3>
+<p>Kjo Politikë Privatësie shpjegon si Sansat IPTV trajton të dhënat kur ju na kontaktoni për aktivizim ose mbështetje.</p>
+<h3>Çfarë të dhënash mund të mblidhen</h3>
+<ul>
+  <li>Informacion kontakti (p.sh. emër, numër telefoni ose profil Messenger) që ju e dërgoni vullnetarisht.</li>
+  <li>Informacion teknik për aktivizim (p.sh. MAC Address). Ne kërkojmë MAC Address dhe jo Device ID.</li>
+  <li>Mesazhe/komunikime mbështetjeje për të zgjidhur kërkesat tuaja.</li>
+</ul>
+<h3>Si përdoren të dhënat</h3>
+<ul>
+  <li>Për aktivizim të shërbimit dhe verifikim të pajtueshmërisë së pajisjes.</li>
+  <li>Për mbështetje teknike dhe komunikim lidhur me porosinë.</li>
+  <li>Për përmirësim të përvojës së klientit (pa profilizim të avancuar).</li>
+</ul>
+<h3>Shpërndarja e të dhënave</h3>
+<p>Nuk shesim të dhëna personale. Mund të përdorim platforma komunikimi (WhatsApp/Messenger) sipas zgjedhjes suaj, të cilat kanë politikat e tyre të privatësisë.</p>
+<h3>Ruajtja</h3>
+<p>Ruajmë të dhënat vetëm aq sa nevojitet për aktivizim, mbështetje dhe kërkesa ligjore. Ju mund të kërkoni fshirje kur është e aplikueshme.</p>
+<h3>Të drejtat tuaja</h3>
+<ul>
+  <li>Qasje, korrigjim dhe fshirje (kur lejohet).</li>
+  <li>Kundërshtim ndaj përdorimit për marketing (nëse zbatohet).</li>
+</ul>
+<h3>Kontakt</h3>
+<p>Për kërkesa privatësie, na kontaktoni në WhatsApp ose Messenger.</p>` ,
+
+        tagline:"Premium • Aktivizim i shpejtë",
+        badge:"Aktivizim IBO Player falas (normal 10€)",
+        
+        trialMini:"Provë falas 24 orë",
+        ratingText:"Vlerësuar nga klientët tanë",
+        reviewsSub:"Mesazhe reale nga përdoruesit për shpejtësinë dhe suportin.",
+        reviewsTitle:"Feedback nga klientët",
+        reviewsH:"Feedback nga klientët",
+        reviewsLead:"Komente reale për shpejtësinë dhe mbështetjen.",
+        rev1:"Aktivizim shumë i shpejtë dhe lista punon perfekt.", rev1n:"Arben K.",
+        rev2:"Sportet u hapën menjëherë, cilësi shumë e mirë.", rev2n:"Drita M.",
+        rev3:"Mbështetja në WhatsApp përgjigjet shpejt.", rev3n:"Besnik R.",
+        rev4:"Punon pa ndërprerje në Samsung TV.", rev4n:"Luan S.",
+        rev5:"VOD shumë i pasur, serialet i gjej lehtë.", rev5n:"Elona P.",
+        rev6:"Çmim i arsyeshëm për 12 muaj, ia vlen.", rev6n:"Kujtim H.",
+        rev7:"Udhëzimet për IBO Player ishin të qarta.", rev7n:"Rina T.",
+        rev8:"Kanale ndërkombëtare të mjaftueshme për familjen.", rev8n:"Gent I.",
+        rev9:"Stabilitet shumë i mirë edhe në mobile.", rev9n:"Sara N.",
+        rev10:"Shërbim korrekt, e rekomandoj.", rev10n:"Ilir D.",
+h1:"IPTV Premium për Sport, Filma & Seriale",
+        h1Html:"<span class=\"tMain\">IPTV Premium</span> <span class=\"tAccent\">për Sport, Filma & Seriale</span>",
+        lead:"Aktivizim i shpejtë, udhëzime konfigurimi për pajisjen tënde dhe rimbursim i plotë brenda 30 ditësh (sipas kushteve).",
+        waLabel:"WhatsApp",
+        msLabel:"Messenger",
+        supportPill:"Sport live • Filma • Seriale • Kanale ndërkombëtare",
+        note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
+        calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
+        goPlansBtn:"Shiko paketat",
+        buyNow12:"Blej tani", buyNow6:"Blej tani", buyNow1:"Blej tani",
+        testCtaBadge:"TEST 24 ORË",
+        testCtaTitle:"Aktivizo testin falas për IPTV (24 orë)",
+        testCtaSub:"Kliko këtu dhe na dërgo në WhatsApp: Device ID dhe MAC Address për aktivizim.",
+        testCtaHint:"Kliko për WhatsApp",
+
+        navPlans:"Paketa", navHow:"Si funksionon", navSetup:"Instalimi", navFaq:"FAQ", navContact:"Kontakt",
+
+        trustH:"Transparencë & Besueshmëri",
+        trustLead:"Qëllimi ynë është aktivizim i shpejtë, udhëzime të qarta dhe komunikim transparent përpara pagesës.",
+        trust1t:"Kontakt i verifikueshëm",
+        trust1d:"Na gjeni në WhatsApp dhe Messenger. Aktivizimi bëhet vetëm pas konfirmimit të detajeve.",
+        trust2t:"Pagesa & procesi",
+        trust2d:"Para pagesës: konfirmojmë pajisjen, aplikacionin dhe të dhënat (p.sh. MAC Address). Pastaj aktivizojmë.",
+        trust3t:"Privatësia e të dhënave",
+        trust3d:"Kërkojmë vetëm të dhëna teknike të nevojshme për aktivizim (p.sh. MAC Address dhe Device ID).",
+        trust4t:"Kushtet e përdorimit",
+        trust4d:"Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit. Shiko shënimin ligjor poshtë.",
+
+        plansTitle:"Paketa & Çmimet",
+        plansSubtitle:"Të gjitha paketat përfshijnë IPTV Premium, aktivizim falas të IBO Player dhe mbështetje.",
+        p12:"12 muaj", p12d:"Më e leverdishmja", p12psych:"⭐ Zgjedhja më e mirë", p12pm:"≈ 6.6 € / muaj",
+        p6:"6 muaj", p6d:"Vlerë e mirë", p6psych:"🔹 Më e zgjedhura", p6pm:"≈ 6.5 € / muaj",
+        p1:"1 muaj", p1d:"E përshtatshme për testim", p1psych:"Pa obligim", p1pm:"≈ 10 € / muaj",
+        p12pmLabel:"€/muaj", p6pmLabel:"€/muaj", p1pmLabel:"€/muaj",
+        p12valueLabel:"Vlerë", p6valueLabel:"Balancë", p1valueLabel:"Testim",
+        p12value:"Maksimum", p6value:"Çmim / kohë", p1value:"Start i shpejtë",
+        planCta12:"Zgjidh 12 muaj", planCta6:"Zgjidh 6 muaj", planCta1:"Zgjidh 1 muaj",
+        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
+        plansPush:"Për porosi dhe aktivizim, na shkruani në WhatsApp ose Messenger dhe ju udhëzojmë menjëherë.",
+
+        whyH:"Pse Sansat IPTV",
+        why1t:"Aktivizim i shpejtë", why1d:"Proces i thjeshtë dhe udhëzime të qarta.",
+        why2t:"Paketa fleksibile", why2d:"1 / 6 / 12 muaj sipas nevojës.",
+        why3t:"Pajisje të ndryshme", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
+        why4t:"Mbështetje", why4d:"Përgjigje e shpejtë në DM/WhatsApp.",
+
+        devicesH:"Përputhshmëri me pajisjet tuaja të preferuara",
+        dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
+        dev2t:"Mobile", dev2d:"Telefon dhe tablet (Android/iOS)",
+
+        howH:"Si funksionon",
+        s1t:"Kontakto", s1d:"Na shkruaj në WhatsApp ose Messenger.",
+        s2t:"Zgjedh paketën", s2d:"Zgjedh 1 / 6 / 12 muaj dhe merr udhëzimet.",
+        s3t:"Aktivizim", s3d:"Aktivizim i shpejtë + IBO Player falas (udhëzime konfigurimi).",
+
+        setupH:"Instalimi në Smart TV (Samsung/LG/Android)",
+        setupLead:"Hapat më poshtë janë udhëzues të shkurtër. Nëse të del ndonjë opsion ndryshe sipas modelit, na shkruaj dhe të udhëzojmë.",
+        st1t:"Samsung",
+        st1d:"Hap “Apps” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.",
+        st2t:"LG",
+        st2d:"Hap “LG Content Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.",
+        st3t:"Android TV / Box",
+        st3d:"Hap “Play Store” → kërko “IBO Player” → instalo → hap aplikacionin dhe gjej MAC Address.",
+
+        iboH:"IBO Player – Instalimi (shkurt)",
+        ibo1t:"1) Instalo aplikacionin", ibo1d:"Në pajisjen tënde, instalo IBO Player nga dyqani i aplikacioneve.",
+        ibo2t:"2) Dërgo MAC Address", ibo2d:"Na dërgo MAC Address-in (siç shfaqet në aplikacion).",
+        ibo3t:"3) Konfigurim", ibo3d:"Ne bëjmë konfigurimin dhe të udhëzojmë për hapat e fundit.",
+        iboNote:"Shënim: IBO Player është aplikacion i palës së tretë. Ne ofrojmë aktivizim dhe udhëzime konfigurimi.",
+
+        macPreviewH:"MAC Address – Shembull",
+        macPreviewNote:"Shembull orientues: MAC Address gjendet brenda aplikacionit IBO Player.",
+
+        contactH:"Kontakt",
+        contactLead:"Për aktivizim, na dërgo MAC Address-in dhe Device ID-në, si dhe pajisjen që përdor (Samsung/LG/Android/Box/Mobile).",
+        contact1t:"WhatsApp",
+        contact1d:"Kliko për mesazh: +389 72 698 616",
+        contact2t:"Messenger",
+        contact2d:"Kliko për mesazh: m.me/sansatiptv",
+        contactWaBtn:"Hap WhatsApp",
+        contactMsBtn:"Hap Messenger",
+
+        faqH:"FAQ",
+        f1q:"Çfarë interneti rekomandohet?",
+        f1a:"Për përvojë stabile rekomandohet lidhje e qëndrueshme. Si orientim: 10–15 Mbps për HD dhe 25+ Mbps për 4K (kur është e disponueshme). Performanca varet nga rrjeti, pajisja dhe konfigurimi.",
+        f2q:"A është aktivizimi i IBO Player falas?",
+        f2a:"Po, aktivizimi dhe udhëzimet bazë të konfigurimit përfshihen me abonimin (nevojitet MAC Address).",
+        f3q:"Sa shpejt bëhet aktivizimi?",
+        f3a:"Zakonisht menjëherë pas konfirmimit të pagesës dhe marrjes së të dhënave të nevojshme (p.sh. MAC Address).",
+        f4q:"Çfarë përfshihet në shërbim?",
+        f4a:"Përfshihet akses në përmbajtje IPTV (kanale live dhe VOD), si dhe udhëzime konfigurimi. Disponueshmëria dhe lista e përmbajtjes mund të ndryshojë me kohën dhe sipas rajonit.",
+        f5q:"A ka evente sportive/PPV?",
+        f5a:"Eventet sportive dhe PPV mund të jenë të disponueshme sipas periudhës dhe rajonit. Për rastin konkret, na shkruaj dhe e konfirmojmë.",
+        f6q:"Çfarë cilësie video ofrohet (HD/4K)?",
+        f6a:"Cilësia varet nga kanali/përmbajtja dhe shpejtësia e internetit. HD/Full HD është e zakonshme; 4K mund të jetë e disponueshme për disa përmbajtje.",
+        f7q:"Çfarë të dhënash kërkohen për aktivizim?",
+        f7a:"Kërkojmë të dhëna teknike për konfigurim: MAC Address dhe Device ID (siç shfaqen në aplikacion/pajisje).",
+
+        navRefund:"Rimbursimi",
+        refundH:"Politika e rimbursimit (30 ditë – rimbursim i plotë)",
+        refundLead:"Rimbursimi i plotë (100%) aprovohet nëse shërbimi nuk funksionon ose nuk stabilizohet në pajisjen e konfirmuar, pas verifikimit teknik.",
+        r1t:"1) Afati",
+        r1d:"Kërkesat pranohen brenda 30 ditëve nga data e aktivizimit.",
+        r2t:"2) Dokumentimi",
+        r2d:"Kërkohen: paketa, data e aktivizimit, pajisja, MAC Address dhe foto/video e problemit.",
+        r3t:"3) Përjashtime",
+        r3d:"Nuk mbulohen: internet/ISP, Wi‑Fi i dobët, VPN/ndryshim rajoni, pajisje jo e përputhshme, aplikacione të palës së tretë.",
+        r4t:"4) Shqyrtimi & rimbursimi",
+        r4d:"Shqyrtimi bëhet brenda 24–48 orëve. Nëse aprovohet, rimbursimi bëhet në shumën e plotë.",
+        tb1:"Aktivizim brenda minutash",
+        tb2:"Mbështetje në WhatsApp/Messenger",
+        tb3:"30 ditë rimbursim i plotë",
+        p12save:"Kursen 41€ krahasuar me 1 muaj",
+        p6save:"Kursen 21€ krahasuar me 1 muaj",
+        p1save:"E mirë për testim 30 ditë",
+        p12ribbon:"SAVE 41€",
+        rq1:"30 ditë rimbursim i plotë",
+        rq2:"Kërkohet verifikim teknik",
+        rq3:"Përgjigje 24–48 orë",
+        rq4:"Përjashtime: ISP/Wi‑Fi/VPN",
+        refundWaBtn:"Kërko rimbursim",
+        refundAltBtn:"Kontakto mbështetjen",
+        footerPlans:"Paketa",
+        footerRefund:"Rimbursimi",
+        footerContact:"Kontakt",
+        footerWa:"WhatsApp",
+        footerMs:"Messenger",
+        legalText:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.",
+        hs1:"Aktivizim i shpejtë",
+        hs2:"Udhëzim sipas pajisjes",
+        hs3:"Rimbursim 30 ditë",
+        p12f1:"28,000+ Kanale TV Live",
+        p12f2:"Cilësi Full HD & 4K",
+        p12f3:"Bibliotekë Premium VOD (përditësohet çdo ditë) (Filma & Serialë)",
+        p6f1:"28,000+ Kanale TV Live",
+        p6f2:"Cilësi Full HD & 4K",
+        p6f3:"Bibliotekë Premium VOD (përditësohet çdo ditë) (Filma & Serialë)",
+        p1f1:"28,000+ Kanale TV Live",
+        p1f2:"Cilësi Full HD & 4K",
+        p1f3:"Bibliotekë Premium VOD (përditësohet çdo ditë) (Filma & Serialë)",
+        themeDark:"Errët",
+        themeLight:"Ndriçim",
+        refundLink:"Shiko kushtet e rimbursimit",
+
+
+        legal:"Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.",
+        ratingText:"Vlerësuar nga klientët tanë",
+        p12f4:"Mbështetje 24/7 në WhatsApp",
+        p12f5:"Ndihmë falas për konfigurim",
+        p6f4:"Mbështetje 24/7 në WhatsApp",
+        p6f5:"Ndihmë falas për konfigurim",
+        p1f4:"Mbështetje 24/7 në WhatsApp",
+        p1f5:"Ndihmë falas për konfigurim",
+        payTitle:"Opsione të sigurta pagese",
+        paySub:"Pranojmë metoda të sigurta pagese për lehtësinë tuaj.",
+        payCard:"Pagesa me kartë",
+        payPaypal:"PayPal",
+        payBank:"Transfer bankar",
+        devTV:"Smart TV",
+        devTVsub:"Samsung, LG, Sony etj.",
+        devMobile:"Mobile",
+        devMobilesub:"iOS & Android",
+        devTablet:"Tablets",
+        devTabletsub:"iPad & Android",
+        devPC:"Kompjuter",
+        devPCsub:"Windows & Mac",
+        devBox:"Android Box",
+        devBoxsub:"Firestick",
+        devMag:"MAG Box / Formuler",
+        devMagsub:"Të mbështetura",
+        devicesNote:"Dhe shumë të tjera. Nëse pajisja e mbështet IPTV, është e përputhshme.",
+        contactSub:"Keni pyetje apo ju duhet ndihmë? Jemi këtu për ju!",
+        getTouchH:"Na kontaktoni",
+        emailT:"Na shkruani në email",
+        emailV:"contact@sansatiptv.com",
+        emailA:"Disponueshëm 24/7",
+        callT:"Na telefononi",
+        callV:"+389 72 698 616",
+        callA:"Disponueshëm 24/7",
+        chatT:"Chat / Mesazh",
+        chatV:"Në WhatsApp & Messenger",
+        chatA:"Koha e përgjigjes: nën 5 minuta",
+        hoursH:"Orari",
+        hours1:"Mbështetje klienti: 24/7",
+        hours2:"Shitje: Hën–Pre, 09:00–18:00",
+        hours3:"Mbështetje teknike: 24/7",
+        waFormH:"Na dërgoni mesazh (në WhatsApp)",
+        waNameL:"Emri juaj",
+        waEmailL:"Email",
+        waSubjL:"Subjekti",
+        waMsgL:"Mesazhi",
+        waSendBtn:"Dërgo mesazh në WhatsApp",
+      "trialTitle": "Test 24 orë falas për IPTV",
+      "trialLead": "Merr test 24 orë për verifikim të shërbimit. Aktivizimi bëhet pasi të na dërgosh Device ID dhe MAC Address.",
+      "trialGet": "Çfarë përfshihet në test:",
+      "trialLi1": "Kanale Live + Sport (përzgjedhja mund të ndryshojë)",
+      "trialLi2": "Cilësi HD/4K (në varësi të kanalit dhe pajisjes)",
+      "trialLi3": "VOD (Filma & Serialë) – në varësi të paketës/listës",
+      "trialLi4": "Kompatibilitet për TV/Box/Mobile (sipas pajisjes)",
+      "trialLi5": "EPG (TV Guide) kur është e disponueshme",
+      "trialWaBtn": "Aktivizo testin në WhatsApp",
+      "trialFoot": "Kliko butonin dhe dërgo mesazhin në WhatsApp. Shkruaj: Device ID dhe MAC Address (të dyja)."
+    },
+
+      en: {
+        footerPrivacy:"Privacy Policy",
+        privacyTitle:"Privacy Policy",
+        privacyUpdated:"Last updated: January 19, 2026",
+        privacyBodyHtml:`<h3>Purpose</h3>
+<p>This Privacy Policy explains how Sansat IPTV processes information when you contact us for activation or support.</p>
+<h3>Data we may collect</h3>
+<ul>
+  <li>Contact details (e.g., name, phone number, Messenger profile) you voluntarily provide.</li>
+  <li>Technical activation details (e.g., MAC Address). We request MAC Address, not Device ID.</li>
+  <li>Support communications to resolve your requests.</li>
+</ul>
+<h3>How we use data</h3>
+<ul>
+  <li>To activate the service and verify device compatibility.</li>
+  <li>To provide technical support and order-related communication.</li>
+  <li>To improve customer experience (no advanced profiling).</li>
+</ul>
+<h3>Sharing</h3>
+<p>We do not sell personal data. If you contact us via WhatsApp/Messenger, those platforms process data under their own privacy policies.</p>
+<h3>Retention</h3>
+<p>We keep data only as long as needed for activation, support, and legal requirements. You may request deletion where applicable.</p>
+<h3>Your rights</h3>
+<ul>
+  <li>Access, correction, and deletion (where permitted).</li>
+  <li>Opt-out of marketing (if applicable).</li>
+</ul>
+<h3>Contact</h3>
+<p>For privacy requests, contact us via WhatsApp or Messenger.</p>` ,
+
+        tagline:"Premium • Fast activation",
+        badge:"Free IBO Player activation (normally €10)",
+        
+        trialMini:"24 hr Free Trial",
+        ratingText:"Rated by our customers",
+        reviewsSub:"Real messages from our users about speed and support.",
+        reviewsTitle:"Customer Feedback",
+        reviewsH:"Customer Feedback",
+        reviewsLead:"Real messages about speed and support.",
+        rev1:"Activation was very fast and everything works smoothly.", rev1n:"Mark L.",
+        rev2:"Great sports channels, solid HD quality.", rev2n:"Emily R.",
+        rev3:"WhatsApp support replies quickly and clearly.", rev3n:"Daniel K.",
+        rev4:"Works perfectly on my Samsung TV.", rev4n:"Sarah P.",
+        rev5:"Large VOD library, movies and series are easy to find.", rev5n:"Jason M.",
+        rev6:"Best value on the 12-month plan.", rev6n:"Olivia S.",
+        rev7:"Clear setup guidance for IBO Player.", rev7n:"Chris T.",
+        rev8:"Good international channel selection.", rev8n:"Nina B.",
+        rev9:"Stable streaming on mobile too.", rev9n:"Alex G.",
+        rev10:"Reliable service, recommended.", rev10n:"Kevin D.",
+h1:"Premium IPTV for Sports, Movies & Series",
+        h1Html:"<span class=\"tMain\">Premium IPTV</span> <span class=\"tAccent\">for Sports, Movies & Series</span>",
+        lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
+        waLabel:"WhatsApp",
+        msLabel:"Messenger",
+        supportPill:"Live sports • Movies • Series • International channels",
+        note:"For details and payment options, please message us privately. Activation is done after confirmation.",
+        calloutD:"Message us and we’ll guide you based on your device (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
+        goPlansBtn:"View plans",
+        buyNow12:"Buy now", buyNow6:"Buy now", buyNow1:"Buy now",
+        testCtaBadge:"24H TRIAL",
+        testCtaTitle:"Activate your free IPTV trial (24 hours)",
+        testCtaSub:"Click here and send us on WhatsApp: Device ID and MAC Address to activate.",
+        testCtaHint:"Click for WhatsApp",
+
+        navPlans:"Plans", navHow:"How it works", navSetup:"Setup", navFaq:"FAQ", navContact:"Contact",
+
+        trustH:"Transparency & Trust",
+        trustLead:"Our goal is fast activation, clear guidance and transparent communication before payment.",
+        trust1t:"Verified contact",
+        trust1d:"Reach us via WhatsApp and Messenger. Activation happens only after confirming details.",
+        trust2t:"Payment & process",
+        trust2d:"Before payment: we confirm your device, app and required details (e.g., MAC Address). Then we activate.",
+        trust3t:"Data privacy",
+        trust3d:"We ask only for technical details needed for activation (e.g., MAC). We do not request “Device ID”.",
+        trust4t:"Terms of use",
+        trust4d:"Use must comply with local laws and broadcasting rights. See legal note below.",
+
+        plansTitle:"Plans & Pricing",
+        plansSubtitle:"All plans include Premium IPTV, free IBO Player activation, and support.",
+        p12:"12 months", p12d:"Best deal", p12psych:"⭐ Best choice", p12pm:"≈ €6.6 / month",
+        p6:"6 months", p6d:"Great value", p6psych:"🔹 Most popular", p6pm:"≈ €6.5 / month",
+        p1:"1 month", p1d:"Good for testing", p1psych:"No commitment", p1pm:"≈ €10 / month",
+        p12pmLabel:"€/month", p6pmLabel:"€/month", p1pmLabel:"€/month",
+        p12valueLabel:"Value", p6valueLabel:"Balance", p1valueLabel:"Trial",
+        p12value:"Maximum", p6value:"Price / time", p1value:"Quick start",
+        planCta12:"Choose 12 months", planCta6:"Choose 6 months", planCta1:"Choose 1 month",
+        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
+        plansPush:"To order and activate, message us on WhatsApp or Messenger and we will guide you right away.",
+
+        whyH:"Why Sansat IPTV",
+        why1t:"Fast activation", why1d:"Simple process with clear guidance.",
+        why2t:"Flexible plans", why2d:"1 / 6 / 12 months to match your needs.",
+        why3t:"Multiple devices", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
+        why4t:"Support", why4d:"Fast replies on DM/WhatsApp.",
+
+        devicesH:"Compatible With All Your Favourite Devices",
+        dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
+        dev2t:"Mobile", dev2d:"Phone and tablet (Android/iOS)",
+
+        howH:"How it works",
+        s1t:"Contact", s1d:"Message us on WhatsApp or Messenger.",
+        s2t:"Choose a plan", s2d:"Pick 1 / 6 / 12 months and receive guidance.",
+        s3t:"Activation", s3d:"Fast activation + free IBO Player activation (setup guidance).",
+
+        setupH:"Smart TV setup (Samsung/LG/Android)",
+        setupLead:"These are quick steps. If menus differ by model, message us and we’ll guide you.",
+        st1t:"Samsung", st1d:"Open “Apps” → search “IBO Player” → install → open the app and find the MAC Address.",
+        st2t:"LG", st2d:"Open “LG Content Store” → search “IBO Player” → install → open the app and find the MAC Address.",
+        st3t:"Android TV / Box", st3d:"Open “Play Store” → search “IBO Player” → install → open the app and find the MAC Address.",
+
+        iboH:"IBO Player – Quick setup",
+        ibo1t:"1) Install the app", ibo1d:"On your device, install IBO Player from the app store.",
+        ibo2t:"2) Send MAC Address", ibo2d:"Send us the MAC Address as shown in the app.",
+        ibo3t:"3) Configure", ibo3d:"We configure and guide you through the final steps.",
+        iboNote:"Note: IBO Player is a third-party application. We provide activation and setup guidance.",
+
+        macPreviewH:"MAC Address – Example",
+        macPreviewNote:"Example only: the MAC Address is shown inside the IBO Player app.",
+
+        contactH:"Contact Us",
+        contactLead:"For activation, send your MAC Address and Device ID, plus your device type (Samsung/LG/Android/Box/Mobile).",
+        contact1t:"WhatsApp",
+        contact1d:"Tap to message: +389 72 698 616",
+        contact2t:"Messenger",
+        contact2d:"Tap to message: m.me/sansatiptv",
+        contactWaBtn:"Open WhatsApp",
+        contactMsBtn:"Open Messenger",
+
+        faqH:"FAQ",
+        f1q:"What internet speed is recommended?",
+        f1a:"A stable connection is recommended. As a guideline: 10–15 Mbps for HD and 25+ Mbps for 4K (when available). Performance depends on network, device and setup.",
+        f2q:"Is IBO Player activation free?",
+        f2a:"Yes. Activation and basic setup guidance are included with the subscription (MAC Address required).",
+        f3q:"How fast is activation?",
+        f3a:"Usually right after payment confirmation and receiving the required details (e.g., MAC Address).",
+        f4q:"What does the service include?",
+        f4a:"Access to IPTV content (live channels and VOD) plus setup guidance. Availability and lists may change over time and by region.",
+        f5q:"Do you offer sports/PPV events?",
+        f5a:"Sports and PPV may be available depending on time and region. Message us to confirm for your case.",
+        f6q:"What video quality is available (HD/4K)?",
+        f6a:"Quality varies by channel/content and internet speed. HD/Full HD is common; 4K may be available for some content.",
+        f7q:"What details are required for activation?",
+        f7a:"We request technical details for setup: MAC Address and Device ID (as shown in the app/device).",
+
+        navRefund:"Refund",
+        refundH:"Refund policy (30 days – full refund)",
+        refundLead:"A full refund (100%) is approved if the service does not work or cannot be stabilized on the confirmed device after technical verification.",
+        r1t:"1) Time window",
+        r1d:"Requests are accepted within 30 days from activation date.",
+        r2t:"2) What to provide",
+        r2d:"Plan, activation date, device, MAC Address, and a photo/video of the issue.",
+        r3t:"3) Exclusions",
+        r3d:"Not covered: internet/ISP issues, weak Wi‑Fi, VPN/region changes, incompatible devices, third‑party apps.",
+        r4t:"4) Review & refund",
+        r4d:"Reviewed within 24–48 hours. If approved, a full refund is issued.",
+        tb1:"Activation in minutes",
+        tb2:"Support on WhatsApp/Messenger",
+        tb3:"30-day full refund",
+        p12save:"Save €41 vs monthly",
+        p6save:"Save €21 vs monthly",
+        p1save:"Great for a 30-day trial",
+        p12ribbon:"SAVE €41",
+        rq1:"30-day full refund",
+        rq2:"Technical verification required",
+        rq3:"Response in 24–48 hours",
+        rq4:"Exclusions: ISP/Wi‑Fi/VPN",
+        refundWaBtn:"Request refund",
+        refundAltBtn:"Contact support",
+        footerPlans:"Plans",
+        footerRefund:"Refund",
+        footerContact:"Contact",
+        footerWa:"WhatsApp",
+        footerMs:"Messenger",
+        legalText:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights.",
+        hs1:"Fast activation",
+        hs2:"Device-specific guidance",
+        hs3:"30-day refund",
+        p12f1:"28,000+ Live TV Channels",
+        p12f2:"Full HD & 4K Quality",
+        p12f3:"Premium VOD Library (Updated Daily) (Movies & Series)",
+        p6f1:"28,000+ Live TV Channels",
+        p6f2:"Full HD & 4K Quality",
+        p6f3:"Premium VOD Library (Updated Daily) (Movies & Series)",
+        p1f1:"28,000+ Live TV Channels",
+        p1f2:"Full HD & 4K Quality",
+        p1f3:"Premium VOD Library (Updated Daily) (Movies & Series)",
+        themeDark:"Dark",
+        themeLight:"Light",
+        refundLink:"View refund policy",
+
+
+        legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights.",
+        ratingText:"Rated by our customers",
+        p12f4:"24/7 Support via WhatsApp",
+        p12f5:"Free Setup Assistance",
+        p6f4:"24/7 Support via WhatsApp",
+        p6f5:"Free Setup Assistance",
+        p1f4:"24/7 Support via WhatsApp",
+        p1f5:"Free Setup Assistance",
+        payTitle:"Secure Payment Options",
+        paySub:"We accept secure payment methods for your convenience.",
+        payCard:"Card Payments",
+        payPaypal:"PayPal",
+        payBank:"Bank Transfer",
+        devTV:"Smart TV",
+        devTVsub:"Samsung, LG, Sony etc.",
+        devMobile:"Mobile",
+        devMobilesub:"iOS & Android",
+        devTablet:"Tablets",
+        devTabletsub:"iPad & Android",
+        devPC:"Computers",
+        devPCsub:"Windows & Mac",
+        devBox:"Android Box",
+        devBoxsub:"Firestick",
+        devMag:"MAG Box / Formuler",
+        devMagsub:"Supported",
+        devicesNote:"And many more. If your device supports IPTV, it’s compatible.",
+        contactSub:"Have questions or need assistance? We're here to help!",
+        getTouchH:"Get in Touch",
+        emailT:"Email Us",
+        emailV:"contact@sansatiptv.com",
+        emailA:"Available 24/7",
+        callT:"Call Us",
+        callV:"+389 72 698 616",
+        callA:"Available 24/7",
+        chatT:"Live Chat",
+        chatV:"Available on WhatsApp & Messenger",
+        chatA:"Response time: Under 5 minutes",
+        hoursH:"Our Hours",
+        hours1:"Customer Support: 24/7",
+        hours2:"Sales Department: Mon–Fri, 9am–6pm",
+        hours3:"Technical Support: 24/7",
+        waFormH:"Send Us a Message (via WhatsApp)",
+        waNameL:"Your Name",
+        waEmailL:"Email Address",
+        waSubjL:"Subject",
+        waMsgL:"Message",
+        waSendBtn:"Send Message via WhatsApp",
+      "trialTitle": "Your 24hr IPTV Trial Awaits!",
+      "trialLead": "Get a 24-hour test to verify the service. Activation happens after you send your Device ID and MAC Address.",
+      "trialGet": "What is included:",
+      "trialLi1": "Live Channels + Sports (selection may vary)",
+      "trialLi2": "HD/4K quality (depends on channel and device)",
+      "trialLi3": "VOD (Movies & Series) – depends on your list/package",
+      "trialLi4": "Compatible with TV/Box/Mobile (device dependent)",
+      "trialLi5": "EPG (TV Guide) where available",
+      "trialWaBtn": "Claim your trial via WhatsApp",
+      "trialFoot": "Tap the button and send the WhatsApp message. Please include both Device ID and MAC Address."
+},
+
+      de: {
+        footerPrivacy:"Datenschutz",
+        privacyTitle:"Datenschutz",
+        privacyUpdated:"Zuletzt aktualisiert: 19. Januar 2026",
+        privacyBodyHtml:`<h3>Zweck</h3>
+<p>Diese Datenschutzerklärung beschreibt, wie Sansat IPTV Informationen verarbeitet, wenn Sie uns für Aktivierung oder Support kontaktieren.</p>
+<h3>Welche Daten wir erheben können</h3>
+<ul>
+  <li>Kontaktdaten (z. B. Name, Telefonnummer, Messenger-Profil), die Sie freiwillig senden.</li>
+  <li>Technische Aktivierungsdaten (z. B. MAC-Adresse). Wir fragen nach der MAC-Adresse, nicht nach der Device ID.</li>
+  <li>Support-Kommunikation zur Bearbeitung Ihrer Anfrage.</li>
+</ul>
+<h3>Verwendung der Daten</h3>
+<ul>
+  <li>Zur Aktivierung des Dienstes und Prüfung der Geräte-Kompatibilität.</li>
+  <li>Für technischen Support und auftragsbezogene Kommunikation.</li>
+  <li>Zur Verbesserung der Kundenerfahrung (keine erweiterte Profilbildung).</li>
+</ul>
+<h3>Weitergabe</h3>
+<p>Wir verkaufen keine personenbezogenen Daten. Bei Kontakt über WhatsApp/Messenger gelten deren eigene Datenschutzrichtlinien.</p>
+<h3>Speicherdauer</h3>
+<p>Wir speichern Daten nur so lange wie nötig für Aktivierung, Support und gesetzliche Pflichten. Löschung kann, soweit anwendbar, beantragt werden.</p>
+<h3>Ihre Rechte</h3>
+<ul>
+  <li>Auskunft, Berichtigung und Löschung (soweit zulässig).</li>
+  <li>Widerspruch gegen Marketing (falls zutreffend).</li>
+</ul>
+<h3>Kontakt</h3>
+<p>Für Datenschutzanfragen kontaktieren Sie uns über WhatsApp oder Messenger.</p>` ,
+
+        tagline:"Premium • Schnelle Aktivierung",
+        badge:"IBO Player Aktivierung gratis (normal 10€)",
+        
+        trialMini:"24 Std. Gratis-Test",
+        ratingText:"Bewertet von unseren Kunden",
+        reviewsSub:"Echte Rückmeldungen unserer Nutzer zu Geschwindigkeit und Support.",
+        reviewsTitle:"Kundenbewertungen",
+        reviewsH:"Kundenbewertungen",
+        reviewsLead:"Echte Rückmeldungen zu Speed und Support.",
+        rev1:"Sehr schnelle Aktivierung, läuft einwandfrei.", rev1n:"Marco L.",
+        rev2:"Top Sportkanäle, gute HD-Qualität.", rev2n:"Emma R.",
+        rev3:"WhatsApp-Support antwortet schnell und hilfreich.", rev3n:"Daniel K.",
+        rev4:"Funktioniert perfekt auf meinem Samsung TV.", rev4n:"Sara P.",
+        rev5:"Große VOD-Auswahl, Filme und Serien leicht zu finden.", rev5n:"Jason M.",
+        rev6:"Bestes Preis-Leistungs-Verhältnis beim 12-Monats-Plan.", rev6n:"Olivia S.",
+        rev7:"Klare Anleitung für IBO Player.", rev7n:"Chris T.",
+        rev8:"Gute Auswahl an internationalen Kanälen.", rev8n:"Nina B.",
+        rev9:"Stabiles Streaming auch am Handy.", rev9n:"Alex G.",
+        rev10:"Zuverlässiger Service, empfehlenswert.", rev10n:"Kevin D.",
+h1:"Premium IPTV für Sport, Filme & Serien",
+        h1Html:"<span class=\"tMain\">Premium IPTV</span> <span class=\"tAccent\">für Sport, Filme & Serien</span>",
+        lead:"Schnelle Aktivierung, gerätespezifische Einrichtungshilfe und volle 30‑Tage‑Erstattung (Bedingungen gelten).",
+        waLabel:"WhatsApp",
+        msLabel:"Messenger",
+        supportPill:"Live‑Sport • Filme • Serien • Internationale Sender",
+        note:"Für Details und Zahlungsoptionen schreiben Sie uns bitte privat. Die Aktivierung erfolgt nach Bestätigung.",
+        calloutD:"Schreiben Sie uns – wir helfen je nach Gerät (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
+        goPlansBtn:"Tarife ansehen",
+
+        buyNow12:"Jetzt kaufen", buyNow6:"Jetzt kaufen", buyNow1:"Jetzt kaufen",
+        testCtaBadge:"24H TEST",
+        testCtaTitle:"Kostenlosen IPTV-Test aktivieren (24 Std.)",
+        testCtaSub:"Klicke hier und sende uns auf WhatsApp: Device ID und MAC Address zur Aktivierung.",
+        testCtaHint:"Zu WhatsApp",
+
+
+        navPlans:"Tarife", navHow:"Ablauf", navSetup:"Installation", navFaq:"FAQ", navContact:"Kontakt",
+
+        trustH:"Transparenz & Vertrauen",
+        trustLead:"Unser Ziel: schnelle Aktivierung, klare Anleitung und transparente Kommunikation vor der Zahlung.",
+        trust1t:"Verifizierbarer Kontakt",
+        trust1d:"Erreichen Sie uns über WhatsApp und Messenger. Aktivierung erst nach Bestätigung der Details.",
+        trust2t:"Zahlung & Ablauf",
+        trust2d:"Vor der Zahlung: Wir bestätigen Gerät, App und benötigte Angaben (z. B. MAC-Adresse). Danach aktivieren wir.",
+        trust3t:"Datenschutz",
+        trust3d:"Wir fragen nur technische Daten ab, die für die Aktivierung notwendig sind (z. B. MAC). Wir verlangen keine „Device ID“.",
+        trust4t:"Nutzungsbedingungen",
+        trust4d:"Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen. Siehe rechtlichen Hinweis unten.",
+
+        plansTitle:"Tarife & Preise",
+        plansSubtitle:"Alle Tarife enthalten Premium IPTV, kostenlose IBO Player Aktivierung und Support.",
+        p12:"12 Monate", p12d:"Bestes Angebot", p12psych:"⭐ Beste Wahl", p12pm:"≈ 6,6 € / Monat",
+        p6:"6 Monate", p6d:"Gutes Preis-Leistungs-Verhältnis", p6psych:"🔹 Am beliebtesten", p6pm:"≈ 6,5 € / Monat",
+        p1:"1 Monat", p1d:"Ideal zum Testen", p1psych:"Ohne Verpflichtung", p1pm:"≈ 10 € / Monat",
+        p12pmLabel:"€/Monat", p6pmLabel:"€/Monat", p1pmLabel:"€/Monat",
+        p12valueLabel:"Wert", p6valueLabel:"Balance", p1valueLabel:"Test",
+        p12value:"Maximum", p6value:"Preis / Laufzeit", p1value:"Schneller Start",
+        planCta12:"12 Monate wählen", planCta6:"6 Monate wählen", planCta1:"1 Monat wählen",
+        planMs12:"Messenger", planMs6:"Messenger", planMs1:"Messenger",
+        plansPush:"Für Bestellung und Aktivierung schreiben Sie uns auf WhatsApp oder Messenger – wir helfen sofort.",
+
+        whyH:"Warum Sansat IPTV",
+        why1t:"Schnelle Aktivierung", why1d:"Einfacher Ablauf mit klarer Anleitung.",
+        why2t:"Flexible Tarife", why2d:"1 / 6 / 12 Monate – passend zu Ihrem Bedarf.",
+        why3t:"Mehrere Geräte", why3d:"Smart TV, Android TV/Box, Fire Stick, Mobile.",
+        why4t:"Support", why4d:"Schnelle Antworten per DM/WhatsApp.",
+
+        devicesH:"Kompatibel mit all Ihren Lieblingsgeräten",
+        dev1t:"TV & Box", dev1d:"Smart TV, Android TV/Box, Fire Stick",
+        dev2t:"Mobile", dev2d:"Smartphone und Tablet (Android/iOS)",
+
+        howH:"So funktioniert es",
+        s1t:"Kontakt", s1d:"Schreiben Sie uns auf WhatsApp oder Messenger.",
+        s2t:"Tarif wählen", s2d:"Wählen Sie 1 / 6 / 12 Monate und erhalten Sie die Anleitung.",
+        s3t:"Aktivierung", s3d:"Schnelle Aktivierung + kostenlose IBO Player Aktivierung (Einrichtungsanleitung).",
+
+        setupH:"Installation auf Smart TV (Samsung/LG/Android)",
+        setupLead:"Kurzanleitung. Wenn Menüs je nach Modell abweichen, schreiben Sie uns – wir helfen.",
+        st1t:"Samsung", st1d:"„Apps“ öffnen → „IBO Player“ suchen → installieren → App öffnen und MAC-Adresse finden.",
+        st2t:"LG", st2d:"„LG Content Store“ öffnen → „IBO Player“ suchen → installieren → App öffnen und MAC-Adresse finden.",
+        st3t:"Android TV / Box", st3d:"„Play Store“ öffnen → „IBO Player“ suchen → installieren → App öffnen und MAC-Adresse finden.",
+
+        iboH:"IBO Player – Kurze Einrichtung",
+        ibo1t:"1) App installieren", ibo1d:"Installieren Sie IBO Player aus dem App-Store Ihres Geräts.",
+        ibo2t:"2) MAC-Adresse senden", ibo2d:"Senden Sie uns die MAC-Adresse, wie sie in der App angezeigt wird.",
+        ibo3t:"3) Konfigurieren", ibo3d:"Wir konfigurieren und führen Sie durch die letzten Schritte.",
+        iboNote:"Hinweis: IBO Player ist eine Drittanbieter-App. Wir bieten Aktivierung und Einrichtungshilfe.",
+
+        macPreviewH:"MAC-Adresse – Beispiel",
+        macPreviewNote:"Nur als Beispiel: Die MAC-Adresse wird in der IBO Player App angezeigt.",
+
+        contactH:"Kontakt",
+        contactLead:"Für die Aktivierung senden Sie MAC-Adresse und Device-ID sowie den Gerätetyp (Samsung/LG/Android/Box/Mobile).",
+        contact1t:"WhatsApp",
+        contact1d:"Tippen zum Schreiben: +389 72 698 616",
+        contact2t:"Messenger",
+        contact2d:"Tippen zum Schreiben: m.me/sansatiptv",
+        contactWaBtn:"WhatsApp öffnen",
+        contactMsBtn:"Messenger öffnen",
+
+        faqH:"FAQ",
+        f1q:"Welche Internetgeschwindigkeit wird empfohlen?",
+        f1a:"Eine stabile Verbindung wird empfohlen. Richtwert: 10–15 Mbps für HD und 25+ Mbps für 4K (wenn verfügbar). Leistung hängt von Netzwerk, Gerät und Setup ab.",
+        f2q:"Ist die IBO Player Aktivierung kostenlos?",
+        f2a:"Ja. Aktivierung und grundlegende Einrichtungshilfe sind im Abonnement enthalten (MAC-Adresse erforderlich).",
+        f3q:"Wie schnell erfolgt die Aktivierung?",
+        f3a:"In der Regel direkt nach Zahlungsbestätigung und Erhalt der benötigten Angaben (z. B. MAC-Adresse).",
+        f4q:"Was ist im Service enthalten?",
+        f4a:"Zugang zu IPTV-Inhalten (Live-Kanäle und VOD) plus Einrichtungshilfe. Verfügbarkeit und Listen können sich je nach Zeit und Region ändern.",
+        f5q:"Gibt es Sport/PPV?",
+        f5a:"Sport und PPV können je nach Zeitraum und Region verfügbar sein. Schreiben Sie uns zur Bestätigung.",
+        f6q:"Welche Videoqualität ist verfügbar (HD/4K)?",
+        f6a:"Die Qualität hängt von Kanal/Inhalt und Internetgeschwindigkeit ab. HD/Full HD ist üblich; 4K kann für einige Inhalte verfügbar sein.",
+        f7q:"Welche Angaben werden für die Aktivierung benötigt?",
+        f7a:"Für das Setup benötigen wir technische Angaben: MAC-Adresse und Device-ID (wie in App/Gerät angezeigt).",
+
+        navRefund:"Erstattung",
+        refundH:"Erstattungsrichtlinie (30 Tage – volle Erstattung)",
+        refundLead:"Eine volle Erstattung (100%) wird genehmigt, wenn der Dienst auf dem bestätigten Gerät nach technischer Prüfung nicht funktioniert oder nicht stabilisiert werden kann.",
+        r1t:"1) Frist",
+        r1d:"Anträge werden innerhalb von 30 Tagen ab Aktivierungsdatum akzeptiert.",
+        r2t:"2) Erforderliche Angaben",
+        r2d:"Tarif, Aktivierungsdatum, Gerät, MAC‑Adresse sowie Foto/Video des Problems.",
+        r3t:"3) Ausschlüsse",
+        r3d:"Nicht abgedeckt: Internet/ISP, schwaches WLAN, VPN/Regionswechsel, inkompatible Geräte, Drittanbieter‑Apps.",
+        r4t:"4) Prüfung & Erstattung",
+        r4d:"Prüfung innerhalb von 24–48 Stunden. Bei Genehmigung erfolgt die volle Erstattung.",
+        tb1:"Aktivierung in Minuten",
+        tb2:"Support via WhatsApp/Messenger",
+        tb3:"30 Tage volle Erstattung",
+        p12save:"Spare 41€ gegenüber monatlich",
+        p6save:"Spare 21€ gegenüber monatlich",
+        p1save:"Ideal zum 30‑Tage‑Test",
+        p12ribbon:"SPARE 41€",
+        rq1:"30 Tage volle Erstattung",
+        rq2:"Technische Prüfung erforderlich",
+        rq3:"Antwort in 24–48 Stunden",
+        rq4:"Ausschlüsse: ISP/WLAN/VPN",
+        refundWaBtn:"Erstattung anfordern",
+        refundAltBtn:"Support kontaktieren",
+        footerPlans:"Tarife",
+        footerRefund:"Erstattung",
+        footerContact:"Kontakt",
+        footerWa:"WhatsApp",
+        footerMs:"Messenger",
+        legalText:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen.",
+        hs1:"Schnelle Aktivierung",
+        hs2:"Anleitung je Gerät",
+        hs3:"30 Tage Erstattung",
+        p12f1:"28.000+ Live-TV-Kanäle",
+        p12f2:"Full HD & 4K Qualität",
+        p12f3:"Premium VOD-Bibliothek (täglich aktualisiert) (Filme & Serien)",
+        p6f1:"28.000+ Live-TV-Kanäle",
+        p6f2:"Full HD & 4K Qualität",
+        p6f3:"Premium VOD-Bibliothek (täglich aktualisiert) (Filme & Serien)",
+        p1f1:"28.000+ Live-TV-Kanäle",
+        p1f2:"Full HD & 4K Qualität",
+        p1f3:"Premium VOD-Bibliothek (täglich aktualisiert) (Filme & Serien)",
+        themeDark:"Dunkel",
+        themeLight:"Hell",
+        refundLink:"Rückerstattungsbedingungen ansehen",
+
+
+        legal:"Hinweis: Eine stabile Internetverbindung ist erforderlich. Die Nutzung muss lokalen Gesetzen und Übertragungsrechten entsprechen.",
+        ratingText:"Von unseren Kunden bewertet",
+        p12f4:"24/7 Support über WhatsApp",
+        p12f5:"Kostenlose Einrichtungsunterstützung",
+        p6f4:"24/7 Support über WhatsApp",
+        p6f5:"Kostenlose Einrichtungsunterstützung",
+        p1f4:"24/7 Support über WhatsApp",
+        p1f5:"Kostenlose Einrichtungsunterstützung",
+        payTitle:"Sichere Zahlungsoptionen",
+        paySub:"Wir akzeptieren sichere Zahlungsmethoden für Ihren Komfort.",
+        payCard:"Kartenzahlung",
+        payPaypal:"PayPal",
+        payBank:"Banküberweisung",
+        devTV:"Smart TV",
+        devTVsub:"Samsung, LG, Sony usw.",
+        devMobile:"Mobil",
+        devMobilesub:"iOS & Android",
+        devTablet:"Tablets",
+        devTabletsub:"iPad & Android",
+        devPC:"Computer",
+        devPCsub:"Windows & Mac",
+        devBox:"Android Box",
+        devBoxsub:"Firestick",
+        devMag:"MAG Box / Formuler",
+        devMagsub:"Unterstützt",
+        devicesNote:"Und viele mehr. Wenn Ihr Gerät IPTV unterstützt, ist es kompatibel.",
+        contactSub:"Haben Sie Fragen oder brauchen Sie Hilfe? Wir sind für Sie da!",
+        getTouchH:"Kontakt aufnehmen",
+        emailT:"E-Mail senden",
+        emailV:"contact@sansatiptv.com",
+        emailA:"24/7 verfügbar",
+        callT:"Anrufen",
+        callV:"+389 72 698 616",
+        callA:"24/7 verfügbar",
+        chatT:"Live-Chat",
+        chatV:"Über WhatsApp & Messenger",
+        chatA:"Antwortzeit: unter 5 Minuten",
+        hoursH:"Öffnungszeiten",
+        hours1:"Kundensupport: 24/7",
+        hours2:"Vertrieb: Mo–Fr, 09:00–18:00",
+        hours3:"Technischer Support: 24/7",
+        waFormH:"Nachricht senden (via WhatsApp)",
+        waNameL:"Ihr Name",
+        waEmailL:"E-Mail",
+        waSubjL:"Betreff",
+        waMsgL:"Nachricht",
+        waSendBtn:"Nachricht via WhatsApp senden",
+      "trialTitle": "Ihre 24-Std. IPTV-Testversion",
+      "trialLead": "24-Stunden-Test zur Überprüfung. Aktivierung nach Zusendung von Device ID und MAC-Adresse.",
+      "trialGet": "Im Test enthalten:",
+      "trialLi1": "Live-Kanäle + Sport (Auswahl kann variieren)",
+      "trialLi2": "HD/4K-Qualität (abhängig von Kanal und Gerät)",
+      "trialLi3": "VOD (Filme & Serien) – abhängig von Liste/Paket",
+      "trialLi4": "Kompatibel mit TV/Box/Mobil (geräteabhängig)",
+      "trialLi5": "EPG (TV-Guide) sofern verfügbar",
+      "trialWaBtn": "Test über WhatsApp aktivieren",
+      "trialFoot": "Button klicken und WhatsApp-Nachricht senden. Bitte Device ID und MAC-Adresse angeben."
+    }
+    };
+
+    const ids = [
+      "tagline","badge","h1","lead","supportPill","note","calloutD","goPlansBtn",
+      "navPlans","navHow","navSetup","navFaq","navContact",
+
+      "trustH","trustLead","trust1t","trust1d","trust2t","trust2d","trust3t","trust3d","trust4t","trust4d",
+
+      "plansTitle","plansSubtitle",
+      "p12","p12d","p12psych","p12pm","p12pmLabel","p12valueLabel","p12value",
+      "p6","p6d","p6psych","p6pm","p6pmLabel","p6valueLabel","p6value",
+      "p1","p1d","p1psych","p1pm","p1pmLabel","p1valueLabel","p1value",
+      "planCta12","planCta6","planCta1","planMs12","planMs6","planMs1",
+      "plansPush",
+
+      "whyH","why1t","why1d","why2t","why2d","why3t","why3d","why4t","why4d",
+      "devicesH","dev1t","dev1d","dev2t","dev2d",
+      "howH","s1t","s1d","s2t","s2d","s3t","s3d",
+
+      "setupH","setupLead","st1t","st1d","st2t","st2d","st3t","st3d",
+
+      "iboH","ibo1t","ibo1d","ibo2t","ibo2d","ibo3t","ibo3d","iboNote",
+      "macPreviewH","macPreviewNote",
+
+      "contactH","contactLead","contact1t","contact1d","contact2t","contact2d","contactWaBtn","contactMsBtn",
+
+      "faqH","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","f5q","f5a","f6q","f6a","f7q","f7a",
+      "legal",
+      "navRefund", "refundH", "refundLead", "r1t", "r1d", "r2t", "r2d", "r3t", "r3d", "r4t", "r4d",
+      "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon",
+      "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerWa", "footerMs", "legalText",
+      "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3",
+      "refundLink",
+      "themeLabel",
+      "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5",
+      "payTitle", "paySub", "payCard", "payPaypal", "payBank",
+      "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote",
+      "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn",
+      "buyNow12", "buyNow6", "buyNow1",
+      "trialMini",
+      "ratingText",
+      "reviewsTitle",
+      "reviewsSub",
+      "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint",
+      "trialTitle",
+      "trialLead",
+      "trialGet",
+      "trialLi1",
+      "trialLi2",
+      "trialLi3",
+      "trialLi4",
+      "trialLi5",
+      "trialWaBtn",
+      "trialFoot"
+    ];
+
+    function setActiveLangButton(lang){
+      document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
+      document.getElementById("btnEN").classList.toggle("active", lang === "en");
+      document.getElementById("btnDE").classList.toggle("active", lang === "de");
+    }
+
+
+
+
+    function openPrivacyModal(){
+      const overlay = document.getElementById('privacyModal');
+      if (!overlay) return;
+      overlay.classList.add('isOpen');
+      overlay.setAttribute('aria-hidden','false');
+      document.documentElement.style.overflow = 'hidden';
+      // populate content
+      const lang = window.__sansatLang || 'sq';
+      const t = i18n[lang] || i18n.sq;
+      const body = document.getElementById('privacyBody');
+      const title = document.getElementById('privacyTitle');
+      const upd = document.getElementById('privacyUpdated');
+      if (title && t.privacyTitle) title.textContent = t.privacyTitle;
+      if (upd && t.privacyUpdated) upd.textContent = t.privacyUpdated;
+      if (body && t.privacyBodyHtml) body.innerHTML = t.privacyBodyHtml;
+    }
+    function closePrivacyModal(){
+      const overlay = document.getElementById('privacyModal');
+      if (!overlay) return;
+      overlay.classList.remove('isOpen');
+      overlay.setAttribute('aria-hidden','true');
+      document.documentElement.style.overflow = '';
+    }
+
+    function renderReviews(lang){
+      const t = i18n[lang] || i18n.sq;
+      const grid = document.getElementById("reviewsGrid");
+      if(!grid) return;
+      const items = [];
+      for(let i=1;i<=10;i++){
+        const msg = t["rev"+i];
+        const name = t["rev"+i+"n"];
+        if(!msg || !name) continue;
+        items.push({msg, name});
+      }
+      grid.innerHTML = items.map(it => (
+        '<div class="reviewCard">' +
+          '<div class="stars" aria-hidden="true">★★★★★</div>' +
+          it.msg +
+          '<span>' + it.name + '</span>' +
+        '</div>'
+      )).join('');
+    }
+
+    function applyLang(lang){
+      const t = i18n[lang] || i18n.sq;
+      document.documentElement.lang = lang;
+      window.__sansatLang = lang;
+      if (typeof updateTrialWaLink === 'function') updateTrialWaLink(lang);
+
+      document.getElementById("waBtn").textContent = t.waLabel;
+      document.getElementById("msBtn").textContent = t.msLabel;
+
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        // Allow styled headline (innerHTML)
+        if (id === 'h1' && t.h1Html) {
+          el.innerHTML = t.h1Html;
+          el.classList.add('heroTitleSplit');
+          return;
+                }
+        if (t[id] !== undefined) el.textContent = t[id];
+      });
+      if (typeof renderReviewsSection === 'function') renderReviewsSection(lang);
+      if (typeof renderReviews === 'function') renderReviews(lang);
+      setActiveLangButton(lang);
+
+      // update privacy modal content if open
+      const pm = document.getElementById('privacyModal');
+      if (pm && pm.classList.contains('isOpen')) {
+        const body = document.getElementById('privacyBody');
+        const title = document.getElementById('privacyTitle');
+        const upd = document.getElementById('privacyUpdated');
+        if (title && t.privacyTitle) title.textContent = t.privacyTitle;
+        if (upd && t.privacyUpdated) upd.textContent = t.privacyUpdated;
+        if (body && t.privacyBodyHtml) body.innerHTML = t.privacyBodyHtml;
+      }
+      
+      // keep theme label in sync with language
+      const themeNow = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'dark' : 'light';
+      if (typeof applyTheme === 'function') applyTheme(themeNow);
+      try { localStorage.setItem("sansat_lang", lang); } catch(e){}
+    }
+
+    document.getElementById("btnSQ").addEventListener("click", () => applyLang("sq"));
+    document.getElementById("btnEN").addEventListener("click", () => applyLang("en"));
+    document.getElementById("btnDE").addEventListener("click", () => applyLang("de"));
+
+    (function init(){
+      let lang = "sq";
+      try {
+        const saved = localStorage.getItem("sansat_lang");
+        if (saved && i18n[saved]) lang = saved;
+        else {
+          const nav = (navigator.language || "").toLowerCase();
+          if (nav.startsWith("de")) lang = "de";
+          else if (nav.startsWith("en")) lang = "en";
+        }
+      } catch(e){}
+      applyLang(lang);
+      setWaLinks(lang);
+    })();
+  
+    function enc(s){ return encodeURIComponent(s); }
+
+    function buildWaText(lang, plan){
+      if(lang === "en"){
+        return `Hi! I want Sansat IPTV${plan?` (${plan} months)`:``}.
+Device: ____
+MAC Address: ____
+`;
+      }
+      if(lang === "de"){
+        return `Hallo! Ich möchte Sansat IPTV${plan?` (${plan} Monate)`:``}.
+Gerät: ____
+MAC‑Adresse: ____
+`;
+      }
+      return `Përshëndetje! Dua Sansat IPTV${plan?` (${plan} muaj)`:``}.
+Pajisja: ____
+MAC Address: ____
+`;
+    }
+
+    function setWaLinks(lang){
+      const base = "https://wa.me/38972698616?text=";
+            const refundBtn = document.getElementById("refundWaBtn");
+      const fab = document.getElementById("fabWa");
+const hero = document.getElementById("waBtn");
+      const contact = document.getElementById("contactWaBtn");
+      const footerWa = document.getElementById("footerWa");
+
+      if(hero) hero.href = base + enc(buildWaText(lang, ""));
+      if(contact) contact.href = base + enc(buildWaText(lang, ""));
+      if(footerWa) footerWa.href = base + enc(buildWaText(lang, ""));
+
+      if(refundBtn) refundBtn.href = base + enc("Kërkoj rimbursim (30 ditë).\nEmri: ____\nData e aktivizimit: ____\nPajisja: ____\nMAC Address: ____\nPërshkrimi i problemit: ____\n");
+      if(fab) fab.href = base + enc(buildWaText(lang, ""));
+
+      const p12 = document.getElementById("planCta12");
+      const p6  = document.getElementById("planCta6");
+      const p1  = document.getElementById("planCta1");
+
+      if(p12) p12.href = base + enc(buildWaText(lang, "12"));
+      if(p6)  p6.href  = base + enc(buildWaText(lang, "6"));
+      if(p1)  p1.href  = base + enc(buildWaText(lang, "1"));
+    }
+
+    // Theme (Light/Dark)
+    function applyTheme(theme){
+      const root = document.documentElement;
+      if(theme === "dark") root.setAttribute("data-theme","dark");
+      else root.removeAttribute("data-theme");
+
+      const icon = document.getElementById("themeIcon");
+      const label = document.getElementById("themeLabel");
+      const lang = document.documentElement.lang || "sq";
+      const t = (typeof i18n !== "undefined" && i18n[lang]) ? i18n[lang] : (typeof i18n !== "undefined" ? i18n.sq : null);
+
+      if(icon) icon.textContent = (theme === "dark") ? "☀️" : "🌙";
+      if(label){
+        if(t){
+          label.textContent = (theme === "dark") ? (t.themeLight || "Light") : (t.themeDark || "Dark");
+        }else{
+          label.textContent = (theme === "dark") ? "Light" : "Dark";
+        }
+      }
+
+      try { localStorage.setItem("sansat_theme", theme); } catch(e){}
+    }
+
+    function getInitialTheme(){
+      try{
+        const saved = localStorage.getItem("sansat_theme");
+        if(saved === "dark" || saved === "light") return saved;
+      }catch(e){}
+      return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    }
+
+    function initTheme(){
+      applyTheme(getInitialTheme());
+      const btn = document.getElementById("themeToggle");
+      if(btn){
+        btn.addEventListener("click", () => {
+          const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+          applyTheme(isDark ? "light" : "dark");
+        });
+      }
+    }
+
+    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTheme);
+    else initTheme();
+
+  </script>
+
+  <!-- Sticky WhatsApp Button -->
+  <a id="fabWa" class="fabWa" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" aria-label="Hap WhatsApp">
+    <span class="fabIcon" aria-hidden="true"></span>
+  </a>
+
+
+  <script id="sansat_meta_tracking">
+    (function(){
+      function safeFbq(){
+        return (typeof window.fbq === "function");
+      }
+
+      function bindClick(id, eventName, params){
+        var el = document.getElementById(id);
+        if(!el) return;
+        el.addEventListener("click", function(){
+          if(!safeFbq()) return;
+          try{
+            window.fbq("track", eventName, params || {});
+          }catch(e){}
+        });
+      }
+
+      // Primary CTAs
+      bindClick("waBtn", "Contact", {method:"whatsapp", placement:"hero"});
+      bindClick("msBtn", "Contact", {method:"messenger", placement:"hero"});
+      bindClick("contactWaBtn", "Contact", {method:"whatsapp", placement:"contact"});
+      bindClick("contactMsBtn", "Contact", {method:"messenger", placement:"contact"});
+      bindClick("footerWa", "Contact", {method:"whatsapp", placement:"footer"});
+      bindClick("footerMs", "Contact", {method:"messenger", placement:"footer"});
+
+      // Plan CTAs (Lead + content category)
+      bindClick("planCta12", "Lead", {plan:"12m"});
+      bindClick("planCta6", "Lead", {plan:"6m"});
+      bindClick("planCta1", "Lead", {plan:"1m"});
+      bindClick("planMs12", "Lead", {plan:"12m", method:"messenger"});
+      bindClick("planMs6", "Lead", {plan:"6m", method:"messenger"});
+      bindClick("planMs1", "Lead", {plan:"1m", method:"messenger"});
+
+      // Optional: sticky WhatsApp if present
+      bindClick("stickyWa", "Contact", {method:"whatsapp", placement:"sticky"});
+
+      // Scroll depth as an extra signal (optional, light)
+      var fired50 = false;
+      window.addEventListener("scroll", function(){
+        if(fired50) return;
+        var doc = document.documentElement;
+        var sc = (window.scrollY || doc.scrollTop || 0);
+        var h = (doc.scrollHeight - doc.clientHeight);
+        if(h > 0 && (sc / h) >= 0.5){
+          fired50 = true;
+          if(safeFbq()){
+            try{ window.fbq("trackCustom", "ScrollDepth", {depth:50}); }catch(e){}
+          }
+        }
+      }, {passive:true});
+    })();
+  </script>
+
+
+<script>
+(function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const langParam = params.get("lang");
+
+    if (langParam && ["sq","en","de"].includes(langParam)) {
+      localStorage.setItem("sansat_lang", langParam);
+      return;
+    }
+
+    if (localStorage.getItem("sansat_lang")) return;
+
+    const nav = (navigator.language || "").toLowerCase();
+    if (nav.startsWith("sq")) localStorage.setItem("sansat_lang", "sq");
+    else if (nav.startsWith("de")) localStorage.setItem("sansat_lang", "de");
+    else localStorage.setItem("sansat_lang", "en");
+
+  } catch (e) {}
+})();
+</script>
+
+
+<script>
+(function(){
+  const form = document.getElementById("waForm");
+  if(!form) return;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = (document.getElementById("waName")||{}).value || "";
+    const email = (document.getElementById("waEmail")||{}).value || "";
+    const subject = (document.getElementById("waSubject")||{}).value || "";
+    const msg = (document.getElementById("waMsg")||{}).value || "";
+
+    const lines = [];
+    if(name) lines.push("Name: " + name);
+    if(email) lines.push("Email: " + email);
+    if(subject) lines.push("Subject: " + subject);
+    if(msg) lines.push("Message: " + msg);
+
+    const text = encodeURIComponent(lines.join("
+"));
+    const waNumber = "38972698616";
+    const url = "https://wa.me/" + waNumber + "?text=" + text;
+    window.open(url, "_blank", "noopener");
+  });
+})();
+</script>
+
+<script>
+  (function(){
+    const PHONE_E164 = "38972698616"; // Sansat IPTV WhatsApp (no +)
+    const form = document.getElementById("waForm");
+    if(!form) return;
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = (document.getElementById("waName")?.value || "").trim();
+      const email = (document.getElementById("waEmail")?.value || "").trim();
+      const subject = (document.getElementById("waSubject")?.value || "").trim();
+      const msg = (document.getElementById("waMsg")?.value || "").trim();
+
+      // Basic validation (HTML required covers most, but keep for robustness)
+      if(!name || !msg){
+        try{ document.getElementById("waSendBtn")?.focus(); }catch(_){}
+        return;
+      }
+
+      const lines = [
+        "Hi Sansat IPTV,",
+        "",
+        "Name: " + name
+      ];
+      if(email)   lines.push("Email: " + email);
+      if(subject) lines.push("Subject: " + subject);
+      lines.push("");
+      lines.push("Message:");
+      lines.push(msg);
+
+      const text = encodeURIComponent(lines.join("
+"));
+      const url = "https://wa.me/" + PHONE_E164 + "?text=" + text;
+
+      // Open WhatsApp (new tab)
+      window.open(url, "_blank", "noopener");
+    });
+  })();
+</script>
+
+<script>
+  (function(){
+    const openBtn = document.getElementById("trialMini");
+    const modal = document.getElementById("trialModal");
+    const waBtn = document.getElementById("trialWaBtn");
+    if(!openBtn || !modal || !waBtn) return;
+
+    const PHONE_E164 = "38972698616"; // no +
+
+    function getLang(){
+      return (window.__sansatLang || document.documentElement.lang || "sq").toLowerCase();
+    }
+
+    function buildWhatsAppUrl(lang){
+      const L = (lang === "en" || lang === "de" || lang === "sq") ? lang : "sq";
+      const templates = {
+        sq: [
+          "Përshëndetje Sansat IPTV,",
+          "",
+          "Dua TEST 24 orë për IPTV.",
+          "Pajisja (Model/Platformë): ____",
+          "Device ID: ____",
+          "MAC Address: ____",
+          "",
+          "Faleminderit!"
+        ],
+        en: [
+          "Hi Sansat IPTV,",
+          "",
+          "I would like a 24-hour IPTV trial.",
+          "Device (Model/Platform): ____",
+          "Device ID: ____",
+          "MAC Address: ____",
+          "",
+          "Thank you!"
+        ],
+        de: [
+          "Hallo Sansat IPTV,",
+          "",
+          "Ich möchte einen 24-Stunden-IPTV-Test.",
+          "Gerät (Modell/Plattform): ____",
+          "Device ID: ____",
+          "MAC-Adresse: ____",
+          "",
+          "Danke!"
+        ]
+      };
+      const text = encodeURIComponent(templates[L].join("\n"));
+      return "https://wa.me/" + PHONE_E164 + "?text=" + text;
+    }
+
+    window.updateTrialWaLink = function(lang){
+      try{ waBtn.href = buildWhatsAppUrl(lang || getLang()); }catch(e){}
+    };
+
+    function openModal(){
+      try{ updateTrialWaLink(getLang()); }catch(e){}
+      modal.classList.add("isOpen");
+      modal.setAttribute("aria-hidden","false");
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      modal.classList.remove("isOpen");
+      modal.setAttribute("aria-hidden","true");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      try{ openBtn.focus(); }catch(e){}
+    }
+
+    openBtn.addEventListener("click", openModal);
+
+    modal.addEventListener("click", function(e){
+      const t = e.target;
+      if(t && t.getAttribute && t.getAttribute("data-close")==="true") closeModal();
+    });
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && modal.classList.contains("isOpen")) closeModal();
+    });
+  })();
+
+
+    // ---- Reviews (cards + modal) ----
+    const REVIEWS_DATA = {
+      en: {
+        sectionTitle: "What Our Customers Say",
+        sectionSub: "Don't just take our word for it - hear from our satisfied customers",
+        btn: "Read More Reviews",
+        modalTitle: "Customer Reviews",
+        feedbackTitle: "Leave your feedback",
+        fbName: "Name",
+        fbCity: "City",
+        fbRating: "Rating",
+        fbComment: "Comment",
+        fbSubmit: "Submit via WhatsApp",
+        fbNamePh: "Your name",
+        fbCityPh: "City",
+        fbMsgPh: "Write your feedback...",
+        items: [
+          {name:"James Wilson", city:"London", stars:5, msg:"I've tried several IPTV services, but Sansat IPTV is by far the best. The channel selection is amazing and the quality is superb."},
+          {name:"Sarah Thompson", city:"Manchester", stars:5, msg:"The customer service is exceptional. They guided me through the setup process and it works perfectly."},
+          {name:"David Clark", city:"Birmingham", stars:4, msg:"Great value for money. The channel selection is vast and HD quality is impressive."},
+          {name:"Emma Roberts", city:"Glasgow", stars:5, msg:"Reliable service and they keep adding new channels. Highly recommended."},
+          {name:"Oliver Brown", city:"Leeds", stars:5, msg:"No buffering during live sports. Very smooth experience."},
+          {name:"Sophia Evans", city:"Bristol", stars:5, msg:"Fast activation and clear instructions. Great support on WhatsApp."},
+          {name:"Liam Walker", city:"Liverpool", stars:5, msg:"Works on my Smart TV and Android box without issues."},
+          {name:"Mia Johnson", city:"Nottingham", stars:5, msg:"Excellent movies and series library. Easy to use."},
+          {name:"Ethan Harris", city:"Sheffield", stars:5, msg:"Streams load quickly and stay stable."},
+          {name:"Ava Scott", city:"Newcastle", stars:5, msg:"Best value subscription I've used. Recommended."}
+        ]
+      },
+      sq: {
+        sectionTitle: "Çfarë thonë klientët tanë",
+        sectionSub: "Mos u mbështet vetëm në fjalën tonë - dëgjo nga klientët tanë të kënaqur",
+        btn: "Lexo më shumë komente",
+        modalTitle: "Komentet e klientëve",
+        feedbackTitle: "Shkruaj feedback-un tënd",
+        fbName: "Emri",
+        fbCity: "Qyteti",
+        fbRating: "Vlerësimi",
+        fbComment: "Komenti",
+        fbSubmit: "Dërgo me WhatsApp",
+        fbNamePh: "Emri juaj",
+        fbCityPh: "Qyteti",
+        fbMsgPh: "Shkruaj feedback-un...",
+        items: [
+          {name:"Arben Krasniqi", city:"Prishtinë", stars:5, msg:"Aktivizim shumë i shpejtë dhe lista punon perfekt. Cilësi e lartë."},
+          {name:"Drita Mehmeti", city:"Shkup", stars:5, msg:"Suporti në WhatsApp ishte i shkëlqyer. Më ndihmuan për konfigurim."},
+          {name:"Besnik Ramadani", city:"Tetovë", stars:4, msg:"Shumë vlerë për çmimin. Kanale të shumta dhe HD i pastër."},
+          {name:"Elona Peci", city:"Tiranë", stars:5, msg:"Shërbim i besueshëm, punon pa ndërprerje në TV."},
+          {name:"Luan Selimi", city:"Gostivar", stars:5, msg:"Sportet live pa buffering. Përvojë shumë e mirë."},
+          {name:"Rina Toma", city:"Durrës", stars:5, msg:"Udhëzime të qarta dhe aktivizim brenda pak minutash."},
+          {name:"Gent Ibrahimi", city:"Kumanovë", stars:5, msg:"Punon mirë në Android Box dhe mobile. Shumë stabile."},
+          {name:"Sara Nela", city:"Elbasan", stars:5, msg:"Filma dhe seriale shumë të mira. VOD i pasur."},
+          {name:"Ilir Dervishi", city:"Vlorë", stars:5, msg:"Shërbim korrekt dhe përgjigje e shpejtë. E rekomandoj."},
+          {name:"Kujtim Hoxha", city:"Ferizaj", stars:5, msg:"Paketa 12 muaj ia vlen. Çmim i mirë dhe kualitet."}
+        ]
+      },
+      de: {
+        sectionTitle: "Was unsere Kunden sagen",
+        sectionSub: "Verlassen Sie sich nicht nur auf unser Wort - hören Sie von zufriedenen Kunden",
+        btn: "Mehr Bewertungen lesen",
+        modalTitle: "Kundenbewertungen",
+        feedbackTitle: "Feedback hinterlassen",
+        fbName: "Name",
+        fbCity: "Stadt",
+        fbRating: "Bewertung",
+        fbComment: "Kommentar",
+        fbSubmit: "Per WhatsApp senden",
+        fbNamePh: "Ihr Name",
+        fbCityPh: "Stadt",
+        fbMsgPh: "Schreiben Sie Ihr Feedback...",
+        items: [
+          {name:"Jonas Weber", city:"Berlin", stars:5, msg:"Sehr stabil und die Aktivierung ging schnell. Top Support."},
+          {name:"Sofia Schneider", city:"Hamburg", stars:5, msg:"Der Kundenservice ist hervorragend und hat bei der Einrichtung geholfen."},
+          {name:"David Klein", city:"München", stars:4, msg:"Gutes Preis-Leistungs-Verhältnis und viele Kanäle in HD."},
+          {name:"Emma Fischer", city:"Köln", stars:5, msg:"Zuverlässig und läuft ohne Unterbrechungen auf dem TV."},
+          {name:"Lukas Hoffmann", city:"Frankfurt", stars:5, msg:"Live-Sport ohne Buffering. Sehr zufrieden."},
+          {name:"Mia Bauer", city:"Stuttgart", stars:5, msg:"Schnelle Einrichtung und klare Anleitung."},
+          {name:"Noah Wagner", city:"Dortmund", stars:5, msg:"Funktioniert auf Android Box und Smartphone problemlos."},
+          {name:"Lea Becker", city:"Leipzig", stars:5, msg:"Viele Filme und Serien, leicht zu finden."},
+          {name:"Elias Schulz", city:"Dresden", stars:5, msg:"Streams laden schnell und bleiben stabil."},
+          {name:"Hannah König", city:"Bremen", stars:5, msg:"Beste Abo-Erfahrung bisher. Empfehlung."}
+        ]
+      }
+    };
+
+    function initials(name){
+      const parts = String(name||'').trim().split(/\s+/).filter(Boolean);
+      const a = (parts[0]||'').slice(0,1).toUpperCase();
+      const b = (parts[1]||parts[0]||'').slice(0,1).toUpperCase();
+      return (a + b).trim() || 'U';
+    }
+
+    function starsText(n){
+      const full = Math.max(0, Math.min(5, parseInt(n,10)||0));
+      return '★★★★★'.slice(0, full) + '☆☆☆☆☆'.slice(0, 5-full);
+    }
+
+    function escapeHtml(s){
+      return String(s||'').replace(/[&<>"']/g, (c)=>({
+        '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+      }[c]));
+    }
+
+    function renderReviewsSection(lang){
+      const data = REVIEWS_DATA[lang] || REVIEWS_DATA.sq;
+      const t = data;
+
+      const title = document.getElementById('reviewsSectionTitle');
+      const sub = document.getElementById('reviewsSectionSub');
+      const btn = document.getElementById('readMoreReviewsBtn');
+      if (title) title.textContent = t.sectionTitle;
+      if (sub) sub.textContent = t.sectionSub;
+      if (btn) btn.textContent = t.btn;
+
+      const cards = document.getElementById('reviewsCards');
+      if (cards){
+        const first4 = t.items.slice(0,4);
+        cards.innerHTML = first4.map((r)=>{
+          const ini = initials(r.name);
+          return `            <div class="reviewCard2">              <div class="reviewHead">                <div class="reviewAvatar">${escapeHtml(ini)}</div>                <div class="reviewMeta">                  <div class="reviewName">${escapeHtml(r.name)}</div>                  <div class="reviewCity">${escapeHtml(r.city)}</div>                </div>              </div>              <div class="reviewStars" aria-hidden="true">${starsText(r.stars)}</div>              <div class="reviewText">"${escapeHtml(r.msg)}"</div>            </div>`;
+        }).join('');
+      }
+
+      // Modal labels
+      const mt = document.getElementById('reviewsModalTitle');
+      const ft = document.getElementById('feedbackTitle');
+      const nL = document.getElementById('fbNameL');
+      const cL = document.getElementById('fbCityL');
+      const sL = document.getElementById('fbStarsL');
+      const mL = document.getElementById('fbMsgL');
+      const subBtn = document.getElementById('fbSubmit');
+      if (mt) mt.textContent = t.modalTitle;
+      if (ft) ft.textContent = t.feedbackTitle;
+      if (nL) nL.textContent = t.fbName;
+      if (cL) cL.textContent = t.fbCity;
+      if (sL) sL.textContent = t.fbRating;
+      if (mL) mL.textContent = t.fbComment;
+      if (subBtn) subBtn.textContent = t.fbSubmit;
+
+      const nI = document.getElementById('fbName');
+      const cI = document.getElementById('fbCity');
+      const mI = document.getElementById('fbMsg');
+      if (nI) nI.placeholder = t.fbNamePh;
+      if (cI) cI.placeholder = t.fbCityPh;
+      if (mI) mI.placeholder = t.fbMsgPh;
+
+      // All reviews inside modal
+      const all = document.getElementById('reviewsAll');
+      if (all){
+        all.innerHTML = t.items.map((r)=>{
+          return `            <div class="reviewMini">              <div class="top">                <div class="who">${escapeHtml(r.name)} • <span style="color:#6b7280;font-weight:700">${escapeHtml(r.city)}</span></div>                <div class="stars" aria-hidden="true">${starsText(r.stars)}</div>              </div>              <div class="msg">"${escapeHtml(r.msg)}"</div>            </div>`;
+        }).join('');
+      }
+    }
+
+    function openReviewsModal(){
+      const overlay = document.getElementById('reviewsModal');
+      if (!overlay) return;
+      overlay.classList.add('isOpen');
+      overlay.setAttribute('aria-hidden','false');
+      document.documentElement.style.overflow = 'hidden';
+    }
+
+    function closeReviewsModal(){
+      const overlay = document.getElementById('reviewsModal');
+      if (!overlay) return;
+      overlay.classList.remove('isOpen');
+      overlay.setAttribute('aria-hidden','true');
+      document.documentElement.style.overflow = '';
+    }
+
+    
+
+    (function hookPrivacy(){
+      const a = document.getElementById('footerPrivacy');
+      const close = document.getElementById('privacyClose');
+      const overlay = document.getElementById('privacyModal');
+      const backdrop = overlay ? overlay.querySelector('[data-close="privacy"]') : null;
+      if (a) a.addEventListener('click', (e)=>{ e.preventDefault(); openPrivacyModal(); });
+      if (close) close.addEventListener('click', closePrivacyModal);
+      if (backdrop) backdrop.addEventListener('click', closePrivacyModal);
+      if (overlay) overlay.addEventListener('click', (e)=>{ if (e.target === overlay) closePrivacyModal(); });
+      document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closePrivacyModal(); });
+    })();
+
+    (function hookReviews(){
+      const btn = document.getElementById('readMoreReviewsBtn');
+      const close = document.getElementById('reviewsModalClose');
+      const overlay = document.getElementById('reviewsModal');
+      if (btn) btn.addEventListener('click', openReviewsModal);
+      if (close) close.addEventListener('click', closeReviewsModal);
+      if (overlay) overlay.addEventListener('click', (e)=>{ if (e.target === overlay) closeReviewsModal(); });
+      document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeReviewsModal(); });
+
+      const submit = document.getElementById('fbSubmit');
+      if (submit) submit.addEventListener('click', ()=>{
+        const lang = window.__sansatLang || 'sq';
+        const data = REVIEWS_DATA[lang] || REVIEWS_DATA.sq;
+        const name = (document.getElementById('fbName')||{}).value || '';
+        const city = (document.getElementById('fbCity')||{}).value || '';
+        const stars = (document.getElementById('fbStars')||{}).value || '5';
+        const msg = (document.getElementById('fbMsg')||{}).value || '';
+        const base = 'https://wa.me/38972698616?text=';
+        const label = (lang==='de') ? 'Feedback' : (lang==='en') ? 'Feedback' : 'Feedback';
+        const text = `${label} (%23SansatIPTV)
+Name: ${name}
+City: ${city}
+Rating: ${stars}/5
+Comment: ${msg}`;
+        window.open(base + encodeURIComponent(text), '_blank');
+      });
+    })();
+
+</script>
+</body>
+</html>
