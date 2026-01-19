@@ -176,6 +176,21 @@
     .lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
 
     .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px}
+
+    .trialMini{
+      display:inline-flex;align-items:center;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(37,99,235,.20);
+      background:rgba(255,255,255,.86);
+      color:var(--text);font-weight:950;font-size:13px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+      margin:8px 0 2px;
+    }
+    :root[data-theme="dark"] .trialMini{
+      background:rgba(15,23,42,.45);
+      border-color:rgba(148,163,184,.22);
+      color:rgba(226,232,240,.95);
+    }
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:12px 14px;border-radius:14px;font-weight:950;
@@ -1349,6 +1364,9 @@ body.dark .logoMark,
             Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.
           </p>
 
+          <div class="trialMini" id="trialMini">24 hr Free Trial</div>
+
+          
           <div class="ctaRow" aria-label="Primary actions">
             <a class="btn primary" id="waBtn" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn secondary" id="msBtn" href="https://m.me/sansatiptv" target="_blank" rel="noopener">Messenger</a>
@@ -1356,40 +1374,21 @@ body.dark .logoMark,
           </div>
 
           <div class="trustBullets" aria-label="Trust bullets">
-            <div class="tbullet" id="tb1">Aktivizim brenda minutash</div>
-
-          <div class="miniStats" aria-label="Quick stats">
-            <div class="mstat"><span class="mDot"></span><span id="hs1">Aktivizim i shpejtë</span></div>
-            <div class="mstat"><span class="mDot"></span><span id="hs2">Udhëzim sipas pajisjes</span></div>
-            <div class="mstat"><span class="mDot"></span><span id="hs3">Rimbursim 30 ditë</span></div>
-          </div>
-
+            <div class="miniStats" aria-label="Quick stats">
+              <div class="mstat"><span class="mDot"></span><span id="hs1">Aktivizim i shpejtë</span></div>
+              <div class="mstat"><span class="mDot"></span><span id="hs2">Udhëzim sipas pajisjes</span></div>
+              <div class="mstat"><span class="mDot"></span><span id="hs3">Rimbursim 30 ditë</span></div>
+            </div>
             <div class="tbullet" id="tb2">Mbështetje në WhatsApp/Messenger</div>
             <a class="tbullet link" id="tb3" href="#refund">30 ditë rimbursim i plotë</a>
           </div>
 
-          <div class="pill" id="note" style="display:inline-flex; margin-top:2px">
-            Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.
-          </div>
         </div>
 
         <div class="heroCard">
           <img class="heroImg" src="soccer_banner.png" alt="Sansat IPTV cover banner" loading="eager">
 </div>
       </section>
-
-      <!-- 24H TEST CTA -->
-      <section class="section testCta" id="test24h" aria-label="Test 24 orë">
-        <button type="button" class="testCtaLink"  id="openTrialModal">
-          <div class="testCtaInner">
-            <div class="testCtaBadge" id="testCtaBadge">TEST 24 ORË</div>
-            <h2 class="testCtaTitle" id="testCtaTitle">Aktivizo testin falas për IPTV (24 orë)</h2>
-            <p class="testCtaSub" id="testCtaSub">Kliko këtu dhe na dërgo në WhatsApp: Device ID dhe MAC Address për aktivizim.</p>
-            <div class="testCtaHint" id="testCtaHint">Kliko për WhatsApp</div>
-          </div>
-        </button>
-      </section>
-
 
       <!-- TRUST / TRANSPARENCY -->
       
@@ -1943,7 +1942,9 @@ body.dark .logoMark,
       sq: {
         tagline:"Premium • Aktivizim i shpejtë",
         badge:"Aktivizim IBO Player falas (normal 10€)",
-        h1:"IPTV Premium për Sport, Filma & Seriale",
+        
+        trialMini:"Provë falas 24 orë",
+h1:"IPTV Premium për Sport, Filma & Seriale",
         lead:"Aktivizim i shpejtë, udhëzime konfigurimi për pajisjen tënde dhe rimbursim i plotë brenda 30 ditësh (sipas kushteve).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
@@ -2149,7 +2150,9 @@ body.dark .logoMark,
       en: {
         tagline:"Premium • Fast activation",
         badge:"Free IBO Player activation (normally €10)",
-        h1:"Premium IPTV for Sports, Movies & Series",
+        
+        trialMini:"24 hr Free Trial",
+h1:"Premium IPTV for Sports, Movies & Series",
         lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
@@ -2352,7 +2355,9 @@ body.dark .logoMark,
       de: {
         tagline:"Premium • Schnelle Aktivierung",
         badge:"IBO Player Aktivierung gratis (normal 10€)",
-        h1:"Premium IPTV für Sport, Filme & Serien",
+        
+        trialMini:"24 Std. Gratis-Test",
+h1:"Premium IPTV für Sport, Filme & Serien",
         lead:"Schnelle Aktivierung, gerätespezifische Einrichtungshilfe und volle 30‑Tage‑Erstattung (Bedingungen gelten).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
@@ -2592,6 +2597,7 @@ body.dark .logoMark,
       "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote",
       "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn",
       "buyNow12", "buyNow6", "buyNow1",
+      "trialMini",
       "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint",
       "trialTitle",
       "trialLead",
