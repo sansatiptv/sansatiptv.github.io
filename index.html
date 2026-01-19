@@ -1336,6 +1336,24 @@ body.dark .logoMark,
 /* FAQ heading styles */
 .faqTitle{font-weight:800;margin:0 0 6px}
 .faqSubtitle{font-size:0.95rem;font-weight:400;opacity:.8;margin:0 0 18px}
+
+/* Privacy Policy modal */
+.privacyModal{position:fixed; inset:0; display:none; z-index:10050; align-items:center; justify-content:center;}
+.privacyModal.isOpen{display:flex;}
+.privacyBackdrop{position:absolute; inset:0; background:rgba(2,6,23,.65); backdrop-filter: blur(4px);}
+.privacyPanel{position:relative; width:min(820px, calc(100vw - 28px)); margin: 6vh auto 0; background:#fff;
+  border-radius:22px; border:1px solid rgba(226,232,240,.95); box-shadow:0 30px 80px rgba(0,0,0,.35);
+  padding: 22px 18px 18px; max-height: 82vh; overflow:auto;}
+.privacyClose{position:absolute; right:12px; top:10px; width:40px; height:40px; border-radius:12px;
+  border:1px solid rgba(226,232,240,.95); background:rgba(15,23,42,.03); color:rgba(15,23,42,.85);
+  font-weight:950; font-size:22px; cursor:pointer;}
+.privacyTitle{margin: 0 0 10px; font-size: 26px; font-weight: 1000; color: var(--text);}
+.privacyBody{color: var(--muted); font-weight: 750; line-height: 1.6;}
+.privacyBody h4{margin:16px 0 6px; color:var(--text); font-weight:950;}
+.privacyBody ul{margin:8px 0 0 18px;}
+:root[data-theme="dark"] .privacyPanel{background: rgba(15,23,42,.92); border-color: rgba(148,163,184,.18);}
+:root[data-theme="dark"] .privacyClose{background: rgba(255,255,255,.06); border-color: rgba(148,163,184,.18); color: rgba(226,232,240,.9);}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2103,7 +2121,8 @@ body.dark .logoMark,
             <a href="#plans" id="footerPlans">Paketa</a>
             <a href="#refund" id="footerRefund">Rimbursimi</a>
             <a href="#contact" id="footerContact">Kontakt</a>
-          </div>
+            <a href="#" id="footerPrivacy" data-i18n="footerPrivacy">Privacy Policy</a>
+</div>
 
           <div class="footerCtas">
             <a class="btn primary" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20dua%20aktivizim.%20Paketa%3A%20%5B12%2F6%2F1%5D%20muaj.%20Pajisja%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" id="footerWa">WhatsApp</a>
@@ -2113,13 +2132,69 @@ body.dark .logoMark,
 
 
 </footer>
-      </body>
+      
+<!-- Privacy Policy Modal -->
+<div class="privacyModal" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="privacyBackdrop" data-close="privacy"></div>
+  <div class="privacyPanel" role="document">
+    <button class="privacyClose" id="privacyClose" type="button" aria-label="Close" data-close="privacy">×</button>
+    <h3 class="privacyTitle" id="privacyTitle" data-i18n="privacyTitle">Privacy Policy</h3>
+    <div class="privacyBody" id="privacyBody" data-i18n-html="privacyBody">
+      <p>We respect your privacy.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openPrivacyModal(){
+  const overlay = document.getElementById('privacyModal');
+  if(!overlay) return;
+  overlay.classList.add('isOpen');
+  overlay.setAttribute('aria-hidden','false');
+  document.documentElement.style.overflow='hidden';
+}
+function closePrivacyModal(){
+  const overlay = document.getElementById('privacyModal');
+  if(!overlay) return;
+  overlay.classList.remove('isOpen');
+  overlay.setAttribute('aria-hidden','true');
+  document.documentElement.style.overflow='';
+}
+(function hookPrivacy(){
+  const a = document.getElementById('footerPrivacy');
+  const overlay = document.getElementById('privacyModal');
+  if(a) a.addEventListener('click', (e)=>{ e.preventDefault(); openPrivacyModal(); });
+  if(!overlay) return;
+  overlay.querySelectorAll('[data-close="privacy"]').forEach(el=> el.addEventListener('click', closePrivacyModal));
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePrivacyModal(); });
+})();
+</script>
+
+</body>
 </html>
 
 
   <script>
     const i18n = {
       sq: {
+        privacyBody:"<p>Sansat IPTV respekton privatësinë tuaj dhe angazhohet për mbrojtjen e të dhënave personale.</p>
+<h4>Çfarë të dhënash mbledhim</h4>
+<ul>
+  <li>Emër (opsional)</li>
+  <li>MAC Address ose Device ID për aktivizim</li>
+  <li>Informacion kontakti (WhatsApp / Messenger)</li>
+</ul>
+<h4>Cookies & Pixel</h4>
+<p>Faqja mund të përdorë cookies teknike dhe pixel marketingu (p.sh. Meta Pixel) për analiza trafiku dhe optimizim reklamash. Ju mund të kufizoni cookies përmes cilësimeve të shfletuesit.</p>
+<h4>Ndarja e të dhënave</h4>
+<p>Të dhënat nuk shiten. Ato mund të ndahen vetëm kur është teknikisht e nevojshme për ofrimin e shërbimit ose kur kërkohet nga ligji.</p>
+<h4>Ruajtja & siguria</h4>
+<p>Të dhënat përdoren vetëm për qëllime shërbimi dhe ruhen me masa sigurie të arsyeshme.</p>
+<h4>Të drejtat tuaja</h4>
+<p>Mund të kërkoni korrigjim ose fshirje të të dhënave duke na kontaktuar në WhatsApp/Messenger.</p>",
+        privacyTitle:"Politika e Privatësisë",
+        footerPrivacy:"Politika e Privatësisë",
         p12discount:"Zbritje",
         faqSub:"Gjeni përgjigje për pyetje të zakonshme rreth shërbimit tonë IPTV",
         footerTagline:"Aktivizim i shpejtë • Mbështetje direkte",
@@ -2345,6 +2420,23 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
     },
 
       en: {
+        privacyBody:"<p>Sansat IPTV respects your privacy and is committed to protecting your personal data.</p>
+<h4>Data we collect</h4>
+<ul>
+  <li>Name (optional)</li>
+  <li>MAC Address or Device ID for activation</li>
+  <li>Contact details (WhatsApp / Messenger)</li>
+</ul>
+<h4>Cookies & Tracking Pixels</h4>
+<p>We may use technical cookies and marketing pixels (e.g., Meta Pixel) to analyze traffic and improve advertising performance. You can restrict cookies via your browser settings.</p>
+<h4>Data sharing</h4>
+<p>We do not sell your data. We may share it only when technically necessary to deliver the service or when required by law.</p>
+<h4>Retention & security</h4>
+<p>Data is used strictly for service purposes and stored with reasonable security measures.</p>
+<h4>Your rights</h4>
+<p>You may request correction or deletion of your data by contacting us via WhatsApp/Messenger.</p>",
+        privacyTitle:"Privacy Policy",
+        footerPrivacy:"Privacy Policy",
         p12discount:"Discount",
         faqSub:"Find answers to common questions about our IPTV service",
         footerTagline:"Fast activation • Direct support",
@@ -2567,6 +2659,23 @@ h1:"Premium IPTV for Sports, Movies & Series",
 },
 
       de: {
+        privacyBody:"<p>Sansat IPTV respektiert Ihre Privatsphäre und verpflichtet sich zum Schutz Ihrer personenbezogenen Daten.</p>
+<h4>Welche Daten wir erheben</h4>
+<ul>
+  <li>Name (optional)</li>
+  <li>MAC‑Adresse oder Geräte‑ID zur Aktivierung</li>
+  <li>Kontakt (WhatsApp / Messenger)</li>
+</ul>
+<h4>Cookies & Tracking‑Pixel</h4>
+<p>Wir können technische Cookies und Marketing‑Pixel (z. B. Meta Pixel) zur Analyse und Optimierung unserer Werbung verwenden. Cookies können in den Browser‑Einstellungen eingeschränkt werden.</p>
+<h4>Datenweitergabe</h4>
+<p>Wir verkaufen keine Daten. Eine Weitergabe erfolgt nur, wenn dies technisch notwendig ist oder gesetzlich vorgeschrieben wird.</p>
+<h4>Speicherung & Sicherheit</h4>
+<p>Daten werden ausschließlich für Servicezwecke genutzt und mit angemessenen Sicherheitsmaßnahmen gespeichert.</p>
+<h4>Ihre Rechte</h4>
+<p>Sie können die Berichtigung oder Löschung Ihrer Daten über WhatsApp/Messenger anfordern.</p>",
+        privacyTitle:"Datenschutz",
+        footerPrivacy:"Datenschutz",
         p12discount:"Rabatt",
         faqSub:"Finden Sie Antworten auf häufige Fragen zu unserem IPTV‑Service",
         footerTagline:"Schnelle Aktivierung • Direkter Support",
@@ -3396,5 +3505,44 @@ Comment: ${msg}`;
     })();
 
 </script>
+
+<!-- Privacy Policy Modal -->
+<div class="privacyModal" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="privacyBackdrop" data-close="privacy"></div>
+  <div class="privacyPanel" role="document">
+    <button class="privacyClose" id="privacyClose" type="button" aria-label="Close" data-close="privacy">×</button>
+    <h3 class="privacyTitle" id="privacyTitle" data-i18n="privacyTitle">Privacy Policy</h3>
+    <div class="privacyBody" id="privacyBody" data-i18n-html="privacyBody">
+      <p>We respect your privacy.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openPrivacyModal(){
+  const overlay = document.getElementById('privacyModal');
+  if(!overlay) return;
+  overlay.classList.add('isOpen');
+  overlay.setAttribute('aria-hidden','false');
+  document.documentElement.style.overflow='hidden';
+}
+function closePrivacyModal(){
+  const overlay = document.getElementById('privacyModal');
+  if(!overlay) return;
+  overlay.classList.remove('isOpen');
+  overlay.setAttribute('aria-hidden','true');
+  document.documentElement.style.overflow='';
+}
+(function hookPrivacy(){
+  const a = document.getElementById('footerPrivacy');
+  const overlay = document.getElementById('privacyModal');
+  if(a) a.addEventListener('click', (e)=>{ e.preventDefault(); openPrivacyModal(); });
+  if(!overlay) return;
+  overlay.querySelectorAll('[data-close="privacy"]').forEach(el=> el.addEventListener('click', closePrivacyModal));
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePrivacyModal(); });
+})();
+</script>
+
 </body>
 </html>
