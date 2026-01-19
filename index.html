@@ -1235,29 +1235,6 @@ body.dark .logoMark,
 
 
 
-
-
-/* ================================
-   PRIVACY POLICY MODAL
-   ================================ */
-.privacyModal{position:fixed; inset:0; display:none; z-index:12000;}
-.privacyModal.isOpen{display:block;}
-.privacyBackdrop{position:absolute; inset:0; background:rgba(2,6,23,.55); backdrop-filter: blur(4px);}
-.privacyPanel{position:relative; width:min(820px, calc(100vw - 28px)); max-height: calc(100vh - 80px); overflow:auto;
-  margin: clamp(14px, 6vh, 38px) auto 0; background:#fff; border-radius:22px; border:1px solid rgba(226,232,240,.95);
-  box-shadow: 0 30px 80px rgba(0,0,0,.35); padding: 22px 18px 18px;}
-.privacyClose{position:absolute; right:12px; top:10px; width:40px; height:40px; border-radius:12px; border:1px solid rgba(226,232,240,.95);
-  background:rgba(15,23,42,.03); color:rgba(15,23,42,.85); font-weight:950; font-size:22px; cursor:pointer;}
-.privacyTitle{margin: 6px 0 6px; font-size: 30px; line-height: 1.15; letter-spacing: -0.4px; font-weight: 1000; color: var(--text);} 
-.privacyUpdated{margin:0 0 14px; color: var(--muted); font-weight: 850; font-size: 13px;}
-.privacyBody h3{margin:14px 0 8px; font-size:16px; color: var(--text);} 
-.privacyBody p, .privacyBody li{color: var(--muted); font-weight: 800; line-height: 1.6;}
-.privacyBody ul{margin:8px 0 0 18px;}
-.privacyBody a{color: var(--brand); text-decoration: underline;}
-:root[data-theme="dark"] .privacyPanel{background: rgba(15,23,42,.92); border-color: rgba(148,163,184,.18);} 
-:root[data-theme="dark"] .privacyClose{background: rgba(255,255,255,.06); border-color: rgba(148,163,184,.18); color: rgba(226,232,240,.9);} 
-
-
 /* ================================
    24H TRIAL MODAL (POPUP)
    ================================ */
@@ -1288,6 +1265,13 @@ body.dark .logoMark,
 #h1 .tMain{color:#0b1220 !important;font-weight:900;}
 #h1 .tAccent{color:#f97316 !important;font-weight:900;}
 #h1{font-weight:900;}
+
+/* Footer reviews */
+.footerReviewsWrap{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);}
+.footerReviewsWrap h3{margin:0 0 6px;font-size:16px;color:rgba(255,255,255,.92);}
+.footerReviewsWrap .muted{color:rgba(255,255,255,.72);}
+.footerReviewsWrap .reviewCard{background:rgba(255,255,255,.95);}
+.footerReviewsWrap .reviewCard .stars{letter-spacing:1px;font-size:14px;line-height:1;}
 
 
 /* Hero split title colors */
@@ -1348,6 +1332,10 @@ body.dark .logoMark,
   .feedbackGrid{grid-template-columns:1fr;}
 }
 
+
+/* FAQ heading styles */
+.faqTitle{font-weight:800;margin:0 0 6px}
+.faqSubtitle{font-size:0.95rem;font-weight:400;opacity:.8;margin:0 0 18px}
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1503,7 +1491,7 @@ body.dark .logoMark,
             <div class="planPrice" aria-label="Çmimi">
               <span class="oldPrice" aria-hidden="true">79€</span>
               <span class="newPrice">69€</span>
-              <span class="priceNote" id="p12priceNote">Zbritje</span>
+              <span class="priceNote" id="p12priceNote" data-i18n="p12discount">Zbritje</span>
             </div>
 
             
@@ -1826,7 +1814,8 @@ body.dark .logoMark,
 
       <!-- FAQ -->
       <section class="section" id="faq">
-        <h2 id="faqH">FAQ</h2>
+        <h2 id="faqH" class="faqTitle" data-i18n="faqH">Frequently Asked Questions</h2>
+        <div class="faqSubtitle" id="faqSub" data-i18n="faqSub">Find answers to common questions about our IPTV service</div>
 
         <details>
           <summary id="f1q">Çfarë interneti rekomandohet?</summary>
@@ -2106,7 +2095,7 @@ body.dark .logoMark,
         </div>
             <div>
               <div class="footerName">Sansat IPTV</div>
-              <div class="footerSmall">Aktivizim i shpejtë • Mbështetje direkte</div>
+              <div class="footerSmall" id="footerTagline" data-i18n="footerTagline">Aktivizim i shpejtë • Mbështetje direkte</div>
             </div>
           </div>
 
@@ -2114,7 +2103,6 @@ body.dark .logoMark,
             <a href="#plans" id="footerPlans">Paketa</a>
             <a href="#refund" id="footerRefund">Rimbursimi</a>
             <a href="#contact" id="footerContact">Kontakt</a>
-            <a href="#" id="footerPrivacy" role="button">Privacy Policy</a>
           </div>
 
           <div class="footerCtas">
@@ -2124,58 +2112,39 @@ body.dark .logoMark,
         </div>
 
         <div style="margin-top:14px">
-          
-
+          <div class="ratingRow" aria-label="Customer rating">
+            <div class="stars starsBig" aria-hidden="true">★★★★★</div>
+            <div class="ratingText" id="ratingText">Rated by our customers</div>
           </div>
-
-
-        <!-- Privacy Policy Modal -->
-        <div class="privacyModal" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
-          <div class="privacyBackdrop" data-close="privacy"></div>
-          <div class="privacyPanel" role="document">
-            <button class="privacyClose" id="privacyClose" aria-label="Close">×</button>
-            <h2 class="privacyTitle" id="privacyTitle">Privacy Policy</h2>
-            <p class="privacyUpdated" id="privacyUpdated">Last updated: January 19, 2026</p>
-            <div class="privacyBody" id="privacyBody">
-              <!-- injected by i18n -->
-            </div>
+Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Stable streams and fast support.<span>Nora K.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Great sports package, no buffering.<span>Daniel P.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Easy setup with clear instructions.<span>Mila S.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Best value for money.<span>Chris T.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Works on mobile and Android box smoothly.<span>Sara N.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Channels load quickly.<span>Ethan R.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Support answered within minutes.<span>Liam B.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>High quality movies and series.<span>Olivia H.</span></div>
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Reliable service, recommended.<span>Noah D.</span></div>
           </div>
         </div>
 
-</footer>
 
-<script>
+        <div class="footerBottom" id="legalText">
+          Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
+          <span class="footerCopy">© 2026 Sansat IPTV</span>
+        </div>
+</footer>
+      </body>
+</html>
+
+
+  <script>
     const i18n = {
       sq: {
-        footerPrivacy:"Politika e Privatësisë",
-        privacyTitle:"Politika e Privatësisë",
-        privacyUpdated:"Përditësuar: 19 Janar 2026",
-        privacyBodyHtml:`<h3>Qëllimi</h3>
-<p>Kjo Politikë Privatësie shpjegon si Sansat IPTV trajton të dhënat kur ju na kontaktoni për aktivizim ose mbështetje.</p>
-<h3>Çfarë të dhënash mund të mblidhen</h3>
-<ul>
-  <li>Informacion kontakti (p.sh. emër, numër telefoni ose profil Messenger) që ju e dërgoni vullnetarisht.</li>
-  <li>Informacion teknik për aktivizim (p.sh. MAC Address). Ne kërkojmë MAC Address dhe jo Device ID.</li>
-  <li>Mesazhe/komunikime mbështetjeje për të zgjidhur kërkesat tuaja.</li>
-</ul>
-<h3>Si përdoren të dhënat</h3>
-<ul>
-  <li>Për aktivizim të shërbimit dhe verifikim të pajtueshmërisë së pajisjes.</li>
-  <li>Për mbështetje teknike dhe komunikim lidhur me porosinë.</li>
-  <li>Për përmirësim të përvojës së klientit (pa profilizim të avancuar).</li>
-</ul>
-<h3>Shpërndarja e të dhënave</h3>
-<p>Nuk shesim të dhëna personale. Mund të përdorim platforma komunikimi (WhatsApp/Messenger) sipas zgjedhjes suaj, të cilat kanë politikat e tyre të privatësisë.</p>
-<h3>Ruajtja</h3>
-<p>Ruajmë të dhënat vetëm aq sa nevojitet për aktivizim, mbështetje dhe kërkesa ligjore. Ju mund të kërkoni fshirje kur është e aplikueshme.</p>
-<h3>Të drejtat tuaja</h3>
-<ul>
-  <li>Qasje, korrigjim dhe fshirje (kur lejohet).</li>
-  <li>Kundërshtim ndaj përdorimit për marketing (nëse zbatohet).</li>
-</ul>
-<h3>Kontakt</h3>
-<p>Për kërkesa privatësie, na kontaktoni në WhatsApp ose Messenger.</p>` ,
-
+        p12discount:"Zbritje",
+        faqSub:"Gjeni përgjigje për pyetje të zakonshme rreth shërbimit tonë IPTV",
+        footerTagline:"Aktivizim i shpejtë • Mbështetje direkte",
         tagline:"Premium • Aktivizim i shpejtë",
         badge:"Aktivizim IBO Player falas (normal 10€)",
         
@@ -2400,35 +2369,9 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
     },
 
       en: {
-        footerPrivacy:"Privacy Policy",
-        privacyTitle:"Privacy Policy",
-        privacyUpdated:"Last updated: January 19, 2026",
-        privacyBodyHtml:`<h3>Purpose</h3>
-<p>This Privacy Policy explains how Sansat IPTV processes information when you contact us for activation or support.</p>
-<h3>Data we may collect</h3>
-<ul>
-  <li>Contact details (e.g., name, phone number, Messenger profile) you voluntarily provide.</li>
-  <li>Technical activation details (e.g., MAC Address). We request MAC Address, not Device ID.</li>
-  <li>Support communications to resolve your requests.</li>
-</ul>
-<h3>How we use data</h3>
-<ul>
-  <li>To activate the service and verify device compatibility.</li>
-  <li>To provide technical support and order-related communication.</li>
-  <li>To improve customer experience (no advanced profiling).</li>
-</ul>
-<h3>Sharing</h3>
-<p>We do not sell personal data. If you contact us via WhatsApp/Messenger, those platforms process data under their own privacy policies.</p>
-<h3>Retention</h3>
-<p>We keep data only as long as needed for activation, support, and legal requirements. You may request deletion where applicable.</p>
-<h3>Your rights</h3>
-<ul>
-  <li>Access, correction, and deletion (where permitted).</li>
-  <li>Opt-out of marketing (if applicable).</li>
-</ul>
-<h3>Contact</h3>
-<p>For privacy requests, contact us via WhatsApp or Messenger.</p>` ,
-
+        p12discount:"Discount",
+        faqSub:"Find answers to common questions about our IPTV service",
+        footerTagline:"Fast activation • Direct support",
         tagline:"Premium • Fast activation",
         badge:"Free IBO Player activation (normally €10)",
         
@@ -2590,6 +2533,7 @@ h1:"Premium IPTV for Sports, Movies & Series",
         refundLink:"View refund policy",
 
 
+        legal:"Note: A stable internet connection is required. Usage must comply with local laws and broadcasting rights.",
         ratingText:"Rated by our customers",
         p12f4:"24/7 Support via WhatsApp",
         p12f5:"Free Setup Assistance",
@@ -2649,35 +2593,9 @@ h1:"Premium IPTV for Sports, Movies & Series",
 },
 
       de: {
-        footerPrivacy:"Datenschutz",
-        privacyTitle:"Datenschutz",
-        privacyUpdated:"Zuletzt aktualisiert: 19. Januar 2026",
-        privacyBodyHtml:`<h3>Zweck</h3>
-<p>Diese Datenschutzerklärung beschreibt, wie Sansat IPTV Informationen verarbeitet, wenn Sie uns für Aktivierung oder Support kontaktieren.</p>
-<h3>Welche Daten wir erheben können</h3>
-<ul>
-  <li>Kontaktdaten (z. B. Name, Telefonnummer, Messenger-Profil), die Sie freiwillig senden.</li>
-  <li>Technische Aktivierungsdaten (z. B. MAC-Adresse). Wir fragen nach der MAC-Adresse, nicht nach der Device ID.</li>
-  <li>Support-Kommunikation zur Bearbeitung Ihrer Anfrage.</li>
-</ul>
-<h3>Verwendung der Daten</h3>
-<ul>
-  <li>Zur Aktivierung des Dienstes und Prüfung der Geräte-Kompatibilität.</li>
-  <li>Für technischen Support und auftragsbezogene Kommunikation.</li>
-  <li>Zur Verbesserung der Kundenerfahrung (keine erweiterte Profilbildung).</li>
-</ul>
-<h3>Weitergabe</h3>
-<p>Wir verkaufen keine personenbezogenen Daten. Bei Kontakt über WhatsApp/Messenger gelten deren eigene Datenschutzrichtlinien.</p>
-<h3>Speicherdauer</h3>
-<p>Wir speichern Daten nur so lange wie nötig für Aktivierung, Support und gesetzliche Pflichten. Löschung kann, soweit anwendbar, beantragt werden.</p>
-<h3>Ihre Rechte</h3>
-<ul>
-  <li>Auskunft, Berichtigung und Löschung (soweit zulässig).</li>
-  <li>Widerspruch gegen Marketing (falls zutreffend).</li>
-</ul>
-<h3>Kontakt</h3>
-<p>Für Datenschutzanfragen kontaktieren Sie uns über WhatsApp oder Messenger.</p>` ,
-
+        p12discount:"Rabatt",
+        faqSub:"Finden Sie Antworten auf häufige Fragen zu unserem IPTV‑Service",
+        footerTagline:"Schnelle Aktivierung • Direkter Support",
         tagline:"Premium • Schnelle Aktivierung",
         badge:"IBO Player Aktivierung gratis (normal 10€)",
         
@@ -2901,7 +2819,7 @@ h1:"Premium IPTV für Sport, Filme & Serien",
     }
     };
 
-    const ids=["tagline", "badge", "h1", "lead", "supportPill", "note", "calloutD", "goPlansBtn", "navPlans", "navHow", "navSetup", "navFaq", "navContact", "trustH", "trustLead", "trust1t", "trust1d", "trust2t", "trust2d", "trust3t", "trust3d", "trust4t", "trust4d", "plansTitle", "plansSubtitle", "p12", "p12d", "p12psych", "p12pm", "p12pmLabel", "p12valueLabel", "p12value", "p6", "p6d", "p6psych", "p6pm", "p6pmLabel", "p6valueLabel", "p6value", "p1", "p1d", "p1psych", "p1pm", "p1pmLabel", "p1valueLabel", "p1value", "planCta12", "planCta6", "planCta1", "planMs12", "planMs6", "planMs1", "plansPush", "whyH", "why1t", "why1d", "why2t", "why2d", "why3t", "why3d", "why4t", "why4d", "devicesH", "dev1t", "dev1d", "dev2t", "dev2d", "howH", "s1t", "s1d", "s2t", "s2d", "s3t", "s3d", "setupH", "setupLead", "st1t", "st1d", "st2t", "st2d", "st3t", "st3d", "iboH", "ibo1t", "ibo1d", "ibo2t", "ibo2d", "ibo3t", "ibo3d", "iboNote", "macPreviewH", "macPreviewNote", "contactH", "contactLead", "contact1t", "contact1d", "contact2t", "contact2d", "contactWaBtn", "contactMsBtn", "faqH", "f1q", "f1a", "f2q", "f2a", "f3q", "f3a", "f4q", "f4a", "f5q", "f5a", "f6q", "f6a", "f7q", "f7a", "navRefund", "refundH", "refundLead", "r1t", "r1d", "r2t", "r2d", "r3t", "r3d", "r4t", "r4d", "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon", "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerPrivacy", "footerWa", "footerMs", "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3", "refundLink", "themeLabel", "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5", "payTitle", "paySub", "payCard", "payPaypal", "payBank", "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote", "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn", "buyNow12", "buyNow6", "buyNow1", "trialMini", "ratingText", "reviewsTitle", "reviewsSub", "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint", "trialTitle", "trialLead", "trialGet", "trialLi1", "trialLi2", "trialLi3", "trialLi4", "trialLi5", "trialWaBtn", "trialFoot"]
+    const ids=["tagline", "badge", "h1", "lead", "supportPill", "note", "calloutD", "goPlansBtn", "navPlans", "navHow", "navSetup", "navFaq", "navContact", "trustH", "trustLead", "trust1t", "trust1d", "trust2t", "trust2d", "trust3t", "trust3d", "trust4t", "trust4d", "plansTitle", "plansSubtitle", "p12", "p12d", "p12psych", "p12pm", "p12pmLabel", "p12valueLabel", "p12value", "p6", "p6d", "p6psych", "p6pm", "p6pmLabel", "p6valueLabel", "p6value", "p1", "p1d", "p1psych", "p1pm", "p1pmLabel", "p1valueLabel", "p1value", "planCta12", "planCta6", "planCta1", "planMs12", "planMs6", "planMs1", "plansPush", "whyH", "why1t", "why1d", "why2t", "why2d", "why3t", "why3d", "why4t", "why4d", "devicesH", "dev1t", "dev1d", "dev2t", "dev2d", "howH", "s1t", "s1d", "s2t", "s2d", "s3t", "s3d", "setupH", "setupLead", "st1t", "st1d", "st2t", "st2d", "st3t", "st3d", "iboH", "ibo1t", "ibo1d", "ibo2t", "ibo2d", "ibo3t", "ibo3d", "iboNote", "macPreviewH", "macPreviewNote", "contactH", "contactLead", "contact1t", "contact1d", "contact2t", "contact2d", "contactWaBtn", "contactMsBtn", "faqH", "f1q", "f1a", "f2q", "f2a", "f3q", "f3a", "f4q", "f4a", "f5q", "f5a", "f6q", "f6a", "f7q", "f7a", "legal", "navRefund", "refundH", "refundLead", "r1t", "r1d", "r2t", "r2d", "r3t", "r3d", "r4t", "r4d", "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon", "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerWa", "footerMs", "legalText", "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3", "refundLink", "themeLabel", "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5", "payTitle", "paySub", "payCard", "payPaypal", "payBank", "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote", "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn", "buyNow12", "buyNow6", "buyNow1", "trialMini", "ratingText", "reviewsTitle", "reviewsSub", "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint", "trialTitle", "trialLead", "trialGet", "trialLi1", "trialLi2", "trialLi3", "trialLi4", "trialLi5", "trialWaBtn", "trialFoot", "faqSub", "footerTagline"];
 
     function setActiveLangButton(lang){
       document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
@@ -2909,32 +2827,6 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       document.getElementById("btnDE").classList.toggle("active", lang === "de");
     }
 
-
-
-
-    function openPrivacyModal(){
-      const overlay = document.getElementById('privacyModal');
-      if (!overlay) return;
-      overlay.classList.add('isOpen');
-      overlay.setAttribute('aria-hidden','false');
-      document.documentElement.style.overflow = 'hidden';
-      // populate content
-      const lang = window.__sansatLang || 'sq';
-      const t = i18n[lang] || i18n.sq;
-      const body = document.getElementById('privacyBody');
-      const title = document.getElementById('privacyTitle');
-      const upd = document.getElementById('privacyUpdated');
-      if (title && t.privacyTitle) title.textContent = t.privacyTitle;
-      if (upd && t.privacyUpdated) upd.textContent = t.privacyUpdated;
-      if (body && t.privacyBodyHtml) body.innerHTML = t.privacyBodyHtml;
-    }
-    function closePrivacyModal(){
-      const overlay = document.getElementById('privacyModal');
-      if (!overlay) return;
-      overlay.classList.remove('isOpen');
-      overlay.setAttribute('aria-hidden','true');
-      document.documentElement.style.overflow = '';
-    }
 
     function renderReviews(lang){
       const t = i18n[lang] || i18n.sq;
@@ -2979,17 +2871,6 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       if (typeof renderReviewsSection === 'function') renderReviewsSection(lang);
       if (typeof renderReviews === 'function') renderReviews(lang);
       setActiveLangButton(lang);
-
-      // update privacy modal content if open
-      const pm = document.getElementById('privacyModal');
-      if (pm && pm.classList.contains('isOpen')) {
-        const body = document.getElementById('privacyBody');
-        const title = document.getElementById('privacyTitle');
-        const upd = document.getElementById('privacyUpdated');
-        if (title && t.privacyTitle) title.textContent = t.privacyTitle;
-        if (upd && t.privacyUpdated) upd.textContent = t.privacyUpdated;
-        if (body && t.privacyBodyHtml) body.innerHTML = t.privacyBodyHtml;
-      }
       
       // keep theme label in sync with language
       const themeNow = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'dark' : 'light';
@@ -3513,20 +3394,6 @@ const hero = document.getElementById("waBtn");
       overlay.setAttribute('aria-hidden','true');
       document.documentElement.style.overflow = '';
     }
-
-    
-
-    (function hookPrivacy(){
-      const a = document.getElementById('footerPrivacy');
-      const close = document.getElementById('privacyClose');
-      const overlay = document.getElementById('privacyModal');
-      const backdrop = overlay ? overlay.querySelector('[data-close="privacy"]') : null;
-      if (a) a.addEventListener('click', (e)=>{ e.preventDefault(); openPrivacyModal(); });
-      if (close) close.addEventListener('click', closePrivacyModal);
-      if (backdrop) backdrop.addEventListener('click', closePrivacyModal);
-      if (overlay) overlay.addEventListener('click', (e)=>{ if (e.target === overlay) closePrivacyModal(); });
-      document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closePrivacyModal(); });
-    })();
 
     (function hookReviews(){
       const btn = document.getElementById('readMoreReviewsBtn');
