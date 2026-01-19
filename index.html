@@ -1273,6 +1273,65 @@ body.dark .logoMark,
 .footerReviewsWrap .reviewCard{background:rgba(255,255,255,.95);}
 .footerReviewsWrap .reviewCard .stars{letter-spacing:1px;font-size:14px;line-height:1;}
 
+
+/* Hero split title colors */
+.heroTitleSplit .tMain{font-weight:950;color:#0b0b0b !important;}
+.heroTitleSplit .tAccent{font-weight:950;color:#f97316 !important;}
+
+/* Customer feedback section (cards + modal) */
+.reviewsSection{padding:64px 0;background:#ffffff;}
+.reviewsSection .reviewsWrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+.reviewsSection h2{margin:0 0 10px;font-size:44px;line-height:1.08;letter-spacing:-0.02em;text-align:center;}
+.reviewsSection p.lead{margin:0 auto 28px;max-width:720px;text-align:center;color:#6b7280;font-size:18px;}
+.reviewsCards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;}
+.reviewCard2{border:1px solid #e5e7eb;border-radius:14px;background:#fff;box-shadow:0 12px 30px rgba(15,23,42,.06);padding:18px;min-height:300px;display:flex;flex-direction:column;}
+.reviewHead{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;}
+.reviewAvatar{width:46px;height:46px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:900;background:#f97316;color:#fff;flex:0 0 auto;}
+.reviewMeta{display:flex;flex-direction:column;gap:2px;}
+.reviewName{font-weight:900;color:#111827;}
+.reviewCity{font-size:13px;color:#6b7280;}
+.reviewStars{margin:6px 0 10px;letter-spacing:1px;font-size:16px;line-height:1;color:#f59e0b;}
+.reviewText{font-style:italic;color:#111827;line-height:1.55;flex:1 1 auto;}
+.reviewsActions{display:flex;justify-content:center;margin-top:22px;}
+.btnReviews{border:1px solid #f97316;background:#fff;color:#f97316;font-weight:900;padding:12px 18px;border-radius:12px;cursor:pointer;transition:all .15s ease;}
+.btnReviews:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(249,115,22,.18);}
+
+/* Reviews modal */
+.reviewsModalOverlay{position:fixed;inset:0;background:rgba(2,6,23,.65);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999;}
+.reviewsModalOverlay.isOpen{display:flex;}
+.reviewsModal{width:min(980px,100%);background:#fff;border-radius:16px;box-shadow:0 30px 80px rgba(2,6,23,.35);overflow:hidden;}
+.reviewsModalHeader{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #e5e7eb;}
+.reviewsModalHeader h3{margin:0;font-size:18px;}
+.reviewsModalClose{border:0;background:transparent;font-size:18px;font-weight:900;cursor:pointer;padding:8px 10px;border-radius:10px;}
+.reviewsModalClose:hover{background:rgba(15,23,42,.06);}
+.reviewsModalBody{padding:18px;max-height:min(78vh,820px);overflow:auto;}
+.reviewsAll{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:18px;}
+.reviewMini{border:1px solid #e5e7eb;border-radius:14px;padding:14px;background:#fff;}
+.reviewMini .top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.reviewMini .who{font-weight:900;color:#111827;font-size:14px;}
+.reviewMini .stars{color:#f59e0b;letter-spacing:1px;font-size:14px;}
+.reviewMini .msg{margin:8px 0 0;color:#111827;line-height:1.5;font-style:italic;}
+
+.feedbackForm{border-top:1px solid #e5e7eb;padding-top:16px;margin-top:8px;}
+.feedbackForm h4{margin:0 0 10px;font-size:16px;}
+.feedbackGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.feedbackGrid .field{display:flex;flex-direction:column;gap:6px;}
+.feedbackGrid label{font-size:13px;color:#374151;font-weight:800;}
+.feedbackGrid input,.feedbackGrid select,.feedbackGrid textarea{border:1px solid #e5e7eb;border-radius:12px;padding:10px 12px;font-size:14px;outline:none;}
+.feedbackGrid textarea{min-height:92px;grid-column:1/-1;resize:vertical;}
+.btnSubmitFeedback{margin-top:12px;width:100%;border:0;background:#f97316;color:#fff;font-weight:950;padding:12px 14px;border-radius:12px;cursor:pointer;}
+.btnSubmitFeedback:hover{filter:brightness(.98);}
+
+@media (max-width: 980px){
+  .reviewsCards{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width: 640px){
+  .reviewsSection h2{font-size:32px;}
+  .reviewsCards{grid-template-columns:1fr;}
+  .reviewsAll{grid-template-columns:1fr;}
+  .feedbackGrid{grid-template-columns:1fr;}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1908,10 +1967,108 @@ body.dark .logoMark,
   </p>
 </section>
 
+<section id="reviews" class="reviewsSection">
+  <div class="reviewsWrap">
+    <h2 id="reviewsSectionTitle">What Our Customers Say</h2>
+    <p class="lead" id="reviewsSectionSub">Don't just take our word for it - hear from our satisfied customers</p>
+
+    <div class="reviewsCards" id="reviewsCards" aria-label="Customer reviews">
+      <!-- Cards injected by JS (with fallback below) -->
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">JW</div>
+          <div class="reviewMeta">
+            <div class="reviewName">James Wilson</div>
+            <div class="reviewCity">London</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★★</div>
+        <div class="reviewText">"Great service and very stable streams."</div>
+      </div>
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">ST</div>
+          <div class="reviewMeta">
+            <div class="reviewName">Sarah Thompson</div>
+            <div class="reviewCity">Manchester</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★★</div>
+        <div class="reviewText">"Fast setup help and excellent support."</div>
+      </div>
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">DC</div>
+          <div class="reviewMeta">
+            <div class="reviewName">David Clark</div>
+            <div class="reviewCity">Birmingham</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★☆</div>
+        <div class="reviewText">"Great value for money and good channel selection."</div>
+      </div>
+      <div class="reviewCard2">
+        <div class="reviewHead">
+          <div class="reviewAvatar">ER</div>
+          <div class="reviewMeta">
+            <div class="reviewName">Emma Roberts</div>
+            <div class="reviewCity">Glasgow</div>
+          </div>
+        </div>
+        <div class="reviewStars" aria-hidden="true">★★★★★</div>
+        <div class="reviewText">"Reliable service. Highly recommended."</div>
+      </div>
+    </div>
+
+    <div class="reviewsActions">
+      <button class="btnReviews" id="readMoreReviewsBtn" type="button">Read More Reviews</button>
+    </div>
+  </div>
+</section>
+
+<div class="reviewsModalOverlay" id="reviewsModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="reviewsModal" role="document">
+    <div class="reviewsModalHeader">
+      <h3 id="reviewsModalTitle">Customer Reviews</h3>
+      <button class="reviewsModalClose" id="reviewsModalClose" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="reviewsModalBody">
+      <div class="reviewsAll" id="reviewsAll"></div>
+
+      <div class="feedbackForm">
+        <h4 id="feedbackTitle">Leave your feedback</h4>
+        <div class="feedbackGrid">
+          <div class="field">
+            <label for="fbName" id="fbNameL">Name</label>
+            <input id="fbName" type="text" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="fbCity" id="fbCityL">City</label>
+            <input id="fbCity" type="text" placeholder="City" />
+          </div>
+          <div class="field">
+            <label for="fbStars" id="fbStarsL">Rating</label>
+            <select id="fbStars">
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label for="fbMsg" id="fbMsgL">Comment</label>
+            <textarea id="fbMsg" placeholder="Write your feedback..."></textarea>
+          </div>
+        </div>
+        <button class="btnSubmitFeedback" id="fbSubmit" type="button">Submit via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-
-        <footer id="legal">
+<footer id="legal">
 <div class="footerGrid">
           <div class="footerBrand">
             <div class="logoMark" aria-hidden="true">
@@ -1954,11 +2111,7 @@ body.dark .logoMark,
             <div class="stars starsBig" aria-hidden="true">★★★★★</div>
             <div class="ratingText" id="ratingText">Rated by our customers</div>
           </div>
-
-          <h3 style="margin:14px 0 6px;font-size:18px" id="reviewsTitle">Customer Feedback</h3>
-          <p class="muted" style="margin:0 0 12px" id="reviewsSub">Real messages from our users about speed and support.</p>
-          <div class="reviewsGrid" id="reviewsGrid" aria-label="Reviews">
-            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
+Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
             <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Stable streams and fast support.<span>Nora K.</span></div>
             <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Great sports package, no buffering.<span>Daniel P.</span></div>
             <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Easy setup with clear instructions.<span>Mila S.</span></div>
@@ -2753,8 +2906,8 @@ h1:"Premium IPTV für Sport, Filme & Serien",
                 }
         if (t[id] !== undefined) el.textContent = t[id];
       });
-
-      renderReviews(lang);
+      if (typeof renderReviewsSection === 'function') renderReviewsSection(lang);
+      if (typeof renderReviews === 'function') renderReviews(lang);
       setActiveLangButton(lang);
       
       // keep theme label in sync with language
@@ -3107,6 +3260,207 @@ const hero = document.getElementById("waBtn");
       if(e.key === "Escape" && modal.classList.contains("isOpen")) closeModal();
     });
   })();
+
+
+    // ---- Reviews (cards + modal) ----
+    const REVIEWS_DATA = {
+      en: {
+        sectionTitle: "What Our Customers Say",
+        sectionSub: "Don't just take our word for it - hear from our satisfied customers",
+        btn: "Read More Reviews",
+        modalTitle: "Customer Reviews",
+        feedbackTitle: "Leave your feedback",
+        fbName: "Name",
+        fbCity: "City",
+        fbRating: "Rating",
+        fbComment: "Comment",
+        fbSubmit: "Submit via WhatsApp",
+        fbNamePh: "Your name",
+        fbCityPh: "City",
+        fbMsgPh: "Write your feedback...",
+        items: [
+          {name:"James Wilson", city:"London", stars:5, msg:"I've tried several IPTV services, but Sansat IPTV is by far the best. The channel selection is amazing and the quality is superb."},
+          {name:"Sarah Thompson", city:"Manchester", stars:5, msg:"The customer service is exceptional. They guided me through the setup process and it works perfectly."},
+          {name:"David Clark", city:"Birmingham", stars:4, msg:"Great value for money. The channel selection is vast and HD quality is impressive."},
+          {name:"Emma Roberts", city:"Glasgow", stars:5, msg:"Reliable service and they keep adding new channels. Highly recommended."},
+          {name:"Oliver Brown", city:"Leeds", stars:5, msg:"No buffering during live sports. Very smooth experience."},
+          {name:"Sophia Evans", city:"Bristol", stars:5, msg:"Fast activation and clear instructions. Great support on WhatsApp."},
+          {name:"Liam Walker", city:"Liverpool", stars:5, msg:"Works on my Smart TV and Android box without issues."},
+          {name:"Mia Johnson", city:"Nottingham", stars:5, msg:"Excellent movies and series library. Easy to use."},
+          {name:"Ethan Harris", city:"Sheffield", stars:5, msg:"Streams load quickly and stay stable."},
+          {name:"Ava Scott", city:"Newcastle", stars:5, msg:"Best value subscription I've used. Recommended."}
+        ]
+      },
+      sq: {
+        sectionTitle: "Çfarë thonë klientët tanë",
+        sectionSub: "Mos u mbështet vetëm në fjalën tonë - dëgjo nga klientët tanë të kënaqur",
+        btn: "Lexo më shumë komente",
+        modalTitle: "Komentet e klientëve",
+        feedbackTitle: "Shkruaj feedback-un tënd",
+        fbName: "Emri",
+        fbCity: "Qyteti",
+        fbRating: "Vlerësimi",
+        fbComment: "Komenti",
+        fbSubmit: "Dërgo me WhatsApp",
+        fbNamePh: "Emri juaj",
+        fbCityPh: "Qyteti",
+        fbMsgPh: "Shkruaj feedback-un...",
+        items: [
+          {name:"Arben Krasniqi", city:"Prishtinë", stars:5, msg:"Aktivizim shumë i shpejtë dhe lista punon perfekt. Cilësi e lartë."},
+          {name:"Drita Mehmeti", city:"Shkup", stars:5, msg:"Suporti në WhatsApp ishte i shkëlqyer. Më ndihmuan për konfigurim."},
+          {name:"Besnik Ramadani", city:"Tetovë", stars:4, msg:"Shumë vlerë për çmimin. Kanale të shumta dhe HD i pastër."},
+          {name:"Elona Peci", city:"Tiranë", stars:5, msg:"Shërbim i besueshëm, punon pa ndërprerje në TV."},
+          {name:"Luan Selimi", city:"Gostivar", stars:5, msg:"Sportet live pa buffering. Përvojë shumë e mirë."},
+          {name:"Rina Toma", city:"Durrës", stars:5, msg:"Udhëzime të qarta dhe aktivizim brenda pak minutash."},
+          {name:"Gent Ibrahimi", city:"Kumanovë", stars:5, msg:"Punon mirë në Android Box dhe mobile. Shumë stabile."},
+          {name:"Sara Nela", city:"Elbasan", stars:5, msg:"Filma dhe seriale shumë të mira. VOD i pasur."},
+          {name:"Ilir Dervishi", city:"Vlorë", stars:5, msg:"Shërbim korrekt dhe përgjigje e shpejtë. E rekomandoj."},
+          {name:"Kujtim Hoxha", city:"Ferizaj", stars:5, msg:"Paketa 12 muaj ia vlen. Çmim i mirë dhe kualitet."}
+        ]
+      },
+      de: {
+        sectionTitle: "Was unsere Kunden sagen",
+        sectionSub: "Verlassen Sie sich nicht nur auf unser Wort - hören Sie von zufriedenen Kunden",
+        btn: "Mehr Bewertungen lesen",
+        modalTitle: "Kundenbewertungen",
+        feedbackTitle: "Feedback hinterlassen",
+        fbName: "Name",
+        fbCity: "Stadt",
+        fbRating: "Bewertung",
+        fbComment: "Kommentar",
+        fbSubmit: "Per WhatsApp senden",
+        fbNamePh: "Ihr Name",
+        fbCityPh: "Stadt",
+        fbMsgPh: "Schreiben Sie Ihr Feedback...",
+        items: [
+          {name:"Jonas Weber", city:"Berlin", stars:5, msg:"Sehr stabil und die Aktivierung ging schnell. Top Support."},
+          {name:"Sofia Schneider", city:"Hamburg", stars:5, msg:"Der Kundenservice ist hervorragend und hat bei der Einrichtung geholfen."},
+          {name:"David Klein", city:"München", stars:4, msg:"Gutes Preis-Leistungs-Verhältnis und viele Kanäle in HD."},
+          {name:"Emma Fischer", city:"Köln", stars:5, msg:"Zuverlässig und läuft ohne Unterbrechungen auf dem TV."},
+          {name:"Lukas Hoffmann", city:"Frankfurt", stars:5, msg:"Live-Sport ohne Buffering. Sehr zufrieden."},
+          {name:"Mia Bauer", city:"Stuttgart", stars:5, msg:"Schnelle Einrichtung und klare Anleitung."},
+          {name:"Noah Wagner", city:"Dortmund", stars:5, msg:"Funktioniert auf Android Box und Smartphone problemlos."},
+          {name:"Lea Becker", city:"Leipzig", stars:5, msg:"Viele Filme und Serien, leicht zu finden."},
+          {name:"Elias Schulz", city:"Dresden", stars:5, msg:"Streams laden schnell und bleiben stabil."},
+          {name:"Hannah König", city:"Bremen", stars:5, msg:"Beste Abo-Erfahrung bisher. Empfehlung."}
+        ]
+      }
+    };
+
+    function initials(name){
+      const parts = String(name||'').trim().split(/\s+/).filter(Boolean);
+      const a = (parts[0]||'').slice(0,1).toUpperCase();
+      const b = (parts[1]||parts[0]||'').slice(0,1).toUpperCase();
+      return (a + b).trim() || 'U';
+    }
+
+    function starsText(n){
+      const full = Math.max(0, Math.min(5, parseInt(n,10)||0));
+      return '★★★★★'.slice(0, full) + '☆☆☆☆☆'.slice(0, 5-full);
+    }
+
+    function escapeHtml(s){
+      return String(s||'').replace(/[&<>"']/g, (c)=>({
+        '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+      }[c]));
+    }
+
+    function renderReviewsSection(lang){
+      const data = REVIEWS_DATA[lang] || REVIEWS_DATA.sq;
+      const t = data;
+
+      const title = document.getElementById('reviewsSectionTitle');
+      const sub = document.getElementById('reviewsSectionSub');
+      const btn = document.getElementById('readMoreReviewsBtn');
+      if (title) title.textContent = t.sectionTitle;
+      if (sub) sub.textContent = t.sectionSub;
+      if (btn) btn.textContent = t.btn;
+
+      const cards = document.getElementById('reviewsCards');
+      if (cards){
+        const first4 = t.items.slice(0,4);
+        cards.innerHTML = first4.map((r)=>{
+          const ini = initials(r.name);
+          return `            <div class="reviewCard2">              <div class="reviewHead">                <div class="reviewAvatar">${escapeHtml(ini)}</div>                <div class="reviewMeta">                  <div class="reviewName">${escapeHtml(r.name)}</div>                  <div class="reviewCity">${escapeHtml(r.city)}</div>                </div>              </div>              <div class="reviewStars" aria-hidden="true">${starsText(r.stars)}</div>              <div class="reviewText">"${escapeHtml(r.msg)}"</div>            </div>`;
+        }).join('');
+      }
+
+      // Modal labels
+      const mt = document.getElementById('reviewsModalTitle');
+      const ft = document.getElementById('feedbackTitle');
+      const nL = document.getElementById('fbNameL');
+      const cL = document.getElementById('fbCityL');
+      const sL = document.getElementById('fbStarsL');
+      const mL = document.getElementById('fbMsgL');
+      const subBtn = document.getElementById('fbSubmit');
+      if (mt) mt.textContent = t.modalTitle;
+      if (ft) ft.textContent = t.feedbackTitle;
+      if (nL) nL.textContent = t.fbName;
+      if (cL) cL.textContent = t.fbCity;
+      if (sL) sL.textContent = t.fbRating;
+      if (mL) mL.textContent = t.fbComment;
+      if (subBtn) subBtn.textContent = t.fbSubmit;
+
+      const nI = document.getElementById('fbName');
+      const cI = document.getElementById('fbCity');
+      const mI = document.getElementById('fbMsg');
+      if (nI) nI.placeholder = t.fbNamePh;
+      if (cI) cI.placeholder = t.fbCityPh;
+      if (mI) mI.placeholder = t.fbMsgPh;
+
+      // All reviews inside modal
+      const all = document.getElementById('reviewsAll');
+      if (all){
+        all.innerHTML = t.items.map((r)=>{
+          return `            <div class="reviewMini">              <div class="top">                <div class="who">${escapeHtml(r.name)} • <span style="color:#6b7280;font-weight:700">${escapeHtml(r.city)}</span></div>                <div class="stars" aria-hidden="true">${starsText(r.stars)}</div>              </div>              <div class="msg">"${escapeHtml(r.msg)}"</div>            </div>`;
+        }).join('');
+      }
+    }
+
+    function openReviewsModal(){
+      const overlay = document.getElementById('reviewsModal');
+      if (!overlay) return;
+      overlay.classList.add('isOpen');
+      overlay.setAttribute('aria-hidden','false');
+      document.documentElement.style.overflow = 'hidden';
+    }
+
+    function closeReviewsModal(){
+      const overlay = document.getElementById('reviewsModal');
+      if (!overlay) return;
+      overlay.classList.remove('isOpen');
+      overlay.setAttribute('aria-hidden','true');
+      document.documentElement.style.overflow = '';
+    }
+
+    (function hookReviews(){
+      const btn = document.getElementById('readMoreReviewsBtn');
+      const close = document.getElementById('reviewsModalClose');
+      const overlay = document.getElementById('reviewsModal');
+      if (btn) btn.addEventListener('click', openReviewsModal);
+      if (close) close.addEventListener('click', closeReviewsModal);
+      if (overlay) overlay.addEventListener('click', (e)=>{ if (e.target === overlay) closeReviewsModal(); });
+      document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeReviewsModal(); });
+
+      const submit = document.getElementById('fbSubmit');
+      if (submit) submit.addEventListener('click', ()=>{
+        const lang = window.__sansatLang || 'sq';
+        const data = REVIEWS_DATA[lang] || REVIEWS_DATA.sq;
+        const name = (document.getElementById('fbName')||{}).value || '';
+        const city = (document.getElementById('fbCity')||{}).value || '';
+        const stars = (document.getElementById('fbStars')||{}).value || '5';
+        const msg = (document.getElementById('fbMsg')||{}).value || '';
+        const base = 'https://wa.me/38972698616?text=';
+        const label = (lang==='de') ? 'Feedback' : (lang==='en') ? 'Feedback' : 'Feedback';
+        const text = `${label} (%23SansatIPTV)
+Name: ${name}
+City: ${city}
+Rating: ${stars}/5
+Comment: ${msg}`;
+        window.open(base + encodeURIComponent(text), '_blank');
+      });
+    })();
+
 </script>
 </body>
 </html>
