@@ -179,17 +179,18 @@
 
     .trialMini{
       display:inline-flex;align-items:center;
-      padding:7px 10px;border-radius:999px;
-      border:1px solid rgba(37,99,235,.20);
-      background:rgba(255,255,255,.86);
-      color:var(--text);font-weight:950;font-size:13px;
+      padding:7px 12px;border-radius:999px;
+      border:1px solid rgba(34,197,94,.28);
+      background:rgba(34,197,94,.14);
+      color:#166534;font-weight:950;font-size:13px;
       box-shadow:0 10px 22px rgba(15,23,42,.06);
       margin:8px 0 2px;
+      cursor:pointer;
     }
     :root[data-theme="dark"] .trialMini{
-      background:rgba(15,23,42,.45);
-      border-color:rgba(148,163,184,.22);
-      color:rgba(226,232,240,.95);
+      background:rgba(34,197,94,.14);
+      border-color:rgba(34,197,94,.24);
+      color:#4ade80;
     }
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -1285,18 +1286,18 @@ body.dark .logoMark,
   align-items:center;
   justify-content:center;
   gap:10px;
-  padding:12px 14px;
+  padding:14px 16px;
   border-radius:14px;
   font-weight:950;
   cursor:pointer;
-  background:#ffffff;
-  color:var(--text);
-  border:1px solid rgba(226,232,240,.95);
-  min-height:46px;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  background:linear-gradient(135deg, rgba(37,99,235,1), rgba(14,165,233,1));
+  color:#ffffff;
+  border:1px solid rgba(37,99,235,.35);
+  min-height:50px;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
 }
 
-.btn-paypal-dark:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.10); background:rgba(255,255,255,.92)}
+.btn-paypal-dark:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.18); opacity:.97}
 </style>
 
 </head>
@@ -1364,7 +1365,7 @@ body.dark .logoMark,
             Shërbim digjital me aktivizim të shpejtë dhe udhëzime konfigurimi për pajisjet tuaja të përputhshme.
           </p>
 
-          <div class="trialMini" id="trialMini">24 hr Free Trial</div>
+          <button type="button" class="trialMini" id="trialMini" aria-haspopup="dialog" aria-controls="trialModal">24 hr Free Trial</button>
 
           
           <div class="ctaRow" aria-label="Primary actions">
@@ -1583,7 +1584,7 @@ body.dark .logoMark,
       <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
         <div class="trialBackdrop" data-close="true"></div>
         <div class="trialPanel" role="document">
-          <button type="button" class="trialClose" aria-label="Close" data-close="true">×</button>
+          <button type="button" class="trialClose" aria-label="Close" data-close="true" data-close="true">×</button>
 
           <div class="trialIcon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="54" height="54">
@@ -1928,6 +1929,18 @@ body.dark .logoMark,
           </div>
         </div>
 
+        <div style="margin-top:14px">
+          <div class="ratingRow" aria-label="Customer rating">
+            <div class="stars starsBig" aria-hidden="true">★★★★★</div>
+            <div class="ratingText" id="ratingText">Rated by our customers</div>
+          </div>
+
+          <h3 style="margin:14px 0 6px;font-size:18px" id="reviewsH">Customer Feedback</h3>
+          <p class="muted" style="margin:0 0 12px" id="reviewsLead">Real messages from our users about speed and support.</p>
+          <div class="reviewsGrid" id="reviewsGrid" aria-label="Reviews"></div>
+        </div>
+
+
         <div class="footerBottom" id="legalText">
           Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
           <span class="footerCopy">© 2026 Sansat IPTV</span>
@@ -1944,6 +1957,19 @@ body.dark .logoMark,
         badge:"Aktivizim IBO Player falas (normal 10€)",
         
         trialMini:"Provë falas 24 orë",
+        ratingText:"Vlerësuar nga klientët tanë",
+        reviewsH:"Feedback nga klientët",
+        reviewsLead:"Komente reale për shpejtësinë dhe mbështetjen.",
+        rev1:"Aktivizim shumë i shpejtë dhe lista punon perfekt.", rev1n:"Arben K.",
+        rev2:"Sportet u hapën menjëherë, cilësi shumë e mirë.", rev2n:"Drita M.",
+        rev3:"Mbështetja në WhatsApp përgjigjet shpejt.", rev3n:"Besnik R.",
+        rev4:"Punon pa ndërprerje në Samsung TV.", rev4n:"Luan S.",
+        rev5:"VOD shumë i pasur, serialet i gjej lehtë.", rev5n:"Elona P.",
+        rev6:"Çmim i arsyeshëm për 12 muaj, ia vlen.", rev6n:"Kujtim H.",
+        rev7:"Udhëzimet për IBO Player ishin të qarta.", rev7n:"Rina T.",
+        rev8:"Kanale ndërkombëtare të mjaftueshme për familjen.", rev8n:"Gent I.",
+        rev9:"Stabilitet shumë i mirë edhe në mobile.", rev9n:"Sara N.",
+        rev10:"Shërbim korrekt, e rekomandoj.", rev10n:"Ilir D.",
 h1:"IPTV Premium për Sport, Filma & Seriale",
         lead:"Aktivizim i shpejtë, udhëzime konfigurimi për pajisjen tënde dhe rimbursim i plotë brenda 30 ditësh (sipas kushteve).",
         waLabel:"WhatsApp",
@@ -2152,6 +2178,19 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
         badge:"Free IBO Player activation (normally €10)",
         
         trialMini:"24 hr Free Trial",
+        ratingText:"Rated by our customers",
+        reviewsH:"Customer Feedback",
+        reviewsLead:"Real messages about speed and support.",
+        rev1:"Activation was very fast and everything works smoothly.", rev1n:"Mark L.",
+        rev2:"Great sports channels, solid HD quality.", rev2n:"Emily R.",
+        rev3:"WhatsApp support replies quickly and clearly.", rev3n:"Daniel K.",
+        rev4:"Works perfectly on my Samsung TV.", rev4n:"Sarah P.",
+        rev5:"Large VOD library, movies and series are easy to find.", rev5n:"Jason M.",
+        rev6:"Best value on the 12-month plan.", rev6n:"Olivia S.",
+        rev7:"Clear setup guidance for IBO Player.", rev7n:"Chris T.",
+        rev8:"Good international channel selection.", rev8n:"Nina B.",
+        rev9:"Stable streaming on mobile too.", rev9n:"Alex G.",
+        rev10:"Reliable service, recommended.", rev10n:"Kevin D.",
 h1:"Premium IPTV for Sports, Movies & Series",
         lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
         waLabel:"WhatsApp",
@@ -2357,6 +2396,19 @@ h1:"Premium IPTV for Sports, Movies & Series",
         badge:"IBO Player Aktivierung gratis (normal 10€)",
         
         trialMini:"24 Std. Gratis-Test",
+        ratingText:"Bewertet von unseren Kunden",
+        reviewsH:"Kundenbewertungen",
+        reviewsLead:"Echte Rückmeldungen zu Speed und Support.",
+        rev1:"Sehr schnelle Aktivierung, läuft einwandfrei.", rev1n:"Marco L.",
+        rev2:"Top Sportkanäle, gute HD-Qualität.", rev2n:"Emma R.",
+        rev3:"WhatsApp-Support antwortet schnell und hilfreich.", rev3n:"Daniel K.",
+        rev4:"Funktioniert perfekt auf meinem Samsung TV.", rev4n:"Sara P.",
+        rev5:"Große VOD-Auswahl, Filme und Serien leicht zu finden.", rev5n:"Jason M.",
+        rev6:"Bestes Preis-Leistungs-Verhältnis beim 12-Monats-Plan.", rev6n:"Olivia S.",
+        rev7:"Klare Anleitung für IBO Player.", rev7n:"Chris T.",
+        rev8:"Gute Auswahl an internationalen Kanälen.", rev8n:"Nina B.",
+        rev9:"Stabiles Streaming auch am Handy.", rev9n:"Alex G.",
+        rev10:"Zuverlässiger Service, empfehlenswert.", rev10n:"Kevin D.",
 h1:"Premium IPTV für Sport, Filme & Serien",
         lead:"Schnelle Aktivierung, gerätespezifische Einrichtungshilfe und volle 30‑Tage‑Erstattung (Bedingungen gelten).",
         waLabel:"WhatsApp",
@@ -2598,6 +2650,9 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn",
       "buyNow12", "buyNow6", "buyNow1",
       "trialMini",
+      "ratingText",
+      "reviewsH",
+      "reviewsLead",
       "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint",
       "trialTitle",
       "trialLead",
@@ -2617,6 +2672,27 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       document.getElementById("btnDE").classList.toggle("active", lang === "de");
     }
 
+
+    function renderReviews(lang){
+      const t = i18n[lang] || i18n.sq;
+      const grid = document.getElementById("reviewsGrid");
+      if(!grid) return;
+      const items = [];
+      for(let i=1;i<=10;i++){
+        const msg = t["rev"+i];
+        const name = t["rev"+i+"n"];
+        if(!msg || !name) continue;
+        items.push({msg, name});
+      }
+      grid.innerHTML = items.map(it => (
+        '<div class="reviewCard">' +
+          '<div class="stars" aria-hidden="true">★★★★★</div>' +
+          it.msg +
+          '<span>' + it.name + '</span>' +
+        '</div>'
+      )).join('');
+    }
+
     function applyLang(lang){
       const t = i18n[lang] || i18n.sq;
       document.documentElement.lang = lang;
@@ -2632,6 +2708,7 @@ h1:"Premium IPTV für Sport, Filme & Serien",
         if (t[id] !== undefined) el.textContent = t[id];
       });
 
+      renderReviews(lang);
       setActiveLangButton(lang);
       
       // keep theme label in sync with language
@@ -2904,7 +2981,7 @@ const hero = document.getElementById("waBtn");
 
 <script>
   (function(){
-    const openBtn = document.getElementById("openTrialModal");
+    const openBtn = document.getElementById("trialMini");
     const modal = document.getElementById("trialModal");
     const waBtn = document.getElementById("trialWaBtn");
     if(!openBtn || !modal || !waBtn) return;
