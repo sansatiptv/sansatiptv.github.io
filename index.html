@@ -54,8 +54,6 @@
       --brand:#2563eb;
       --brand2:#0ea5e9;
 
-      --accent: var(--brand2);
-
       --ok:#16a34a;
       --warn:#f59e0b;
       --violet:#7c3aed;
@@ -890,18 +888,18 @@
   border:1px solid rgba(226,232,240,.95);
 }
 .payLabel{margin:0;font-weight:950;color:var(--text)}
-/* Dark mode compatibility (assumes :root[data-theme="dark"] or [data-theme="dark"]) */
-:root[data-theme="dark"] .payments,
+/* Dark mode compatibility (assumes body.dark or [data-theme="dark"]) */
+body.dark .payments,
 [data-theme="dark"] .payments{
   background:rgba(15,23,42,.55);
   border-color:rgba(148,163,184,.25);
 }
-:root[data-theme="dark"] .payItem,
+body.dark .payItem,
 [data-theme="dark"] .payItem{
   background:rgba(2,6,23,.55);
   border-color:rgba(148,163,184,.22);
 }
-:root[data-theme="dark"] .payIcon,
+body.dark .payIcon,
 [data-theme="dark"] .payIcon{
   background:rgba(148,163,184,.10);
   border-color:rgba(148,163,184,.18);
@@ -916,9 +914,9 @@
 .payItem.paypal .payIcon{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
 .payItem.bank .payIcon{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
 
-:root[data-theme="dark"] .payItem.card .payIcon{background:rgba(249,115,22,.15);color:#fb923c}
-:root[data-theme="dark"] .payItem.paypal .payIcon{background:rgba(37,99,235,.18);color:#60a5fa}
-:root[data-theme="dark"] .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
+body.dark .payItem.card .payIcon{background:rgba(249,115,22,.15);color:#fb923c}
+body.dark .payItem.paypal .payIcon{background:rgba(37,99,235,.18);color:#60a5fa}
+body.dark .payItem.bank .payIcon{background:rgba(22,163,74,.18);color:#4ade80}
 
 
 /* Devices compatibility (colored icons + subtle animation) */
@@ -990,14 +988,14 @@
 }
 
 /* Dark mode */
-:root[data-theme="dark"] .deviceCard,
+body.dark .deviceCard,
 [data-theme="dark"] .deviceCard{
   background:rgba(2,6,23,.55);
   border-color:rgba(148,163,184,.22);
 }
-:root[data-theme="dark"] .deviceSub,
+body.dark .deviceSub,
 [data-theme="dark"] .deviceSub{color:rgba(226,232,240,.78)}
-:root[data-theme="dark"] .deviceCard:hover,
+body.dark .deviceCard:hover,
 [data-theme="dark"] .deviceCard:hover{
   border-color:rgba(96,165,250,.28);
   box-shadow:0 20px 40px rgba(0,0,0,.35);
@@ -1030,7 +1028,7 @@
   padding:18px;
   box-shadow:0 10px 22px rgba(15,23,42,.06);
 }
-:root[data-theme="dark"] .contactCard,
+body.dark .contactCard,
 [data-theme="dark"] .contactCard{
   background:rgba(2,6,23,.55);
   border-color:rgba(148,163,184,.18);
@@ -1044,7 +1042,7 @@
   padding:12px 0;
   border-bottom:1px solid rgba(226,232,240,.75);
 }
-:root[data-theme="dark"] .contactItem,
+body.dark .contactItem,
 [data-theme="dark"] .contactItem{border-bottom-color:rgba(148,163,184,.16)}
 .contactItem:last-child{border-bottom:0}
 
@@ -1054,7 +1052,7 @@
   border:1px solid rgba(226,232,240,.95);
   background:rgba(15,23,42,.04);
 }
-:root[data-theme="dark"] .ciIcon,
+body.dark .ciIcon,
 [data-theme="dark"] .ciIcon{
   border-color:rgba(148,163,184,.18);
   background:rgba(148,163,184,.10);
@@ -1063,9 +1061,9 @@
 .ciIcon.email{background:#fff3e6;border-color:#fed7aa;color:#f97316}
 .ciIcon.phone{background:#eff6ff;border-color:#bfdbfe;color:#2563eb}
 .ciIcon.chat{background:#ecfdf5;border-color:#bbf7d0;color:#16a34a}
-:root[data-theme="dark"] .ciIcon.email,[data-theme="dark"] .ciIcon.email{background:rgba(249,115,22,.15);color:#fb923c}
-:root[data-theme="dark"] .ciIcon.phone,[data-theme="dark"] .ciIcon.phone{background:rgba(37,99,235,.18);color:#60a5fa}
-:root[data-theme="dark"] .ciIcon.chat,[data-theme="dark"] .ciIcon.chat{background:rgba(22,163,74,.18);color:#4ade80}
+body.dark .ciIcon.email,[data-theme="dark"] .ciIcon.email{background:rgba(249,115,22,.15);color:#fb923c}
+body.dark .ciIcon.phone,[data-theme="dark"] .ciIcon.phone{background:rgba(37,99,235,.18);color:#60a5fa}
+body.dark .ciIcon.chat,[data-theme="dark"] .ciIcon.chat{background:rgba(22,163,74,.18);color:#4ade80}
 
 .ciText b{display:block;color:var(--text);font-weight:950;margin-bottom:4px}
 .ciText span{display:block;color:var(--muted);font-weight:800;line-height:1.35}
@@ -1075,7 +1073,7 @@
   padding-top:14px;
   border-top:1px solid rgba(226,232,240,.75);
 }
-:root[data-theme="dark"] .hours,[data-theme="dark"] .hours{border-top-color:rgba(148,163,184,.16)}
+body.dark .hours,[data-theme="dark"] .hours{border-top-color:rgba(148,163,184,.16)}
 .hours h4{margin:0 0 8px;font-size:16px}
 .hours p{margin:0;color:var(--muted);font-weight:800;line-height:1.5}
 
@@ -1092,8 +1090,8 @@
   outline:none;
 }
 .field textarea{min-height:120px;resize:vertical}
-:root[data-theme="dark"] .field input,
-:root[data-theme="dark"] .field textarea,
+body.dark .field input,
+body.dark .field textarea,
 [data-theme="dark"] .field input,
 [data-theme="dark"] .field textarea{
   background:rgba(15,23,42,.55);
@@ -1131,7 +1129,7 @@
   overflow:hidden;
 }
 .logoSvg{width:44px;height:44px;display:block}
-:root[data-theme="dark"] .logoMark,
+body.dark .logoMark,
 [data-theme="dark"] .logoMark{
   box-shadow:0 16px 34px rgba(0,0,0,.32);
 }
@@ -2075,20 +2073,6 @@
 </div>
 
 
-
-
-<!-- Privacy Policy Modal -->
-<div class="reviewsModalOverlay" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="reviewsModal" role="document">
-    <div class="reviewsModalHeader">
-      <h3 id="privacyTitle">Privacy Policy</h3>
-      <button class="reviewsModalClose" id="privacyClose" type="button" aria-label="Close">✕</button>
-    </div>
-    <div class="reviewsModalBody">
-      <div id="privacyBody" class="legalText"></div>
-    </div>
-  </div>
-</div>
 <footer id="legal">
 <div class="footerGrid">
           <div class="footerBrand">
@@ -2119,7 +2103,6 @@
             <a href="#plans" id="footerPlans">Paketa</a>
             <a href="#refund" id="footerRefund">Rimbursimi</a>
             <a href="#contact" id="footerContact">Kontakt</a>
-            <a href="#" id="footerPrivacy" role="button">Privacy Policy</a>
           </div>
 
           <div class="footerCtas">
@@ -2286,10 +2269,6 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
         footerContact:"Kontakt",
         footerWa:"WhatsApp",
         footerMs:"Messenger",
-        footerPrivacy:"Politika e Privatësisë",
-        privacyTitle:"Politika e Privatësisë",
-        privacyHtml:"<p><strong>Çfarë mbledhim:</strong> vetëm të dhëna teknike të nevojshme për aktivizim (p.sh. MAC Address, Device ID, lloji i pajisjes) dhe mesazhet që na dërgoni në WhatsApp/Messenger.</p><p><strong>Pse i përdorim:</strong> për aktivizim, verifikim kompatibiliteti dhe suport teknik.</p><p><strong>Sa i ruajmë:</strong> vetëm aq sa nevojitet për ofrimin e shërbimit dhe zgjidhjen e kërkesave të suportit; mund të kërkoni fshirjen.</p><p><strong>Ndarja e të dhënave:</strong> nuk i shesim; mund të ndajmë vetëm kur kërkohet ligjërisht ose për procesim pagesash (nëse aplikohet).</p><p><strong>Kontakt:</strong> për pyetje ose fshirje të të dhënave, na shkruani në WhatsApp/Messenger.</p>",
-
         hs1:"Aktivizim i shpejtë",
         hs2:"Udhëzim sipas pajisjes",
         hs3:"Rimbursim 30 ditë",
@@ -2512,10 +2491,6 @@ h1:"Premium IPTV for Sports, Movies & Series",
         footerContact:"Contact",
         footerWa:"WhatsApp",
         footerMs:"Messenger",
-        footerPrivacy:"Privacy Policy",
-        privacyTitle:"Privacy Policy",
-        privacyHtml:"<p><strong>What we collect:</strong> only technical details needed for activation (e.g., MAC Address, Device ID, device type) and the messages you send via WhatsApp/Messenger.</p><p><strong>Why we use it:</strong> activation, compatibility checks, and technical support.</p><p><strong>Retention:</strong> kept only as long as needed to provide the service and resolve support requests; you may request deletion.</p><p><strong>Sharing:</strong> we do not sell data; we may share only if legally required or for payment processing (if applicable).</p><p><strong>Contact:</strong> message us on WhatsApp/Messenger for questions or deletion requests.</p>",
-
         hs1:"Fast activation",
         hs2:"Device-specific guidance",
         hs3:"30-day refund",
@@ -2740,10 +2715,6 @@ h1:"Premium IPTV für Sport, Filme & Serien",
         footerContact:"Kontakt",
         footerWa:"WhatsApp",
         footerMs:"Messenger",
-        footerPrivacy:"Datenschutzerklärung",
-        privacyTitle:"Datenschutzerklärung",
-        privacyHtml:"<p><strong>Welche Daten wir erfassen:</strong> nur technische Angaben, die für die Aktivierung nötig sind (z. B. MAC-Adresse, Device ID, Gerätetyp) sowie Nachrichten, die Sie über WhatsApp/Messenger senden.</p><p><strong>Wofür:</strong> Aktivierung, Kompatibilitätsprüfung und technischer Support.</p><p><strong>Speicherdauer:</strong> nur so lange wie erforderlich für Service und Support; Löschung kann angefordert werden.</p><p><strong>Weitergabe:</strong> keine Verkäufe; Weitergabe nur bei gesetzlicher Pflicht oder zur Zahlungsabwicklung (falls zutreffend).</p><p><strong>Kontakt:</strong> bei Fragen oder Löschanfragen schreiben Sie uns über WhatsApp/Messenger.</p>",
-
         hs1:"Schnelle Aktivierung",
         hs2:"Anleitung je Gerät",
         hs3:"30 Tage Erstattung",
@@ -2820,7 +2791,7 @@ h1:"Premium IPTV für Sport, Filme & Serien",
     }
     };
 
-    const ids=["tagline", "badge", "h1", "lead", "supportPill", "note", "calloutD", "goPlansBtn", "navPlans", "navHow", "navSetup", "navFaq", "navContact", "trustH", "trustLead", "trust1t", "trust1d", "trust2t", "trust2d", "trust3t", "trust3d", "trust4t", "trust4d", "plansTitle", "plansSubtitle", "p12", "p12d", "p12psych", "p12pm", "p12pmLabel", "p12valueLabel", "p12value", "p6", "p6d", "p6psych", "p6pm", "p6pmLabel", "p6valueLabel", "p6value", "p1", "p1d", "p1psych", "p1pm", "p1pmLabel", "p1valueLabel", "p1value", "planCta12", "planCta6", "planCta1", "planMs12", "planMs6", "planMs1", "plansPush", "whyH", "why1t", "why1d", "why2t", "why2d", "why3t", "why3d", "why4t", "why4d", "devicesH", "dev1t", "dev1d", "dev2t", "dev2d", "howH", "s1t", "s1d", "s2t", "s2d", "s3t", "s3d", "setupH", "setupLead", "st1t", "st1d", "st2t", "st2d", "st3t", "st3d", "iboH", "ibo1t", "ibo1d", "ibo2t", "ibo2d", "ibo3t", "ibo3d", "iboNote", "macPreviewH", "macPreviewNote", "contactH", "contactLead", "contact1t", "contact1d", "contact2t", "contact2d", "contactWaBtn", "contactMsBtn", "faqH", "f1q", "f1a", "f2q", "f2a", "f3q", "f3a", "f4q", "f4a", "f5q", "f5a", "f6q", "f6a", "f7q", "f7a", "legal", "navRefund", "refundH", "refundLead", "r1t", "r1d", "r2t", "r2d", "r3t", "r3d", "r4t", "r4d", "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon", "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerWa", "footerMs", "footerPrivacy", "legalText", "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3", "refundLink", "themeLabel", "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5", "payTitle", "paySub", "payCard", "payPaypal", "payBank", "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote", "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn", "buyNow12", "buyNow6", "buyNow1", "trialMini", "ratingText", "reviewsTitle", "reviewsSub", "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint", "trialTitle", "trialLead", "trialGet", "trialLi1", "trialLi2", "trialLi3", "trialLi4", "trialLi5", "trialWaBtn", "trialFoot", "faqSub", "footerTagline"];
+    const ids=["tagline", "badge", "h1", "lead", "supportPill", "note", "calloutD", "goPlansBtn", "navPlans", "navHow", "navSetup", "navFaq", "navContact", "trustH", "trustLead", "trust1t", "trust1d", "trust2t", "trust2d", "trust3t", "trust3d", "trust4t", "trust4d", "plansTitle", "plansSubtitle", "p12", "p12d", "p12psych", "p12pm", "p12pmLabel", "p12valueLabel", "p12value", "p6", "p6d", "p6psych", "p6pm", "p6pmLabel", "p6valueLabel", "p6value", "p1", "p1d", "p1psych", "p1pm", "p1pmLabel", "p1valueLabel", "p1value", "planCta12", "planCta6", "planCta1", "planMs12", "planMs6", "planMs1", "plansPush", "whyH", "why1t", "why1d", "why2t", "why2d", "why3t", "why3d", "why4t", "why4d", "devicesH", "dev1t", "dev1d", "dev2t", "dev2d", "howH", "s1t", "s1d", "s2t", "s2d", "s3t", "s3d", "setupH", "setupLead", "st1t", "st1d", "st2t", "st2d", "st3t", "st3d", "iboH", "ibo1t", "ibo1d", "ibo2t", "ibo2d", "ibo3t", "ibo3d", "iboNote", "macPreviewH", "macPreviewNote", "contactH", "contactLead", "contact1t", "contact1d", "contact2t", "contact2d", "contactWaBtn", "contactMsBtn", "faqH", "f1q", "f1a", "f2q", "f2a", "f3q", "f3a", "f4q", "f4a", "f5q", "f5a", "f6q", "f6a", "f7q", "f7a", "legal", "navRefund", "refundH", "refundLead", "r1t", "r1d", "r2t", "r2d", "r3t", "r3d", "r4t", "r4d", "tb1", "tb2", "tb3", "p12save", "p6save", "p1save", "p12ribbon", "rq1", "rq2", "rq3", "rq4", "refundWaBtn", "refundAltBtn", "footerPlans", "footerRefund", "footerContact", "footerWa", "footerMs", "legalText", "hs1", "hs2", "hs3", "p12f1", "p12f2", "p12f3", "p6f1", "p6f2", "p6f3", "p1f1", "p1f2", "p1f3", "refundLink", "themeLabel", "p12f4", "p12f5", "p6f4", "p6f5", "p1f4", "p1f5", "payTitle", "paySub", "payCard", "payPaypal", "payBank", "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote", "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn", "buyNow12", "buyNow6", "buyNow1", "trialMini", "ratingText", "reviewsTitle", "reviewsSub", "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint", "trialTitle", "trialLead", "trialGet", "trialLi1", "trialLi2", "trialLi3", "trialLi4", "trialLi5", "trialWaBtn", "trialFoot", "faqSub", "footerTagline"];
 
     function setActiveLangButton(lang){
       document.getElementById("btnSQ").classList.toggle("active", lang === "sq");
@@ -2828,6 +2799,18 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       document.getElementById("btnDE").classList.toggle("active", lang === "de");
     }
 
+
+    function renderReviews(lang){
+      const t = i18n[lang] || i18n.sq;
+      const grid = document.getElementById("reviewsGrid");
+      if(!grid) return;
+      const items = [];
+      for(let i=1;i<=10;i++){
+        const msg = t["rev"+i];
+        const name = t["rev"+i+"n"];
+        if(!msg || !name) continue;
+        items.push({msg, name});
+      }
       grid.innerHTML = items.map(it => (
         '<div class="reviewCard">' +
           '<div class="stars" aria-hidden="true">★★★★★</div>' +
@@ -2857,16 +2840,8 @@ h1:"Premium IPTV für Sport, Filme & Serien",
                 }
         if (t[id] !== undefined) el.textContent = t[id];
       });
-
-      // Privacy Policy modal text
-      const pTitle = document.getElementById('privacyTitle');
-      const pBody = document.getElementById('privacyBody');
-      if (pTitle && t.privacyTitle) pTitle.textContent = t.privacyTitle;
-      if (pBody && t.privacyHtml) pBody.innerHTML = t.privacyHtml;
-
       if (typeof renderReviewsSection === 'function') renderReviewsSection(lang);
-      if (typeof setWaLinks === 'function') setWaLinks(lang);
-      if (typeof setMsLinks === 'function') setMsLinks(lang);
+      if (typeof renderReviews === 'function') renderReviews(lang);
       setActiveLangButton(lang);
       
       // keep theme label in sync with language
@@ -2892,7 +2867,6 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       } catch(e){}
       applyLang(lang);
       setWaLinks(lang);
-      if (typeof setMsLinks === 'function') setMsLinks(lang);
     })();
   
     function enc(s){ return encodeURIComponent(s); }
@@ -2901,20 +2875,17 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       if(lang === "en"){
         return `Hi! I want Sansat IPTV${plan?` (${plan} months)`:``}.
 Device: ____
-Device ID: ____
 MAC Address: ____
 `;
       }
       if(lang === "de"){
         return `Hallo! Ich möchte Sansat IPTV${plan?` (${plan} Monate)`:``}.
 Gerät: ____
-Device ID: ____
 MAC‑Adresse: ____
 `;
       }
       return `Përshëndetje! Dua Sansat IPTV${plan?` (${plan} muaj)`:``}.
 Pajisja: ____
-Device ID: ____
 MAC Address: ____
 `;
     }
@@ -2941,30 +2912,6 @@ const hero = document.getElementById("waBtn");
       if(p12) p12.href = base + enc(buildWaText(lang, "12"));
       if(p6)  p6.href  = base + enc(buildWaText(lang, "6"));
       if(p1)  p1.href  = base + enc(buildWaText(lang, "1"));
-    }
-
-
-    function buildMsRef(lang, plan){
-      // Messenger supports a simple ref parameter we can read on the other side
-      if(lang === 'de') return `Bestellung Sansat IPTV${plan?` (${plan} Monate)`:''} | Gerät: ____ | Device ID: ____ | MAC: ____`;
-      if(lang === 'en') return `Order Sansat IPTV${plan?` (${plan} months)`:''} | Device: ____ | Device ID: ____ | MAC: ____`;
-      return `Porosi Sansat IPTV${plan?` (${plan} muaj)`:''} | Pajisja: ____ | Device ID: ____ | MAC: ____`;
-    }
-
-    function setMsLinks(lang){
-      const base = 'https://m.me/sansatiptv?ref=';
-      const hero = document.getElementById('msBtn');
-      const contact = document.getElementById('contactMsBtn');
-      const footerMs = document.getElementById('footerMs');
-      if(hero) hero.href = base + enc(buildMsRef(lang, ''));
-      if(contact) contact.href = base + enc(buildMsRef(lang, ''));
-      if(footerMs) footerMs.href = base + enc(buildMsRef(lang, ''));
-      const m12 = document.getElementById('planMs12');
-      const m6  = document.getElementById('planMs6');
-      const m1  = document.getElementById('planMs1');
-      if(m12) m12.href = base + enc(buildMsRef(lang, '12'));
-      if(m6)  m6.href  = base + enc(buildMsRef(lang, '6'));
-      if(m1)  m1.href  = base + enc(buildMsRef(lang, '1'));
     }
 
     // Theme (Light/Dark)
@@ -3093,6 +3040,34 @@ const hero = document.getElementById("waBtn");
     else localStorage.setItem("sansat_lang", "en");
 
   } catch (e) {}
+})();
+</script>
+
+
+<script>
+(function(){
+  const form = document.getElementById("waForm");
+  if(!form) return;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = (document.getElementById("waName")||{}).value || "";
+    const email = (document.getElementById("waEmail")||{}).value || "";
+    const subject = (document.getElementById("waSubject")||{}).value || "";
+    const msg = (document.getElementById("waMsg")||{}).value || "";
+
+    const lines = [];
+    if(name) lines.push("Name: " + name);
+    if(email) lines.push("Email: " + email);
+    if(subject) lines.push("Subject: " + subject);
+    if(msg) lines.push("Message: " + msg);
+
+    const text = encodeURIComponent(lines.join("
+"));
+    const waNumber = "38972698616";
+    const url = "https://wa.me/" + waNumber + "?text=" + text;
+    window.open(url, "_blank", "noopener");
+  });
 })();
 </script>
 
@@ -3418,33 +3393,6 @@ Rating: ${stars}/5
 Comment: ${msg}`;
         window.open(base + encodeURIComponent(text), '_blank');
       });
-    })();
-
-
-
-    // ---- Privacy Policy (modal) ----
-    function openPrivacyModal(){
-      const overlay = document.getElementById('privacyModal');
-      if(!overlay) return;
-      overlay.classList.add('isOpen');
-      overlay.setAttribute('aria-hidden','false');
-      document.documentElement.style.overflow = 'hidden';
-    }
-    function closePrivacyModal(){
-      const overlay = document.getElementById('privacyModal');
-      if(!overlay) return;
-      overlay.classList.remove('isOpen');
-      overlay.setAttribute('aria-hidden','true');
-      document.documentElement.style.overflow = '';
-    }
-    (function hookPrivacy(){
-      const link = document.getElementById('footerPrivacy');
-      const close = document.getElementById('privacyClose');
-      const overlay = document.getElementById('privacyModal');
-      if(link) link.addEventListener('click', (e)=>{ e.preventDefault(); openPrivacyModal(); });
-      if(close) close.addEventListener('click', closePrivacyModal);
-      if(overlay) overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closePrivacyModal(); });
-      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePrivacyModal(); });
     })();
 
 </script>
