@@ -1235,6 +1235,29 @@ body.dark .logoMark,
 
 
 
+
+
+/* ================================
+   PRIVACY POLICY MODAL
+   ================================ */
+.privacyModal{position:fixed; inset:0; display:none; z-index:12000;}
+.privacyModal.isOpen{display:block;}
+.privacyBackdrop{position:absolute; inset:0; background:rgba(2,6,23,.55); backdrop-filter: blur(4px);}
+.privacyPanel{position:relative; width:min(820px, calc(100vw - 28px)); max-height: calc(100vh - 80px); overflow:auto;
+  margin: clamp(14px, 6vh, 38px) auto 0; background:#fff; border-radius:22px; border:1px solid rgba(226,232,240,.95);
+  box-shadow: 0 30px 80px rgba(0,0,0,.35); padding: 22px 18px 18px;}
+.privacyClose{position:absolute; right:12px; top:10px; width:40px; height:40px; border-radius:12px; border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.03); color:rgba(15,23,42,.85); font-weight:950; font-size:22px; cursor:pointer;}
+.privacyTitle{margin: 6px 0 6px; font-size: 30px; line-height: 1.15; letter-spacing: -0.4px; font-weight: 1000; color: var(--text);} 
+.privacyUpdated{margin:0 0 14px; color: var(--muted); font-weight: 850; font-size: 13px;}
+.privacyBody h3{margin:14px 0 8px; font-size:16px; color: var(--text);} 
+.privacyBody p, .privacyBody li{color: var(--muted); font-weight: 800; line-height: 1.6;}
+.privacyBody ul{margin:8px 0 0 18px;}
+.privacyBody a{color: var(--brand); text-decoration: underline;}
+:root[data-theme="dark"] .privacyPanel{background: rgba(15,23,42,.92); border-color: rgba(148,163,184,.18);} 
+:root[data-theme="dark"] .privacyClose{background: rgba(255,255,255,.06); border-color: rgba(148,163,184,.18); color: rgba(226,232,240,.9);} 
+
+
 /* ================================
    24H TRIAL MODAL (POPUP)
    ================================ */
@@ -2098,6 +2121,7 @@ body.dark .logoMark,
             <a href="#plans" id="footerPlans">Paketa</a>
             <a href="#refund" id="footerRefund">Rimbursimi</a>
             <a href="#contact" id="footerContact">Kontakt</a>
+            <a href="#" id="footerPrivacy" role="button">Privacy Policy</a>
           </div>
 
           <div class="footerCtas">
@@ -2111,7 +2135,8 @@ body.dark .logoMark,
             <div class="stars starsBig" aria-hidden="true">★★★★★</div>
             <div class="ratingText" id="ratingText">Rated by our customers</div>
           </div>
-Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
+          <div class="reviewsGrid" id="reviewsGrid" aria-label="Customer reviews">
+            <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
             <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Stable streams and fast support.<span>Nora K.</span></div>
             <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Great sports package, no buffering.<span>Daniel P.</span></div>
             <div class="reviewCard"><div class="stars" aria-hidden="true">★★★★★</div>Easy setup with clear instructions.<span>Mila S.</span></div>
@@ -2125,18 +2150,61 @@ Instant activation, works perfectly on my TV.<span>Alex M.</span></div>
         </div>
 
 
+          </div>
+
         <div class="footerBottom" id="legalText">
           Shënim: Kërkohet internet stabil. Përdorimi duhet të jetë në përputhje me ligjet lokale dhe të drejtat e transmetimit.
           <span class="footerCopy">© 2026 Sansat IPTV</span>
         </div>
+
+
+        <!-- Privacy Policy Modal -->
+        <div class="privacyModal" id="privacyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+          <div class="privacyBackdrop" data-close="privacy"></div>
+          <div class="privacyPanel" role="document">
+            <button class="privacyClose" id="privacyClose" aria-label="Close">×</button>
+            <h2 class="privacyTitle" id="privacyTitle">Privacy Policy</h2>
+            <p class="privacyUpdated" id="privacyUpdated">Last updated: January 19, 2026</p>
+            <div class="privacyBody" id="privacyBody">
+              <!-- injected by i18n -->
+            </div>
+          </div>
+        </div>
+
 </footer>
-      </body>
-</html>
 
-
-  <script>
+<script>
     const i18n = {
       sq: {
+        footerPrivacy:"Politika e Privatësisë",
+        privacyTitle:"Politika e Privatësisë",
+        privacyUpdated:"Përditësuar: 19 Janar 2026",
+        privacyBodyHtml:`<h3>Qëllimi</h3>
+<p>Kjo Politikë Privatësie shpjegon si Sansat IPTV trajton të dhënat kur ju na kontaktoni për aktivizim ose mbështetje.</p>
+<h3>Çfarë të dhënash mund të mblidhen</h3>
+<ul>
+  <li>Informacion kontakti (p.sh. emër, numër telefoni ose profil Messenger) që ju e dërgoni vullnetarisht.</li>
+  <li>Informacion teknik për aktivizim (p.sh. MAC Address). Ne kërkojmë MAC Address dhe jo Device ID.</li>
+  <li>Mesazhe/komunikime mbështetjeje për të zgjidhur kërkesat tuaja.</li>
+</ul>
+<h3>Si përdoren të dhënat</h3>
+<ul>
+  <li>Për aktivizim të shërbimit dhe verifikim të pajtueshmërisë së pajisjes.</li>
+  <li>Për mbështetje teknike dhe komunikim lidhur me porosinë.</li>
+  <li>Për përmirësim të përvojës së klientit (pa profilizim të avancuar).</li>
+</ul>
+<h3>Shpërndarja e të dhënave</h3>
+<p>Nuk shesim të dhëna personale. Mund të përdorim platforma komunikimi (WhatsApp/Messenger) sipas zgjedhjes suaj, të cilat kanë politikat e tyre të privatësisë.</p>
+<h3>Ruajtja</h3>
+<p>Ruajmë të dhënat vetëm aq sa nevojitet për aktivizim, mbështetje dhe kërkesa ligjore. Ju mund të kërkoni fshirje kur është e aplikueshme.</p>
+<h3>Të drejtat tuaja</h3>
+<ul>
+  <li>Qasje, korrigjim dhe fshirje (kur lejohet).</li>
+  <li>Kundërshtim ndaj përdorimit për marketing (nëse zbatohet).</li>
+</ul>
+<h3>Kontakt</h3>
+<p>Për kërkesa privatësie, na kontaktoni në WhatsApp ose Messenger.</p>` ,
+
         tagline:"Premium • Aktivizim i shpejtë",
         badge:"Aktivizim IBO Player falas (normal 10€)",
         
@@ -2361,6 +2429,35 @@ h1:"IPTV Premium për Sport, Filma & Seriale",
     },
 
       en: {
+        footerPrivacy:"Privacy Policy",
+        privacyTitle:"Privacy Policy",
+        privacyUpdated:"Last updated: January 19, 2026",
+        privacyBodyHtml:`<h3>Purpose</h3>
+<p>This Privacy Policy explains how Sansat IPTV processes information when you contact us for activation or support.</p>
+<h3>Data we may collect</h3>
+<ul>
+  <li>Contact details (e.g., name, phone number, Messenger profile) you voluntarily provide.</li>
+  <li>Technical activation details (e.g., MAC Address). We request MAC Address, not Device ID.</li>
+  <li>Support communications to resolve your requests.</li>
+</ul>
+<h3>How we use data</h3>
+<ul>
+  <li>To activate the service and verify device compatibility.</li>
+  <li>To provide technical support and order-related communication.</li>
+  <li>To improve customer experience (no advanced profiling).</li>
+</ul>
+<h3>Sharing</h3>
+<p>We do not sell personal data. If you contact us via WhatsApp/Messenger, those platforms process data under their own privacy policies.</p>
+<h3>Retention</h3>
+<p>We keep data only as long as needed for activation, support, and legal requirements. You may request deletion where applicable.</p>
+<h3>Your rights</h3>
+<ul>
+  <li>Access, correction, and deletion (where permitted).</li>
+  <li>Opt-out of marketing (if applicable).</li>
+</ul>
+<h3>Contact</h3>
+<p>For privacy requests, contact us via WhatsApp or Messenger.</p>` ,
+
         tagline:"Premium • Fast activation",
         badge:"Free IBO Player activation (normally €10)",
         
@@ -2582,6 +2679,35 @@ h1:"Premium IPTV for Sports, Movies & Series",
 },
 
       de: {
+        footerPrivacy:"Datenschutz",
+        privacyTitle:"Datenschutz",
+        privacyUpdated:"Zuletzt aktualisiert: 19. Januar 2026",
+        privacyBodyHtml:`<h3>Zweck</h3>
+<p>Diese Datenschutzerklärung beschreibt, wie Sansat IPTV Informationen verarbeitet, wenn Sie uns für Aktivierung oder Support kontaktieren.</p>
+<h3>Welche Daten wir erheben können</h3>
+<ul>
+  <li>Kontaktdaten (z. B. Name, Telefonnummer, Messenger-Profil), die Sie freiwillig senden.</li>
+  <li>Technische Aktivierungsdaten (z. B. MAC-Adresse). Wir fragen nach der MAC-Adresse, nicht nach der Device ID.</li>
+  <li>Support-Kommunikation zur Bearbeitung Ihrer Anfrage.</li>
+</ul>
+<h3>Verwendung der Daten</h3>
+<ul>
+  <li>Zur Aktivierung des Dienstes und Prüfung der Geräte-Kompatibilität.</li>
+  <li>Für technischen Support und auftragsbezogene Kommunikation.</li>
+  <li>Zur Verbesserung der Kundenerfahrung (keine erweiterte Profilbildung).</li>
+</ul>
+<h3>Weitergabe</h3>
+<p>Wir verkaufen keine personenbezogenen Daten. Bei Kontakt über WhatsApp/Messenger gelten deren eigene Datenschutzrichtlinien.</p>
+<h3>Speicherdauer</h3>
+<p>Wir speichern Daten nur so lange wie nötig für Aktivierung, Support und gesetzliche Pflichten. Löschung kann, soweit anwendbar, beantragt werden.</p>
+<h3>Ihre Rechte</h3>
+<ul>
+  <li>Auskunft, Berichtigung und Löschung (soweit zulässig).</li>
+  <li>Widerspruch gegen Marketing (falls zutreffend).</li>
+</ul>
+<h3>Kontakt</h3>
+<p>Für Datenschutzanfragen kontaktieren Sie uns über WhatsApp oder Messenger.</p>` ,
+
         tagline:"Premium • Schnelle Aktivierung",
         badge:"IBO Player Aktivierung gratis (normal 10€)",
         
@@ -2866,6 +2992,32 @@ h1:"Premium IPTV für Sport, Filme & Serien",
     }
 
 
+
+
+    function openPrivacyModal(){
+      const overlay = document.getElementById('privacyModal');
+      if (!overlay) return;
+      overlay.classList.add('isOpen');
+      overlay.setAttribute('aria-hidden','false');
+      document.documentElement.style.overflow = 'hidden';
+      // populate content
+      const lang = window.__sansatLang || 'sq';
+      const t = i18n[lang] || i18n.sq;
+      const body = document.getElementById('privacyBody');
+      const title = document.getElementById('privacyTitle');
+      const upd = document.getElementById('privacyUpdated');
+      if (title && t.privacyTitle) title.textContent = t.privacyTitle;
+      if (upd && t.privacyUpdated) upd.textContent = t.privacyUpdated;
+      if (body && t.privacyBodyHtml) body.innerHTML = t.privacyBodyHtml;
+    }
+    function closePrivacyModal(){
+      const overlay = document.getElementById('privacyModal');
+      if (!overlay) return;
+      overlay.classList.remove('isOpen');
+      overlay.setAttribute('aria-hidden','true');
+      document.documentElement.style.overflow = '';
+    }
+
     function renderReviews(lang){
       const t = i18n[lang] || i18n.sq;
       const grid = document.getElementById("reviewsGrid");
@@ -2909,6 +3061,17 @@ h1:"Premium IPTV für Sport, Filme & Serien",
       if (typeof renderReviewsSection === 'function') renderReviewsSection(lang);
       if (typeof renderReviews === 'function') renderReviews(lang);
       setActiveLangButton(lang);
+
+      // update privacy modal content if open
+      const pm = document.getElementById('privacyModal');
+      if (pm && pm.classList.contains('isOpen')) {
+        const body = document.getElementById('privacyBody');
+        const title = document.getElementById('privacyTitle');
+        const upd = document.getElementById('privacyUpdated');
+        if (title && t.privacyTitle) title.textContent = t.privacyTitle;
+        if (upd && t.privacyUpdated) upd.textContent = t.privacyUpdated;
+        if (body && t.privacyBodyHtml) body.innerHTML = t.privacyBodyHtml;
+      }
       
       // keep theme label in sync with language
       const themeNow = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'dark' : 'light';
@@ -3432,6 +3595,20 @@ const hero = document.getElementById("waBtn");
       overlay.setAttribute('aria-hidden','true');
       document.documentElement.style.overflow = '';
     }
+
+    
+
+    (function hookPrivacy(){
+      const a = document.getElementById('footerPrivacy');
+      const close = document.getElementById('privacyClose');
+      const overlay = document.getElementById('privacyModal');
+      const backdrop = overlay ? overlay.querySelector('[data-close="privacy"]') : null;
+      if (a) a.addEventListener('click', (e)=>{ e.preventDefault(); openPrivacyModal(); });
+      if (close) close.addEventListener('click', closePrivacyModal);
+      if (backdrop) backdrop.addEventListener('click', closePrivacyModal);
+      if (overlay) overlay.addEventListener('click', (e)=>{ if (e.target === overlay) closePrivacyModal(); });
+      document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closePrivacyModal(); });
+    })();
 
     (function hookReviews(){
       const btn = document.getElementById('readMoreReviewsBtn');
