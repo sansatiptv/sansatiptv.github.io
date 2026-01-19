@@ -1266,16 +1266,22 @@ body.dark .logoMark,
 
 <style>
 .btn-paypal-dark{
-  background:linear-gradient(135deg,#1f2937,#111827);
-  color:#fff;
-  border:1px solid #0f172a;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 14px;
   border-radius:14px;
-  padding:12px 16px;
-  font-weight:900;
+  font-weight:950;
   cursor:pointer;
-  transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  background:#ffffff;
+  color:var(--text);
+  border:1px solid rgba(226,232,240,.95);
+  min-height:46px;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
-.btn-paypal-dark:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(0,0,0,.35); opacity:.95}
+
+.btn-paypal-dark:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.10); background:rgba(255,255,255,.92)}
 </style>
 
 </head>
@@ -1372,6 +1378,19 @@ body.dark .logoMark,
 </div>
       </section>
 
+      <!-- 24H TEST CTA -->
+      <section class="section testCta" id="test24h" aria-label="Test 24 orë">
+        <button type="button" class="testCtaLink"  id="openTrialModal">
+          <div class="testCtaInner">
+            <div class="testCtaBadge" id="testCtaBadge">TEST 24 ORË</div>
+            <h2 class="testCtaTitle" id="testCtaTitle">Aktivizo testin falas për IPTV (24 orë)</h2>
+            <p class="testCtaSub" id="testCtaSub">Kliko këtu dhe na dërgo në WhatsApp: Device ID dhe MAC Address për aktivizim.</p>
+            <div class="testCtaHint" id="testCtaHint">Kliko për WhatsApp</div>
+          </div>
+        </button>
+      </section>
+
+
       <!-- TRUST / TRANSPARENCY -->
       
 
@@ -1416,8 +1435,8 @@ body.dark .logoMark,
   <input type="hidden" name="on0" value="Subscription">
   <input type="hidden" name="os0" value="12 Months – IPTV Premium + IBO Player FREE">
   <input type="hidden" name="currency_code" value="EUR">
-  <button type="submit" class="btn-paypal-dark">
-    Paguaj me PayPal
+  <button type="submit" class="btn-paypal-dark" id="buyNow12">
+    Buy now
   </button>
 </form>
 
@@ -1454,9 +1473,9 @@ body.dark .logoMark,
                 <input type="hidden" name="on0" value="Subscription">
                 <input type="hidden" name="os0" value="6 Months – IPTV Premium + IBO Player FREE">
                 <input type="hidden" name="currency_code" value="EUR">
-                <button type="submit" class="btn-paypal-dark" id="payPal6">
-                  Paguaj me PayPal
-                </button>
+                <button type="submit" class="btn-paypal-dark" id="buyNow6">
+    Buy now
+  </button>
               </form>
 
               <a class="miniBtn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="planMs6">Messenger</a>
@@ -1494,8 +1513,8 @@ body.dark .logoMark,
   <input type="hidden" name="on0" value="Subscription">
   <input type="hidden" name="os0" value="1 Month – IPTV Premium">
   <input type="hidden" name="currency_code" value="EUR">
-  <button type="submit" class="btn-paypal-dark">
-    Paguaj me PayPal
+  <button type="submit" class="btn-paypal-dark" id="buyNow1">
+    Buy now
   </button>
 </form>
 
@@ -1559,19 +1578,7 @@ body.dark .logoMark,
 
       <!-- WHY -->
       
-      <!-- 24H TEST CTA -->
-      <section class="section testCta" id="test24h" aria-label="Test 24 orë">
-        <button type="button" class="testCtaLink"  id="openTrialModal">
-          <div class="testCtaInner">
-            <div class="testCtaBadge">TEST 24 ORË</div>
-            <h2 class="testCtaTitle">Aktivizo testin falas për IPTV (24 orë)</h2>
-            <p class="testCtaSub">
-              Kliko këtu dhe na dërgo në WhatsApp: Device ID dhe MAC Address për aktivizim.
-            </p>
-            <div class="testCtaHint">Kliko për WhatsApp</div>
-          </div>
-        </button>
-      </section>
+      
 
       <!-- 24H Trial Modal -->
       <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
@@ -1944,6 +1951,11 @@ body.dark .logoMark,
         note:"Për informata dhe mënyrat e pagesës, na shkruani në mesazh privat. Aktivizimi bëhet pas konfirmimit.",
         calloutD:"Na shkruaj dhe të udhëzojmë sipas pajisjes (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"Shiko paketat",
+        buyNow12:"Blej tani", buyNow6:"Blej tani", buyNow1:"Blej tani",
+        testCtaBadge:"TEST 24 ORË",
+        testCtaTitle:"Aktivizo testin falas për IPTV (24 orë)",
+        testCtaSub:"Kliko këtu dhe na dërgo në WhatsApp: Device ID dhe MAC Address për aktivizim.",
+        testCtaHint:"Kliko për WhatsApp",
 
         navPlans:"Paketa", navHow:"Si funksionon", navSetup:"Instalimi", navFaq:"FAQ", navContact:"Kontakt",
 
@@ -2145,6 +2157,11 @@ body.dark .logoMark,
         note:"For details and payment options, please message us privately. Activation is done after confirmation.",
         calloutD:"Message us and we’ll guide you based on your device (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"View plans",
+        buyNow12:"Buy now", buyNow6:"Buy now", buyNow1:"Buy now",
+        testCtaBadge:"24H TRIAL",
+        testCtaTitle:"Activate your free IPTV trial (24 hours)",
+        testCtaSub:"Click here and send us on WhatsApp: Device ID and MAC Address to activate.",
+        testCtaHint:"Click for WhatsApp",
 
         navPlans:"Plans", navHow:"How it works", navSetup:"Setup", navFaq:"FAQ", navContact:"Contact",
 
@@ -2343,6 +2360,13 @@ body.dark .logoMark,
         note:"Für Details und Zahlungsoptionen schreiben Sie uns bitte privat. Die Aktivierung erfolgt nach Bestätigung.",
         calloutD:"Schreiben Sie uns – wir helfen je nach Gerät (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"Tarife ansehen",
+
+        buyNow12:"Jetzt kaufen", buyNow6:"Jetzt kaufen", buyNow1:"Jetzt kaufen",
+        testCtaBadge:"24H TEST",
+        testCtaTitle:"Kostenlosen IPTV-Test aktivieren (24 Std.)",
+        testCtaSub:"Klicke hier und sende uns auf WhatsApp: Device ID und MAC Address zur Aktivierung.",
+        testCtaHint:"Zu WhatsApp",
+
 
         navPlans:"Tarife", navHow:"Ablauf", navSetup:"Installation", navFaq:"FAQ", navContact:"Kontakt",
 
@@ -2567,6 +2591,8 @@ body.dark .logoMark,
       "payTitle", "paySub", "payCard", "payPaypal", "payBank",
       "devTV", "devTVsub", "devMobile", "devMobilesub", "devTablet", "devTabletsub", "devPC", "devPCsub", "devBox", "devBoxsub", "devMag", "devMagsub", "devicesNote",
       "contactSub", "getTouchH", "emailT", "emailV", "emailA", "callT", "callV", "callA", "chatT", "chatV", "chatA", "hoursH", "hours1", "hours2", "hours3", "waFormH", "waNameL", "waEmailL", "waSubjL", "waMsgL", "waSendBtn",
+      "buyNow12", "buyNow6", "buyNow1",
+      "testCtaBadge", "testCtaTitle", "testCtaSub", "testCtaHint",
       "trialTitle",
       "trialLead",
       "trialGet",
