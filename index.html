@@ -1241,7 +1241,7 @@ body.dark .logoMark,
 .trialModal{position:fixed; inset:0; display:none; z-index:10000;}
 .trialModal.isOpen{display:block;}
 .trialBackdrop{position:absolute; inset:0; background:rgba(2,6,23,.55); backdrop-filter: blur(4px);}
-.trialPanel{position:relative; width:min(720px, calc(100vw - 28px)); margin: clamp(14px, 6vh, 38px) auto 0; background:#fff; border-radius:22px; border:1px solid rgba(226,232,240,.95); box-shadow: 0 30px 80px rgba(0,0,0,.35); padding: 22px 18px 18px; text-align:center;}
+.trialPanel{position:relative; width:min(720px, calc(100vw - 28px)); margin: 48px auto 0; background:#fff; border-radius:22px; border:1px solid rgba(226,232,240,.95); box-shadow: 0 30px 80px rgba(0,0,0,.35); padding: 22px 18px 18px; text-align:center;}
 .trialClose{position:absolute; right:12px; top:10px; width:40px; height:40px; border-radius:12px; border:1px solid rgba(226,232,240,.95); background:rgba(15,23,42,.03); color:rgba(15,23,42,.85); font-weight:950; font-size:22px; cursor:pointer;}
 .trialIcon{display:inline-grid; place-items:center; width:64px; height:64px; border-radius:999px; color:#16a34a; background:rgba(22,163,74,.10); border:1px solid rgba(22,163,74,.22); margin: 4px auto 10px;}
 .trialTitle{margin: 0 0 8px; font-size: 44px; line-height: 1.05; letter-spacing: -0.6px; font-weight: 1000; color: var(--text);}
@@ -1426,9 +1426,6 @@ body.dark .logoMark,
 
         
         </div>
-        
-          <span id="themeLabel">Dark</span>
-        </button>
       </div>
     </header>
     
@@ -1657,7 +1654,7 @@ body.dark .logoMark,
       <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
         <div class="trialBackdrop" data-close="true"></div>
         <div class="trialPanel" role="document">
-          <button type="button" class="trialClose" aria-label="Close" data-close="true" data-close="true">×</button>
+          <button type="button" class="trialClose" aria-label="Close" data-close="true" data-close="true" data-trial-close>×</button>
 
           <div class="trialIcon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="54" height="54">
@@ -2042,11 +2039,19 @@ body.dark .logoMark,
 </footer>
       
 <script>
-function openTrialModal(){document.querySelectorAll('.trialModal').forEach(m=>m.classList.add('isOpen'));}
-function closeTrialModal(){document.querySelectorAll('.trialModal').forEach(m=>m.classList.remove('isOpen'));}
-document.addEventListener('click',e=>{
-  if(e.target.closest('[data-trial-open]')){e.preventDefault();openTrialModal();}
-  if(e.target.closest('[data-trial-close]')||e.target.classList.contains('trialBackdrop')){closeTrialModal();}
+function openTrialModal(){
+  document.querySelectorAll('.trialModal').forEach(m=>m.classList.add('isOpen'));
+}
+function closeTrialModal(){
+  document.querySelectorAll('.trialModal').forEach(m=>m.classList.remove('isOpen'));
+}
+document.addEventListener('click', (e) => {
+  if (e.target.closest('[data-trial-open]')) { e.preventDefault(); openTrialModal(); return; }
+  if (e.target.closest('[data-trial-close]') || e.target.closest('.trialClose') || e.target.closest('[data-close="true"]') || e.target.classList.contains('trialBackdrop')) {
+    e.preventDefault();
+    closeTrialModal();
+    return;
+  }
 });
 </script>
 </body>
@@ -2779,11 +2784,19 @@ Comment: ${msg}`;
 </script>
 
 <script>
-function openTrialModal(){document.querySelectorAll('.trialModal').forEach(m=>m.classList.add('isOpen'));}
-function closeTrialModal(){document.querySelectorAll('.trialModal').forEach(m=>m.classList.remove('isOpen'));}
-document.addEventListener('click',e=>{
-  if(e.target.closest('[data-trial-open]')){e.preventDefault();openTrialModal();}
-  if(e.target.closest('[data-trial-close]')||e.target.classList.contains('trialBackdrop')){closeTrialModal();}
+function openTrialModal(){
+  document.querySelectorAll('.trialModal').forEach(m=>m.classList.add('isOpen'));
+}
+function closeTrialModal(){
+  document.querySelectorAll('.trialModal').forEach(m=>m.classList.remove('isOpen'));
+}
+document.addEventListener('click', (e) => {
+  if (e.target.closest('[data-trial-open]')) { e.preventDefault(); openTrialModal(); return; }
+  if (e.target.closest('[data-trial-close]') || e.target.closest('.trialClose') || e.target.closest('[data-close="true"]') || e.target.classList.contains('trialBackdrop')) {
+    e.preventDefault();
+    closeTrialModal();
+    return;
+  }
 });
 </script>
 </body>
