@@ -99,6 +99,17 @@ button.btn-paypal-dark:hover,
   border: 1px solid rgba(226,232,240,.9);
 }
 
+
+/* Micro-copy */
+.micro{
+  font-size:13px;
+  color:var(--muted);
+  font-weight:800;
+  margin-top:6px;
+  text-align:center;
+}
+.micro.inline{margin-top:4px;text-align:left}
+
 </style>
 </head>
 
@@ -1516,7 +1527,7 @@ body.dark .logoMark,
 <h1 id="h1" class="heroTitleSplit"><span class="tMain">Premium IPTV</span><br><span class="tAccent">Sports, Movies &amp; Series</span></h1>
           <p class="lead" id="lead">Digital service with fast activation and setup guidance for your compatible devices.</p>
 
-          <button type="button" class="trialMini" id="trialMini" aria-haspopup="dialog" aria-controls="trialModal"><span data-trial-open>24 hr Free Trial</span></button>
+          <button type="button" class="trialMini" id="trialMini" aria-haspopup="dialog" aria-controls="trialModal"><span data-trial-open>24 hr Free Trial<div class="micro">No credit card required • Limited availability</div></span></button>
 
           
           <div class="ctaRow" aria-label="Primary actions">
@@ -2107,8 +2118,8 @@ body.dark .logoMark,
           </div>
 
           <div class="footerCtas">
-            <a class="btn primary" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20I%20want%20activation.%20Plan%3A%20%5B12%2F6%2F1%5D%20months.%20Device%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" id="footerWa">WhatsApp</a>
-            <a class="btn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="footerMs">Messenger</a>
+            <a class="btn primary" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20I%20want%20activation.%20Plan%3A%20%5B12%2F6%2F1%5D%20months.%20Device%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" id="footerWa">WhatsApp</a><div class="micro inline">Fast response • Support via WhatsApp</div>
+            <a class="btn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="footerMs">Messenger</a><div class="micro inline">Instant chat • Messenger support</div>
           </div>
         </div>
 
@@ -2146,7 +2157,7 @@ document.addEventListener('click', (e) => {
         tagline:"Premium • Fast activation",
         badge:"Free IBO Player activation (normally €10)",
         
-        trialMini:"<span data-trial-open>24 hr Free Trial</span>",
+        trialMini:"<span data-trial-open>24 hr Free Trial<div class="micro">No credit card required • Limited availability</div></span>",
         ratingText:"Rated by our customers",
         reviewsSub:"Real messages from our users about speed and support.",
         reviewsTitle:"Customer Feedback",
