@@ -1393,6 +1393,16 @@ body.dark .logoMark,
 /* FAQ heading styles */
 .faqTitle{font-weight:800;margin:0 0 6px}
 .faqSubtitle{font-size:0.95rem;font-weight:400;opacity:.8;margin:0 0 18px}
+
+/* Instagram / iOS in-app browser: eliminate extra gap under header */
+@media (max-width: 520px){
+  body{margin:0;padding:0}
+  .wrap{padding-top:6px !important}
+  header[aria-label="Top navigation"]{position:relative !important; top:auto !important; padding:8px 0 6px !important}
+  main#main{margin-top:0 !important; padding-top:0 !important}
+  .hero{margin-top:6px !important}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
