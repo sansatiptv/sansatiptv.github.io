@@ -1403,6 +1403,14 @@ body.dark .logoMark,
   .hero{margin-top:6px !important}
 }
 
+
+/* Force-remove residual top gap in Instagram in-app browser */
+@media (max-width: 520px){
+  .hero{margin-top:-46px !important}
+  /* keep content from touching header */
+  .heroLeft{padding-top:18px !important}
+}
+
 </style>
 <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
