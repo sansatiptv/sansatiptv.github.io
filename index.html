@@ -13,14 +13,14 @@
 
   <!-- Social preview -->
   <meta property="og:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
-  <meta property="og:description" content="Plans: 12/6/1 month. Free IBO Player activation (normally €10). Contact: WhatsApp & Messenger." />
+  <meta property="og:description" content="Plans: 12/6/1 month. Free IBO Player - normally $10. Contact: WhatsApp & Messenger." />
   <meta property="og:image" content="https://sansatiptv.github.io/soccer_banner.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sansatiptv.github.io/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sansat IPTV | IPTV Premium + IBO Player" />
-  <meta name="twitter:description" content="Plans: 12/6/1 month. Free IBO Player activation (normally €10). Contact: WhatsApp & Messenger." />
+  <meta name="twitter:description" content="Plans: 12/6/1 month. Free IBO Player - normally $10. Contact: WhatsApp & Messenger." />
   <meta name="twitter:image" content="https://sansatiptv.github.io/soccer_banner.png" />
 
   <!-- Structured data (basic) -->
@@ -56,7 +56,8 @@
 
       --ok:#16a34a;
       --warn:#f59e0b;
-      --violet:#7c3aed;
+            --accent:#f97316;
+--violet:#7c3aed;
       --rose:#e11d48;
     }
 
@@ -177,7 +178,7 @@
     /* Hero title split */
     .heroTitleSplit{font-weight:1000}
     .heroTitleSplit .tMain{color:#0f172a;font-weight:1000}
-    .heroTitleSplit .tAccent{color:var(--accent);font-weight:950}
+    .heroTitleSplit .tAccent{color:var(--accent);font-weight:1000}
     :root[data-theme="dark"] .heroTitleSplit .tMain{color:#f8fafc}
 .lead{color:var(--muted);margin:0 0 12px;max-width:62ch}
 
@@ -1276,7 +1277,7 @@ body.dark .logoMark,
 
 /* Hero split title colors */
 .heroTitleSplit .tMain{font-weight:950;color:#0b0b0b !important;}
-.heroTitleSplit .tAccent{font-weight:950;color:#f97316 !important;}
+.heroTitleSplit .tAccent{color:var(--accent);font-weight:1000}
 
 /* Customer feedback section (cards + modal) */
 .reviewsSection{padding:64px 0;background:#ffffff;}
@@ -1438,11 +1439,10 @@ body.dark .logoMark,
       <!-- HERO -->
       <section class="hero" aria-label="Hero">
         <div class="heroLeft">
-          <span class="badge" id="badge">Free IBO Player activation</span>
-          <div class="pill" id="supportPill">Support • Setup guidance</div>
+          <span class="badge" id="badge">Free IBO Player - normally $10</span>
 
-          <h1 id="h1">IPTV Premium + IBO Player</h1>
-          <p class="lead" id="lead">Digital service with fast activation and setup guidance for your compatible devices.</p>
+          <h1 id="h1" class="heroTitleSplit"><span class="tMain">Premium IPTV</span> <span class="tAccent">Sports, movies &amp; series</span></h1>
+          <p class="lead" id="lead">Digital service with fast activation for your compatible devices.</p>
 
           <button type="button" class="trialMini" id="trialMini" aria-haspopup="dialog" aria-controls="trialModal">24 hr Free Trial</button>
 
@@ -1455,12 +1455,9 @@ body.dark .logoMark,
 
           <div class="trustBullets" aria-label="Trust bullets">
             <div class="miniStats" aria-label="Quick stats">
-              <div class="mstat"><span class="mDot"></span><span id="hs1">Fast activation</span></div>
-              <div class="mstat"><span class="mDot"></span><span id="hs2">Device-specific guidance</span></div>
-              <div class="mstat"><span class="mDot"></span><span id="hs3">30-day refund</span></div>
+<div class="mstat"><span class="mDot"></span><span id="hs3">30-day refund</span></div>
             </div>
-            <div class="tbullet" id="tb2">Support on WhatsApp/Messenger</div>
-            <a class="tbullet link" id="tb3" href="#refund">30-day full refund</a>
+<a class="tbullet link" id="tb3" href="#refund">30-day full refund</a>
           </div>
 
         </div>
@@ -1712,7 +1709,7 @@ body.dark .logoMark,
           </div>
           <div class="step">
             <b id="s3t">Activation</b>
-            <div class="muted" id="s3d">Fast activation + IBO Player FREE (setup guidance).</div>
+            <div class="muted" id="s3d">Fast activation + free IBO Player.</div>
           </div>
         </div>
       </section>
@@ -1755,7 +1752,7 @@ body.dark .logoMark,
             <div class="muted" id="ibo3d">We configure it and guide you through the final steps.</div>
           </div>
         </div>
-        <p class="muted" id="iboNote" style="margin-top:10px">Note: IBO Player is a third‑party app. We provide activation and setup guidance.</p>
+        <p class="muted" id="iboNote" style="margin-top:10px">Note: IBO Player is a third‑party app. We provide activation.</p>
       </section>
 
       <!-- MAC -->
@@ -2101,7 +2098,7 @@ body.dark .logoMark,
         footerTagline:"Fast activation • Direct support",
         footerPrivacy:"Privacy Policy",
         tagline:"Premium • Fast activation",
-        badge:"Free IBO Player activation (normally €10)",
+        badge:"Free IBO Player - normally $10",
         
         trialMini:"24 hr Free Trial",
         ratingText:"Rated by our customers",
@@ -2124,7 +2121,7 @@ h1:"Premium IPTV for Sports, Movies & Series",
         lead:"Fast activation, device-specific setup guidance, and a full 30-day refund (terms apply).",
         waLabel:"WhatsApp",
         msLabel:"Messenger",
-        supportPill:"Live sports • Movies • Series • International channels",
+        supportPill:"",
         note:"For details and payment options, please message us privately. Activation is done after confirmation.",
         calloutD:"Message us and we’ll guide you based on your device (Samsung/LG/Android TV, Box, Fire Stick, Mobile).",
         goPlansBtn:"View plans",
@@ -2172,7 +2169,7 @@ h1:"Premium IPTV for Sports, Movies & Series",
         howH:"How it works",
         s1t:"Contact", s1d:"Message us on WhatsApp or Messenger.",
         s2t:"Choose a plan", s2d:"Pick 1 / 6 / 12 months and receive guidance.",
-        s3t:"Activation", s3d:"Fast activation + free IBO Player activation (setup guidance).",
+        s3t:"Activation", s3d:"Fast activation + free IBO Player.",
 
         setupH:"Smart TV setup (Samsung/LG/Android)",
         setupLead:"These are quick steps. If menus differ by model, message us and we’ll guide you.",
@@ -2184,7 +2181,7 @@ h1:"Premium IPTV for Sports, Movies & Series",
         ibo1t:"1) Install the app", ibo1d:"On your device, install IBO Player from the app store.",
         ibo2t:"2) Send MAC Address", ibo2d:"Send us the MAC Address as shown in the app.",
         ibo3t:"3) Configure", ibo3d:"We configure and guide you through the final steps.",
-        iboNote:"Note: IBO Player is a third-party application. We provide activation and setup guidance.",
+        iboNote:"Note: IBO Player is a third-party application. We provide activation.",
 
         macPreviewH:"MAC Address – Example",
         macPreviewNote:"Example only: the MAC Address is shown inside the IBO Player app.",
@@ -2557,8 +2554,7 @@ const hero = document.getElementById("waBtn");
     if(subject) lines.push("Subject: " + subject);
     if(msg) lines.push("Message: " + msg);
 
-    const text = encodeURIComponent(lines.join("
-"));
+    const text = encodeURIComponent(lines.join("\n"));
     const waNumber = "38972698616";
     const url = "https://wa.me/" + waNumber + "?text=" + text;
     window.open(url, "_blank", "noopener");
@@ -2597,8 +2593,7 @@ const hero = document.getElementById("waBtn");
       lines.push("Message:");
       lines.push(msg);
 
-      const text = encodeURIComponent(lines.join("
-"));
+      const text = encodeURIComponent(lines.join("\n"));
       const url = "https://wa.me/" + PHONE_E164 + "?text=" + text;
 
       // Open WhatsApp (new tab)
@@ -2632,8 +2627,7 @@ const hero = document.getElementById("waBtn");
         "",
         "Thank you!"
       ];
-      const text = encodeURIComponent(templates.join("
-"));
+      const text = encodeURIComponent(templates.join("\n"));
       return "https://wa.me/" + PHONE_E164 + "?text=" + text;
     }
 
