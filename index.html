@@ -45,7 +45,40 @@
     .heroTitleSplit .tMain{color:#0b1220;font-weight:900}
     .heroTitleSplit .tAccent{color:#f97316;font-weight:900}
     @media(max-width:900px){.heroTitleSplit{font-size:32px}}
-  </style>
+  
+/* === Mobile (Instagram in-app) header compaction to remove empty gap === */
+@media (max-width: 640px){
+  /* Hide the quick links pill on very small screens to avoid multi-row header */
+  nav.quick{display:none !important;}
+  .topRight{display:none !important;}
+  .wrap{padding-top:10px !important;}
+  .hero{margin-top:8px !important;}
+}
+
+/* === PayPal CTA: bigger + blue === */
+.btn-paypal-dark{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  min-height:54px !important;
+  padding:14px 18px !important;
+  width:100% !important;
+  font-size:16px !important;
+  font-weight:1000 !important;
+  border-radius:16px !important;
+  border:1px solid rgba(37,99,235,.30) !important;
+  color:#ffffff !important;
+  background: linear-gradient(135deg, rgba(37,99,235,1), rgba(14,165,233,1)) !important;
+  box-shadow: 0 16px 34px rgba(37,99,235,.24) !important;
+}
+.btn-paypal-dark:hover{
+  transform:translateY(-1px) !important;
+  box-shadow:0 20px 42px rgba(37,99,235,.28) !important;
+  opacity:1 !important;
+}
+
+</style>
 </head>
 
 <body>
