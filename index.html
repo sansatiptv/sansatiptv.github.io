@@ -1442,7 +1442,7 @@ body.dark .logoMark,
 <h1 id="h1" class="heroTitleSplit"><span class="tMain">Premium IPTV</span><br><span class="tAccent">Sports, Movies &amp; Series</span></h1>
           <p class="lead" id="lead">Digital service with fast activation and setup guidance for your compatible devices.</p>
 
-          <button type="button" class="trialMini" id="trialMini" aria-haspopup="dialog" aria-controls="trialModal">24 hr Free Trial</button>
+          <button type="button" class="trialMini" data-trial-open id="trialMini" aria-haspopup="dialog" aria-controls="trialModal">24 hr Free Trial</button>
 
           
           <div class="ctaRow" aria-label="Primary actions">
@@ -1663,7 +1663,7 @@ body.dark .logoMark,
       <div class="trialModal" id="trialModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
         <div class="trialBackdrop" data-close="true"></div>
         <div class="trialPanel" role="document">
-          <button type="button" class="trialClose" aria-label="Close" data-close="true" data-close="true">×</button>
+          <button type="button" class="trialClose" data-trial-close aria-label="Close" data-close="true" data-close="true">×</button>
 
           <div class="trialIcon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="54" height="54">
@@ -2046,7 +2046,24 @@ body.dark .logoMark,
 
 
 </footer>
-      </body>
+      
+<script>
+function openTrialModal(){
+  var m=document.querySelector('.trialModal');
+  if(m){m.classList.add('isOpen');}
+}
+function closeTrialModal(){
+  var m=document.querySelector('.trialModal');
+  if(m){m.classList.remove('isOpen');}
+}
+document.addEventListener('click',function(e){
+  if(e.target.closest('[data-trial-open]')){e.preventDefault();openTrialModal();}
+  if(e.target.closest('[data-trial-close]')){e.preventDefault();closeTrialModal();}
+  if(e.target.classList.contains('trialBackdrop')){closeTrialModal();}
+});
+</script>
+
+</body>
 </html>
 
 
@@ -2773,5 +2790,22 @@ Comment: ${msg}`;
     })();
 
 </script>
+
+<script>
+function openTrialModal(){
+  var m=document.querySelector('.trialModal');
+  if(m){m.classList.add('isOpen');}
+}
+function closeTrialModal(){
+  var m=document.querySelector('.trialModal');
+  if(m){m.classList.remove('isOpen');}
+}
+document.addEventListener('click',function(e){
+  if(e.target.closest('[data-trial-open]')){e.preventDefault();openTrialModal();}
+  if(e.target.closest('[data-trial-close]')){e.preventDefault();closeTrialModal();}
+  if(e.target.classList.contains('trialBackdrop')){closeTrialModal();}
+});
+</script>
+
 </body>
 </html>
