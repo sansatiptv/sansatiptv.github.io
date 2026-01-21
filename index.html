@@ -287,23 +287,6 @@ button.btn-paypal-dark:hover,
   .guaranteeTitle{font-size:20px}
 }
 
-
-/* Desktop centering fix */
-@media (min-width: 1024px){
-  .hero, .heroLeft, .container, main, section{
-    margin-left:auto !important;
-    margin-right:auto !important;
-  }
-  .heroLeft{
-    text-align:center;
-    align-items:center;
-  }
-  .heroLeft h1, .heroLeft p{
-    margin-left:auto;
-    margin-right:auto;
-  }
-}
-
 </style>
 </head>
 
@@ -2325,8 +2308,7 @@ body.dark .logoMark,
             <a href="privacy.html" id="footerPrivacy" data-i18n="footerPrivacy" rel="nofollow">Privacy Policy</a>
           </div>
 
-          <div class="footerCtas">
-            <a class="btn primary" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20I%20want%20activation.%20Plan%3A%20%5B12%2F6%2F1%5D%20months.%20Device%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" id="footerWa">WhatsApp</a><div class="micro inline">Fast response • Support via WhatsApp</div>
+          
             <a class="btn secondary" href="https://m.me/sansatiptv" target="_blank" rel="noopener" id="footerMs">Messenger</a><div class="micro inline">Instant chat • Messenger support</div>
           </div>
         </div>
@@ -2733,7 +2715,9 @@ const hero = document.getElementById("waBtn");
   </script>
 
   <!-- Sticky WhatsApp Button -->
-  
+  <a id="fabWa" class="fabWa" href="https://wa.me/38972698616?text=Hi%20Sansat%20IPTV%2C%20I%20want%20activation.%20Plan%3A%20%5B12%2F6%2F1%5D%20months.%20Device%3A%20%5BSamsung%2FLG%2FAndroid%2FBox%2FMobile%5D.%20MAC%3A%20%5B____%5D%20Device%20ID%3A%20%5B____%5D." target="_blank" rel="noopener" aria-label="Open WhatsApp">
+    <span class="fabIcon" aria-hidden="true"></span>
+  </a>
 
 
   <script id="sansat_meta_tracking">
