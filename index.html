@@ -110,6 +110,104 @@ button.btn-paypal-dark:hover,
 }
 .micro.inline{margin-top:4px;text-align:left}
 
+
+
+/* ================================
+   GUARANTEE SECTION (replaces image banner)
+   Crisp on desktop + mobile
+   ================================ */
+.guarantee{
+  margin-top:18px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(226,232,240,.9);
+  border-radius:20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+.guaranteeInner{
+  padding:18px 16px;
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+.guaranteeBadge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(34,197,94,.22);
+  background:rgba(34,197,94,.10);
+  color:var(--ok);
+  font-weight:1000;
+  letter-spacing:.2px;
+}
+.guaranteeTitle{
+  margin:12px 0 6px;
+  font-size:28px;
+  letter-spacing:-.3px;
+}
+.guaranteeText{
+  margin:0 auto 14px;
+  max-width:78ch;
+  color:var(--muted);
+  font-weight:800;
+  line-height:1.55;
+}
+.guaranteeChips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+  margin:0 0 14px;
+}
+.gChip{
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(226,232,240,.95);
+  background:rgba(15,23,42,.03);
+  color:var(--muted);
+  font-weight:800;
+  font-size:13px;
+}
+.guaranteeCtaRow{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.gBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:12px 14px;
+  border-radius:14px;
+  font-weight:950;
+  border:1px solid rgba(37,99,235,.26);
+  background:linear-gradient(135deg, rgba(37,99,235,.14), rgba(14,165,233,.12));
+  color:var(--text);
+}
+.gBtn:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(15,23,42,.10)}
+.gBtn.secondary{
+  background:transparent;
+  border-color:rgba(37,99,235,.22);
+  color:var(--muted);
+}
+.gBtn.secondary:hover{background:rgba(37,99,235,.08); color:var(--text)}
+@media (max-width: 920px){
+  .guaranteeTitle{font-size:22px}
+  .guaranteeInner{padding:16px 14px}
+}
+:root[data-theme="dark"] .guarantee{
+  background:rgba(15,23,42,.60);
+  border-color:rgba(148,163,184,.18);
+}
+:root[data-theme="dark"] .gChip{
+  background:rgba(255,255,255,.04);
+  border-color:rgba(148,163,184,.18);
+  color:var(--muted);
+}
 </style>
 </head>
 
@@ -2033,14 +2131,28 @@ body.dark .logoMark,
 </section>
 
 
-<!-- FULL WIDTH GUARANTEE IMAGE -->
+<!-- GUARANTEE (clean, crisp, responsive) -->
+<section class="guarantee" id="guarantee" aria-label="30-day refund guarantee">
+  <div class="guaranteeInner">
+    <div class="guaranteeBadge">30-day full refund</div>
+    <h2 class="guaranteeTitle">Try Sansat IPTV with confidence</h2>
+    <p class="guaranteeText">
+      If the service does not work on your confirmed device and cannot be stabilized after technical verification,
+      we approve a full refund within the first 30 days.
+    </p>
 
+    <div class="guaranteeChips" aria-label="Refund conditions summary">
+      <span class="gChip">30-day window</span>
+      <span class="gChip">Technical verification</span>
+      <span class="gChip">Response 24–48h</span>
+      <span class="gChip">Exclusions: ISP/Wi‑Fi/VPN</span>
+    </div>
 
-<section class="fullBanner">
-  <img src="30daymoneyback.png" alt="30 Day Money Back Guarantee - Sansat IPTV">
-  <p class="muted" style="text-align:center;margin:10px 0 0">
-    <a href="#refund" id="refundLink" style="font-weight:950">View refund terms</a>
-  </p>
+    <div class="guaranteeCtaRow">
+      <a class="gBtn" href="#refund" id="refundLink">View refund terms</a>
+      <a class="gBtn secondary" href="#contact" id="refundContactLink">Contact support</a>
+    </div>
+  </div>
 </section>
 <div class="reviewsModalOverlay" id="reviewsModal" aria-hidden="true" role="dialog" aria-modal="true">
   <div class="reviewsModal" role="document">
